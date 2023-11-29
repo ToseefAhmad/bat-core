@@ -1,0 +1,27 @@
+@import '../../../../scss/variables/vuse';
+
+$button-component-font-weight: $button-font-weight;
+$button-component-letter-spacing: 0.075rem;
+$button-component-line-height: 1;
+$button-component-padding-block: 1.8rem;
+$button-component-box-shadow-hover: 0 0 0.9rem $secondary-dark;
+$button-component-background-color: $secondary;
+$button-component-color: $darker;
+$button-component-transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease;
+$button-component-hover-background-color: $secondary-dark;
+$button-component-hover-color: $darker;
+$button-component-disabled-background-color: $disabled-color;
+$button-component-primary-background-color: $secondary;
+$button-component-primary-border: none;
+$button-component-primary-font-weight: $font-weight-bold;
+$button-component-primary-border-radius: $form-border-radius;
+$button-component-primary-hover-color: $darker;
+$button-component-primary-disabled-border: none;
+$button-component-secondary-background-color: $secondary;
+$button-component-secondary-disabled-border: none;
+$button-component-tertiary-padding-block: 1.6rem;
+$button-component-tertiary-color: $primary;
+$button-component-tertiary-border-color: $button-tertiary-border-color;
+$button-component-tertiary-border-radius: $form-border-radius;
+$button-component-tertiary-hover-border-color: $button-tertiary-border-color-hover;
+$button-component-tertiary-disabled-border: $secondary-border-width solid $disabled-color;

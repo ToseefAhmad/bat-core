@@ -1,0 +1,10 @@
+#import '@luft/product/src/graphql/fragments/ProductPreview.fragment.graphql'
+
+query CrossSellProducts($cart_id: ID) {
+    cart(cart_id: $cart_id) @connection(key: "cart") {
+        id
+        crosssell_products_list {
+            ...ProductPreviewFragment
+        }
+    }
+}

@@ -1,0 +1,7 @@
+extend type Shipment {
+    """
+    [sales][BAT]
+    Shipment Tracking Number. It's provided by aCommerce via OMS or can be provided manually by admin
+    """
+    tracking_number: String
+}

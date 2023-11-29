@@ -1,0 +1,107 @@
+@import '../../../../common/src/scss/variables/base';
+
+.page-builder-video-component {
+    $page-builder-video-component-container-padding-top: 56.25% !default;
+    $page-builder-video-component-youtube-button-width: 6.8rem !default;
+    $page-builder-video-component-youtube-button-height: 4.8rem !default;
+    $page-builder-video-component-youtube-button-bg-fill: #212121 !default;
+    $page-builder-video-component-youtube-button-bg-fill-hover: #f00 !default;
+    $page-builder-video-component-youtube-button-bg-fill-opacity: 0.8 !default;
+    $page-builder-video-component-vimeo-button-width: 6.5rem !default;
+    $page-builder-video-component-vimeo-button-height: 4rem !default;
+    $page-builder-video-component-vimeo-button-background-color: rgba(30, 30, 30, 0.9) !default;
+    $page-builder-video-component-vimeo-button-background-color-hover: rgb(0, 173, 239) !default;
+    $page-builder-video-component-vimeo-button-border-radius: 0.5rem !default;
+    $page-builder-video-component-vimeo-button-icon-size: 2rem !default;
+
+    & {
+        font-size: 0;
+    }
+
+    &-inner {
+        display: inline-block;
+        width: 100%;
+    }
+
+    &-wrapper {
+        overflow: hidden;
+    }
+
+    &-container {
+        overflow: hidden;
+        padding-top: $page-builder-video-component-container-padding-top;
+        position: relative;
+    }
+
+    &-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &-overlay:hover &-youtube-button-bg {
+        fill: $page-builder-video-component-youtube-button-bg-fill-hover;
+        fill-opacity: 1;
+    }
+
+    &-overlay:hover &-vimeo-button {
+        background-color: $page-builder-video-component-vimeo-button-background-color-hover;
+    }
+
+    &-youtube-button,
+    &-vimeo-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        border: none;
+        padding: 0;
+    }
+
+    &-youtube-button {
+        width: $page-builder-video-component-youtube-button-width;
+        height: $page-builder-video-component-youtube-button-height;
+        background-color: transparent;
+        transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    &-youtube-button-bg {
+        fill: $page-builder-video-component-youtube-button-bg-fill;
+        fill-opacity: $page-builder-video-component-youtube-button-bg-fill-opacity;
+        transition: fill 100ms cubic-bezier(0.4, 0, 1, 1), fill-opacity 100ms cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    &-vimeo-button {
+        width: $page-builder-video-component-vimeo-button-width;
+        height: $page-builder-video-component-vimeo-button-height;
+        color: $light;
+        background-color: $page-builder-video-component-vimeo-button-background-color;
+        border-radius: $page-builder-video-component-vimeo-button-border-radius;
+        position: relative;
+        transition: opacity 250ms ease-out, background-color 40ms, color 40ms;
+    }
+
+    &-vimeo-button-icon {
+        width: $page-builder-video-component-vimeo-button-icon-size;
+        height: $page-builder-video-component-vimeo-button-icon-size;
+    }
+
+    &-vimeo-button-triangle {
+        fill: $light;
+    }
+}

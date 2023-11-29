@@ -1,0 +1,7 @@
+type VerifiedCode {
+    """
+    [user][BAT]
+    Flag, which identifies that confirmation code was successfully verified
+    """
+    success: Boolean
+}

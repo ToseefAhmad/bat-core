@@ -1,0 +1,8 @@
+query EspayPaymentInfoQuery {
+    espayPaymentInfo {
+        product_code
+        bank_code
+        product_name
+        category
+    }
+}

@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/glo';
+
+$store-locator-nav-control-component-button-focus-border: none;
+$store-locator-nav-control-component-button-focus-box-shadow: none;
+
+// sm
+$store-locator-nav-control-component-icon-direction-sm: column;
+$store-locator-nav-control-component-icon-justify-sm: flex-end;
+
+// xs
+$store-locator-nav-control-component-border-color-xs: $primary;

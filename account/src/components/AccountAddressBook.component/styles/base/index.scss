@@ -1,0 +1,13 @@
+@import '~@luft/account/src/components/AccountAddressBook.component/index';
+
+.app {
+    .account-address-book-component {
+        $account-address-book-component-display: null !default;
+        $account-address-book-component-position: null !default;
+
+        & {
+            display: block;
+            position: relative;
+        }
+    }
+}

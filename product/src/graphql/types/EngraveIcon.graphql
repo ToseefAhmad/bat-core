@@ -1,0 +1,29 @@
+"""
+[product][BAT]
+Device engraving icon
+"""
+type EngraveIcon {
+    """
+    [product][BAT]
+    Icon identifier
+    """
+    id: ID
+
+    """
+    [product][BAT]
+    Icon name
+    """
+    name: String
+
+    """
+    [product][BAT]
+    Icon thumbnail image
+    """
+    thumbnail_image: String
+
+    """
+    [product][BAT]
+    Icon image
+    """
+    icon_image: String
+}

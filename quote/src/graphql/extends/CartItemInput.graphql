@@ -1,0 +1,7 @@
+extend input CartItemInput {
+    """
+    [quote][BAT]
+    Engraved Options
+    """
+    engraved_options: EngravedOptionsInput
+}

@@ -1,0 +1,295 @@
+type BlogPost {
+    """
+    [blog][BAT]
+    Id of the Blog Post
+    """
+    post_id: Int
+
+    """
+    [blog][BAT]
+    Blog Post URL
+    """
+    post_url: String
+
+    """
+    [blog][BAT]
+    URL key of Blog Post
+    """
+    identifier: String
+
+    """
+    [blog][BAT]
+    Blog Post title
+    """
+    title: String
+
+    """
+    [blog][BAT]
+    Blog Post Meta title
+    """
+    meta_title: String
+
+    """
+    [blog][BAT]
+    Blog Post Meta keywords
+    """
+    meta_keywords: String
+
+    """
+    [blog][BAT]
+    Blog Post Meta description
+    """
+    meta_description: String
+
+    """
+    [blog][BAT]
+    Blog Post Og title
+    """
+    og_title: String
+
+    """
+    [blog][BAT]
+    Blog Post Og description
+    """
+    og_description: String
+
+    """
+    [blog][BAT]
+    Blog Post Og image
+    """
+    og_image: String
+
+    """
+    [blog][BAT]
+    Blog Post Og type
+    """
+    og_type: String
+
+    """
+    [blog][BAT]
+    Blog Post Canonical URL
+    """
+    canonical_url: String
+
+    """
+    [blog][BAT]
+    Blog Post Content heading
+    """
+    content_heading: String
+
+    """
+    [blog][BAT]
+    Blog Post content
+    """
+    content: String
+
+    """
+    [blog][BAT]
+    Blog Post filtered content
+    """
+    filtered_content: String
+
+    """
+    [blog][BAT]
+    Blog Post short filtered content
+    """
+    short_filtered_content: String
+
+    """
+    [blog][BAT]
+    Blog Post Creation time
+    """
+    creation_time: String
+
+    """
+    [blog][BAT]
+    Blog Post Update time
+    """
+    update_time: String
+
+    """
+    [blog][BAT]
+    Blog Post Publish time
+    """
+    publish_time: String
+
+    """
+    [blog][BAT]
+    Blog Post Is active
+    """
+    is_active: Int
+
+    """
+    [blog][BAT]
+    Blog Post Include in recent
+    """
+    include_in_recent: Int
+
+    """
+    [blog][BAT]
+    Blog Post Position
+    """
+    position: Int
+
+    """
+    [blog][BAT]
+    Blog Post first image
+    """
+    first_image: String
+
+    """
+    [blog][BAT]
+    Blog Post Featured image
+    """
+    featured_image: String
+
+    """
+    [blog][BAT]
+    Blog Post Featured image alt attribute
+    """
+    featured_img_alt: String
+
+    """
+    [blog][BAT]
+    Blog Post Author
+    """
+    author: BlogAuthor
+
+    """
+    [blog][BAT]
+    Blog Post Author Id
+    """
+    author_id: Int
+
+    """
+    [blog][BAT]
+    Blog Post Search Term
+    """
+    search: String
+
+    """
+    [blog][BAT]
+    Blog Post Author Id
+    """
+    tag_id: Int
+
+    """
+    [blog][BAT]
+    Blog Post Category Id
+    """
+    category_id: Int
+
+    """
+    [blog][BAT]
+    An array of related tags
+    """
+    tags: [BlogTag]
+
+    """
+    [blog][BAT]
+    An array of related categories
+    """
+    categories: [BlogCategory]
+
+    """
+    [blog][BAT]
+    Blog Post Page_layout
+    """
+    page_layout: String
+
+    """
+    [blog][BAT]
+    Blog Post Layout update xml
+    """
+    layout_update_xml: String
+
+    """
+    [blog][BAT]
+    Blog Post Custom theme
+    """
+    custom_theme: String
+
+    """
+    [blog][BAT]
+    Blog Post Custom layout
+    """
+    custom_layout: String
+
+    """
+    [blog][BAT]
+    Blog Post Custom layout update xml
+    """
+    custom_layout_update_xml: String
+
+    """
+    [blog][BAT]
+    Blog Post Custom theme from
+    """
+    custom_theme_from: String
+
+    """
+    [blog][BAT]
+    Blog Post Custom theme to
+    """
+    custom_theme_to: String
+
+    """
+    [blog][BAT]
+    Blog Post Media gallery
+    """
+    media_gallery: String
+
+    """
+    [blog][BAT]
+    Blog Post Secret
+    """
+    secret: String
+
+    """
+    [blog][BAT]
+    Blog Post Views count
+    """
+    views_count: Int
+
+    """
+    [blog][BAT]
+    Blog Post Is recent posts skip
+    """
+    is_recent_posts_skip: Int
+
+    """
+    [blog][BAT]
+    Blog Post Short content
+    """
+    short_content: String
+
+    """
+    [blog][BAT]
+    Blog Related posts
+    """
+    related_posts: [BlogPost]
+
+    """
+    [blog][BAT]
+    Blog Related products
+    """
+    related_products: [String]
+
+    """
+    [blog][BAT]
+    Id of the Related Product (This attribute used only in filter)
+    """
+    relatedproduct_id: Int
+
+    """
+    [blog][BAT]
+    If social sharing is enabled
+    """
+    enable_social_sharing: Boolean
+
+    """
+    [blog][BAT]
+    Meta Robots tags
+    """
+    meta_robots: String
+}

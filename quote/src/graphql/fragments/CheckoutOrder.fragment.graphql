@@ -1,0 +1,24 @@
+#import "../../../../user/src/graphql/fragments/BatAddress.fragment.graphql"
+#import "./TaxItemFragment.fragment.graphql"
+
+fragment BatCheckoutOrderFragment on CheckoutOrder {
+    order {
+        id
+        email
+        shipments {
+            shipment_id
+            shipping_address {
+                ...BatAddressFragment
+            }
+        }
+        billing_address {
+            firstname
+            lastname
+        }
+        prices {
+            taxes {
+                ...TaxItemFragment
+            }
+        }
+    }
+}

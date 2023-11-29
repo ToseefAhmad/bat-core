@@ -1,0 +1,28 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.wishlist-items-component {
+    $wishlist-items-component-background-color: $gray-light-secondary !default;
+    $wishlist-items-component-empty-font-size: $h4-font-size !default;
+
+    & {
+        background-color: $wishlist-items-component-background-color;
+        padding: 0;
+    }
+
+    &-empty {
+        & {
+            background-color: $light;
+            font-size: $wishlist-items-component-empty-font-size;
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            text-align: center;
+            text-transform: lowercase;
+        }
+
+        &:first-letter {
+            text-transform: uppercase;
+        }
+    }
+}

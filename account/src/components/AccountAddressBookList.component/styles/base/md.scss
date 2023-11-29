@@ -1,0 +1,13 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .account-address-book-list-component-actions {
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $p-primary-lg;
+            padding-inline-end: $p-primary-lg;
+        }
+    }
+}

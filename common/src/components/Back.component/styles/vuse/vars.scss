@@ -1,0 +1,12 @@
+@import '../../../../scss/variables/vuse';
+
+$back-component-border-bottom: $primary-border-width solid $gray-light-primary;
+$back-component-icon-background-size: 1.4rem 1.1rem;
+$back-component-button-line-height: normal;
+$back-component-title-font-weight: 400;
+$back-component-title-font-size: $font-size-base;
+$back-component-title-line-height: 1.4rem;
+$back-component-header-button-text-align: center;
+
+// md
+$back-component-button-text-align-md: start;

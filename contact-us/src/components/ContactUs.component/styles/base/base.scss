@@ -1,0 +1,129 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../user/src/components/Recaptcha.component/index';
+
+.contact-us-component {
+    $contact-us-component-max-width: 53.2rem;
+    $contact-us-component-padding: 5rem 0;
+    $contact-us-component-title: 2.6rem;
+    $contact-us-component-form-textarea-height: 18rem;
+    $contact-us-component-form-submit-margin: 3rem auto 0 auto;
+    $contact-us-component-cms-contact-us-title-font-size: 3.2rem;
+    $contact-us-component-cms-contact-us-margin: 3rem;
+    $contact-us-component-success-background-size: 5rem 5rem;
+    $contact-us-component-success-background-color: #efefef;
+    $contact-us-component-success-background-position: 50% 6rem;
+    $contact-us-component-success-padding: 13rem 4rem 6rem 4rem;
+    $contact-us-component-divider-height: 0.1rem;
+    $contact-us-component-divider-margin: 4rem 0;
+    $contact-us-component-divider-background-color: #dedede;
+
+    & {
+        max-width: $contact-us-component-max-width;
+        margin: 0 auto;
+        padding: $contact-us-component-padding;
+    }
+
+    &-wrapper {
+        margin: 0 $m-secondary;
+    }
+
+    &-form {
+        & &-message {
+            .form-control-component textarea {
+                height: $contact-us-component-form-textarea-height;
+                resize: none;
+            }
+        }
+
+        &-submit.button-component {
+            display: flex;
+            justify-content: center;
+            margin: $contact-us-component-form-submit-margin;
+        }
+    }
+
+    &-success {
+        & {
+            background-image: url('../../../../../../common/src/resources/svg/base/bat-check-success.svg');
+            background-repeat: no-repeat;
+            background-position: $contact-us-component-success-background-position;
+            background-size: $contact-us-component-success-background-size;
+            background-color: $contact-us-component-success-background-color;
+            text-align: center;
+            padding: $contact-us-component-success-padding;
+        }
+
+        &-title {
+            font-size: $contact-us-component-title;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            padding-bottom: $p-secondary;
+        }
+
+        &-message {
+            font-size: $font-size-md;
+        }
+    }
+
+    &-divider {
+        background-color: $contact-us-component-divider-background-color;
+        height: $contact-us-component-divider-height;
+        margin: $contact-us-component-divider-margin;
+    }
+
+    &-hubspot-form {
+        margin-top: $m-primary;
+    }
+
+    .recaptcha-component {
+        margin-top: $m-primary;
+    }
+
+    .cms-block-contact-us {
+        margin-bottom: $contact-us-component-cms-contact-us-margin;
+        font-size: $font-size-md;
+
+        .contact-us-title {
+            font-size: $contact-us-component-cms-contact-us-title-font-size;
+        }
+
+        .contact-us-subtitle {
+            font-size: $contact-us-component-title;
+        }
+
+        .contact-us-faq,
+        .contact-us-note {
+            display: block !important; // Override inline style
+        }
+
+        .contact-us-faq a,
+        .contact-us-note a {
+            font-weight: $font-weight-bold;
+        }
+
+        .contact-us-faq a {
+            text-decoration: none;
+        }
+    }
+
+    .cms-block-customer-service {
+        font-size: $font-size-md;
+
+        .customer-service-title {
+            font-size: $contact-us-component-title;
+        }
+
+        .customer-service-column a {
+            text-decoration: none;
+            width: 100%;
+            padding: $p-primary 0;
+        }
+
+        .customer-service-column > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+type BlogAuthor {
+    """
+    [blog][BAT]
+    Id of the Blog Post Author
+    """
+    author_id: Int
+
+    """
+    [blog][BAT]
+    Blog Author Author url
+    """
+    author_url: String
+
+    """
+    [blog][BAT]
+    Blog Author Created
+    """
+    creation_time: String
+
+    """
+    [blog][BAT]
+    FB url
+    """
+    facebook_page_url: String
+
+    """
+    [blog][BAT]
+    URL key of Blog Author
+    """
+    identifier: String
+
+    """
+    [blog][BAT]
+    Instagram url
+    """
+    instagram_page_url: String
+
+    """
+    [blog][BAT]
+    Blog Author Is active
+    """
+    is_active: Int
+
+    """
+    [blog][BAT]
+    Linkedin url
+    """
+    linkedin_page_url: String
+
+    """
+    [blog][BAT]
+    Blog Author Meta description
+    """
+    meta_description: String
+
+    """
+    [blog][BAT]
+    Blog Author Meta title
+    """
+    meta_title: String
+
+    """
+    [blog][BAT]
+    Blog Author Name
+    """
+    name: String
+
+    """
+    [blog][BAT]
+    Blog Author role
+    """
+    role: String
+
+    """
+    [blog][BAT]
+    Blog Author title
+    """
+    title: String
+
+    """
+    [blog][BAT]
+    Twitter url
+    """
+    twitter_page_url: String
+
+    """
+    [blog][BAT]
+    Blog Author Url
+    """
+    url: String
+}

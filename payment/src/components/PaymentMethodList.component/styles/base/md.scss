@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app .payment-method-list-component {
+        $payment-method-list-component-padding-block-end-md: 2.4rem !default;
+
+        & {
+            padding-block-end: $payment-method-list-component-padding-block-end-md;
+        }
+    }
+}

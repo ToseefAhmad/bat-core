@@ -1,0 +1,13 @@
+input ReferralsInput {
+    """
+    [sales][BAT]
+    Offset of returned data for particular return search
+    """
+    start: Int
+
+    """
+    [sales][BAT]
+    The number of returns returned
+    """
+    count: Int
+}

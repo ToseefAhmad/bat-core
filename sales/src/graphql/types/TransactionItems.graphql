@@ -1,0 +1,29 @@
+"""
+[sales][BAT]
+Transactions items info
+"""
+type TransactionItems {
+    """
+    [sales][BAT]
+    Transaction comment
+    """
+    comment: String
+
+    """
+    [sales][BAT]
+    Transaction points
+    """
+    points: String
+
+    """
+    [sales][BAT]
+    Date of transaction
+    """
+    created: String
+
+    """
+    [sales][BAT]
+    Expiry data
+    """
+    expires: String
+}

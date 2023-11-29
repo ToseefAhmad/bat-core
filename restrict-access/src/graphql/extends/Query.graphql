@@ -1,0 +1,13 @@
+extend type Query {
+    """
+    [restrict-access][BAT]
+    Extract dob from national ID (KTP ID)
+    """
+    extractDobFromNationalId(national_id: String): Dob
+
+    """
+    [restrict-access][BAT]
+    Returns documents used for upload
+    """
+    getDocumentTypes: [DocumentTypes]
+}

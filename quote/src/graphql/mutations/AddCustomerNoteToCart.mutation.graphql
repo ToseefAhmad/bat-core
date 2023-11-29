@@ -1,0 +1,10 @@
+#import "../fragments/Checkout.fragment.graphql"
+
+mutation AddCustomerNoteToCart($input: AddCustomerNoteToCartInput) {
+    addCustomerNoteToCart(input: $input) @connection(key: "cart") {
+        ...BatCheckoutFragment
+        customer_note {
+            code
+        }
+    }
+}

@@ -1,0 +1,17 @@
+"""
+[checkout-com][BAT]
+Input is used as an argument for 'checkoutcomPaymentVerify' and 'checkoutcomPaymentFail' mutations
+"""
+input Payment3DSResultInput {
+    """
+    [checkout-com][BAT]
+    Order identifier
+    """
+    order_id: ID
+
+    """
+    [checkout-com][BAT]
+    Session ID from checkout.com
+    """
+    cko_session_id: String
+}

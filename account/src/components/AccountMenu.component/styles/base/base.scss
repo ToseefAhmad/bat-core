@@ -1,0 +1,46 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/account/src/components/AccountMenu.component/index';
+
+.app {
+    .account-menu-component {
+        $account-menu-component-link-border-color: null !default;
+        $account-menu-component-link-background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow.svg') !default;
+        $account-menu-component-link-background-size: 0.9rem 1.4rem !default;
+        $account-menu-component-link-background-position: null !default;
+        $account-menu-component-link-font-weight: null !default;
+        $account-menu-component-link-line-height: null !default;
+        $account-menu-component-link-padding-block-start: null !default;
+        $account-menu-component-link-padding-block-end: null !default;
+        $account-menu-component-link-text-align: null !default;
+
+        &-link {
+            color: $primary-font-color;
+            border-color: $account-menu-component-link-border-color;
+            background-image: $account-menu-component-link-background-image;
+            background-size: $account-menu-component-link-background-size;
+            background-position: $account-menu-component-link-background-position;
+            font-weight: $account-menu-component-link-font-weight;
+            line-height: $account-menu-component-link-line-height;
+            padding-block-start: $account-menu-component-link-padding-block-start;
+            padding-block-end: $account-menu-component-link-padding-block-end;
+            text-align: $account-menu-component-link-text-align;
+            transition: color 150ms ease;
+
+            &:hover {
+                color: $primary-font-color;
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .account-menu-component {
+        $account-menu-component-background-image-rtl: null !default;
+        $account-menu-component-background-position-x-rtl: null !default;
+
+        &-link {
+            background-image: $account-menu-component-background-image-rtl;
+            background-position-x: $account-menu-component-background-position-x-rtl;
+        }
+    }
+}

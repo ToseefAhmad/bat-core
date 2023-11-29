@@ -1,0 +1,7 @@
+#import "../../../../quote/src/graphql/fragments/CheckoutOrder.fragment.graphql"
+
+mutation PaynamicsResult($input: PaynamicsResultInput) {
+    paynamicsResult(input: $input) {
+        ...BatCheckoutOrderFragment
+    }
+}

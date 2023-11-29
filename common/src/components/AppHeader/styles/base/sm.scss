@@ -1,0 +1,12 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    $app-header-content-menu-block-height-sm: 5.8rem !default;
+
+    .app-header-content {
+        &-menu-block {
+            min-height: $app-header-content-menu-block-height-sm;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+extend type Mutation {
+    """
+    [ccavenue][BAT]
+    Set cart_id to create order and get data for payment
+    """
+    ccavenuePlaceOrder(input: CcAvenueRedirectInput): CcAvenueRedirect
+
+    """
+    [ccavenue][BAT]
+    Set response data to confirm payment
+    """
+    ccavenueResponse(token: String): CheckoutOrder
+}

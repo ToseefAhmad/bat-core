@@ -1,0 +1,170 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .product-engraving-summary-item-component {
+    $product-engraving-summary-item-component-product-padding: 1.5rem 0;
+    $product-engraving-summary-item-component-image-box-size: 6rem;
+    $product-engraving-summary-item-component-image-box-height: 80%;
+    $product-engraving-summary-item-component-params-min-width: 10rem;
+    $product-engraving-summary-item-component-padding-inline-start: 8rem;
+    $product-engraving-summary-item-component-padding-inline-end: 6rem;
+    $product-engraving-summary-item-component-item-actions-top: 1rem;
+    $product-engraving-summary-item-component-price-margin-inline-end: 3rem;
+    $product-engraving-summary-item-component-item-actions-edit-margin-inline-end: 3rem;
+    $product-engraving-summary-item-component-item-actions-remove-size: 3rem;
+    $product-engraving-summary-item-component-item-actions-icon-remove-background: url('../../../../../../common/src/resources/svg/base/bat-cross.svg');
+    $product-engraving-summary-item-component-item-actions-icon-remove-size: 1.2rem 1.2rem;
+    $product-engraving-summary-item-component-price-total-font-size: 2.8rem;
+    $product-engraving-summary-item-component-actions-update-width: 22rem;
+
+    &-image-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $product-engraving-summary-item-component-image-box-size;
+        min-width: $product-engraving-summary-item-component-image-box-size;
+        height: $product-engraving-summary-item-component-image-box-size;
+        background-color: $gray-light-secondary;
+        border-radius: 50%;
+        overflow: hidden;
+
+        &-icon {
+            filter: invert(1);
+        }
+
+        img {
+            height: $product-engraving-summary-item-component-image-box-height;
+            width: auto;
+        }
+    }
+
+    &-product {
+        & {
+            display: flex;
+            align-items: center;
+            padding: $product-engraving-summary-item-component-product-padding;
+            margin-bottom: $m-primary;
+            border-top: 1px solid $gray-light-primary;
+            border-bottom: 1px solid $gray-light-primary;
+        }
+
+        &-title {
+            width: 100%;
+            padding: 0 $p-primary;
+            font-weight: $font-weight-semibold;
+        }
+
+        &-price {
+            & {
+                margin-inline-end: $product-engraving-summary-item-component-price-margin-inline-end;
+            }
+
+            div.product-price-component {
+                .regular-product-price-component,
+                .final-product-price-component,
+                .minimum-product-price-component {
+                    font-size: $font-size-md;
+                    font-weight: $font-weight-semibold;
+                    font-family: $font-family;
+                    padding-inline-end: 0;
+                }
+            }
+
+            .final-product-price-component {
+                & {
+                    text-align: end;
+                }
+
+                &-discounted-value {
+                    padding-inline-end: 0;
+                }
+            }
+        }
+    }
+
+    &-options {
+        & {
+            margin-bottom: $m-primary;
+        }
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline-start: $product-engraving-summary-item-component-padding-inline-start;
+            padding-inline-end: $product-engraving-summary-item-component-padding-inline-end;
+            font-weight: $font-weight-semibold;
+            font-size: $h4-font-size;
+            margin-bottom: $m-primary;
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: $m-primary;
+        }
+
+        &-item-content {
+            position: relative;
+            flex-grow: 1;
+            padding-inline-start: $p-primary;
+            padding-top: $p-secondary;
+        }
+
+        &-item-title {
+            font-weight: $font-weight-semibold;
+            margin-bottom: $m-tertiary;
+        }
+
+        &-item-params {
+            display: flex;
+            margin-bottom: $m-tertiary;
+        }
+
+        &-item-params-name {
+            min-width: $product-engraving-summary-item-component-params-min-width;
+        }
+
+        &-item-actions {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: $product-engraving-summary-item-component-item-actions-top;
+            cursor: pointer;
+        }
+
+        &-item-actions-edit.button-component {
+            text-transform: uppercase;
+            text-decoration: underline;
+            margin-inline-end: $product-engraving-summary-item-component-item-actions-edit-margin-inline-end;
+            padding: 0;
+        }
+
+        &-item-actions-remove.button-component {
+            width: $product-engraving-summary-item-component-item-actions-remove-size;
+            height: $product-engraving-summary-item-component-item-actions-remove-size;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background-image: $product-engraving-summary-item-component-item-actions-icon-remove-background;
+            background-color: $gray-light-secondary;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: $product-engraving-summary-item-component-item-actions-icon-remove-size;
+            padding: 0;
+        }
+    }
+
+    .product-price-component .final-product-price-component-discounted-value {
+        padding-inline-end: 0;
+    }
+}
+
+[dir='rtl'] {
+    .app .product-engraving-summary-item-component {
+        &-options {
+            &-item-actions {
+                right: initial;
+                left: 0;
+            }
+        }
+    }
+}

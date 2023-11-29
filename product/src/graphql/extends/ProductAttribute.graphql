@@ -1,0 +1,19 @@
+extend type ProductAttribute {
+    """
+    [product][BAT]
+    Option value uses for dropdowns intead value for datalayer
+    """
+    option_value: String
+
+    """
+    [product][BAT]
+    Flag uses for adding data of atrribute to datalayer
+    """
+    use_in_google_analytics: Boolean
+
+    """
+    [product][BAT]
+    Flag uses for hidding attribute on storefront
+    """
+    is_not_visible_on_storefront: Boolean
+}

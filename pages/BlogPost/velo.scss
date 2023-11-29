@@ -1,0 +1,10 @@
+@import '../../common/src/scss/variables/velo';
+@import '../../common/src/components/Pagination.component/styles/velo/index';
+@import '../../blog/src/components/BlogPost.component/styles/velo/index';
+@import '../../blog/src/components/BlogWidget.component/styles/velo/index';
+@import '../../blog/src/components/BlogPostTile.component/styles/velo/index';
+@import '../../blog/src/components/BlogRelatedPosts.component/styles/velo/index';
+
+.blog-post-page {
+    background-color: $background-primary-color;
+}

@@ -1,0 +1,94 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .mini-cart-component {
+            $mini-cart-component-width-md: 53rem;
+            $mini-cart-component-padding-md: 4rem 6rem 0;
+            $mini-cart-component-close-button-left-md: -4.5rem;
+            $mini-cart-component-title-font-size-md: null !default;
+            $mini-cart-component-title-block-margin-bottom-md: 2.5rem;
+            $mini-cart-component-products-margin-bottom-md: 3rem;
+            $mini-cart-component-view-button-margin-y-md: 3rem;
+            $mini-cart-component-cart-item-title-width-md: 17rem;
+            $mini-cart-component-cart-item-content-padding-md: 1.6rem;
+            $mini-cart-component-edit-item-icon-position-md: 1.6rem;
+
+            & {
+                width: $mini-cart-component-width-md;
+                padding: $mini-cart-component-padding-md;
+            }
+
+            &-header {
+                margin-bottom: $m-secondary;
+            }
+
+            &-close-button.button-component {
+                left: $mini-cart-component-close-button-left-md;
+                transform: none;
+            }
+
+            &-title-block {
+                margin-bottom: $mini-cart-component-title-block-margin-bottom-md;
+            }
+
+            &-title {
+                font-size: $mini-cart-component-title-font-size-md;
+            }
+
+            &-products {
+                margin-bottom: $mini-cart-component-products-margin-bottom-md;
+            }
+
+            &-view-button.button-component.button-component-link {
+                margin-top: $mini-cart-component-view-button-margin-y-md;
+                margin-bottom: $mini-cart-component-view-button-margin-y-md;
+            }
+
+            .cart-item-component {
+                &-content {
+                    padding: $mini-cart-component-cart-item-content-padding-md;
+                }
+
+                &-edit-button {
+                    top: $mini-cart-component-edit-item-icon-position-md;
+                    right: $mini-cart-component-edit-item-icon-position-md;
+                }
+
+                .product-pane-component-name-link {
+                    width: $mini-cart-component-cart-item-title-width-md;
+                }
+            }
+        }
+    }
+
+    [dir='rtl'] {
+        .mini-cart-component {
+            $mini-cart-component-title-font-size-rtl: 2.6rem;
+            $mini-cart-component-total-font-size-rtl: 1.8rem;
+            $mini-cart-component-close-button-right-rtl: -4.5rem;
+            $mini-cart-component-edit-button-left-rtl: 1.6rem;
+
+            &-close-button.button-component {
+                left: initial;
+                right: $mini-cart-component-close-button-right-rtl;
+            }
+
+            &-title {
+                font-size: $mini-cart-component-title-font-size-rtl;
+            }
+
+            &-total {
+                font-size: $mini-cart-component-total-font-size-rtl;
+            }
+
+            .cart-item-component {
+                &-edit-button.button-component-primary.button-component {
+                    right: initial;
+                    left: $mini-cart-component-edit-button-left-rtl;
+                }
+            }
+        }
+    }
+}

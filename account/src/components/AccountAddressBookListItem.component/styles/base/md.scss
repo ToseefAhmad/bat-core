@@ -1,0 +1,22 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        $account-address-book-list-item-component-padding-inline-md: $p-primary !default;
+        $account-address-book-list-item-component-action-margin-right-md: null !default;
+
+        .account-address-book-list-item-component {
+            &-info {
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+                padding-inline-start: $account-address-book-list-item-component-padding-inline-md;
+                padding-inline-end: $account-address-book-list-item-component-padding-inline-md;
+            }
+
+            .actions-panel-btn-component {
+                margin-right: $account-address-book-list-item-component-action-margin-right-md;
+            }
+        }
+    }
+}

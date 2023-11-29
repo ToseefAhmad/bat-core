@@ -1,0 +1,26 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .product-pane-component {
+            $product-pane-component-image-link-flex-basis-md: 10rem !default;
+            $product-pane-component-update-action-width-md: 10rem !default;
+            $product-pane-component-price-label-font-size-md: null !default;
+
+            &-image-link {
+                flex-basis: $product-pane-component-image-link-flex-basis-md;
+                margin-right: initial;
+                margin-inline-end: $m-primary;
+            }
+
+            &-price-label {
+                font-size: $product-pane-component-price-label-font-size-md;
+            }
+
+            &-update-action.button-component {
+                width: $product-pane-component-update-action-width-md;
+            }
+        }
+    }
+}

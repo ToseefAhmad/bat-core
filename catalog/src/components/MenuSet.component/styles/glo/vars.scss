@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/glo';
+
+$menu-set-component-modal-menu-set-background-color: $darker;
+$menu-set-component-second-level-category-border-color: $darker;
+$menu-set-component-all-background-color: $dark-secondary;
+
+// sm
+$menu-set-component-menu-set-nav-max-width-sm: 22rem;
+$menu-set-component-category-padding-sm: 1.4rem $p-tertiary;
+
+// md
+$menu-set-component-category-padding-md: 1.4rem $p-primary;

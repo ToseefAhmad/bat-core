@@ -1,0 +1,49 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/ProductPrice.component/index';
+
+.app {
+    .product-price-component {
+        $product-price-component-font-size: 2.8rem !default;
+        $product-price-component-color: $primary !default;
+        $product-price-component-variant-margin: null !default;
+        $product-price-component-variant-padding: null !default;
+        $product-price-component-variant-padding-inline-end: null !default;
+        $product-price-component-variant-font-size: null !default;
+        $product-price-component-variant-font-weight: null !default;
+        $product-price-component-bundle-font-size: null !default;
+        $product-price-component-bundle-font-weight: $font-weight-normal !default;
+
+        & {
+            font-size: $product-price-component-font-size;
+            font-weight: $font-weight-bold;
+            margin: $m-secondary 0;
+            color: $product-price-component-color;
+        }
+
+        .regular-product-price-component,
+        .final-product-price-component,
+        .minimum-product-price-component {
+            padding: $product-price-component-variant-padding;
+            padding-inline-end: $product-price-component-variant-padding-inline-end;
+            margin: $product-price-component-variant-margin;
+            font-size: $product-price-component-variant-font-size;
+            font-weight: $product-price-component-variant-font-weight;
+        }
+
+        .final-product-price-component-discounted-value {
+            padding: initial;
+            padding-inline-end: $p-secondary;
+        }
+
+        .editable-bundle-price-component {
+            &-value {
+                font-weight: $product-price-component-bundle-font-weight;
+                font-size: $product-price-component-bundle-font-size;
+            }
+
+            &-label {
+                display: none;
+            }
+        }
+    }
+}

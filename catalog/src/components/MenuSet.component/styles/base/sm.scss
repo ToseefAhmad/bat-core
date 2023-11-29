@@ -1,0 +1,158 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app .menu-set-component {
+        $menu-set-component-category-margin-sm: 0 $m-tertiary !default;
+        $menu-set-component-category-padding-sm: $p-primary $p-tertiary !default;
+        $menu-set-component-category-height-sm: 5.8rem !default;
+        $menu-set-component-toggle-button-padding-sm: $menu-set-component-category-padding-sm !default;
+        $menu-set-component-second-level-category-height-sm: 25rem !default;
+        $menu-set-component-second-level-category-font-size-sm: 2rem !default;
+        $menu-set-component-second-level-icon-image-max-height-sm: null !default;
+        $menu-set-component-menu-set-nav-max-width-sm: null !default;
+        $menu-set-component-menu-set-double-max-width-sm: 45rem !default;
+        $menu-set-component-accordion-padding-sm: 0 7rem !default;
+        $menu-set-component-accordion-background-color-sm: $dark !default;
+        $menu-set-component-all-margin-sm: 0 -7rem !default;
+        $menu-set-component-all-background-color-sm: null !default;
+        $menu-set-component-all-color-sm: null !default;
+        $menu-set-component-all-hover-color-sm: null !default;
+        $menu-set-component-all-icon-background-image-url-sm: null !default;
+        $menu-set-component-second-level-category-background-color-sm: null !default;
+
+        & {
+            position: relative;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: $max-content-width;
+            margin: auto;
+            height: 100%;
+        }
+
+        &-nav {
+            height: 100%;
+        }
+
+        &-category {
+            margin: $menu-set-component-category-margin-sm;
+            padding: $menu-set-component-category-padding-sm;
+            border: none;
+            max-height: none;
+            height: $menu-set-component-category-height-sm;
+        }
+
+        &-toggle.accordion-toggle-component.button-component {
+            background-image: none;
+            border-top: none;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            padding: $menu-set-component-toggle-button-padding-sm;
+        }
+
+        &-toggle.accordion-toggle-component.button-component.accordion-toggle-component-active {
+            background-image: none;
+        }
+
+        &-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: $header-elements-z-index;
+        }
+
+        &-collapse.collapse.show,
+        &-collapse.collapsing {
+            padding: 0;
+        }
+
+        &-collapse-content {
+            padding: $menu-set-component-accordion-padding-sm;
+            background-color: $menu-set-component-accordion-background-color-sm;
+        }
+
+        &-collapse-content .menu-set-component {
+            flex-wrap: nowrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        &-all {
+            & {
+                background-color: $menu-set-component-all-background-color-sm;
+                color: $menu-set-component-all-color-sm;
+                padding: $p-secondary;
+                margin: $menu-set-component-all-margin-sm;
+                font-size: $font-size-md;
+            }
+
+            &:hover {
+                color: $menu-set-component-all-hover-color-sm;
+            }
+        }
+
+        &-all-icon {
+            background-image: $menu-set-component-all-icon-background-image-url-sm;
+        }
+
+        .cms-content {
+            order: 2;
+        }
+
+        .no-display {
+            display: none;
+        }
+
+        &-collapse-content .menu-set-component-category {
+            height: $menu-set-component-second-level-category-height-sm;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            font-size: $menu-set-component-second-level-category-font-size-sm;
+            background-color: $menu-set-component-second-level-category-background-color-sm;
+        }
+
+        &-collapse-content .menu-set-component-icon {
+            & {
+                width: 50%;
+            }
+
+            img {
+                max-height: $menu-set-component-second-level-icon-image-max-height-sm;
+            }
+        }
+
+        &-collapse-content .menu-set-component-title {
+            width: 50%;
+            margin-left: $m-secondary;
+            white-space: normal;
+        }
+
+        &-icon.menu-set-component-cms-content {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &-collapse-content .menu-set-component-nav {
+            max-width: $menu-set-component-menu-set-nav-max-width-sm;
+            margin: 0 $m-tertiary;
+        }
+
+        &-collapse-content .cms-nav-item-double {
+            max-width: $menu-set-component-menu-set-double-max-width-sm;
+        }
+
+        &-collapse-content .menu-set-component-wrapper {
+            overflow-x: auto;
+            white-space: nowrap;
+            margin: 0 -#{$m-secondary};
+        }
+
+        .accordion-collapse-component {
+            padding: 0;
+        }
+    }
+}

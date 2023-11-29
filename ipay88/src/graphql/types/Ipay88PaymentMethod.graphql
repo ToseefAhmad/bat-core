@@ -1,0 +1,19 @@
+type Ipay88PaymentMethod {
+    """
+    [ipay88][BAT]
+    Ipay88 payment item identifier
+    """
+    id: ID
+
+    """
+    [ipay88][BAT]
+    Ipay88 payment item name
+    """
+    name: String
+
+    """
+    [ipay88][BAT]
+    Ipay88 payment item logo name
+    """
+    logo: String
+}

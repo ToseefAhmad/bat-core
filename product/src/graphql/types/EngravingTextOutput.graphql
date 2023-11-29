@@ -1,0 +1,11 @@
+"""
+[product][BAT]
+Device engraving text validation output
+"""
+type EngravingTextOutput {
+    """
+    [product][BAT]
+    Flag identifies if engraving text is valid
+    """
+    is_valid: Boolean
+}

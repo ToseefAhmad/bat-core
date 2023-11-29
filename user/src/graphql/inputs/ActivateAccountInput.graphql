@@ -1,0 +1,17 @@
+"""
+[user][BAT]
+Input used for account activation
+"""
+input ActivateAccountInput {
+    """
+    [user][BAT]
+    Customer ID from confirmation email
+    """
+    id: Int
+
+    """
+    [user][BAT]
+    Key from confirmation email
+    """
+    key: String
+}

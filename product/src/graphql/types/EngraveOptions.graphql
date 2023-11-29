@@ -1,0 +1,23 @@
+"""
+[product][BAT]
+Device engraving options
+"""
+type EngraveOptions {
+    """
+    [product][BAT]
+    List of icons
+    """
+    icons: [EngraveIcon]
+
+    """
+    [product][BAT]
+    List of patterns
+    """
+    patterns: [EngravePattern]
+
+    """
+    [product][BAT]
+    List of fonts
+    """
+    fonts: [EngraveFont]
+}

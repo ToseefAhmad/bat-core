@@ -1,0 +1,5 @@
+mutation ValidateEngravingTextMutation($input: EngravingTextInput) {
+    validateEngravingText(input: $input) {
+        is_valid
+    }
+}

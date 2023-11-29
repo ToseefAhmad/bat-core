@@ -1,0 +1,21 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .cms-menu-items-component {
+        $cms-menu-items-component-background-color-md: $primary !default;
+        $cms-menu-items-component-active-color-md: $primary !default;
+        $cms-menu-items-component-hover-color-md: $primary !default;
+
+        &-link:hover {
+            color: $cms-menu-items-component-hover-color-md;
+        }
+
+        &-link.active {
+            color: $cms-menu-items-component-active-color-md;
+            cursor: default;
+            background-color: $cms-menu-items-component-background-color-md;
+            border-bottom-color: $cms-menu-items-component-background-color-md;
+        }
+    }
+}

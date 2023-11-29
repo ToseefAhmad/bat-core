@@ -1,0 +1,9 @@
+.app {
+    .variation-attribute-swatch-component {
+        $variation-attribute-swatch-component-value-box-shadow-color-hover: null !default;
+
+        .variation-attribute-swatch-component-value:hover {
+            box-shadow: 0 0 0.9rem 0 $variation-attribute-swatch-component-value-box-shadow-color-hover;
+        }
+    }
+}

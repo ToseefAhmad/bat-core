@@ -1,0 +1,26 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .account-address-book-actions-component {
+        $account-address-book-actions-component-button-padding-block-start: 2.1rem !default;
+        $account-address-book-actions-component-button-padding-block-end: $p-primary !default;
+
+        & {
+            border: none;
+        }
+
+        .button-component {
+            padding-block-start: $account-address-book-actions-component-button-padding-block-start;
+            padding-block-end: $account-address-book-actions-component-button-padding-block-end;
+            border: none;
+
+            + .button-component::after {
+                border-color: $gray-light-primary;
+            }
+        }
+
+        &-delete.button-component {
+            color: $primary-font-color;
+        }
+    }
+}

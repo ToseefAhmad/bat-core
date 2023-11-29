@@ -1,0 +1,25 @@
+type City {
+    """
+    [common][BAT]
+    City ID
+    """
+    id: ID
+
+    """
+    [common][BAT]
+    City Code
+    """
+    code: String
+
+    """
+    [common][BAT]
+    List of Districts
+    """
+    districts: [District]
+
+    """
+    [common][BAT]
+    City Name
+    """
+    name: String
+}

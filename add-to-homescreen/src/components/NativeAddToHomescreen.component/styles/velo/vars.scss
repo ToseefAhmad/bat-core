@@ -1,0 +1,8 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$native-add-to-homescreen-control-border-color-hover: $secondary;
+$native-add-to-homescreen-control-border-color-focus: $secondary;
+$native-add-to-homescreen-control-border-color-active: $secondary;
+$native-add-to-homescreen-control-background-color: $tertiary;
+$native-add-to-homescreen-control-background-image: url('../../../../../../common/src/resources/svg/velo/velo-logo-small.svg');
+$native-add-to-homescreen-control-box-shadow-focus: 0 0 0.9rem 0 $secondary;

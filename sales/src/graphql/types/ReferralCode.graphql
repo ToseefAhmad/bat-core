@@ -1,0 +1,11 @@
+"""
+[sales][VELO]
+Referral code
+"""
+type ReferralCode {
+    """
+    [sales][VELO]
+    Referral code
+    """
+    referral_code: String
+}

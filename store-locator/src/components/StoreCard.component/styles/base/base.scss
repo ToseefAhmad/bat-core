@@ -1,0 +1,140 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.store-card-component {
+    $store-card-component-min-height: 13.7rem !default;
+    $store-card-component-border-color: #dedede !default;
+    $store-card-component-distance-color: #6b6b6b !default;
+    $store-card-component-header-image-max-width: 2rem !default;
+    $store-card-component-footer-height: null !default;
+    $store-card-component-footer-width: 18.6rem !default;
+    $store-card-component-button-border-color: $primary !default;
+    $store-card-component-button-border-width: $border-width-lg !default;
+    $store-card-component-button-display: null !default;
+    $store-card-component-button-align: null !default;
+    $store-card-component-button-justify: null !default;
+    $store-card-component-button-padding-block-start: null !default;
+    $store-card-component-button-padding-block-end: null !default;
+    $store-card-component-button-padding-inline-start: null !default;
+    $store-card-component-button-padding-inline-end: null !default;
+    $store-card-component-button-margin-block-start: $m-secondary !default;
+    $store-card-component-button-color: null !default;
+    $store-card-component-button-border-radius: null !default;
+    $store-card-component-button-hover-border: null !default;
+    $store-card-component-button-focus-box-shadow: none !default;
+    $store-card-component-title-font-size: 1.6rem !default;
+    $store-card-component-title-color: #686868 !default;
+    $store-card-component-title-padding-inline-start: $p-secondary !default;
+    $store-card-component-title-padding-inline-end: 2.6rem !default;
+    $store-card-component-info-window-title-background-size: 2rem 2.5rem !default;
+    $store-card-component-info-window-title-background-position: 0 2rem !default;
+    $store-card-component-info-window-title-logo-padding-inline-start: 2.5rem !default;
+    $store-card-component-padding-block-start: $p-primary !default;
+    $store-card-component-padding-block-end: $p-secondary !default;
+
+    & {
+        width: 100%;
+        min-height: $store-card-component-min-height;
+        border: $border-width-lg solid $store-card-component-border-color;
+        padding-block-start: $p-secondary;
+        padding-block-end: $p-secondary;
+        padding-inline-start: $p-primary;
+        padding-inline-end: $p-primary;
+        margin-block-start: $m-secondary;
+    }
+
+    &-active {
+        border: $border-width-lg solid $tertiary;
+    }
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        padding-block-end: $p-secondary;
+
+        &-name {
+            display: flex;
+            font-size: $h3-font-size;
+            font-weight: $font-weight-bold;
+        }
+
+        &-distance {
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            color: $store-card-component-distance-color;
+        }
+
+        &-image.image-component {
+            padding-top: 0;
+            margin-inline-end: $m-tertiary;
+            max-width: $store-card-component-header-image-max-width;
+        }
+
+        .image-component-image-block {
+            position: static;
+        }
+    }
+
+    &-address {
+        font-size: $h4-font-size;
+    }
+
+    &-footer {
+        .button-component {
+            width: $store-card-component-footer-width;
+            height: $store-card-component-footer-height;
+            display: $store-card-component-button-display;
+            align-items: $store-card-component-button-align;
+            justify-content: $store-card-component-button-justify;
+            padding-block-start: $store-card-component-button-padding-block-start;
+            padding-block-end: $store-card-component-button-padding-block-end;
+            padding-inline-start: $store-card-component-button-padding-inline-start;
+            padding-inline-end: $store-card-component-button-padding-inline-end;
+            margin-block-start: $store-card-component-button-margin-block-start;
+            border-color: $store-card-component-button-border-color;
+            border-width: $store-card-component-button-border-width;
+            border-radius: $store-card-component-button-border-radius;
+            color: $store-card-component-button-color;
+
+            &:hover,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                border-color: $store-card-component-button-hover-border;
+            }
+
+            &:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                box-shadow: $store-card-component-button-focus-box-shadow;
+            }
+        }
+
+        &-title {
+            font-size: $font-size-mobile;
+            font-weight: $font-weight-bold;
+            color: $primary;
+        }
+    }
+
+    &-info-window-title {
+        font-weight: $font-weight-bold;
+        font-size: $store-card-component-title-font-size;
+        color: $store-card-component-title-color;
+        padding-block-start: $store-card-component-padding-block-start;
+        padding-block-end: $store-card-component-padding-block-end;
+        padding-inline-start: $store-card-component-title-padding-inline-start;
+        padding-inline-end: $store-card-component-title-padding-inline-end;
+    }
+
+    &-info-window-title-logo {
+        padding-inline-start: $store-card-component-info-window-title-logo-padding-inline-start;
+        background-repeat: no-repeat;
+        background-size: $store-card-component-info-window-title-background-size;
+        background-position: $store-card-component-info-window-title-background-position;
+    }
+
+    &-info-window-address {
+        color: $store-card-component-title-color;
+        font-size: $h4-font-size;
+        padding-inline-start: $p-secondary;
+    }
+}

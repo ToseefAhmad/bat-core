@@ -1,0 +1,261 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+@import '~@luft/common/src/components/Overlay.component/index';
+
+.app {
+    .mini-cart-component {
+        $mini-cart-component-z-index: 1041;
+        $mini-cart-component-width: 33.8rem;
+        $mini-cart-component-title-font-size: 2rem;
+        $mini-cart-component-title-font-weight: null !default;
+        $mini-cart-component-title-font-family: null !default;
+        $mini-cart-component-total-font-weight: null !default;
+        $mini-cart-component-background-color: #efefef;
+        $mini-cart-component-header-margin-bottom: 0.9rem;
+        $mini-cart-component-close-button-size: 3rem;
+        $mini-cart-component-close-arrow-background-size: 2rem 1.3rem;
+        $mini-cart-component-close-button-background-color-hover: darken(#efefef, 10%);
+        $mini-cart-component-close-button-box-shadow-focus: 0 0 0.9rem 0 #969696;
+        $mini-cart-component-close-button-translate-x: -0.5rem;
+        $mini-cart-component-title-block-margin-bottom: 1.8rem;
+        $mini-cart-component-summary-padding-bottom: 1.8rem;
+        $mini-cart-component-label-font-size: 1.3rem;
+        $mini-cart-component-total-font-size: 1.8rem;
+        $mini-cart-component-total-line-height: 0.78;
+        $mini-cart-component-item-margin-bottom: 0.4rem;
+        $mini-cart-component-buy-now-button-height: 5rem;
+        $mini-cart-component-buy-now-button-letter-spacing: 0.078rem;
+        $mini-cart-component-buy-now-button-padding-y: 0.9rem;
+        $mini-cart-component-cart-item-title-width: 12.8rem;
+        $mini-cart-component-edit-item-icon-right: 1rem;
+        $mini-cart-component-edit-item-icon-top: 1rem;
+        $mini-cart-component-cart-continue-shopping-max-width: 41rem;
+        $mini-cart-component-variation-attribute-max-width: 21rem;
+        $mini-cart-component-view-link-font-size: null !default;
+        $mini-cart-component-view-link-color: null !default;
+
+        & {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: $mini-cart-component-z-index;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: $mini-cart-component-width;
+            height: 100%;
+            padding: $p-primary $p-primary 0;
+            background-color: $mini-cart-component-background-color;
+        }
+
+        & + .overlay-component {
+            cursor: url('../../../../../../common/src/resources/svg/base/bat-close-white.svg'), pointer;
+        }
+
+        &-empty {
+            justify-content: normal;
+        }
+
+        &-header {
+            margin-bottom: $mini-cart-component-header-margin-bottom;
+        }
+
+        &-title-block {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: $mini-cart-component-title-block-margin-bottom;
+        }
+
+        &-close-button.button-component {
+            & {
+                padding: 0;
+                background-color: $mini-cart-component-background-color;
+                border: none;
+                width: $mini-cart-component-close-button-size;
+                height: $mini-cart-component-close-button-size;
+                background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-right.svg');
+                background-size: $mini-cart-component-close-arrow-background-size;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                transform: translateX($mini-cart-component-close-button-translate-x);
+                transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+            }
+
+            &:hover {
+                background-color: $mini-cart-component-close-button-background-color-hover;
+                background-position: center;
+            }
+
+            &:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                background-color: $mini-cart-component-close-button-background-color-hover;
+                box-shadow: $mini-cart-component-close-button-box-shadow-focus;
+            }
+        }
+
+        &-title {
+            width: 100%;
+            font-size: $mini-cart-component-title-font-size;
+            font-weight: $mini-cart-component-title-font-weight;
+            font-family: $mini-cart-component-title-font-family;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: normal;
+        }
+
+        &-summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-bottom: $mini-cart-component-summary-padding-bottom;
+            border-bottom: $border-width solid $dark;
+        }
+
+        &-label {
+            font-size: $mini-cart-component-label-font-size;
+            font-weight: $font-weight-semibold;
+            text-transform: uppercase;
+        }
+
+        &-total {
+            font-size: $mini-cart-component-total-font-size;
+            font-weight: $mini-cart-component-total-font-weight;
+            line-height: $mini-cart-component-total-line-height;
+        }
+
+        &-products {
+            flex-grow: 1;
+            margin-bottom: $m-primary;
+
+            @include scrollable-list('.cart-item-component');
+        }
+
+        .final-product-price-component {
+            white-space: normal;
+        }
+
+        .cart-item-component {
+            border-top: none;
+
+            &:not(:last-child) {
+                margin-bottom: $mini-cart-component-item-margin-bottom;
+                margin-top: 0;
+            }
+
+            &-content {
+                padding: $p-secondary;
+            }
+
+            &-edit-button {
+                position: absolute;
+                top: $mini-cart-component-edit-item-icon-top;
+                right: $mini-cart-component-edit-item-icon-right;
+            }
+
+            .product-pane-component-name-link {
+                display: block;
+                width: $mini-cart-component-cart-item-title-width;
+            }
+
+            .product-title-component {
+                font-weight: $font-weight-normal;
+                overflow: hidden;
+                max-width: 100%;
+                text-overflow: ellipsis;
+            }
+
+            .configurable-product-plain-options-component {
+                white-space: initial;
+            }
+
+            .error-component {
+                white-space: initial;
+            }
+        }
+
+        &-footer {
+            text-align: center;
+        }
+
+        &-buy-now-button.button-component {
+            height: $mini-cart-component-buy-now-button-height;
+            padding-top: $mini-cart-component-buy-now-button-padding-y;
+            padding-bottom: $mini-cart-component-buy-now-button-padding-y;
+            letter-spacing: $mini-cart-component-buy-now-button-letter-spacing;
+        }
+
+        &-view-button.button-component.button-component-link {
+            & {
+                padding: 0;
+                margin-top: $m-primary;
+                margin-bottom: $m-primary;
+                line-height: 1;
+                font-size: $mini-cart-component-view-link-font-size;
+                color: $mini-cart-component-view-link-color;
+                text-transform: uppercase;
+                text-decoration: underline;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .variation-attribute {
+            max-width: $mini-cart-component-variation-attribute-max-width;
+        }
+
+        .cart-continue-shopping {
+            max-width: $mini-cart-component-cart-continue-shopping-max-width;
+            margin-top: $m-secondary !important; // Override inline style
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        .mini-cart-component {
+            $mini-cart-component-title-font-size-rtl: 2.4rem;
+            $mini-cart-component-item-edit-button-left-rtl: 1rem;
+
+            & {
+                left: 0;
+                right: initial;
+            }
+
+            &-close-button.button-component.button-component-primary {
+                background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-left.svg');
+                background-position: right center;
+                left: initial;
+                right: 0;
+            }
+
+            &-title {
+                font-size: $mini-cart-component-title-font-size-rtl;
+            }
+
+            &-total {
+                font-size: $font-size-lg;
+            }
+
+            &-label {
+                font-size: $font-size-md;
+                font-weight: $font-weight-normal;
+                text-transform: none;
+            }
+
+            .cart-item-component {
+                &-edit-button.button-component {
+                    right: initial;
+                    left: $mini-cart-component-item-edit-button-left-rtl;
+                }
+            }
+        }
+    }
+}

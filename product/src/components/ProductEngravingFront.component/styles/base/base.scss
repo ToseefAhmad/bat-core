@@ -1,0 +1,181 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .product-engraving-front-component {
+    $product-engraving-front-component-title-font-size: 2rem;
+    $product-engraving-front-component-title-margin: 3rem 0;
+    $product-engraving-front-component-tabs-margin-bottom: 3rem;
+    $product-engraving-front-component-tabs-title-line-height: 1.4rem;
+    $product-engraving-front-component-control-height: 5rem;
+    $product-engraving-front-component-control-width: 17.9rem;
+    $product-engraving-front-component-variations-item-width: 25%;
+    $product-engraving-front-component-preview-icon-height: 10.8rem;
+    $product-engraving-front-component-actions-cancel-background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-right-black.svg') !default;
+    $product-engraving-front-component-actions-cancel-padding-inline-end: 3rem;
+    $product-engraving-front-component-actions-cancel-background-size: 2rem 1.4rem;
+    $product-engraving-front-component-actions-continue-width: 22rem;
+
+    &-title {
+        font-size: $product-engraving-front-component-title-font-size;
+        font-weight: $font-weight-semibold;
+        margin: $product-engraving-front-component-title-margin;
+    }
+
+    &-tabs {
+        & {
+            margin-bottom: $product-engraving-front-component-tabs-margin-bottom;
+        }
+
+        &-title {
+            font-weight: $font-weight-semibold;
+            margin-bottom: $m-primary;
+            text-transform: uppercase;
+            line-height: $product-engraving-front-component-tabs-title-line-height;
+        }
+
+        &-control {
+            display: flex;
+        }
+
+        &-control-item.button-component.button-component-primary {
+            & {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: $product-engraving-front-component-control-height;
+                width: $product-engraving-front-component-control-width;
+                background-color: $gray-light-secondary;
+                font-weight: $font-weight-semibold;
+                font-size: $h4-font-size;
+                border-radius: 0;
+                text-transform: none;
+            }
+
+            &.active,
+            &:hover,
+            &:focus,
+            &:not(:disabled):not(.disabled):active {
+                background-color: $darker;
+                color: $light;
+                box-shadow: none;
+            }
+        }
+
+        &-control-item:first-child {
+            margin-inline-end: $m-tertiary;
+        }
+
+        &-error {
+            margin-top: $m-secondary;
+        }
+    }
+
+    &-variations {
+        & {
+            margin-bottom: $m-primary;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -#{$m-tertiary};
+            margin-left: -#{$m-tertiary};
+        }
+
+        &-list-col {
+            flex: 0 0 $product-engraving-front-component-variations-item-width;
+            max-width: $product-engraving-front-component-variations-item-width;
+            padding-right: $p-tertiary;
+            padding-left: $p-tertiary;
+            margin-bottom: $m-secondary;
+        }
+
+        &-title {
+            font-weight: $font-weight-semibold;
+            margin-bottom: $m-primary;
+            text-transform: uppercase;
+        }
+
+        &-list-item {
+            & {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: $p-secondary;
+                background-color: $gray-light-secondary;
+                cursor: pointer;
+            }
+        }
+
+        &-list-item.active,
+        &-list-item:hover {
+            & {
+                background-color: $darker;
+            }
+
+            .product-engraving-front-component-variations-list-item-image {
+                filter: invert(0);
+            }
+
+            .product-engraving-front-component-variations-list-item-title {
+                color: $light;
+            }
+        }
+
+        &-list-item-image {
+            height: $product-engraving-front-component-preview-icon-height;
+            filter: invert(1);
+        }
+
+        &-list-item-title {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+            padding-top: $p-secondary;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    &-actions {
+        & {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-continue.button-component {
+            width: $product-engraving-front-component-actions-continue-width;
+        }
+
+        &-cancel.button-component {
+            margin: 0;
+            text-transform: uppercase;
+            box-shadow: initial;
+            padding-inline-end: $product-engraving-front-component-actions-cancel-padding-inline-end;
+            background: $product-engraving-front-component-actions-cancel-background-image no-repeat;
+            background-position: center right;
+            background-size: $product-engraving-front-component-actions-cancel-background-size;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app .product-engraving-front-component {
+        $product-engraving-front-component-actions-cancel-background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-left-black.svg') !default;
+        $product-engraving-front-component-actions-cancel-background-size: 2rem 1.4rem;
+
+        &-tabs-title,
+        &-variations-title {
+            font-weight: $font-weight-bold;
+        }
+
+        &-actions {
+            &-cancel.button-component {
+                background: $product-engraving-front-component-actions-cancel-background-image no-repeat;
+                background-position: center left;
+                background-size: $product-engraving-front-component-actions-cancel-background-size;
+            }
+        }
+    }
+}

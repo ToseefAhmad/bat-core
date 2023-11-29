@@ -1,0 +1,10 @@
+.app {
+    $coupons-wallet-component-apply-padding-inline: null !default;
+
+    .coupons-wallet-component {
+        &-item-apply {
+            padding-inline-start: $coupons-wallet-component-apply-padding-inline;
+            padding-inline-end: $coupons-wallet-component-apply-padding-inline;
+        }
+    }
+}

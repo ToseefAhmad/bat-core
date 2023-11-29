@@ -1,0 +1,12 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .select-component {
+        // Fix the problem of stretching the dropdown when entering too long a search query.
+        $select-component-input-max-width: 48rem !default;
+
+        &-custom__input {
+            max-width: $select-component-input-max-width;
+        }
+    }
+}

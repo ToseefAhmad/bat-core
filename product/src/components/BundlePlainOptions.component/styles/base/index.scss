@@ -1,0 +1,84 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/components/Accordion.component/index';
+
+.app {
+    .bundle-plain-options-component {
+        $bundle-plain-options-component-button-after-width: 1.4rem !default;
+        $bundle-plain-options-component-button-after-height: 0.9rem !default;
+        $bundle-plain-options-component-button-after-top: -0.1rem !default;
+        $bundle-plain-options-component-button-after-transition-duration: 0.5s !default;
+        $bundle-plain-options-component-collapse-line-height: 2 !default;
+        $bundle-plain-options-component-item-option-width: 80% !default;
+        $bundle-plain-options-component-item-qty-width: 20% !default;
+
+        &-toggle.button-component {
+            padding: 0;
+            width: inherit;
+            font-size: $font-size-base;
+            text-transform: uppercase;
+            background-image: none;
+            line-height: 1;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                margin-inline-start: $m-secondary;
+                position: relative;
+                width: $bundle-plain-options-component-button-after-width;
+                height: $bundle-plain-options-component-button-after-height;
+                background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-down.svg');
+                background-repeat: no-repeat;
+                top: $bundle-plain-options-component-button-after-top;
+                transition-duration: $bundle-plain-options-component-button-after-transition-duration;
+                vertical-align: middle;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &-toggle.button-component.accordion-toggle-component-active {
+            &::after {
+                transform: rotate(180deg);
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &-collapse {
+            padding: 0;
+            padding-block-start: $p-tertiary;
+            line-height: $bundle-plain-options-component-collapse-line-height;
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: $m-tertiary;
+        }
+
+        &-item-option {
+            width: $bundle-plain-options-component-item-option-width;
+            overflow-wrap: break-word;
+            white-space: break-spaces;
+        }
+
+        &-item-qty {
+            width: $bundle-plain-options-component-item-qty-width;
+            text-align: end;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app .bundle-plain-options-component {
+        $bundle-plain-options-component-button-after-left: -2rem !default;
+
+        &-toggle.button-component::after {
+            right: initial;
+            left: $bundle-plain-options-component-button-after-left;
+        }
+    }
+}

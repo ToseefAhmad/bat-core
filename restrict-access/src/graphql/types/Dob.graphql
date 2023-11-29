@@ -1,0 +1,7 @@
+type Dob {
+    """
+    [restrict-access][BAT]
+    Date of birth extracted from National ID
+    """
+    dob: String
+}

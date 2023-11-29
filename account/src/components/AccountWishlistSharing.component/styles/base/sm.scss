@@ -1,0 +1,47 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    $account-wishlist-sharing-component-modal-share-button-margin-block-start: 1rem !default;
+    $account-wishlist-sharing-component-modal-share-button-order: 1 !default;
+    $account-wishlist-sharing-component-modal-cancel-button: 2 !default;
+
+    .account-wishlist-sharing-component {
+        &-share-button {
+            width: 100%;
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+
+            .account-wishlist-sharing-component-modal-share-button {
+                order: $account-wishlist-sharing-component-modal-share-button-order;
+            }
+
+            .account-wishlist-sharing-component-modal-cancel-button {
+                order: $account-wishlist-sharing-component-modal-cancel-button;
+            }
+        }
+
+        &-form-actions {
+            margin-top: 0;
+        }
+
+        &-modal-cancel-button,
+        &-modal-share-button {
+            width: 100%;
+            margin-block-start: $account-wishlist-sharing-component-modal-share-button-margin-block-start;
+        }
+
+        &-modal {
+            .modal-component-body {
+                padding: $p-primary;
+            }
+
+            .form-control-label-transform.form-label {
+                text-align: start;
+            }
+        }
+    }
+}

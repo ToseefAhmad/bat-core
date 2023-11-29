@@ -1,0 +1,21 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/review/src/components/ReviewRatingVote.component/index';
+
+.review-rating-vote-component {
+    $review-rating-vote-component-star-width: 4.3rem !default;
+    $review-rating-vote-component-star-height: 4.2rem !default;
+    $review-rating-vote-component-star-background-image: url('../../../../../../common/src/resources/svg/base/bat-star.svg') !default;
+    $review-rating-vote-component-star-empty-background-image: url('../../../../../../common/src/resources/svg/base/bat-star-empty.svg') !default;
+
+    &-label {
+        width: $review-rating-vote-component-star-width;
+        height: $review-rating-vote-component-star-height;
+        background: $review-rating-vote-component-star-empty-background-image repeat-x 0 0;
+        background-size: $review-rating-vote-component-star-width $review-rating-vote-component-star-height;
+    }
+
+    &-item-active .review-rating-vote-component-label,
+    &-input:checked + .review-rating-vote-component-label {
+        background-image: $review-rating-vote-component-star-background-image;
+    }
+}

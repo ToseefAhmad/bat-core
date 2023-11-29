@@ -1,0 +1,17 @@
+query ProductEngravingConfig {
+    storeConfig {
+        is_enabled_device_psn
+        device_psn_max_characters_horizontal
+        device_psn_max_characters_vertical
+        device_psn_regex
+        device_psn_price {
+            currency
+            value
+        }
+        device_psn_special_price {
+            currency
+            value
+        }
+        device_psn_pdp_disclaimer
+    }
+}

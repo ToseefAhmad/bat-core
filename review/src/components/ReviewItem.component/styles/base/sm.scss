@@ -1,0 +1,27 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .review-item-component {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: $m-primary;
+        margin-inline-end: $m-primary;
+
+        &-details {
+            cursor: auto;
+        }
+
+        &-action.button-component {
+            padding-block-start: 0;
+            padding-block-end: 0;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            margin-block-start: $m-secondary;
+            font-size: $font-size-md;
+            font-weight: $font-weight-bold;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    }
+}

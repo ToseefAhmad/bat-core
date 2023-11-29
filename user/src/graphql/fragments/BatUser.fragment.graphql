@@ -1,0 +1,27 @@
+fragment BatUserFragment on User {
+    id
+    email
+    first_name
+    last_name
+    phone_number
+    ktp_id
+    dob
+    gender
+    prefix
+    newsletter_subscribe
+    referral
+    consent
+    status_code
+    connected_social_providers {
+        type
+        first_name
+        last_name
+    }
+    is_social_register
+    is_age_verified
+    password_info {
+        is_password_updated
+        rp_token
+    }
+    phone_is_confirmed
+}

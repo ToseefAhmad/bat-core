@@ -1,0 +1,24 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.cms-register-success-component {
+    $cms-register-success-component-background-image: url('../../../../../../common/src/resources/svg/base/bat-check-success.svg') !default;
+    $cms-register-success-component-background-size: 5rem !default;
+    $cms-register-success-component-background-position: top center !default;
+    $cms-register-success-component-padding-block-start: 7rem !default;
+    $cms-register-success-component-title-font-size: 2rem !default;
+    $cms-register-success-component-title-font-weight: 500 !default;
+
+    & {
+        background-image: $cms-register-success-component-background-image;
+        background-size: $cms-register-success-component-background-size;
+        background-position: $cms-register-success-component-background-position;
+        background-repeat: no-repeat;
+        padding-block-start: $cms-register-success-component-padding-block-start;
+        text-align: center;
+    }
+
+    &-title {
+        font-size: $cms-register-success-component-title-font-size;
+        font-weight: $cms-register-success-component-title-font-weight;
+    }
+}

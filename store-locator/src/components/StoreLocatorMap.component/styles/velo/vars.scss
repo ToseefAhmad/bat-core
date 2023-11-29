@@ -1,0 +1,6 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$store-locator-map-component-close-button-background-image: url('../../../../../../common/src/resources/svg/velo/velo-close.svg') !important;
+
+// sm
+$store-locator-map-component-info-window-width-sm: calc(100vw - 4rem);

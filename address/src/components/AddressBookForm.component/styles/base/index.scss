@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .address-book-form-component {
+        .country-control-component,
+        .region-control-component,
+        .city-control-component,
+        .district-control-component {
+            margin-block-end: $m-secondary;
+        }
+
+        .form-group-component:last-child {
+            margin-block-end: 0;
+        }
+    }
+}

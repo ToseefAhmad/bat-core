@@ -1,0 +1,7 @@
+type isCanShowFreeGiftPopup {
+    """
+    [free-gift][BAT]
+    Show flag
+    """
+    show: Boolean
+}

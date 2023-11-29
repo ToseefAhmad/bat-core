@@ -1,0 +1,6 @@
+query BatSocialProviders($order_ids: [ID], $page_type: SocialLoginPageTypeEnum) {
+    socialProviders(order_ids: $order_ids, page_type: $page_type) {
+        type
+        url
+    }
+}

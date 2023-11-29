@@ -1,0 +1,50 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.age-verification-modal-component {
+    $age-verification-modal-component-border-color: $gray !default;
+    $age-verification-modal-component-header-title-font-size: null !default;
+    $age-verification-modal-component-header-title-font-family: null !default;
+
+    &.modal-component {
+        & {
+            pointer-events: all;
+        }
+
+        .modal-component-dialog {
+            top: 0;
+            transform: none;
+        }
+
+        .modal-component-header {
+            border-bottom: $border-width solid $age-verification-modal-component-border-color;
+
+            &.modal-component-header-secondary-revert .modal-component-title {
+                margin-inline-start: 0;
+                font-size: $age-verification-modal-component-header-title-font-size;
+                font-family: $age-verification-modal-component-header-title-font-family;
+            }
+        }
+
+        .modal-component-header,
+        .modal-component-body {
+            color: $primary;
+        }
+
+        &.modal-component-confirm .modal-component-body-content {
+            max-width: none;
+            text-align: left;
+        }
+    }
+
+    .modal-component-close {
+        display: none;
+    }
+}
+
+@media (max-height: 700px) {
+    .age-verification-modal-component {
+        &.modal-component .modal-component-dialog {
+            height: 100%;
+        }
+    }
+}

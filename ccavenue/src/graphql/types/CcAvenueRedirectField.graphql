@@ -1,0 +1,13 @@
+type CcAvenueRedirectField {
+    """
+    [ccavenue][BAT]
+    Field's name
+    """
+    name: String
+
+    """
+    [ccavenue][BAT]
+    Field's value
+    """
+    value: String
+}

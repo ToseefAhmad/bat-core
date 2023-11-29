@@ -1,0 +1,13 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        .newsletter-component {
+            &-form-title {
+                letter-spacing: $letter-spacing-mobile;
+                font-size: $font-size-mobile;
+            }
+        }
+    }
+}

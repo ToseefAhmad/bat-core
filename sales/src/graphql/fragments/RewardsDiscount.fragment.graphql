@@ -1,0 +1,9 @@
+fragment RewardsDiscountFragment on RewardsDiscount {
+    amount {
+        currency
+        value
+    }
+    points_spent
+    points_earn
+    points_earn_flag
+}

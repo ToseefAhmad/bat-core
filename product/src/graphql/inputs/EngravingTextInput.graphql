@@ -1,0 +1,11 @@
+"""
+[product][BAT]
+Input is used as an argument for 'ValidateEngravingTextMutation' mutation
+"""
+input EngravingTextInput {
+    """
+    [product][BAT]
+    Text to validate
+    """
+    engraving_text: String
+}

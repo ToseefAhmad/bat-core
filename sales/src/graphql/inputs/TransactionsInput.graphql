@@ -1,0 +1,17 @@
+"""
+[sales][BAT]
+Transactions input
+"""
+input TransactionsInput {
+    """
+    [sales][BAT]
+    Specifies the offset of results to return
+    """
+    start: Int
+
+    """
+    [sales][BAT]
+    Specifies the maximum number of results to return at once
+    """
+    count: Int
+}

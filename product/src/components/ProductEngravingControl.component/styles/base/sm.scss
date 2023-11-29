@@ -1,0 +1,24 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .product-engraving-control-component {
+        $product-engraving-control-component-action-width-sm: 8rem;
+
+        &-content {
+            & {
+                padding-top: 0;
+                padding-bottom: 0;
+                padding-inline-end: $p-secondary;
+            }
+
+            &-title {
+                flex-direction: column;
+            }
+        }
+
+        &-action.button-component {
+            width: $product-engraving-control-component-action-width-sm;
+        }
+    }
+}

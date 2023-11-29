@@ -1,0 +1,10 @@
+#import "../fragments/Checkout.fragment.graphql"
+
+mutation addDobToCart($input: AddDobToCartInput) {
+    addDobToCart(input: $input) @connection(key: "cart") {
+        ...BatCheckoutFragment
+        dob {
+            dob
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .product-price-component {
+            $product-price-component-bundle-font-size-md: null !default;
+
+            .editable-bundle-price-component {
+                &-value {
+                    font-size: $product-price-component-bundle-font-size-md;
+                }
+            }
+        }
+    }
+}

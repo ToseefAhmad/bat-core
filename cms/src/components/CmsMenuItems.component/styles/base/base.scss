@@ -1,0 +1,25 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.cms-menu-items-component {
+    $cms-menu-items-component-color: $primary !default;
+    $cms-menu-items-component-border-bottom: $secondary-border-width solid $quaternary-border-color !default;
+    $cms-menu-items-component-font-size: $font-size-base !default;
+    $cms-menu-items-component-padding-block: 2.2rem !default;
+    $cms-menu-items-component-transition: background-color 0.2s !default;
+
+    &-link {
+        display: block;
+        border-bottom: $cms-menu-items-component-border-bottom;
+        color: $cms-menu-items-component-color;
+        font-size: $cms-menu-items-component-font-size;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1;
+        padding-block-start: $cms-menu-items-component-padding-block;
+        padding-block-end: $cms-menu-items-component-padding-block;
+        padding-inline-start: $p-primary;
+        padding-inline-end: $p-primary;
+        transition: $cms-menu-items-component-transition;
+    }
+}

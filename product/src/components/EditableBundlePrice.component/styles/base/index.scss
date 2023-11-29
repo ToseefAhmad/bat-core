@@ -1,0 +1,20 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .editable-bundle-price-component {
+        $editable-bundle-price-component-font-size: 2.8rem !default;
+        $editable-bundle-price-component-font-weight: $font-weight-extrabold !default;
+        $editable-bundle-price-component-line-height: $editable-bundle-price-component-font-size !default;
+
+        &-label,
+        &-sum-label {
+            display: none;
+        }
+
+        &-value {
+            font-size: $editable-bundle-price-component-font-size;
+            font-weight: $editable-bundle-price-component-font-weight;
+            line-height: $editable-bundle-price-component-line-height;
+        }
+    }
+}

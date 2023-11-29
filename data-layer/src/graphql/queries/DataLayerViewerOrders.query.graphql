@@ -1,0 +1,23 @@
+query DataLayerViewerOrdersQuery {
+    viewer {
+        token
+        user {
+            id
+            newsletter_subscribe
+            consent
+            orders {
+                total
+                items {
+                    id
+                    items {
+                        id
+                        product {
+                            product_id
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .account-preferences-component {
+        $account-preferences-component-padding-sm: 1.5rem !default;
+        $account-preferences-component-notes-font-size-sm: 1.1rem !default;
+        $account-preferences-component-button-width-sm: 33.5rem !default;
+        $account-preferences-component-link-margin-block-end-sm: 3rem !default;
+        $account-preferences-component-data-sharing-padding-block-sm: 3rem !default;
+        $account-preferences-component-data-sharing-padding-inline-sm: 1.5rem !default;
+
+        &-content {
+            & {
+                font-size: $font-size-mobile;
+                padding-block-start: $account-preferences-component-padding-sm;
+                padding-block-end: $account-preferences-component-padding-sm;
+                padding-inline-start: $account-preferences-component-padding-sm;
+                padding-inline-end: $account-preferences-component-padding-sm;
+            }
+
+            &-email {
+                padding-block-start: $account-preferences-component-padding-sm;
+                padding-block-end: $account-preferences-component-padding-sm;
+                padding-inline-start: $account-preferences-component-padding-sm;
+                padding-inline-end: $account-preferences-component-padding-sm;
+
+                &-notes {
+                    font-size: $account-preferences-component-notes-font-size-sm;
+                }
+            }
+
+            &-link {
+                margin-block-end: $account-preferences-component-link-margin-block-end-sm;
+            }
+
+            &-data-sharing {
+                padding-block-start: $account-preferences-component-data-sharing-padding-block-sm;
+                padding-block-end: $account-preferences-component-data-sharing-padding-block-sm;
+                padding-inline-start: $account-preferences-component-data-sharing-padding-inline-sm;
+                padding-inline-end: $account-preferences-component-data-sharing-padding-inline-sm;
+            }
+        }
+
+        .button-component {
+            margin-block-start: 0;
+            width: $account-preferences-component-button-width-sm;
+        }
+    }
+}

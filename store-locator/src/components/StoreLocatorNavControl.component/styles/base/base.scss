@@ -1,0 +1,55 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.store-locator-nav-control-component {
+    $store-locator-nav-control-component-icon-size: 1.8rem !default;
+    $store-locator-nav-control-component-height: $header-icon-height !default;
+    $store-locator-nav-control-component-text-line-height: 1.2 !default;
+    $store-locator-nav-control-component-margin-inline-start: 3rem !default;
+    $store-locator-nav-control-component-button-background-image: url('../../../../../../common/src/resources/svg/base/bat-shape.svg') !default;
+    $store-locator-nav-control-component-button-color: null !default;
+    $store-locator-nav-control-component-button-align: null !default;
+    $store-locator-nav-control-component-button-focus-border: null !default;
+    $store-locator-nav-control-component-button-focus-box-shadow: null !default;
+
+    & {
+        display: flex;
+        flex-direction: column;
+        height: $store-locator-nav-control-component-height;
+        z-index: $header-elements-z-index;
+        margin-inline-start: $store-locator-nav-control-component-margin-inline-start;
+    }
+
+    button.store-locator-nav-control-component-icon.button-component {
+        background-image: $store-locator-nav-control-component-button-background-image;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: top;
+        border: none;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: 0;
+        padding-inline-end: 0;
+        display: flex;
+        align-items: $store-locator-nav-control-component-button-align;
+        height: 100%;
+        color: $store-locator-nav-control-component-button-color;
+
+        &:focus {
+            border: $store-locator-nav-control-component-button-focus-border;
+            box-shadow: $store-locator-nav-control-component-button-focus-box-shadow;
+        }
+    }
+
+    &-icon {
+        background-size: $store-locator-nav-control-component-icon-size $store-locator-nav-control-component-icon-size;
+    }
+
+    &-text {
+        color: $light;
+        line-height: $store-locator-nav-control-component-text-line-height;
+        text-transform: capitalize;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-base;
+        white-space: nowrap;
+    }
+}

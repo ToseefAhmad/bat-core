@@ -1,0 +1,1 @@
+export {ContentTypeFactory} from './ContentTypeFactory';

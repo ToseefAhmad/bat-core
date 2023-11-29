@@ -1,0 +1,16 @@
+.add-review-form-component {
+    $add-review-form-component-actions-button-margin-top: 1.5rem !default;
+    $add-review-form-component-form-input-textarea-height: 10rem !default;
+
+    .form-control-component {
+        textarea.form-input-component {
+            height: $add-review-form-component-form-input-textarea-height;
+        }
+    }
+
+    &-actions {
+        .button-component-block + .button-component-block {
+            margin-top: $add-review-form-component-actions-button-margin-top;
+        }
+    }
+}

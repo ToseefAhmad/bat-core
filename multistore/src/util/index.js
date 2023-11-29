@@ -1,0 +1,1 @@
+export {getCurrentStore} from './getCurrentStore';

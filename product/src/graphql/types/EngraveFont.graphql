@@ -1,0 +1,35 @@
+"""
+[product][BAT]
+Device engraving font
+"""
+type EngraveFont {
+    """
+    [product][BAT]
+    Font identifier
+    """
+    id: ID
+
+    """
+    [product][BAT]
+    Font name
+    """
+    name: String
+
+    """
+    [product][BAT]
+    Font preview text
+    """
+    preview_text: String
+
+    """
+    [product][BAT]
+    Font file
+    """
+    font_file: String
+
+    """
+    [product][BAT]
+    Font size
+    """
+    font_size: String
+}

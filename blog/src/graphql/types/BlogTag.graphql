@@ -1,0 +1,103 @@
+type BlogTag {
+    """
+    [blog][BAT]
+    Blog Tag content
+    """
+    content: String
+
+    """
+    [blog][BAT]
+    Blog Tag Custom layout
+    """
+    custom_layout: String
+
+    """
+    [blog][BAT]
+    Blog Tag Custom layout update xml
+    """
+    custom_layout_update_xml: String
+
+    """
+    [blog][BAT]
+    Blog Tag Custom theme
+    """
+    custom_theme: String
+
+    """
+    [blog][BAT]
+    Blog Tag Custom theme from
+    """
+    custom_theme_from: String
+
+    """
+    [blog][BAT]
+    Blog Tag Custom theme to
+    """
+    custom_theme_to: String
+
+    """
+    [blog][BAT]
+    URL key of Blog Tag
+    """
+    identifier: String
+
+    """
+    [blog][BAT]
+    Blog Tag Is active
+    """
+    is_active: Int
+
+    """
+    [blog][BAT]
+    Blog Tag Layout update xml
+    """
+    layout_update_xml: String
+
+    """
+    [blog][BAT]
+    Blog Tag Meta description
+    """
+    meta_description: String
+
+    """
+    [blog][BAT]
+    Blog Tag Meta keywords
+    """
+    meta_keywords: String
+
+    """
+    [blog][BAT]
+    Blog Tag Meta robots
+    """
+    meta_robots: String
+
+    """
+    [blog][BAT]
+    Blog Tag Meta title
+    """
+    meta_title: String
+
+    """
+    [blog][BAT]
+    Blog Tag Page_layout
+    """
+    page_layout: String
+
+    """
+    [blog][BAT]
+    Id of the Blog Post Tag
+    """
+    tag_id: Int
+
+    """
+    [blog][BAT]
+    URL of Blog Tag
+    """
+    tag_url: String
+
+    """
+    [blog][BAT]
+    Blog Tag title
+    """
+    title: String
+}

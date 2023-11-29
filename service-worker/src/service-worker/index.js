@@ -1,0 +1,1 @@
+export {registerNavigationRoute} from './registerNavigationRoute';

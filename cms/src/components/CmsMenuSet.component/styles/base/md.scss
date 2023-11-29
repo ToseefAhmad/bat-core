@@ -1,0 +1,27 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .cms-menu-set-component {
+        $cms-menu-set-component-padding-block-md: 3.8rem !default;
+        $cms-menu-set-component-padding-inline-md: 6rem !default;
+        $cms-menu-set-component-width-md: 29.2% !default;
+
+        & {
+            padding-block-start: $cms-menu-set-component-padding-block-md;
+            padding-block-end: $cms-menu-set-component-padding-block-md;
+            padding-inline-start: $cms-menu-set-component-padding-inline-md;
+            padding-inline-end: $cms-menu-set-component-padding-inline-md;
+            flex-basis: $cms-menu-set-component-width-md;
+            flex-shrink: 0;
+        }
+    }
+
+    .cms-menu-set-component + .cms-page-component {
+        $cms-page-component-width: 70%;
+
+        & {
+            width: $cms-page-component-width;
+        }
+    }
+}

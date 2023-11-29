@@ -1,0 +1,13 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.wishlist-component {
+    $wishlist-component-gap: 1rem !default;
+
+    &-actions {
+        padding: $p-primary;
+        background: $light;
+        display: flex;
+        flex-direction: column;
+        gap: $wishlist-component-gap;
+    }
+}

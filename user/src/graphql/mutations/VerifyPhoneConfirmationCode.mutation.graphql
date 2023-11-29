@@ -1,0 +1,3 @@
+mutation VerifyPhoneConfirmationCode($input: VerifyPhoneConfirmationCodeInput) {
+    verifyPhoneConfirmationCode(input: $input)
+}

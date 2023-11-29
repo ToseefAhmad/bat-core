@@ -1,0 +1,29 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app .settings-nav-item-component {
+        $settings-nav-item-component-icon-position-md: 2rem 1.8rem !default;
+        $settings-nav-item-component-button-padding-inline-end-md: 3rem !default;
+
+        & {
+            background-position: $settings-nav-item-component-icon-position-md;
+        }
+
+        .settings-nav-item-component-button.button-component {
+            margin-inline-start: $m-primary;
+            margin-inline-end: $m-primary;
+            padding-inline-start: $settings-nav-item-component-button-padding-inline-end-md;
+        }
+    }
+
+    [dir='rtl'] {
+        .app {
+            $settings-nav-item-component-button-background-position-rtl-md: right 2rem top 1.7rem;
+
+            .settings-nav-item-component {
+                background-position: $settings-nav-item-component-button-background-position-rtl-md;
+            }
+        }
+    }
+}

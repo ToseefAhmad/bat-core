@@ -1,0 +1,43 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .product-detail-component {
+            $product-detail-component-info-wrapper-padding-block-start-md: 5rem !default;
+            $product-detail-component-info-wrapper-padding-block-end-md: 0 !default;
+            $product-detail-component-info-wrapper-padding-inline-start-md: 9rem !default;
+            $product-detail-component-info-wrapper-padding-inline-end-md: 8rem !default;
+            $product-detail-component-stock-status-out-of-stock-margin-block-start-md: null !default;
+            $product-detail-component-delivery-cms-block-padding-block-md: 3.3rem !default;
+            $product-detail-component-delivery-cms-block-padding-inline-md: 9rem !default;
+            $product-detail-component-wishlist-button-background-size-md: 3.7rem auto !default;
+            $product-detail-component-wishlist-button-size-md: 3.7rem !default;
+
+            &-info-wrapper {
+                padding-block-start: $product-detail-component-info-wrapper-padding-block-start-md;
+                padding-block-end: $product-detail-component-info-wrapper-padding-block-end-md;
+                padding-inline-start: $product-detail-component-info-wrapper-padding-inline-start-md;
+                padding-inline-end: $product-detail-component-info-wrapper-padding-inline-end-md;
+            }
+
+            .stock-status-component-out-of-stock {
+                margin-block-start: $product-detail-component-stock-status-out-of-stock-margin-block-start-md;
+            }
+
+            .delivery-cms-block {
+                padding-block-start: $product-detail-component-delivery-cms-block-padding-block-md;
+                padding-block-end: $product-detail-component-delivery-cms-block-padding-block-md;
+                padding-inline-start: $product-detail-component-delivery-cms-block-padding-inline-md;
+                padding-inline-end: $product-detail-component-delivery-cms-block-padding-inline-md;
+            }
+
+            .add-to-wishlist-component,
+            .remove-from-wishlist-component {
+                background-size: $product-detail-component-wishlist-button-background-size-md;
+                height: $product-detail-component-wishlist-button-size-md;
+                width: $product-detail-component-wishlist-button-size-md;
+            }
+        }
+    }
+}

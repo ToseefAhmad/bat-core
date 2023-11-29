@@ -1,0 +1,7 @@
+extend type Query {
+    """
+    [user][BAT]
+    Loads information about enabled social login providers.
+    """
+    socialProviders(order_ids: [ID], page_type: SocialLoginPageTypeEnum): [SocialLoginProvider]
+}

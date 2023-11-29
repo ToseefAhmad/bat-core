@@ -1,0 +1,35 @@
+@import '../../../../common/src/scss/variables/base';
+
+.subscription-type-component {
+    $subscription-type-component-border-radius: 1rem !default;
+    $subscription-type-component-color: #1d1d1b !default;
+    $subscription-type-component-font-size: 1.2rem !default;
+    $subscription-type-component-padding: 1.1rem 0 !default;
+    $subscription-type-component-bronze-gradient: #e98852 linear-gradient(250deg, #b3481a 7%, rgba(244, 140, 56, 0) 85%) !default;
+    $subscription-type-component-silver-gradient: #b4c7d8
+        linear-gradient(250deg, #808aab 7%, rgba(204, 226, 234, 0) 85%) !default;
+    $subscription-type-component-gold-gradient: #fcb549 linear-gradient(250deg, #f48c38 7%, rgba(244, 140, 56, 0) 85%) !default;
+
+    & {
+        border-radius: $subscription-type-component-border-radius;
+        display: inline-block;
+        color: $subscription-type-component-color;
+        font-size: $subscription-type-component-font-size;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        text-transform: uppercase;
+        padding: $subscription-type-component-padding;
+    }
+
+    &-bronze {
+        background: $subscription-type-component-bronze-gradient;
+    }
+
+    &-silver {
+        background: $subscription-type-component-silver-gradient;
+    }
+
+    &-gold {
+        background: $subscription-type-component-gold-gradient;
+    }
+}

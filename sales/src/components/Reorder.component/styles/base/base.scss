@@ -1,0 +1,36 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/components/Button.component/index';
+
+.app {
+    $reorder-component-action-button-component-min-width: 11rem !default;
+    $reorder-component-action-button-component-height: 4rem !default;
+    $reorder-component-action-button-component-font-weight: $font-weight-bold !default;
+    $reorder-component-action-button-component-font-size: 1.3rem !default;
+    $reorder-component-action-button-component-line-height: 1.4rem !default;
+    $reorder-component-action-button-component-border-radius: 0 !default;
+    $reorder-component-action-button-component-padding-inline: 1.8rem !default;
+
+    .reorder-component {
+        &-action.button-component {
+            @extend .button-component-primary;
+            width: fit-content;
+            min-width: $reorder-component-action-button-component-min-width;
+            height: $reorder-component-action-button-component-height;
+            font-weight: $reorder-component-action-button-component-font-weight;
+            font-size: $reorder-component-action-button-component-font-size;
+            line-height: $reorder-component-action-button-component-line-height;
+            padding-inline-start: $reorder-component-action-button-component-padding-inline;
+            padding-inline-end: $reorder-component-action-button-component-padding-inline;
+            border-radius: $reorder-component-action-button-component-border-radius;
+            border: none;
+
+            .loader-component.loader-component-attached {
+                display: none;
+            }
+        }
+
+        &-action.button-component:hover {
+            border: none;
+        }
+    }
+}

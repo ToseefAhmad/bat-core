@@ -1,0 +1,197 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/ProductPane.component/index';
+@import '../../../ProductSelectedAttributes.component/styles/base/index';
+@import '../../../StockStatus.component/styles/base/index';
+
+.app {
+    .product-pane-component {
+        $product-pane-component-image-link-flex-basis: 6rem !default;
+        $product-pane-component-title-margin-inline-end: 5rem !default;
+        $product-pane-component-number-input-max-width: 10rem !default;
+        $product-pane-component-input-button-padding: 1.7rem 1.5rem !default;
+        $product-pane-component-update-action-width: 8rem !default;
+        $product-pane-component-update-action-padding: 1.4rem $p-secondary !default;
+        $product-pane-component-update-action-letter-spacing: 0.067rem !default;
+        $product-pane-component-update-action-color: null !default;
+        $product-pane-component-price-label-font-size: null !default;
+        $product-pane-component-price-label-margin: null !default;
+        $product-pane-component-product-title-font-family: null !default;
+        $product-pane-component-product-title-font-weight: null !default;
+        $product-pane-component-config-options-title-transform: null !default;
+        $product-pane-component-qty-title-transform: null !default;
+        $product-pane-component-qty-font-weight: null !default;
+        $product-pane-component-stock-status-font-weight: null !default;
+        $product-pane-component-body-wrapper-padding-top: $p-secondary !default;
+        $product-pane-component-bundle-options-max-width: 28rem !default;
+
+        & {
+            width: 100%;
+        }
+
+        &-info {
+            padding: 0;
+        }
+
+        &-image-link {
+            flex-basis: $product-pane-component-image-link-flex-basis;
+        }
+
+        &-price-label {
+            font-size: $product-pane-component-price-label-font-size;
+            margin: $product-pane-component-price-label-margin;
+        }
+
+        &-name-link {
+            & {
+                color: $primary-font-color;
+                font-size: $font-size-md;
+            }
+
+            &[role='link']:hover .product-title-component {
+                text-decoration-color: $primary-font-color;
+            }
+
+            .product-title-component {
+                font-family: $product-pane-component-product-title-font-family;
+                font-weight: $product-pane-component-product-title-font-weight;
+            }
+        }
+
+        &-update-action.button-component {
+            & {
+                width: $product-pane-component-update-action-width;
+                padding: $product-pane-component-update-action-padding;
+                margin-bottom: $m-secondary;
+                font-size: $font-size-base;
+                letter-spacing: $product-pane-component-update-action-letter-spacing;
+                border: none;
+                color: $product-pane-component-update-action-color;
+            }
+
+            &:focus,
+            &:not(:disabled):not(.disabled):active:focus {
+                box-shadow: none;
+            }
+        }
+
+        .product-title-component {
+            margin-right: initial;
+            margin-inline-end: $product-pane-component-title-margin-inline-end;
+            margin-bottom: 0;
+            font-size: $h4-font-size;
+            text-decoration: underline transparent;
+            transition: text-decoration-color 150ms ease;
+        }
+
+        .product-price-component {
+            display: flex;
+            flex-direction: column;
+            font-size: $font-size-lg;
+            font-weight: $font-weight-normal;
+            margin: 0 0 $m-tertiary;
+            padding-top: 0;
+        }
+
+        &-body-wrapper {
+            & {
+                display: flex;
+                justify-content: space-between;
+                padding-top: $product-pane-component-body-wrapper-padding-top;
+            }
+
+            .product-price-component {
+                margin-block-start: 0;
+                margin-block-end: 0;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+            }
+
+            .regular-product-price-component,
+            .final-product-price-component,
+            .minimum-product-price-component {
+                margin-block-start: 0;
+                margin-block-end: 0;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+                padding-inline-end: 0;
+            }
+
+            .product-qty-plain-component {
+                padding-block-start: 0;
+            }
+        }
+
+        .configurable-product-plain-options-component {
+            & {
+                margin-bottom: $m-tertiary;
+            }
+
+            &-title {
+                & {
+                    text-transform: $product-pane-component-config-options-title-transform;
+                }
+
+                &::after {
+                    content: ':';
+                }
+            }
+        }
+
+        .product-qty-component {
+            & {
+                margin-bottom: $m-tertiary;
+            }
+
+            &-title {
+                font-size: $font-size-base;
+                padding-bottom: 0;
+                text-transform: $product-pane-component-qty-title-transform;
+                font-weight: $product-pane-component-qty-font-weight;
+            }
+
+            .number-input-component {
+                max-width: $product-pane-component-number-input-max-width;
+            }
+        }
+
+        .stock-status-component {
+            font-weight: $product-pane-component-stock-status-font-weight;
+        }
+
+        .number-input-component-increment,
+        .number-input-component-decrement {
+            padding: $product-pane-component-input-button-padding;
+
+            &-group .button-component:focus {
+                box-shadow: none;
+            }
+        }
+
+        .number-input-component-control.input-component {
+            height: auto;
+            flex: 1 1;
+            padding: 0;
+        }
+
+        .variation-attribute {
+            & {
+                margin-top: 0;
+                margin-bottom: $m-secondary;
+            }
+
+            .variation-attribute-title-component {
+                display: none;
+            }
+        }
+
+        .editable-bundle-price-component-sum-label {
+            display: none;
+        }
+
+        &.order-details-component-product-item {
+            .bundle-plain-options-component {
+                max-width: $product-pane-component-bundle-options-max-width;
+            }
+        }
+    }
+}

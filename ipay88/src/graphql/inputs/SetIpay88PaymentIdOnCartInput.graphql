@@ -1,0 +1,12 @@
+input SetIpay88PaymentIdOnCartInput {
+    """
+    [ipay88][BAT]
+    Cart ID
+    """
+    cart_id: ID
+    """
+    [ipay88][BAT]
+    Payment method ID
+    """
+    payment_id: ID
+}

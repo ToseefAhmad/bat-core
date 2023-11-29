@@ -1,0 +1,19 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .account-info-component {
+            $account-info-component-content-padding-block-start-md: null !default;
+            $account-info-component-content-padding-block-end-md: $p-primary-lg !default;
+            $account-info-component-content-padding-inline-md: null !default;
+
+            &-content {
+                padding-block-start: $account-info-component-content-padding-block-start-md;
+                padding-block-end: $account-info-component-content-padding-block-end-md;
+                padding-inline-start: $account-info-component-content-padding-inline-md;
+                padding-inline-end: $account-info-component-content-padding-inline-md;
+            }
+        }
+    }
+}

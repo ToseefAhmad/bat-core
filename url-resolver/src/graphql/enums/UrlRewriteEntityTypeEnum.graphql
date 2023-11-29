@@ -1,0 +1,11 @@
+"""
+[url-resolver][BAT]
+This enumeration defines the entity type.
+"""
+enum UrlRewriteEntityTypeEnum {
+    CMS_PAGE
+    PRODUCT
+    CATEGORY
+    MF_BLOG_POST
+    MF_BLOG_INDEX
+}

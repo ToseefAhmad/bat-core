@@ -1,0 +1,29 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .age-verification-form-component {
+        $age-verification-form-component-button-max-width-md: 21rem !default;
+
+        &-note {
+            font-size: $font-size-md;
+        }
+
+        &-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-actions .button-component {
+            max-width: $age-verification-form-component-button-max-width-md;
+        }
+
+        .button-component-block + .button-component-block {
+            margin-block-start: 0;
+        }
+
+        &-submit {
+            order: 2;
+        }
+    }
+}

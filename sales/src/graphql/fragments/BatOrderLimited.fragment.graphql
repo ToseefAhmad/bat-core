@@ -1,0 +1,27 @@
+#import "@luft/sales/src/graphql/fragments/OrderItemLimited.fragment.graphql"
+#import "../../../../user/src/graphql/fragments/BatAddress.fragment.graphql"
+
+fragment BatOrderLimitedFragment on Order {
+    id
+    created_at
+    status {
+        code
+        name
+    }
+    can_reorder
+    items {
+        ...OrderItemLimitedFragment
+    }
+    prices {
+        grand_total {
+            currency
+            value
+        }
+    }
+    shipments {
+        shipment_id
+        shipping_address {
+            ...BatAddressFragment
+        }
+    }
+}

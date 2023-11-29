@@ -1,0 +1,342 @@
+@import '../../../../scss/variables/base';
+
+.app-footer {
+    $app-footer-color: $light !default;
+    $app-footer-background-color: $primary !default;
+    $app-footer-padding-block-start: null !default;
+    $app-footer-padding-block-end: null !default;
+    $app-footer-padding-inline-start: null !default;
+    $app-footer-padding-inline-end: null !default;
+    $app-footer-position: null !default;
+    $app-footer-overflow: null !default;
+    $app-footer-content-position: null !default;
+    $app-footer-content-z-index: null !default;
+    $app-footer-delimiter-position: null !default;
+    $app-footer-delimiter-margin-block-start: null !default;
+    $app-footer-delimiter-margin-block-end: null !default;
+    $app-footer-delimiter-margin-inline-start: null !default;
+    $app-footer-delimiter-margin-inline-end: null !default;
+    $app-footer-delimiter-height: null !default;
+    $app-footer-delimiter-background: null !default;
+    $app-footer-delimiter-z-index: null !default;
+    $app-footer-links-width: 70% !default;
+    $app-footer-top-padding-block-start: null !default;
+    $app-footer-top-padding-block-end: null !default;
+    $app-footer-top-padding-inline-start: null !default;
+    $app-footer-top-padding-inline-end: null !default;
+    $app-footer-top-max-width: map-get($container-max-widths, 'xl') !default;
+    $app-footer-newsletter-margin-inline-start: null !default;
+    $app-footer-section-margin-inline-start: null !default;
+    $app-footer-section-margin-block-end: $m-primary !default;
+    $app-footer-section-title-margin-block-end: $m-primary !default;
+    $app-footer-section-holder-links-display: null !default;
+    $app-footer-section-holder-links-margin-block-end: $m-secondary !default;
+    $app-footer-section-holder-links-margin-inline-end: 4rem !default;
+    $app-footer-section-holder-links-first-child-margin-block-end: null !default;
+    $app-footer-section-holder-link-color: $gray !default;
+    $app-footer-section-holder-link-font-size: null !default;
+    $app-footer-section-holder-link-hover-text-decoration-color: $gray !default;
+    $app-footer-section-holder-link-hover-text-decoration-line: null !default;
+    $app-footer-follow-us-margin-inline-start: 3.2rem !default;
+    $app-footer-follow-us-item-size: 3.2rem !default;
+    $app-footer-follow-us-item-border: none !default;
+    $app-footer-follow-us-item-color: null !default;
+    $app-footer-follow-us-item-padding: null !default;
+    $app-footer-follow-us-item-margin-inline-start: null !default;
+    $app-footer-follow-us-item-hover-background-color: null !default;
+    $app-footer-section-holder-link-font-weight: null !default;
+    $app-footer-follow-us-item-first-child-margin-inline-start: null !default;
+    $app-footer-follow-us-item-white-space: null !default;
+    $app-footer-follow-us-facebook-background-image: url(../../../../resources/svg/base/bat-facebook.svg) !default;
+    $app-footer-follow-us-twitter-background-image: url(../../../../resources/svg/base/bat-twitter.svg) !default;
+    $app-footer-follow-us-instagram-background-image: url(../../../../resources/svg/base/bat-instagram.svg) !default;
+    $app-footer-follow-us-linkedin-background-image: url(../../../../resources/svg/base/bat-linkedin.svg) !default;
+    $app-footer-follow-us-youtube-background-image: url(../../../../resources/svg/base/bat-youtube.svg) !default;
+    $app-footer-follow-us-item-border-radius: null !default;
+    $app-footer-instagram-icon-size: 2rem !default;
+    $app-footer-facebook-icon-size: 1.1rem 2rem !default;
+    $app-footer-youtube-icon-size: 1.8rem 2rem !default;
+    $app-footer-policy-link-text-decoration-color: null !default;
+    $app-footer-policy-link-transition: null !default;
+    $app-footer-policy-link-hover-text-decoration: null !default;
+    $app-footer-policy-link-copyright-links-color: null !default;
+    $app-footer-policy-link-copyright-links-font-size: $font-size-base !default;
+    $app-footer-content-min-height: null !default;
+    $app-footer-bottom-wrapper-background-color: null !default;
+    $app-footer-bottom-align-items: null !default;
+    $app-footer-bottom-padding: null !default;
+    $app-footer-logo-background: null !default;
+    $app-footer-logo-background-size: null !default;
+    $app-footer-logo-color: null !default;
+    $app-footer-logo-padding: null !default;
+    $app-footer-logo-position: null !default;
+    $app-footer-logo-width: null !default;
+    $app-footer-logo-height: null !default;
+    $app-footer-logo-after-content: null !default;
+    $app-footer-logo-after-display: null !default;
+    $app-footer-logo-after-background: null !default;
+    $app-footer-logo-after-position: null !default;
+    $app-footer-logo-after-left: null !default;
+    $app-footer-logo-after-top: null !default;
+    $app-footer-logo-after-margin-block-start: null !default;
+    $app-footer-logo-after-width: null !default;
+    $app-footer-logo-after-height: null !default;
+
+    & {
+        color: $app-footer-color;
+        background-color: $app-footer-background-color;
+        padding-block-start: $app-footer-padding-block-start;
+        padding-block-end: $app-footer-padding-block-end;
+        padding-inline-start: $app-footer-padding-inline-start;
+        padding-inline-end: $app-footer-padding-inline-end;
+        position: $app-footer-position;
+        overflow: $app-footer-overflow;
+    }
+
+    a {
+        color: currentColor;
+    }
+
+    &-top,
+    &-bottom-content {
+        position: $app-footer-content-position;
+        z-index: $app-footer-content-z-index;
+    }
+
+    // Override PageBuilder styles
+    .root {
+        height: auto;
+        min-width: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        color: $light;
+    }
+
+    &-links {
+        width: $app-footer-links-width;
+        order: 1;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &-top {
+        padding-block-start: $app-footer-top-padding-block-start;
+        padding-block-end: $app-footer-top-padding-block-end;
+        padding-inline-start: $app-footer-top-padding-inline-start;
+        padding-inline-end: $app-footer-top-padding-inline-end;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        width: 100%;
+        max-width: $app-footer-top-max-width;
+        display: flex;
+        flex-direction: row;
+        z-index: 2;
+    }
+
+    &-top-right {
+        order: 2;
+    }
+
+    &-delimiter {
+        position: $app-footer-delimiter-position;
+        margin-block-start: $app-footer-delimiter-margin-block-start;
+        margin-block-end: $app-footer-delimiter-margin-block-end;
+        margin-inline-start: $app-footer-delimiter-margin-inline-start;
+        margin-inline-end: $app-footer-delimiter-margin-inline-end;
+        height: $app-footer-delimiter-height;
+        background: $app-footer-delimiter-background;
+        z-index: $app-footer-delimiter-z-index;
+    }
+
+    .newsletter-component {
+        margin-left: $app-footer-newsletter-margin-inline-start;
+    }
+
+    .footer-section {
+        margin-inline-start: $app-footer-section-margin-inline-start;
+        margin-block-end: $app-footer-section-margin-block-end;
+
+        &-title {
+            margin-block-end: $app-footer-section-title-margin-block-end;
+            text-transform: uppercase;
+            font-weight: $font-weight-bold;
+        }
+
+        &-holder-links {
+            list-style: none;
+        }
+
+        &-holder-links-item {
+            display: $app-footer-section-holder-links-display;
+            margin-block-end: $app-footer-section-holder-links-margin-block-end;
+            margin-inline-end: $app-footer-section-holder-links-margin-inline-end;
+
+            &:first-child {
+                margin-block-end: $app-footer-section-holder-links-first-child-margin-block-end;
+            }
+
+            &:last-child {
+                margin-inline-end: 0;
+            }
+        }
+
+        .footer-section-holder .footer-section-link {
+            text-transform: uppercase;
+            color: $app-footer-section-holder-link-color;
+            font-size: $app-footer-section-holder-link-font-size;
+            font-weight: $app-footer-section-holder-link-font-weight;
+            text-decoration: underline transparent;
+            transition: text-decoration-color 150ms ease;
+
+            &:hover {
+                text-decoration-color: $app-footer-section-holder-link-hover-text-decoration-color;
+                text-decoration-line: $app-footer-section-holder-link-hover-text-decoration-line;
+            }
+        }
+    }
+
+    .app-footer-top-right .footer-section .footer-follow-us a {
+        text-decoration: none;
+    }
+
+    .footer-follow-us {
+        display: flex;
+        margin-inline-start: $app-footer-follow-us-item-margin-inline-start;
+    }
+
+    .footer-follow-us a {
+        & {
+            width: $app-footer-follow-us-item-size;
+            height: $app-footer-follow-us-item-size;
+            border: $app-footer-follow-us-item-border;
+            overflow: hidden;
+            white-space: nowrap;
+            text-indent: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: $app-footer-follow-us-item-color;
+            padding-block-start: $app-footer-follow-us-item-padding;
+            padding-block-end: $app-footer-follow-us-item-padding;
+            padding-inline-start: $app-footer-follow-us-item-padding;
+            padding-inline-end: $app-footer-follow-us-item-padding;
+            border-radius: $app-footer-follow-us-item-border-radius;
+            outline: 0;
+            transition: background-color 150ms ease-in-out;
+            white-space: $app-footer-follow-us-item-white-space;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $app-footer-follow-us-item-hover-background-color;
+        }
+
+        &:not(:last-child) {
+            margin-inline-end: $m-primary;
+        }
+    }
+
+    .footer-follow-us a:first-child {
+        margin-inline-start: $app-footer-follow-us-item-first-child-margin-inline-start;
+    }
+
+    .footer-follow-us .facebook {
+        background-image: $app-footer-follow-us-facebook-background-image;
+        background-size: $app-footer-facebook-icon-size;
+    }
+
+    .footer-follow-us .twitter {
+        background-image: $app-footer-follow-us-twitter-background-image;
+    }
+
+    .footer-follow-us .instagram {
+        background-image: $app-footer-follow-us-instagram-background-image;
+        background-size: $app-footer-instagram-icon-size;
+    }
+
+    .footer-follow-us .linkedin {
+        background-image: $app-footer-follow-us-linkedin-background-image;
+    }
+
+    .footer-follow-us .youtube {
+        background-image: $app-footer-follow-us-youtube-background-image;
+        background-size: $app-footer-youtube-icon-size;
+    }
+
+    .footer-policy-links a {
+        & {
+            text-transform: uppercase;
+            color: $light;
+            text-decoration-color: $app-footer-policy-link-text-decoration-color;
+            transition: $app-footer-policy-link-transition;
+        }
+
+        &:hover {
+            text-decoration: $app-footer-policy-link-hover-text-decoration;
+        }
+    }
+
+    .footer-policy-links,
+    .footer-copyright {
+        color: $app-footer-policy-link-copyright-links-color;
+        font-size: $app-footer-policy-link-copyright-links-font-size;
+        text-align: center;
+    }
+
+    &-bottom-wrapper {
+        background-color: $app-footer-bottom-wrapper-background-color;
+    }
+
+    &-bottom {
+        & {
+            align-items: $app-footer-bottom-align-items;
+            display: flex;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            padding-block-start: $app-footer-bottom-padding;
+            padding-block-end: $app-footer-bottom-padding;
+            padding-inline-start: $app-footer-bottom-padding;
+            padding-inline-end: $app-footer-bottom-padding;
+            position: relative;
+            z-index: 1;
+            max-width: map-get($container-max-widths, 'xl');
+        }
+
+        &-logo {
+            & {
+                background: $app-footer-logo-background;
+                background-size: $app-footer-logo-background-size;
+                color: $app-footer-logo-color;
+                padding: $app-footer-logo-padding;
+                position: $app-footer-logo-position;
+                width: $app-footer-logo-width;
+                height: $app-footer-logo-height;
+            }
+
+            &::after {
+                content: $app-footer-logo-after-content;
+                display: $app-footer-logo-after-display;
+                background: $app-footer-logo-after-background;
+                position: $app-footer-logo-after-position;
+                left: $app-footer-logo-after-left;
+                top: $app-footer-logo-after-top;
+                margin-block-start: $app-footer-logo-after-margin-block-start;
+                width: $app-footer-logo-after-width;
+                height: $app-footer-logo-after-height;
+            }
+        }
+
+        &-content {
+            min-height: $app-footer-content-min-height;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

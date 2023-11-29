@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .account-title-component {
+            $account-title-component-name-padding-block-start-md: 2.5rem;
+
+            &-name {
+                padding-block-start: $account-title-component-name-padding-block-start-md;
+            }
+        }
+    }
+}

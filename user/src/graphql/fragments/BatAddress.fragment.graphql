@@ -1,0 +1,23 @@
+fragment BatAddressFragment on Address {
+    address_id
+    city
+    company
+    firstname
+    lastname
+    postcode
+    street
+    telephone
+    country {
+        id
+        name
+        code
+    }
+    region {
+        id
+        name
+        code
+    }
+    district
+    default_shipping
+    default_billing
+}

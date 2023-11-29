@@ -1,0 +1,12 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .pagination-component {
+        $pagination-padding-bottom-md: 6rem;
+
+        & {
+            padding: 0 0 $pagination-padding-bottom-md;
+        }
+    }
+}

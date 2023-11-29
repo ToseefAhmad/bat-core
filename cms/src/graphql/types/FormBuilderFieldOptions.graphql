@@ -1,0 +1,31 @@
+type FormBuilderFieldOptions {
+    """
+    [BAT][cms]
+    Option value
+    """
+    value: String
+
+    """
+    [BAT][cms]
+    Option label
+    """
+    label: String
+
+    """
+    [BAT][cms]
+    Is option null
+    """
+    null: Boolean
+
+    """
+    [BAT][cms]
+    Is option selected/checked
+    """
+    checked: Boolean
+
+    """
+    [BAT][cms]
+    Is option disabled
+    """
+    disabled: Boolean
+}

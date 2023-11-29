@@ -1,0 +1,41 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-reward-item-component {
+    $account-reward-item-component-border-bottom: $border-width solid $gray-light-primary !default;
+    $account-reward-item-component-pseudo-width: 10rem !default;
+    $account-reward-item-component-earned-color: $success !default;
+    $account-reward-item-component-spent-color: $danger !default;
+
+    & {
+        padding-block-start: $p-secondary;
+        padding-block-end: $p-secondary;
+        border-bottom: $account-reward-item-component-border-bottom;
+    }
+
+    &-row {
+        &::before {
+            color: $dark;
+            content: attr(data-label);
+            display: inline-block;
+            font-weight: $font-weight-semibold;
+            width: $account-reward-item-component-pseudo-width;
+        }
+
+        &-text {
+            display: inline-block;
+            margin-block-end: $m-secondary;
+            vertical-align: top;
+            width: calc(100% - #{$account-reward-item-component-pseudo-width});
+        }
+
+        &-points {
+            &-earned {
+                color: $account-reward-item-component-earned-color;
+            }
+
+            &-spent {
+                color: $account-reward-item-component-spent-color;
+            }
+        }
+    }
+}

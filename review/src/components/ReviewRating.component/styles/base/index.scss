@@ -1,0 +1,32 @@
+@import '~@luft/review/src/components/ReviewRating.component/index';
+
+.app,
+.modal-component {
+    .review-rating-component {
+        $review-rating-component-star-count: 5 !default;
+        $review-rating-component-star-width: 1.6rem !default;
+        $review-rating-component-star-height: 1.5rem !default;
+        $review-rating-component-star-empty-background: url('../../../../../../common/src/resources/svg/base/bat-star-empty.svg') !default;
+        $review-rating-component-star-background: url('../../../../../../common/src/resources/svg/base/bat-star.svg') !default;
+        $review-rating-component-width: $review-rating-component-star-width * $review-rating-component-star-count;
+
+        & {
+            width: $review-rating-component-width;
+            background: $review-rating-component-star-empty-background repeat-x 0 0;
+            background-size: $review-rating-component-star-width $review-rating-component-star-height;
+            flex-shrink: 0;
+        }
+
+        &-result {
+            background: $review-rating-component-star-background repeat-x 0 0;
+            background-size: $review-rating-component-star-width $review-rating-component-star-height;
+            flex-shrink: 0;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .review-rating-component {
+        transform: rotateY(180deg);
+    }
+}

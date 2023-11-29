@@ -1,0 +1,44 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/wishlist/src/components/AddToWishlist.component/index';
+@import '~@luft/wishlist/src/components/RemoveFromWishlist.component/index';
+
+.wishlist-product-actions-component {
+    $wishlist-product-actions-component-z-index: 2 !default;
+    $wishlist-product-actions-component-top: 1.5rem !default;
+    $wishlist-product-actions-component-right: 1.4rem !default;
+
+    & {
+        position: relative;
+        z-index: $wishlist-product-actions-component-z-index;
+    }
+
+    .button-component {
+        & {
+            position: absolute;
+            top: $wishlist-product-actions-component-top;
+            right: $wishlist-product-actions-component-right;
+            padding: 0;
+        }
+
+        &,
+        &-light:not(:disabled):active,
+        &-light:not(:disabled):focus,
+        &:hover,
+        &:active {
+            background-color: transparent;
+            border: unset;
+            box-shadow: none;
+        }
+    }
+}
+
+body[dir='rtl'] {
+    .wishlist-product-actions-component {
+        $wishlist-product-actions-component-left-rtl: 1.4rem !default;
+
+        .button-component {
+            right: unset;
+            left: $wishlist-product-actions-component-left-rtl;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(xs) {
+    .contact-us-component {
+        &-form-submit {
+            max-width: 100%;
+        }
+    }
+}

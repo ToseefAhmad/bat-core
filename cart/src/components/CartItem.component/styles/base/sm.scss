@@ -1,0 +1,22 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        .cart-item-component {
+            $cart-item-component-content-move-to-wishlist-component-marging-inline-start: 12.8rem !default;
+            $cart-item-component-move-to-wishlist-component-margin-block-start: -1rem !default;
+
+            .move-to-wishlist-component {
+                padding-block-end: $p-primary;
+                padding-block-start: 0;
+                padding-inline-start: 0;
+                padding-inline-end: 0;
+                margin-inline-start: $cart-item-component-content-move-to-wishlist-component-marging-inline-start;
+                position: unset;
+                margin-block-start: $cart-item-component-move-to-wishlist-component-margin-block-start;
+                background-color: transparent;
+            }
+        }
+    }
+}

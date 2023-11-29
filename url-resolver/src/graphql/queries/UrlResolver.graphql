@@ -1,0 +1,7 @@
+#import "../fragments/EntityUrl.fragment.graphql"
+
+query BatUrlResolver($url: String!) {
+    urlResolver(url: $url) {
+        ...BatEntityUrlFragment
+    }
+}

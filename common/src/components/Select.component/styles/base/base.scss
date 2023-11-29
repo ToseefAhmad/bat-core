@@ -1,0 +1,80 @@
+@import '../../../../scss/variables/base';
+
+.app,
+.modal-component {
+    .select-component {
+        $select-component-check-valid-icon: url('../../../../resources/svg/base/bat-check-symbol.svg') !default;
+        $select-component-check-valid-icon-size: 1.6rem 1.6rem !default;
+        $select-component-control-background-color: null !default;
+        $select-component-control-border: null !default;
+        $select-component-control-focused-border-color: null !default;
+        $select-component-control-focused-box-shadow: null !default;
+        $select-component-option-background-color: null !default;
+        $select-component-option-border-color: null !default;
+        $select-component-option-focused-background-color: null !default;
+        $select-component-option-selected-background-color: null !default;
+        $select-component-menu-background-color: $light !default;
+        $select-component-menu-list-border: null !default;
+        $select-component-menu-list-border-top: 0.1rem solid $primary !default;
+        $select-component-menu-list-box-shadow: null !default;
+        $select-component-value-container-transform: 0.6rem !default;
+        $select-component-font-size: $font-size-md !default;
+
+        & {
+            font-size: $select-component-font-size;
+        }
+
+        &-custom.form-control-component-input-valid .select-component-custom__indicator {
+            background-image: $select-component-check-valid-icon;
+            background-size: $select-component-check-valid-icon-size;
+        }
+
+        &-custom__control {
+            background-color: $select-component-control-background-color;
+            border: $select-component-control-border;
+            height: $form-control-height;
+
+            &--is-focused {
+                border-color: $select-component-control-focused-border-color;
+                box-shadow: $select-component-control-focused-box-shadow;
+            }
+        }
+
+        &-custom__menu {
+            top: 100%;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            background-color: $select-component-menu-background-color;
+        }
+
+        .select-component-custom__menu-list {
+            border: $select-component-menu-list-border;
+            border-top: $select-component-menu-list-border-top;
+            box-shadow: $select-component-menu-list-box-shadow;
+            margin: 0;
+        }
+
+        .select-component-custom__option {
+            & {
+                background-color: $select-component-option-background-color;
+                border-color: $select-component-option-border-color;
+                transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+                font-size: $select-component-font-size;
+            }
+
+            &--is-focused:hover {
+                background-color: $select-component-option-focused-background-color;
+            }
+
+            &--is-selected,
+            &--is-selected:hover {
+                background-color: $select-component-option-selected-background-color;
+            }
+        }
+
+        .select-component-custom__value-container {
+            transform: translateY($select-component-value-container-transform);
+        }
+    }
+}

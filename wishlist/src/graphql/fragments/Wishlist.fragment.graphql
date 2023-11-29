@@ -1,0 +1,47 @@
+#import "@luft/product/src/graphql/fragments/ProductDetailLimited.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/GroupedProductSet.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/BundleInfo.fragment.graphql"
+#import "@luft/gift-card/src/graphql/fragments/GiftCardItem.fragment.graphql"
+#import "../../../../quote/src/graphql/fragments/EngravedOptions.fragment.graphql"
+#import "../../../../quote/src/graphql/fragments/ProductLimited.fragment.graphql"
+
+fragment WishlistFragment on Wishlist {
+    id
+    products(start: $start, count: $count) {
+        start
+        count
+        total
+        items {
+            id
+            added_at
+            product {
+                ...ProductLimitedFragment
+                price_is_dynamic
+                psn_is_personalisable
+            }
+            quantity
+            configurable_variation {
+                product {
+                    ...ProductDetailLimitedFragment
+                }
+                variation_values {
+                    variation_attribute_id
+                    value
+                }
+            }
+            gift_card {
+                ...GiftCardItemFragment
+            }
+            bundle_info {
+                ...BundleInfoFragment
+            }
+            product_set {
+                ...GroupedProductSetFragment
+                wishlist_qty_group
+            }
+            engraved_options {
+                ...EngravedOptionsFragment
+            }
+        }
+    }
+}

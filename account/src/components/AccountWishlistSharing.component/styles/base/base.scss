@@ -1,0 +1,84 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-wishlist-sharing-component {
+    $account-wishlist-sharing-component-width: 50% !default;
+    $account-wishlist-sharing-component-share-button-height: 5rem !default;
+    $account-wishlist-sharing-component-share-button-font-weight: 700 !default;
+    $account-wishlist-sharing-component-modal-share-button: 48% !default;
+    $account-wishlist-sharing-component-modal-component-body-form-input-component-height: 12rem !default;
+    $account-wishlist-sharing-component-modal-component-close-button-component: 2.4rem 2.4rem !default;
+    $account-wishlist-sharing-component-modal-component-dialog-max-width: 60rem !default;
+
+    & {
+        flex: 1 1 $account-wishlist-sharing-component-width;
+    }
+
+    &-form-actions {
+        margin-top: $m-primary;
+    }
+
+    &-share-button {
+        width: 100%;
+        height: $account-wishlist-sharing-component-share-button-height;
+    }
+
+    &-button-title {
+        font-weight: $account-wishlist-sharing-component-share-button-font-weight;
+    }
+
+    &-share-info {
+        margin-block-end: $p-primary;
+        font-weight: $account-wishlist-sharing-component-share-button-font-weight;
+        text-align: start;
+    }
+
+    &-modal-share-button {
+        width: $account-wishlist-sharing-component-modal-share-button;
+        float: right;
+    }
+
+    &-modal-cancel-button {
+        width: $account-wishlist-sharing-component-modal-share-button;
+        float: left;
+    }
+
+    &-modal {
+        &.modal-component-confirm {
+            .modal-component-body-content {
+                max-width: inherit;
+            }
+
+            .modal-component-dialog {
+                max-width: $account-wishlist-sharing-component-modal-component-dialog-max-width;
+            }
+        }
+
+        .modal-component-header .modal-component-close.button-component {
+            background-size: $account-wishlist-sharing-component-modal-component-close-button-component;
+        }
+
+        .modal-component-body {
+            padding-block-end: $p-primary-lg;
+            padding-inline-end: $p-primary-lg;
+            padding-inline-start: $p-primary-lg;
+        }
+
+        .modal-component-body-content {
+            max-width: inherit;
+        }
+
+        .form-control-component-secondary {
+            .form-input-component {
+                height: $account-wishlist-sharing-component-modal-component-body-form-input-component-height;
+            }
+
+            .form-input-component.form-control-component-input-valid:not(.password-input-component-control) {
+                background-image: none;
+            }
+        }
+
+        .validation-error-component {
+            text-align: start;
+        }
+    }
+}

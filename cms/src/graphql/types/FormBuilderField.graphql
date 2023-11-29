@@ -1,0 +1,127 @@
+type FormBuilderField {
+    """
+    [BAT][cms]
+    Field ID
+    """
+    id: Int
+
+    """
+    [BAT][cms]
+    Form ID
+    """
+    webform_id: Int
+
+    """
+    [BAT][cms]
+    Fieldset ID
+    """
+    fieldset_id: Int
+
+    """
+    [BAT][cms]
+    Field name
+    """
+    name: String
+
+    """
+    [BAT][cms]
+    Field code
+    """
+    code: String
+
+    """
+    [BAT][cms]
+    Is field active
+    """
+    is_active: Boolean
+
+    """
+    [BAT][cms]
+    Field comment
+    """
+    comment: String
+
+    """
+    [BAT][cms]
+    Field type
+    """
+    type: FormBuilderFieldTypeEnum
+
+    """
+    [BAT][cms]
+    Field options
+    """
+    options: [FormBuilderFieldOptions]
+
+    """
+    [BAT][cms]
+    Field size
+    """
+    size: String
+
+    """
+    [BAT][cms]
+    CSS classes
+    """
+    css_class: String
+
+    """
+    [BAT][cms]
+    Field Container class
+    """
+    css_class_container: String
+
+    """
+    [BAT][cms]
+    Field CSS styles
+    """
+    css_style: String
+
+    """
+    [BAT][cms]
+    Field validate message
+    """
+    validate_message: String
+
+    """
+    [BAT][cms]
+    Field validate regex
+    """
+    validate_regex: String
+
+    """
+    [BAT][cms]
+    Field validate min length
+    """
+    validate_length_min: Int
+
+    """
+    [BAT][cms]
+    Field validate max length
+    """
+    validate_length_max: Int
+
+    """
+    [BAT][cms]
+    Field position
+    """
+    position: Int
+
+    """
+    [BAT][cms]
+    Is field required
+    """
+    required: Boolean
+
+    """
+    [BAT][cms]
+    Field custom validation advice
+    """
+    validation_advice: String
+
+    """
+    [BAT][cms]
+    Field hint/placeholder
+    """
+    hint: String
+}

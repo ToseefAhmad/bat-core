@@ -1,0 +1,19 @@
+#import "../fragments/Checkout.fragment.graphql"
+
+mutation ApplyPointsToCartMutation($input: ApplyPointsToCartInput) {
+    applyPointsToCart(input: $input) @connection(key: "cart") {
+        ...BatCheckoutFragment
+        spend_points {
+            points
+        }
+        earn_points {
+            points
+        }
+        reward_discount {
+            amount {
+                currency
+                value
+            }
+        }
+    }
+}

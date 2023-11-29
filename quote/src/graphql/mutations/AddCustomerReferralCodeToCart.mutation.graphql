@@ -1,0 +1,5 @@
+mutation AddCustomerReferralCodeToCart($input: AddReferralCodeToCartInput) {
+    addReferralCodeToCart(input: $input) @connection(key: "cart") {
+        referral_code
+    }
+}

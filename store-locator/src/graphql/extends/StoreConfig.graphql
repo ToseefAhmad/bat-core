@@ -1,0 +1,61 @@
+extend type StoreConfig {
+    """
+    [store-locator][BAT]
+    Store Locator (Google Map) api key
+    """
+    sl_api_key: String
+
+    """
+    [store-locator][BAT]
+    Store Locator center position (latitude)
+    """
+    sl_center_lat: Float
+
+    """
+    [store-locator][BAT]
+    Store Locator center position (longitude)
+    """
+    sl_center_lng: Float
+
+    """
+    [store-locator][BAT]
+    Store Locator zoom level
+    """
+    sl_zoom: Int
+
+    """
+    [store-locator][BAT]
+    Store Locator minimum zoom level
+    """
+    sl_min_zoom: Int
+
+    """
+    [store-locator][BAT]
+    Store Locator maximum zoom level
+    """
+    sl_max_zoom: Int
+
+    """
+    [store-locator][BAT]
+    Store Locator flag, that identifies if google map is enabled
+    """
+    sl_gm_enabled: Boolean
+
+    """
+    [store-locator][BAT]
+    Store Locator cluster maximum level
+    """
+    sl_clustering_max_zoom: Int
+
+    """
+    [store-locator][BAT]
+    Flag, responsible for zooming on click on Store Locator cluster
+    """
+    sl_clustering_zoom_on_click: Boolean
+
+    """
+    [store-locator][BAT]
+    Flag, which indicates that Store Locator (Google Map) should consist of black and white colors
+    """
+    sl_blackwhite: Boolean
+}

@@ -1,0 +1,9 @@
+.product-list-slider-component {
+    $product-list-slider-component-margin-bottom: null !default;
+
+    &-product {
+        .variation-attribute-swatch-component {
+            margin-bottom: $product-list-slider-component-margin-bottom;
+        }
+    }
+}

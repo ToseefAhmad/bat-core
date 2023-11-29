@@ -1,0 +1,73 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .mini-cart-transition-component {
+        $mini-cart-component-animation-duration: 400ms;
+        $mini-cart-component-width: 33.8rem;
+
+        @keyframes open-mini-cart {
+            from {
+                transform: translateX($mini-cart-component-width);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes close-mini-cart {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX($mini-cart-component-width);
+            }
+        }
+
+        &-open {
+            animation: open-mini-cart $mini-cart-component-animation-duration ease forwards;
+        }
+
+        &-closed {
+            animation: close-mini-cart $mini-cart-component-animation-duration ease forwards;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        .mini-cart-transition-component {
+            $mini-cart-component-animation-duration-rtl: 400ms;
+            $mini-cart-component-width-rtl: 33.8rem;
+
+            @keyframes open-mini-cart-rtl {
+                from {
+                    transform: translateX(-#{$mini-cart-component-width-rtl});
+                }
+
+                to {
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes close-mini-cart-rtl {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-#{$mini-cart-component-width-rtl});
+                }
+            }
+
+            &-open {
+                animation: open-mini-cart-rtl $mini-cart-component-animation-duration-rtl ease forwards;
+            }
+
+            &-closed {
+                animation: close-mini-cart-rtl $mini-cart-component-animation-duration-rtl ease forwards;
+            }
+        }
+    }
+}

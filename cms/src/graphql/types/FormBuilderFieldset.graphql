@@ -1,0 +1,19 @@
+type FormBuilderFieldset {
+    """
+    [BAT][cms]
+    Fieldset name
+    """
+    name: String
+
+    """
+    [BAT][cms]
+    Fieldset CSS class
+    """
+    css_class: String
+
+    """
+    [BAT][cms]
+    Fieldset fields
+    """
+    fields: [FormBuilderField]
+}

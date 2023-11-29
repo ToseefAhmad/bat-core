@@ -1,0 +1,59 @@
+"""
+[quote][BAT]
+Engraved options info
+"""
+type EngravedOptionsInfo {
+    """
+    [quote][BAT]
+    Flag identifies if product is personalisable
+    """
+    psn_is_personalisable: Boolean
+
+    """
+    [quote][BAT]
+    Pattern identifier
+    """
+    psn_front_pattern_id: ID
+
+    """
+    [quote][BAT]
+    Pattern name
+    """
+    psn_front_pattern: String
+
+    """
+    [quote][BAT]
+    Icon identifier
+    """
+    psn_front_icon_id: ID
+
+    """
+    [quote][BAT]
+    Icon name
+    """
+    psn_front_icon: String
+
+    """
+    [quote][BAT]
+    Text font family identifier
+    """
+    psn_back_text_font_family_id: ID
+
+    """
+    [quote][BAT]
+    Text font family
+    """
+    psn_back_text_font_family: String
+
+    """
+    [quote][BAT]
+    Engraving text direction
+    """
+    psn_back_text_direction: String
+
+    """
+    [quote][BAT]
+    Engraving text
+    """
+    psn_back_text: String
+}

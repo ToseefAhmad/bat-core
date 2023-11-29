@@ -1,0 +1,5 @@
+mutation WishlistSharingMutation($input: ShareWishlistInput) {
+    shareWishlist(input: $input) {
+        sharing_code
+    }
+}

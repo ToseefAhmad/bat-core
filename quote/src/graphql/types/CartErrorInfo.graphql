@@ -1,0 +1,16 @@
+"""
+[quote][BAT]
+Cart error information
+"""
+type CartErrorInfo {
+    """
+    [quote][BAT]
+    Flag indicates that an error was sent by server, will be sent as true if an order can't be placed
+    """
+    has_error: Boolean
+    """
+    [quote][BAT]
+    An array with error messages
+    """
+    errors: [String]
+}

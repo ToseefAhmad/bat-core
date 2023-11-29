@@ -1,0 +1,42 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .editable-bundle-option-component {
+        $editable-bundle-option-component-input-disabled-background-color: #aaaaaa !default;
+        $editable-bundle-option-component-border-width: 0.1rem !default;
+        $editable-bundle-option-component-border-color: $quaternary-border-color !default;
+
+        & {
+            margin: 0;
+        }
+
+        &-title {
+            padding: $p-primary 0 $p-primary;
+            font-size: $font-size-base;
+            border-width: $editable-bundle-option-component-border-width;
+            border-color: $editable-bundle-option-component-border-color;
+        }
+
+        .editable-bundle-dropdown-component {
+            padding: 0;
+        }
+
+        .product-qty-component {
+            padding-bottom: $p-primary;
+
+            &-title {
+                font-size: $font-size-base;
+            }
+
+            .number-input-component-disabled .number-input-component-decrement-group,
+            .number-input-component-disabled .number-input-component-increment-group,
+            .form-input-component:disabled {
+                background-color: $editable-bundle-option-component-input-disabled-background-color;
+            }
+        }
+
+        .select-component-custom__clear-indicator {
+            display: none;
+        }
+    }
+}

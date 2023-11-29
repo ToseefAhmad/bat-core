@@ -1,0 +1,17 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$checkout-products-list-item-component-product-link-font-weight: $font-weight-bold;
+$checkout-products-list-item-component-product-link-font-size: 1.3rem;
+$checkout-products-list-item-component-product-link-text-transform: uppercase;
+$checkout-products-list-item-component-product-link-text-decoration: none;
+$checkout-products-list-item-component-product-link-hover-text-decoration: underline;
+$checkout-products-list-item-component-pane-name-link-display: block;
+$checkout-products-list-item-component-pane-name-link-margin-inline-start: 0;
+$checkout-products-list-item-component-pane-name-link-margin-inline-end: $m-primary-lg;
+$checkout-products-list-item-component-pane-name-link-margin-block-end: 0.8rem;
+$checkout-products-list-item-component-pane-name-link-color: $primary;
+$checkout-products-list-item-component-pane-name-link-font-size: 1.3rem;
+$checkout-products-list-item-component-product-sku-margin-block-end: 1.5rem;
+$checkout-products-list-item-component-product-final-price-padding-inline-end: 0;
+$checkout-products-list-item-component-product-final-price-display: flex;
+$checkout-products-list-item-component-product-final-price-flex-direction: column;

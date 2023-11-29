@@ -1,0 +1,7 @@
+extend type Sort {
+    """
+    [product][BAT]
+    Sorting direction (ASC or DESC)
+    """
+    direction: SortDirectionType
+}

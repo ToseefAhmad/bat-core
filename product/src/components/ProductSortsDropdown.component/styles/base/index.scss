@@ -1,0 +1,103 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/ProductSortsDropdown.component/index';
+
+.app {
+    .product-sorts-dropdown-component {
+        $product-sorts-dropdown-component-min-width: 22rem !default;
+        $product-sorts-dropdown-component-toggle-color-active: null !default;
+        $product-sorts-dropdown-component-icon-size: 3rem !default;
+        $product-sorts-dropdown-component-icon-image: null !default;
+        $product-sorts-dropdown-component-icon-image-active: null !default;
+        $product-sorts-dropdown-component-menu-max-height: 25rem !default; // 5 items
+        $product-sorts-dropdown-component-menu-box-shadow: 0 0.4rem 1rem rgba($dark, 0.2) !default;
+        $product-sorts-dropdown-component-menu-item-padding-y: 1.4rem !default;
+        $product-sorts-dropdown-component-menu-show-z-index: 1020 !default; // less than header z-index
+
+        & {
+            min-width: $product-sorts-dropdown-component-min-width;
+        }
+
+        .dropdown-component {
+            &-toggle {
+                width: auto;
+                background-image: none;
+                color: $primary-font-color;
+                text-transform: uppercase;
+                padding: 0;
+                border: none;
+                justify-content: flex-start;
+            }
+
+            &-toggle.button-component {
+                font-weight: $font-weight-bold;
+                transition: none;
+            }
+
+            &-toggle.button-component:hover,
+            &-toggle.button-component:focus,
+            &-toggle.button-component:active {
+                color: $primary-font-color;
+            }
+
+            &-toggle.button-component:active,
+            &-toggle.button-component:not(:disabled):active,
+            &-toggle.button-component:not(:disabled):active:focus {
+                box-shadow: none;
+            }
+
+            &-toggle.button-component:hover,
+            &-toggle.button-component:active:focus,
+            &-toggle.button-component:not(:disabled):active,
+            &-toggle.button-component:not(:disabled):active:focus {
+                background-color: transparent;
+            }
+
+            &-toggle::after {
+                width: $product-sorts-dropdown-component-icon-size;
+                height: $product-sorts-dropdown-component-icon-size;
+                background-image: $product-sorts-dropdown-component-icon-image;
+                background-size: $product-sorts-dropdown-component-icon-size;
+                margin-inline-start: $m-secondary;
+            }
+
+            &-show > .dropdown-component-toggle.button-component {
+                & {
+                    border: none;
+                    background-color: transparent;
+                    color: $product-sorts-dropdown-component-toggle-color-active;
+                }
+
+                &::after {
+                    transform: none;
+                    background-image: $product-sorts-dropdown-component-icon-image-active;
+                }
+            }
+
+            &-menu {
+                border: none;
+                box-shadow: $product-sorts-dropdown-component-menu-box-shadow;
+            }
+
+            &-menu-show {
+                max-height: $product-sorts-dropdown-component-menu-max-height;
+                z-index: $product-sorts-dropdown-component-menu-show-z-index;
+            }
+
+            &-item {
+                border-color: $quaternary-border-color;
+                font-size: $font-size-md;
+                color: $primary-font-color;
+                padding: $product-sorts-dropdown-component-menu-item-padding-y $p-secondary;
+            }
+
+            &-item:hover,
+            &-item-active {
+                font-weight: $font-weight-bold;
+            }
+
+            &-item-active {
+                cursor: default;
+            }
+        }
+    }
+}

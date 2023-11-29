@@ -1,0 +1,13 @@
+extend type Query {
+    """
+    [free-gift][BAT]
+    Get free gift rules
+    """
+    getFreeGiftRules(cart_id: ID): [FreeGiftItems]
+
+    """
+    [free-gift][BAT]
+    Get flag for showing popup with free gift items
+    """
+    isCanShowFreeGiftPopup(cart_id: ID): isCanShowFreeGiftPopup
+}

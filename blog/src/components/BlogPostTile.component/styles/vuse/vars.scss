@@ -1,0 +1,15 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$blog-post-tile-component-date-text-transform: uppercase;
+$blog-post-tile-component-date-color: $dark-grey;
+$blog-post-tile-component-title-font-size: $h2-font-size;
+$blog-post-tile-component-title-font-weight: $font-weight-bold;
+$blog-post-tile-component-content-margin: $m-secondary $m-primary 1.4rem;
+$blog-post-tile-component-content-color: $dark-grey;
+$blog-post-tile-component-content-font-size: $font-size-mobile;
+
+// md
+$blog-post-tile-component-date-margin-md: 1.5rem 0;
+$blog-post-tile-component-title-font-size-md: $h1-font-size;
+$blog-post-tile-component-content-margin-md: $m-primary 0 1.5rem;
+$blog-post-tile-component-content-font-size-md: $h4-font-size;

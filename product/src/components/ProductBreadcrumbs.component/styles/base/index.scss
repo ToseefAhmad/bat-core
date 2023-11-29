@@ -1,0 +1,49 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.product-breadcrumbs-component {
+    $product-breadcrumbs-component-item-text-transform: null !default;
+    $product-breadcrumbs-component-title-color: null !default;
+    $product-breadcrumbs-component-separator-right: 0.7rem !default;
+    $product-breadcrumbs-component-border-bottom: $border-width solid $gray-light-primary !default;
+
+    & {
+        width: 100%;
+        padding: $p-secondary $p-primary;
+        border-bottom: $product-breadcrumbs-component-border-bottom;
+    }
+
+    &-item {
+        position: relative;
+        padding-inline-end: $p-primary;
+        text-decoration: none;
+        text-transform: $product-breadcrumbs-component-item-text-transform;
+        color: $primary-font-color;
+
+        &:hover {
+            text-decoration: underline;
+            color: $primary-font-color;
+        }
+
+        &:after {
+            content: '/';
+            position: absolute;
+            right: $product-breadcrumbs-component-separator-right;
+        }
+    }
+
+    &-title {
+        text-transform: $product-breadcrumbs-component-item-text-transform;
+        color: $product-breadcrumbs-component-title-color;
+    }
+}
+
+[dir='rtl'] {
+    .product-breadcrumbs-component {
+        $product-breadcrumbs-component-separator-left: 0.7rem !default;
+
+        &-item:after {
+            right: initial;
+            left: $product-breadcrumbs-component-separator-left;
+        }
+    }
+}

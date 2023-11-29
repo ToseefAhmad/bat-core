@@ -1,0 +1,15 @@
+.app {
+    .billing-address-component {
+        $billing-address-component-title-font-weight: null !default;
+        $billing-address-component-title-text-transform: null !default;
+
+        .back-component-control-title {
+            font-weight: $billing-address-component-title-font-weight;
+            text-transform: uppercase;
+        }
+
+        .billing-address-as-shipping-component {
+            display: none;
+        }
+    }
+}

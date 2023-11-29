@@ -1,0 +1,29 @@
+"""
+[espay][BAT]
+Payment Chanel Params
+"""
+type EspayPaymentItem {
+    """
+    [espay][BAT]
+    It's used as method's id, also it's a part of a method's background image url
+    """
+    product_code: String
+
+    """
+    [espay][BAT]
+    This parameter is need to form an input value
+    """
+    bank_code: String
+
+    """
+    [espay][BAT]
+    Method's name. It's used a as title attribute
+    """
+    product_name: String
+
+    """
+    [espay][BAT]
+    Category Name
+    """
+    category: String
+}

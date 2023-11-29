@@ -1,0 +1,7 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .account-wishlist-to-cart-component {
+        order: 1;
+    }
+}

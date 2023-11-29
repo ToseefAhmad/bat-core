@@ -1,0 +1,16 @@
+query ContactUsConfig {
+    storeConfig {
+        web_to_case_enabled
+        recaptcha_contact {
+            enabled
+            public_key
+            theme
+            lang
+            size
+        }
+        hubspot_contact_us_form_enabled
+        hubspot_contact_us_form_region
+        hubspot_contact_us_form_portal_id
+        hubspot_contact_us_form_form_id
+    }
+}

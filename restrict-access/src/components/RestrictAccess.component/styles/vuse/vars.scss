@@ -1,0 +1,18 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$restrict-access-component-z-index: 2147483648; // Set restrict access popup higher than hubspot live chat
+$restrict-access-component-title-font-size: 2.4rem;
+$restrict-access-component-title-line-height: 2.4rem;
+$restrict-access-component-title-color: $primary-font-color;
+$restrict-access-component-title-font-family: $font-family-secondary;
+$restrict-access-component-title-font-family-rtl: $font-family-rtl;
+$restrict-access-component-title-margin-block-end: 0;
+$restrict-access-component-text-font-size: 1.3rem;
+$restrict-access-component-text-margin-block-end: $m-secondary;
+$restrict-access-component-notice-font-size: 1.1rem;
+$restrict-access-component-notice-margin-block-start: $m-primary;
+
+// md
+$restrict-access-component-actions-button-margin-block-md: 0;
+$restrict-access-component-actions-button-margin-inline-md: 0;
+$restrict-access-component-title-font-size-md: 2.6rem;

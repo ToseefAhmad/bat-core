@@ -1,0 +1,49 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/components/NumberInput.component/index';
+
+.app {
+    .number-input-component {
+        $number-input-component-control-font-size: null !default;
+        $number-input-component-icon-size: 1.4rem 1.4rem !default;
+        $number-input-component-increment-background-image: url('../../../../resources/svg/base/bat-increment.svg') !default;
+        $number-input-component-decrement-background-image: url('../../../../resources/svg/base/bat-decrement.svg') !default;
+
+        &-control {
+            font-size: $number-input-component-control-font-size;
+            border-top: $secondary-border-width solid $dark;
+            border-bottom: $secondary-border-width solid $dark;
+
+            &:focus {
+                box-shadow: none;
+                border-color: $dark;
+            }
+        }
+
+        &-increment-group {
+            border: $secondary-border-width solid $dark;
+            border-inline-start: 0;
+        }
+
+        &-decrement-group {
+            border: $secondary-border-width solid $dark;
+            border-inline-end: 0;
+        }
+
+        &-increment,
+        &-increment:disabled {
+            background-image: $number-input-component-increment-background-image;
+            background-size: $number-input-component-icon-size;
+        }
+
+        &-decrement,
+        &-decrement:disabled {
+            background-image: $number-input-component-decrement-background-image;
+            background-size: $number-input-component-icon-size;
+        }
+
+        &-increment:focus,
+        &-decrement:focus {
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .product-qty-plain-component {
+        & {
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+        }
+
+        &-value {
+            font-weight: $font-weight-bold;
+        }
+    }
+}

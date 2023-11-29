@@ -1,0 +1,20 @@
+extend type Query {
+    """
+    [blog][BAT]
+    Returns blog post object that was found by ID
+    """
+    blogPost(id: String): BlogPost
+
+    """
+    [blog][BAT]
+    The posts query searches for posts that match the criteria specified in the search and filter attributes
+    """
+    blogPosts(
+        filter: BlogPostsFilterInput
+        pageSize: Int = 5
+        currentPage: Int = 1
+        sort: [String]
+        sortFiled: String = "publish_time"
+        allPosts: Boolean
+    ): BlogPostsOutput
+}

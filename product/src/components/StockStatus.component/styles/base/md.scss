@@ -1,0 +1,9 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+@import '~@luft/product/src/components/StockStatus.component/index';
+
+@include media-breakpoint-up(md) {
+    .app .stock-status-component {
+        font-size: $font-size-base;
+    }
+}

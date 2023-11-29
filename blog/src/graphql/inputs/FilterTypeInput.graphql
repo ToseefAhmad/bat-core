@@ -1,0 +1,85 @@
+input FilterTypeInput {
+    """
+    [blog][BAT]
+    Equals
+    """
+    eq: String
+
+    """
+    [blog][BAT]
+    From. Must be used with 'to'
+    """
+    from: String
+
+    """
+    [blog][BAT]
+    Greater than
+    """
+    gt: String
+
+    """
+    [blog][BAT]
+    Greater than or equal to
+    """
+    gteq: String
+
+    """
+    [blog][BAT]
+    In. The value can contain a set of comma-separated values
+    """
+    in: [String]
+
+    """
+    [blog][BAT]
+    Like. The specified value can contain % (percent signs) to allow matching of 0 or more characters
+    """
+    like: String
+
+    """
+    [blog][BAT]
+    Less than
+    """
+    lt: String
+
+    """
+    [blog][BAT]
+    Less than or equal to
+    """
+    lteq: String
+
+    """
+    [blog][BAT]
+    More than or equal to
+    """
+    moreq: String
+
+    """
+    [blog][BAT]
+    Not equal to
+    """
+    neq: String
+
+    """
+    [blog][BAT]
+    Not in. The value can contain a set of comma-separated values
+    """
+    nin: [String]
+
+    """
+    [blog][BAT]
+    Not null
+    """
+    notnull: String
+
+    """
+    [blog][BAT]
+    Is null
+    """
+    null: String
+
+    """
+    [blog][BAT]
+    To. Must be used with 'from'
+    """
+    to: String
+}

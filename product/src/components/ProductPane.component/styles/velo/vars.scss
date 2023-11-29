@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$product-pane-component-update-action-color: $light;
+$product-pane-component-update-action-padding: 0.5rem $p-secondary 0.3rem;
+$product-pane-component-price-label-font-size: $font-size-lg;
+$product-pane-component-price-label-margin: $m-secondary 0;
+$product-pane-component-qty-title-transform: capitalize;
+$product-pane-component-body-wrapper-padding-top: $p-primary;
+
+// md
+$product-pane-component-price-label-font-size-md: 1.8rem;

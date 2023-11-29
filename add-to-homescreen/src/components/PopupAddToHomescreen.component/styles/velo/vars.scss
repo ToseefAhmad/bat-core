@@ -1,0 +1,8 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$popup-add-to-homescreen-control-border-color-hover: $secondary;
+$popup-add-to-homescreen-control-border-color-focus: $secondary;
+$popup-add-to-homescreen-control-border-color-active: $secondary;
+$popup-add-to-homescreen-control-background-color: $tertiary;
+$popup-add-to-homescreen-control-background-image: url('../../../../../../common/src/resources/svg/velo/velo-logo-small.svg');
+$popup-add-to-homescreen-control-box-shadow-focus: 0 0 0.9rem 0 $secondary;

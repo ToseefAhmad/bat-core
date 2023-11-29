@@ -1,0 +1,7 @@
+type ContactUsFormOutput {
+    """
+    [contact-us][BAT]
+    Response after success sending Contact Us form data to CRM
+    """
+    success: Boolean
+}

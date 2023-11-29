@@ -1,0 +1,58 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-referral-dashboard-component {
+    $account-referral-dashboard-component-row-border-bottom: $border-width solid $gray-light-primary !default;
+    $account-referral-dashboard-component-tier-info-border-radius: 5rem !default;
+    $account-referral-dashboard-component-tier-info-font-weight: $font-weight-bold !default;
+    $account-referral-dashboard-component-tier-info-letter-spacing: 0.1rem !default;
+    $account-referral-dashboard-component-title-font-weight: $font-weight-bold !default;
+    $account-referral-dashboard-component-title-margin-block-start: null !default;
+
+    &-row {
+        & {
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            border-bottom: $border-width solid $gray-light-primary;
+        }
+
+        &-tier {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-tier-info {
+            color: $secondary-font-color;
+            background-color: $background-secondary-color;
+            border-radius: $account-referral-dashboard-component-tier-info-border-radius;
+            font-weight: $account-referral-dashboard-component-tier-info-font-weight;
+            padding-block-start: $p-secondary;
+            padding-block-end: $p-secondary;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            text-transform: uppercase;
+            letter-spacing: $account-referral-dashboard-component-tier-info-letter-spacing;
+            white-space: nowrap;
+            margin-inline-start: $m-tertiary;
+        }
+
+        &-title {
+            font-weight: $account-referral-dashboard-component-title-font-weight;
+            text-transform: uppercase;
+            margin-bottom: $account-referral-dashboard-component-title-margin-block-start;
+        }
+
+        &-content {
+            & {
+                margin-block-start: $m-tertiary;
+            }
+
+            &-points {
+                color: $tertiary;
+                font-weight: $font-weight-semibold;
+            }
+        }
+    }
+}

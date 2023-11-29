@@ -1,0 +1,7 @@
+#import "../fragments/Cart.fragment.graphql"
+
+query BatCart($cart_id: ID) {
+    cart(cart_id: $cart_id) @connection(key: "cart") {
+        ...BatCartFragment
+    }
+}

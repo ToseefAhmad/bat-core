@@ -1,0 +1,18 @@
+@import '~@luft/common/src/components/Tooltip.component/index';
+
+.app {
+    .ios-instruction {
+        $ios-instruction-tooltip-inner-color: null !default;
+        $ios-instruction-tooltip-inner-background-image: null !default;
+
+        &.tooltip-component .tooltip-component-inner {
+            & {
+                color: $ios-instruction-tooltip-inner-color;
+            }
+
+            &::before {
+                background-image: $ios-instruction-tooltip-inner-background-image;
+            }
+        }
+    }
+}

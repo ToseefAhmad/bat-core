@@ -1,0 +1,22 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .cms-block-component {
+        $cms-block-component-cart-continue-shopping-max-width: 30rem;
+
+        .cart-continue-shopping {
+            & {
+                max-width: $cms-block-component-cart-continue-shopping-max-width;
+                margin-left: auto !important; // Override inline style
+                margin-right: auto !important; // Override inline style
+            }
+
+            & button {
+                @extend .button-component;
+                @extend .button-component-primary;
+                width: 100%;
+                margin-top: $p-primary;
+            }
+        }
+    }
+}

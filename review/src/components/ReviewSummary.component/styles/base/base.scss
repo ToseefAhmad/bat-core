@@ -1,0 +1,57 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+@import '~@luft/review/src/components/ReviewSummary.component/index';
+
+.app {
+    .review-summary-component {
+        $review-summary-component-link-line-height: 1 !default;
+        $review-summary-component-number-color: null !default;
+        $review-summary-component-add-review-color: null !default;
+        $review-summary-component-number-text-decoration: null !default;
+
+        & {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-block-end: $m-secondary;
+        }
+
+        &-add-review {
+            padding-block-start: 0;
+            padding-block-end: 0;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            line-height: $review-summary-component-link-line-height;
+            display: inline;
+            width: auto;
+            border: 0;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+            transition: color 200ms ease, transition 200ms ease;
+            @include as-link;
+            text-transform: uppercase;
+        }
+
+        &-review-number {
+            line-height: $review-summary-component-link-line-height;
+            color: $review-summary-component-number-color;
+            text-transform: uppercase;
+            font-weight: $font-weight-bold;
+
+            &::after {
+                display: inline-block;
+                text-decoration: none;
+            }
+        }
+
+        &-add-review,
+        &-review-number {
+            color: $review-summary-component-add-review-color;
+            text-decoration: $review-summary-component-number-text-decoration;
+        }
+
+        .review-rating-component {
+            margin-inline-end: $m-secondary;
+        }
+    }
+}

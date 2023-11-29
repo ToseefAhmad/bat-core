@@ -1,0 +1,13 @@
+input UpdatePreferencesInput {
+    """
+    [BAT][account]
+    Preferences
+    """
+    preferences: Boolean
+
+    """
+    [BAT][account]
+    Consent
+    """
+    consent: Boolean
+}

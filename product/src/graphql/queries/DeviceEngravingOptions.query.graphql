@@ -1,0 +1,24 @@
+query DeviceEngravingOptions {
+    getDeviceEngravingOptions {
+        icons {
+            id
+            name
+            thumbnail_image
+            icon_image
+        }
+        patterns {
+            id
+            name
+            thumbnail_image
+            pattern_image
+            category_name
+        }
+        fonts {
+            id
+            name
+            preview_text
+            font_file
+            font_size
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$account-menu-component-link-border-color: $gray-light-tertiary;
+$account-menu-component-background-image-rtl: url('../../../../../../common/src/resources/svg/base/bat-arrow-rtl.svg');
+$account-menu-component-background-position-x-rtl: 3rem;
+$account-menu-component-link-background-position: center right 3rem;
+$account-menu-component-link-font-weight: $font-weight-bold;
+$account-menu-component-link-line-height: 1;
+$account-menu-component-link-padding-block-start: 2.2rem;
+$account-menu-component-link-padding-block-end: 1.9rem;
+$account-menu-component-link-text-align: unset;
+
+// md
+$account-menu-component-link-background-image-md: none;
+$account-menu-component-link-color-md: $green;
+$account-menu-component-link-box-shadow-md: inset -0.5rem 0 0 0 $green;

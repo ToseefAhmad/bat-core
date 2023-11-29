@@ -1,0 +1,7 @@
+extend type PaymentMethod {
+    """
+    [quote][BAT]
+    Payment method id
+    """
+    payment_id: ID
+}

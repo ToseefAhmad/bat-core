@@ -1,0 +1,61 @@
+extend type Cart {
+    """
+    [quote][BAT]
+    Referral code
+    """
+    referral_code: ReferralCode
+
+    """
+    [quote][BAT]
+    User's day of birth
+    """
+    dob: Dob
+
+    """
+    [quote][BAT]
+    Error message text if something went wrong
+    """
+    error_message: String
+
+    """
+    [quote][BAT]
+    Information about cart errors
+    """
+    error_info: CartErrorInfo
+
+    """
+    [quote][BAT]
+    Reward points discount amount
+    """
+    reward_discount: RewardDiscount
+
+    """
+    [quote][BAT]
+    Earn points
+    """
+    earn_points: [EarnPoints]
+
+    """
+    [quote][BAT]
+    Spend points
+    """
+    spend_points: [SpendPoints]
+
+    """
+    [quote][BAT]
+    Customer KTP IDs
+    """
+    customer_ktp_id: [KtpId]
+
+    """
+    [quote][BAT]
+    Customer Notes
+    """
+    customer_note: [CustomerNote]
+
+    """
+    [quote][BAT]
+    List of crosssell products
+    """
+    crosssell_products_list: [Product]
+}

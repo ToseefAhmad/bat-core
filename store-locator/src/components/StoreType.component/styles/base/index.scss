@@ -1,0 +1,48 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/components/Image.component/index';
+@import '~@luft/common/src/components/ImagePlaceholder.component/index';
+@import '~@luft/common/src/components/Checkbox.component/index';
+
+.store-type-component {
+    $store-type-component-checkbox-padding-inline-start: 2.4rem !default;
+    $store-type-component-checkbox-flex-basis: calc(100% / 3) !default;
+    $store-type-component-checkbox-image-max-width: 7rem !default;
+    $store-type-component-checkbox-label-width: null !default;
+    $store-type-component-checkbox-label-height: null !default;
+
+    & {
+        display: flex;
+        flex-wrap: wrap;
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+        margin-block-end: $m-primary;
+        border-bottom: $border-width solid $gray-light-primary;
+    }
+
+    .checkbox-component-default .checkbox-component-label-text {
+        padding-inline-start: $store-type-component-checkbox-padding-inline-start;
+        padding-inline-end: 0;
+
+        &:before {
+            width: $store-type-component-checkbox-label-width;
+            height: $store-type-component-checkbox-label-height;
+        }
+    }
+
+    &-checkbox {
+        flex-basis: $store-type-component-checkbox-flex-basis;
+    }
+
+    &-checkbox-image {
+        padding: 0;
+        max-width: $store-type-component-checkbox-image-max-width;
+    }
+
+    .image-component-image-block {
+        position: static;
+    }
+
+    .checkbox-component-label {
+        padding-inline-end: $p-secondary;
+    }
+}

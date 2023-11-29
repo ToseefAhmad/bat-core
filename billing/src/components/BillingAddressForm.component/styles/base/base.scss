@@ -1,0 +1,35 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .billing-address-form-component {
+        $billing-address-form-component-legend-letter-spacing: 0.018rem !default;
+        $billing-address-form-component-legend-margin-block-end: 1.8rem !default;
+        $billing-address-form-component-padding-block-start: 2.5rem !default;
+        $billing-address-form-component-fieldset-margin-block-end: 3rem !default;
+
+        & {
+            padding-block-start: $billing-address-form-component-padding-block-start;
+        }
+
+        .form-group-component:last-child {
+            margin-block-end: 0;
+        }
+
+        .country-control-component,
+        .region-control-component,
+        .city-control-component,
+        .district-control-component {
+            margin-block-end: $m-secondary;
+        }
+
+        legend {
+            font-size: $font-size-md;
+            letter-spacing: $billing-address-form-component-legend-letter-spacing;
+            margin-block-end: $billing-address-form-component-legend-margin-block-end;
+        }
+
+        fieldset {
+            margin-block-end: $billing-address-form-component-fieldset-margin-block-end;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .blog-post-list-component {
+        $blog-post-list-component-title-font-size-md: 4.4rem !default;
+        $blog-post-list-component-title-text-align-md: null !default;
+
+        & {
+            max-width: $max-content-width;
+            margin: auto;
+        }
+
+        &-title {
+            margin: $m-primary-lg 0;
+            font-size: $blog-post-list-component-title-font-size-md;
+            text-align: $blog-post-list-component-title-text-align-md;
+        }
+
+        &-tiles {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -#{$m-tertiary};
+        }
+    }
+}

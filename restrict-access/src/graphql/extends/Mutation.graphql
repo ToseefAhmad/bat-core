@@ -1,0 +1,7 @@
+extend type Mutation {
+    """
+    [restrict-access][BAT]
+    Send request to verify user's age
+    """
+    uploadAndProcessDocument(input: DocumentInput): DocumentUserInfo
+}

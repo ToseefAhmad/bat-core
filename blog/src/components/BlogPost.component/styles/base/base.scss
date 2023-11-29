@@ -1,0 +1,60 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../BlogShare.component/styles/base/index';
+
+.app {
+    .blog-post-component {
+        $blog-post-component-title-margin: 0 0 $m-tertiary !default;
+        $blog-post-component-image-component-padding-top: 50% !default;
+        $blog-post-component-image-component-max-height: 15rem !default;
+        $blog-post-component-date-padding-bottom: null !default;
+        $blog-post-component-date-color: #686868 !default;
+        $blog-post-component-date-font-size: $font-size-md !default;
+        $blog-post-component-title-font-size: 3.4rem !default;
+        $blog-post-component-title-font-weight: $font-weight-bold !default;
+        $blog-post-component-content-font-size: $font-size-md !default;
+        $blog-post-component-cms-content-title-font-size: 1.8rem !default;
+
+        &-wrapper {
+            padding: $p-primary $p-primary $p-primary-lg;
+            background-color: $light;
+        }
+
+        &-title {
+            margin: $blog-post-component-title-margin;
+            font-size: $blog-post-component-title-font-size;
+            font-weight: $blog-post-component-title-font-weight;
+            text-transform: uppercase;
+        }
+
+        &-image-block {
+            max-height: $blog-post-component-image-component-max-height;
+            background-color: $light;
+        }
+
+        &-image {
+            height: 100%;
+            object-fit: cover;
+            max-height: $blog-post-component-image-component-max-height;
+        }
+
+        .image-component,
+        .image-placeholder-component {
+            padding-top: $blog-post-component-image-component-padding-top;
+        }
+
+        &-date {
+            padding-bottom: $blog-post-component-date-padding-bottom;
+            font-size: $blog-post-component-date-font-size;
+            color: $blog-post-component-date-color;
+        }
+
+        &-content {
+            margin: $m-primary 0 0;
+            font-size: $blog-post-component-content-font-size;
+        }
+
+        .cms-content-block h2 {
+            font-size: $blog-post-component-cms-content-title-font-size;
+        }
+    }
+}

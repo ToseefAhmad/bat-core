@@ -1,0 +1,31 @@
+extend type StoreConfig {
+    """
+    [live-chat][BAT]
+    Salesforce chat button ID
+    """
+    salesforce_chat_button_id: String
+
+    """
+    [live-chat][BAT]
+    Salesforce chat deployment ID
+    """
+    salesforce_chat_deployment_id: String
+
+    """
+    [live-chat][BAT]
+    Salesforce chat endpoint url
+    """
+    salesforce_chat_endpoint_url: String
+
+    """
+    [live-chat][BAT]
+    Salesforce chat organization ID
+    """
+    salesforce_chat_organization_id: String
+
+    """
+    [live-chat][BAT]
+    Salesforce chat script url
+    """
+    salesforce_chat_script_url: String
+}

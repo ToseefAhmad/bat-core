@@ -1,0 +1,13 @@
+input AddCustomerNoteToCartInput {
+    """
+    [quote][BAT]
+    Cart ID
+    """
+    cart_id: ID
+
+    """
+    [quote][BAT]
+    Customer Note
+    """
+    code: String
+}

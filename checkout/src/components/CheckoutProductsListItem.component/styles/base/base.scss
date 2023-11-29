@@ -1,0 +1,128 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .checkout-products-list-item-component {
+        $checkout-products-list-item-component-product-image-basis: 11.4rem !default;
+        $checkout-products-list-item-component-product-variation-color: null !default;
+        $checkout-products-list-item-component-product-link-color: $primary-font-color !default;
+        $checkout-products-list-item-component-product-link-font-weight: null !default;
+        $checkout-products-list-item-component-product-link-font-size: null !default;
+        $checkout-products-list-item-component-product-link-text-transform: null !default;
+        $checkout-products-list-item-component-product-link-text-decoration: null !default;
+        $checkout-products-list-item-component-product-link-hover-text-decoration: null !default;
+        $checkout-products-list-item-component-variation-display: null !default;
+        $checkout-products-list-item-component-pane-name-link-display: null !default;
+        $checkout-products-list-item-component-pane-name-link-margin-inline-start: null !default;
+        $checkout-products-list-item-component-pane-name-link-margin-inline-end: null !default;
+        $checkout-products-list-item-component-pane-name-link-margin-block-start: null !default;
+        $checkout-products-list-item-component-pane-name-link-margin-block-end: null !default;
+        $checkout-products-list-item-component-pane-name-link-color: null !default;
+        $checkout-products-list-item-component-pane-name-link-font-size: null !default;
+        $checkout-products-list-item-component-regular-price-font-weight: null !default;
+        $checkout-products-list-item-component-product-sku-margin-block-end: null !default;
+        $checkout-products-list-item-component-product-qty-padding-block-start: 0.2rem !default;
+        $checkout-products-list-item-component-product-final-price-padding-inline-end: null !default;
+        $checkout-products-list-item-component-product-final-price-display: null !default;
+        $checkout-products-list-item-component-product-final-price-flex-direction: null !default;
+
+        & {
+            position: relative;
+        }
+
+        &-product {
+            padding: 0;
+            flex-grow: 1;
+
+            .product-pane-component {
+                &-name-link {
+                    display: $checkout-products-list-item-component-pane-name-link-display;
+                    font-size: $checkout-products-list-item-component-pane-name-link-font-size;
+                    margin-block-start: $checkout-products-list-item-component-pane-name-link-margin-block-start;
+                    margin-block-end: $checkout-products-list-item-component-pane-name-link-margin-block-end;
+                    margin-inline-end: $checkout-products-list-item-component-pane-name-link-margin-inline-end;
+                    margin-inline-start: $checkout-products-list-item-component-pane-name-link-margin-inline-start;
+                    color: $checkout-products-list-item-component-pane-name-link-color;
+                }
+
+                &-body {
+                    white-space: normal;
+                }
+
+                &-image-link {
+                    flex-basis: $checkout-products-list-item-component-product-image-basis;
+                }
+            }
+        }
+
+        .product-sku-component {
+            margin-block-end: $checkout-products-list-item-component-product-sku-margin-block-end;
+        }
+
+        &-link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: $checkout-products-list-item-component-product-link-color;
+            font-weight: $checkout-products-list-item-component-product-link-font-weight;
+            text-transform: $checkout-products-list-item-component-product-link-text-transform;
+            text-decoration: $checkout-products-list-item-component-product-link-text-decoration;
+            font-size: $checkout-products-list-item-component-product-link-font-size;
+
+            &:hover {
+                text-decoration: $checkout-products-list-item-component-product-link-hover-text-decoration;
+            }
+        }
+
+        .product-pane-component {
+            .variation-plain-component {
+                display: $checkout-products-list-item-component-variation-display;
+            }
+        }
+
+        .product-qty-plain-component {
+            padding-block-start: $checkout-products-list-item-component-product-qty-padding-block-start;
+        }
+
+        .variation-plain-component .variation-plain-title {
+            display: none;
+        }
+
+        .variation-plain-value {
+            color: $checkout-products-list-item-component-product-variation-color;
+        }
+
+        .product-pane-component .product-price-component {
+            text-align: right;
+
+            .final-product-price-component-discounted-value {
+                padding-inline-end: $checkout-products-list-item-component-product-final-price-padding-inline-end;
+            }
+        }
+
+        .regular-product-price-component {
+            font-weight: $checkout-products-list-item-component-regular-price-font-weight;
+        }
+
+        .final-product-price-component {
+            display: $checkout-products-list-item-component-product-final-price-display;
+            flex-direction: $checkout-products-list-item-component-product-final-price-flex-direction;
+        }
+
+        .editable-bundle-price-component {
+            margin-top: 0;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .checkout-products-list-item-component {
+        &-link {
+            left: 0;
+            right: initial;
+        }
+
+        .product-pane-component .product-price-component {
+            text-align: left;
+        }
+    }
+}

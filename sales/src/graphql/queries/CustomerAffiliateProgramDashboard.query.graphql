@@ -1,0 +1,14 @@
+query CustomerAffiliateProgram {
+    getCustomerAffiliateProgramDashboard {
+        points
+        earning_rules {
+            label
+        }
+        spending_rules {
+            label
+        }
+        tier_info {
+            label
+        }
+    }
+}

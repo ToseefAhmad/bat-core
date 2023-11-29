@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.ipay88-payment-method-item-component {
+    $ipay88-payment-method-item-component-background-image: url('../../../../../../common/src/resources/svg/base/bat-ipay88-logo.svg') !default;
+    $ipay88-payment-method-item-component-background-width: 5rem !default;
+    $ipay88-payment-method-item-component-background-height: 2.2rem !default;
+
+    .radio-component-label::after {
+        content: '';
+        background-image: $ipay88-payment-method-item-component-background-image;
+        width: $ipay88-payment-method-item-component-background-width;
+        height: $ipay88-payment-method-item-component-background-height;
+    }
+}

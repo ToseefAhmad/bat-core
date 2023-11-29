@@ -1,0 +1,11 @@
+"""
+[paynamics][BAT]
+Input is used as an argument for 'PaynamicsResult' mutation
+"""
+input PaynamicsResultInput {
+    """
+    [paynamics][BAT]
+    Parameter from GET request. Contains order ID
+    """
+    request_id: String
+}

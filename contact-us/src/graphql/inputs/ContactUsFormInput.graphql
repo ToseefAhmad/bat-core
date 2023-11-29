@@ -1,0 +1,35 @@
+"""
+[contact-us][BAT]
+Input is used to send Contact Us form data to CRM
+"""
+input ContactUsFormInput {
+    """
+    [contact-us][BAT]
+    Full Name
+    """
+    full_name: String
+
+    """
+    [contact-us][BAT]
+    Email Address
+    """
+    email_address: String
+
+    """
+    [contact-us][BAT]
+    Phone
+    """
+    phone: String
+
+    """
+    [contact-us][BAT]
+    Message
+    """
+    message: String
+
+    """
+    [contact-us][BAT]
+    Captcha Token
+    """
+    g_recaptcha_response: String
+}

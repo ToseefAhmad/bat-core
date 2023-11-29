@@ -1,0 +1,66 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.search-location-component {
+    $search-location-component-width: 47rem !default;
+    $search-location-component-height: 88vh !default;
+    $search-location-component-title-font-size: 3.4rem !default;
+    $search-location-component-title-font-weight: null !default;
+    $search-location-component-title-font-family: null !default;
+    $search-location-component-title-line-height: 0.88 !default;
+    $search-location-component-button-icon-size: 1.5rem 1.9rem !default;
+    $search-location-component-button-margin-top: 0 !default;
+    $search-location-component-button-background-position: 0 50% !default;
+    $search-location-component-padding-block-start: 5rem !default;
+    $search-location-component-padding-block-end: 3rem !default;
+    $search-location-component-padding-inline-start: 0 !default;
+    $search-location-component-padding-inline-end: 4rem !default;
+
+    & {
+        width: $search-location-component-width;
+        height: $search-location-component-height;
+        overflow-y: scroll;
+        padding-block-start: $search-location-component-padding-block-start;
+        padding-block-end: $search-location-component-padding-block-end;
+        padding-inline-start: $search-location-component-padding-inline-start;
+        padding-inline-end: $search-location-component-padding-inline-end;
+        flex-shrink: 0;
+    }
+
+    &-text {
+        font-size: $search-location-component-title-font-size;
+        font-family: $search-location-component-title-font-family;
+        font-weight: $search-location-component-title-font-weight;
+        line-height: $search-location-component-title-line-height;
+        text-transform: uppercase;
+        color: $dark;
+        white-space: pre-line;
+    }
+
+    &-button {
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-current-stores.svg');
+        background-size: $search-location-component-button-icon-size;
+        background-repeat: no-repeat;
+        background-position: $search-location-component-button-background-position;
+        margin-block-start: $search-location-component-button-margin-top;
+    }
+
+    &-button-text {
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        color: $dark;
+        text-transform: uppercase;
+        padding-inline-start: $p-secondary;
+    }
+
+    &-button.button-component:focus {
+        box-shadow: none;
+    }
+}
+
+[dir='rtl'] {
+    .search-location-component {
+        &-button {
+            background-position-x: 100%;
+        }
+    }
+}

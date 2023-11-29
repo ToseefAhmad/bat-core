@@ -1,0 +1,25 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .account-security-component {
+            $account-security-component-form-width-md: null !default;
+            $account-security-component-content-padding-inline-start-md: $p-primary !default;
+            $account-security-component-content-padding-inline-end-md: $p-primary !default;
+            $account-security-component-content-padding-max-width-md: null !default;
+
+            &-form {
+                width: $account-security-component-form-width-md;
+            }
+
+            &-content {
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+                padding-inline-start: $account-security-component-content-padding-inline-start-md;
+                padding-inline-end: $account-security-component-content-padding-inline-end-md;
+                min-width: $account-security-component-content-padding-max-width-md;
+            }
+        }
+    }
+}

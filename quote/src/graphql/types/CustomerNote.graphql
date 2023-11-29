@@ -1,0 +1,13 @@
+type CustomerNote {
+    """
+    [quote][BAT]
+    Customer note code
+    """
+    code: String
+
+    """
+    [quote][BAT]
+    Customer note label
+    """
+    label: String
+}

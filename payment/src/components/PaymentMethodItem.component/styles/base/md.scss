@@ -1,0 +1,18 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app .payment-method-item-component {
+        $payment-method-item-component-padding-block-start-md: 1rem !default;
+        $payment-method-item-component-padding-block-end-md: 1rem !default;
+
+        .radio-component-label {
+            padding-block-start: $payment-method-item-component-padding-block-start-md;
+            padding-block-end: $payment-method-item-component-padding-block-end-md;
+        }
+
+        .radio-component-label-text {
+            font-size: $font-size-md;
+        }
+    }
+}

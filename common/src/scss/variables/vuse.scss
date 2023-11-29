@@ -1,0 +1,92 @@
+@import './base';
+
+// font-size
+$font-family: 'Gotham', sans-serif;
+$font-family-secondary: 'TrimPoster', sans-serif;
+$font-family-rtl: 'TrimArabic', sans-serif;
+$h1-font-size: 2rem;
+$h2-font-size: 1.8rem;
+$h3-font-size: 1.6rem;
+$h4-font-size: 1.4rem;
+$h5-font-size: 1.1rem;
+$font-size-title: 2.6rem;
+
+// color
+$primary: #1d1d1b;
+$secondary: #f8ab28;
+$secondary-dark: #dd9416;
+$tertiary: #041e42;
+$light: #ffffff;
+$dark: #2a2c2c;
+$dark-secondary: #2b2b2b;
+$dark-tertiary: #2a2a2a;
+$darker: #1d1d1b;
+$gray: #aaa;
+$gray-light-tertiary: #f0f0f0;
+$red: #eb0000;
+$green: #00c7b1;
+$dark-green: #316e6f;
+
+$placeholder-color: $gray-light-tertiary;
+$disabled-color: $gray-light-secondary;
+$disabled-dark-color: $gray;
+$image-background-color: #f5f5f5;
+
+$background-primary-color: $gray-light-secondary;
+$background-secondary-color: rgba($secondary, 0.15);
+$button-tertiary-border-color: $secondary;
+$button-tertiary-border-color-hover: $secondary-dark;
+
+// gradient
+$gradient-primary-color: #ed7d30, #cd4a04;
+$gradient-secondary-color: #dd6513, #b53f00;
+
+$primary-font-color: $primary;
+$secondary-font-color: $secondary-dark;
+$tertiary-font-color: $primary;
+$placeholder-font-color: #969696;
+$disabled-font-color: $primary-font-color;
+$disabled-light-font-color: $dark-grey;
+
+$primary-border-color: #6b6b6b;
+$secondary-border-color: #6b6b6b;
+$tertiary-border-color: $primary;
+
+$form-border-radius: 2.5rem;
+$form-control-height: 5rem;
+
+$scroll-bg: #ccc;
+$scroll-color: $primary;
+
+$success: $green;
+$success-light: #ccf4ef;
+
+$danger: #e00830;
+$danger-light: #faeff1;
+
+$carousel-indicators-inactive-background: #c1c2c2;
+$carousel-inner-background-color: #f9f9f9;
+
+$primary-border-width: $border-width;
+
+$menu-active-item-color: $green;
+
+// Input
+$input-border-color: $secondary-border-color;
+$input-border-color-focus: $primary;
+$input-color: $primary-font-color;
+
+// Link
+$link-color: $primary-font-color;
+$link-hover-color: darken($primary-font-color, 10%);
+$link-decoration: underline $link-color;
+$link-hover-decoration: underline transparent;
+
+// Pages
+$page-bg: $gray-light-secondary;
+
+// Header
+$header-height: 15rem;
+$header-height-xs: 9.2rem;
+$header-elements-z-index: 2;
+$header-icon-height: 4rem;

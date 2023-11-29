@@ -1,0 +1,45 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$app-footer-background-color: $dark-tertiary;
+$app-footer-top-padding-block-start: $p-primary;
+$app-footer-top-padding-block-end: $p-primary;
+$app-footer-top-padding-inline-start: $p-primary;
+$app-footer-top-padding-inline-end: $p-primary;
+$app-footer-section-margin-inline-start: 0.7rem;
+$app-footer-section-holder-link-hover-text-decoration-line: underline;
+$app-footer-section-holder-link-font-size: $font-size-md;
+$app-footer-section-holder-links-first-child-margin-block-end: $m-primary;
+$app-footer-follow-us-item-margin-inline-start: -0.6rem;
+$app-footer-follow-us-item-color: transparent;
+$app-footer-follow-us-item-first-child-margin-inline-start: 0;
+$app-footer-follow-us-item-padding: 0.6rem;
+$app-footer-follow-us-item-hover-background-color: rgba($gray-light-tertiary, 0.1);
+$app-footer-follow-us-item-border-radius: 50%;
+$app-footer-policy-link-copyright-links-color: $gray;
+$app-footer-bottom-wrapper-background-color: $darker;
+$app-footer-bottom-align-items: center;
+$app-footer-bottom-padding: $p-primary;
+$app-footer-content-min-height: 4.5rem;
+$app-footer-logo-background: center url(../../../../../../common/src/resources/svg/vuse/vuse-logo.svg) no-repeat;
+$app-footer-logo-width: 10rem;
+$app-footer-logo-height: 3rem;
+$app-footer-logo-background-size: $app-footer-logo-width $app-footer-logo-height;
+$app-footer-logo-color: $tertiary;
+$app-footer-logo-padding: 0;
+$app-footer-logo-margin-block-start: auto;
+$app-footer-logo-margin-block-end: $m-primary;
+$app-footer-logo-margin-inline-start: auto;
+$app-footer-logo-margin-inline-end: auto;
+
+// sm
+$app-footer-section-title-letter-spacing-sm: $letter-spacing-mobile;
+$app-footer-section-title-font-size-sm: $font-size-base;
+$app-footer-section-holder-links-margin-block-end-sm: $m-primary;
+$app-footer-section-holder-links-item-margin-block-end-sm: $m-secondary;
+
+// md
+$app-footer-top-padding-block-start-md: $p-primary-lg;
+$app-footer-section-title-letter-spacing-md: $letter-spacing-desktop;
+$app-footer-section-title-font-size-md: $font-size-lg;
+$app-footer-section-holder-display-md: grid;
+$app-footer-section-holder-grid-template-column-md: repeat(3, 1fr);

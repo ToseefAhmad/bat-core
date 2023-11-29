@@ -1,0 +1,55 @@
+extend type Product {
+    """
+    [product][BAT]
+    Design attributes. Use for adding additional data for product
+    """
+    design_attributes: [DesignAttribute]
+
+    """
+    [product][BAT]
+    Meta Robots tags
+    """
+    meta_robots: String
+
+    """
+    [product][BAT]
+    Flag indicates if product is personalisable
+    """
+    psn_is_personalisable: Boolean
+
+    """
+    [product][BAT]
+    Coordinates where text should be painted on the device
+    """
+    psn_text_coordinates: String
+
+    """
+    [product][BAT]
+    Coordinates where image should be painted on the device
+    """
+    psn_image_coordinates: String
+
+    """
+    [product][BAT]
+    Personalisable product front image
+    """
+    psn_front_image: Image
+
+    """
+    [product][BAT]
+    Personalisable product back image
+    """
+    psn_background_image: Image
+
+    """
+    [product][BAT]
+    Rule ID
+    """
+    rule_id: ID
+
+    """
+    [product][BAT]
+    List of up-sell products
+    """
+    upsell_products_list: [Product]
+}

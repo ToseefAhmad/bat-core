@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$blog-post-component-title-margin: 0 0 $m-tertiary;
+$blog-post-component-image-component-padding-top: 50%;
+$blog-post-component-image-component-max-height: 15rem;
+$blog-post-component-date-color: #686868;
+$blog-post-component-date-font-size: $font-size-md;
+$blog-post-component-title-font-size: 3.4rem;
+$blog-post-component-content-font-size: $font-size-md;
+
+// md
+$blog-post-component-image-max-height-md: 39rem;
+$blog-post-component-image-block-padding-top-md: 21rem;
+$blog-post-component-wrapper-max-width-md: 90rem;
+$blog-post-component-wrapper-padding-md: 6rem 6rem $p-primary-lg;
+$blog-post-component-title-font-size-md: 4.4rem;

@@ -1,0 +1,13 @@
+#import "../fragments/Order.fragment.graphql"
+
+query BatViewerOrderQuery($order_id: ID) {
+    viewer {
+        token
+        user {
+            id
+            order(order_id: $order_id) {
+                ...BatOrderFragment
+            }
+        }
+    }
+}

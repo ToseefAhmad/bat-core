@@ -1,0 +1,19 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$store-locator-map-component-close-button-size: 1.4rem;
+$store-locator-map-component-info-window-max-height: 11.6rem !important;
+$store-locator-map-component-close-button-top: 2rem !important;
+$store-locator-map-component-close-button-right: 2rem !important;
+$store-locator-map-component-close-button-background-image: url('../../../../../../common/src/resources/svg/vuse/vuse-close-store.svg') !important;
+$store-locator-map-component-style-iw-c-padding-inline-start: $p-secondary;
+$store-locator-map-component-style-iw-c-padding-inline-end: $p-secondary;
+$store-locator-map-component-style-iw-c-padding-block-end: $p-primary;
+$store-locator-map-component-info-window-title-color: $primary;
+$store-locator-map-component-info-window-address-color: $primary;
+$store-locator-map-component-info-window-address-margin-block-end: 2.5rem;
+$store-locator-map-component-cluster-2-color: $light;
+
+// sm
+$store-locator-map-component-info-window-width-sm: 33.5rem !important;
+$store-locator-map-component-info-window-title-font-size-sm: $h4-font-size;
+$store-locator-map-component-info-window-address-font-size-sm: $font-size-mobile;

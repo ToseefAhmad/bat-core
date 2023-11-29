@@ -1,0 +1,57 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .product-detail-component {
+            $product-detail-component-brand-font-size-sm: null !default;
+            $product-detail-component-update-button-margin-bottom-sm: 5rem !default;
+            $product-detail-component-update-button-max-width-sm: 22rem !default;
+
+            & {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &-gallery,
+            &-info {
+                width: 50%;
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &-info-wrapper {
+                padding-block-start: $p-primary-lg;
+                padding-block-end: 0;
+                padding-inline-start: $p-primary-lg;
+                padding-inline-end: $p-primary-lg;
+            }
+
+            &-brand {
+                font-size: $product-detail-component-brand-font-size-sm;
+            }
+
+            .product-price-component {
+                .editable-bundle-price-component {
+                    margin-top: $m-primary;
+                }
+            }
+
+            .delivery-cms-block {
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+                padding-inline-start: $p-primary-lg;
+                padding-inline-end: $p-primary-lg;
+            }
+
+            &-update-button.button-component {
+                max-width: $product-detail-component-update-button-max-width-sm;
+                margin-block-end: $product-detail-component-update-button-margin-bottom-sm;
+                margin-inline-start: 0;
+            }
+        }
+    }
+}

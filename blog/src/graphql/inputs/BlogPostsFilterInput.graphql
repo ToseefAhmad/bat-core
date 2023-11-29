@@ -1,0 +1,65 @@
+"""
+[blog][BAT]
+Input is used to send data of post filter input
+"""
+input BlogPostsFilterInput {
+    """
+    [blog][BAT]
+    Post ID
+    """
+    post_id: FilterTypeInput
+
+    """
+    [blog][BAT]
+    Author ID
+    """
+    author_id: FilterTypeInput
+
+    """
+    [blog][BAT]
+    Tag ID
+    """
+    tag_id: FilterTypeInput
+
+    """
+    [blog][BAT]
+    Category ID
+    """
+    category_id: FilterTypeInput
+
+    """
+    [blog][BAT]
+    Post's title
+    """
+    title: FilterTypeInput
+
+    """
+    [blog][BAT]
+    Post's content
+    """
+    content: FilterTypeInput
+
+    """
+    [blog][BAT]
+    Publish time
+    """
+    publish_time: FilterTypeInput
+
+    """
+    [blog][BAT]
+    Search
+    """
+    search: FilterTypeInput
+
+    """
+    [blog][BAT]
+    An ID of a related product
+    """
+    relatedproduct_id: FilterTypeInput
+
+    """
+    [blog][BAT]
+    The keyword required to perform a logical OR comparison
+    """
+    or: BlogPostsFilterInput
+}

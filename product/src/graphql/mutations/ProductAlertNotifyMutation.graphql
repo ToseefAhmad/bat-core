@@ -1,0 +1,5 @@
+mutation ProductAlertNotifyMutation($input: productAlertCustomerNotifyInStockInput) {
+    productAlertCustomerNotifyInStock(input: $input) {
+        success
+    }
+}

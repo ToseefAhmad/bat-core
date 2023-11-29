@@ -1,0 +1,20 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .checkout-com-renderer-component {
+        $checkout-com-renderer-component-date-input-width-md: 46% !default;
+        $checkout-com-renderer-component-code-input-width-md: 23% !default;
+
+        &-date {
+            width: $checkout-com-renderer-component-date-input-width-md;
+            padding-inline-end: $p-secondary;
+            margin-block-end: 0;
+        }
+
+        &-code {
+            width: $checkout-com-renderer-component-code-input-width-md;
+            padding-inline-start: $p-secondary;
+        }
+    }
+}

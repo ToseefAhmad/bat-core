@@ -1,0 +1,7 @@
+#import "../fragments/CheckoutOrder.fragment.graphql"
+
+mutation BatCreateOrder($input: CreateOrderInput) {
+    createOrder(input: $input) {
+        ...BatCheckoutOrderFragment
+    }
+}

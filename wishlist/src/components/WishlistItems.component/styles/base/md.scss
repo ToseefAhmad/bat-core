@@ -1,0 +1,15 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .wishlist-items-component {
+        $wishlist-items-component-empty-font-size-md: null !default;
+        $wishlist-items-component-empty-padding-block-md: 6rem !default;
+
+        &-empty {
+            font-size: $wishlist-items-component-empty-font-size-md;
+            padding-block-start: $wishlist-items-component-empty-padding-block-md;
+            padding-block-end: $wishlist-items-component-empty-padding-block-md;
+        }
+    }
+}

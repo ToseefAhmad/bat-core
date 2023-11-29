@@ -1,0 +1,51 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .product-engraving-summary-component {
+    $product-engraving-summary-component-title-font-size: 2rem;
+    $product-engraving-summary-component-title-margin: 3rem 0;
+    $product-engraving-summary-component-price-total-font-size: 2.8rem;
+    $product-engraving-summary-component-price-total-line-height: 2.8rem;
+    $product-engraving-summary-component-add-margin-bottom: 3rem;
+    $product-engraving-summary-component-actions-update-width: 22rem;
+
+    &-title {
+        font-size: $product-engraving-summary-component-title-font-size;
+        font-weight: $font-weight-semibold;
+        margin: $product-engraving-summary-component-title-margin;
+    }
+
+    &-list-items {
+        & {
+            margin-bottom: $m-primary;
+        }
+
+        .product-engraving-summary-item-component:last-child {
+            border-bottom: 1px solid $gray-light-primary;
+        }
+    }
+
+    &-price-total {
+        font-size: $product-engraving-summary-component-price-total-font-size;
+        line-height: $product-engraving-summary-component-price-total-line-height;
+        font-weight: $font-weight-extrabold;
+        font-family: $font-family-secondary;
+        margin-bottom: $m-secondary;
+    }
+
+    &-add.button-component {
+        width: 100%;
+        margin-bottom: $product-engraving-summary-component-add-margin-bottom;
+        letter-spacing: normal;
+    }
+
+    &-actions {
+        &-update.button-component {
+            width: $product-engraving-summary-component-actions-update-width;
+        }
+
+        div.add-to-cart-panel-component {
+            padding-inline: 0;
+            padding-block: 0;
+        }
+    }
+}

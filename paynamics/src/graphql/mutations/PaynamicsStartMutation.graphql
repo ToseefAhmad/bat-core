@@ -1,0 +1,8 @@
+mutation PaynamicsStart($input: PaynamicsStartInput) {
+    paynamicsStart(input: $input) {
+        form_url
+        form_method
+        input_value
+        input_name
+    }
+}

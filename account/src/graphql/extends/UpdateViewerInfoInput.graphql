@@ -1,0 +1,19 @@
+extend input UpdateViewerInfoInput {
+    """
+    [BAT][account]
+    Phone number
+    """
+    phone_number: String
+
+    """
+    [BAT][account]
+    Agent referral code
+    """
+    referral: String
+
+    """
+    [BAT][account]
+    Consent
+    """
+    consent: Boolean
+}

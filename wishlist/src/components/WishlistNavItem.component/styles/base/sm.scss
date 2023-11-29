@@ -1,0 +1,13 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .wishlist-nav-item-component {
+        $wishlist-nav-item-component-icon-direction-sm: null !default;
+        $wishlist-nav-item-component-icon-justify-sm: null !default;
+
+        &-icon {
+            flex-direction: $wishlist-nav-item-component-icon-direction-sm;
+            justify-content: $wishlist-nav-item-component-icon-justify-sm;
+        }
+    }
+}

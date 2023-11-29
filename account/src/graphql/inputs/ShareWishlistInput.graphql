@@ -1,0 +1,19 @@
+input ShareWishlistInput {
+    """
+    [BAT][account]
+    Wishlist id
+    """
+    wishlist_id: ID
+
+    """
+    [BAT][account]
+    Emails string to share wishlist
+    """
+    emails: String
+
+    """
+    [BAT][account]
+    Message string to share
+    """
+    message: String
+}

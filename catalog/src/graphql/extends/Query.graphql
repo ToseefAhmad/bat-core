@@ -1,0 +1,7 @@
+extend type Query {
+    """
+    [catalog][BAT]
+    Returns set of menu items
+    """
+    menuItemsByCode(menu_set_code: String!, is_logged_in: Boolean): [MenuItem]
+}

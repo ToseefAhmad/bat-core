@@ -1,0 +1,19 @@
+type WalletRulesWithCoupons {
+    """
+    [sales][VELO]
+    Coupon id
+    """
+    id: ID
+
+    """
+    [sales][VELO]
+    Coupon label
+    """
+    label: String
+
+    """
+    [sales][VELO]
+    Coupon info
+    """
+    coupon_info: WalletCouponInfo
+}

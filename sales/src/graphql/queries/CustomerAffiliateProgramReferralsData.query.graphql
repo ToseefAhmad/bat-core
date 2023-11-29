@@ -1,0 +1,11 @@
+query CustomerAffiliateProgramReferralsData ($start: Int = 0, $count: Int = 5) {
+    getReferrals(input: {start: $start, count: $count}) {
+        start
+        count
+        total
+        items {
+            name
+            email
+        }
+    }
+}

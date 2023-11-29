@@ -1,0 +1,7 @@
+extend type Query {
+    """
+    [store-locator][BAT]
+    Get store locations list
+    """
+    StoreLocations: [StoreLocation]
+}

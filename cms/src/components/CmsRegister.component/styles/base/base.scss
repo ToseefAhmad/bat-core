@@ -1,0 +1,38 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.cms-register-component {
+    $cms-register-component-margin: $m-primary auto !default;
+    $cms-register-component-drop-block-margin-block-start: 5rem !default;
+
+    & {
+        margin: $cms-register-component-margin;
+        width: 100%;
+    }
+
+    &-title {
+        border-bottom: 0.1rem solid $gray-light-primary;
+        font-size: $font-size-title;
+        margin-bottom: $m-primary;
+        padding: $p-primary 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-age {
+        background-color: $success-light;
+        padding: $p-primary;
+        text-align: center;
+    }
+
+    &-verify-name {
+        font-weight: $font-weight-bold;
+    }
+
+    .age-verification-component {
+        margin: $p-primary;
+    }
+
+    .age-verification-form-component-drop-block {
+        margin-block-start: $cms-register-component-drop-block-margin-block-start;
+    }
+}

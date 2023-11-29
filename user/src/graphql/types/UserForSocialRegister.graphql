@@ -1,0 +1,19 @@
+type UserForSocialRegister {
+    """
+    [user][BAT]
+    User first name
+    """
+    first_name: String
+
+    """
+    [user][BAT]
+    User last name
+    """
+    last_name: String
+
+    """
+    [user][BAT]
+    User email
+    """
+    email: String
+}

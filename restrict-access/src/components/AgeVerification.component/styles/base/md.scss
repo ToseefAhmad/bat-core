@@ -1,0 +1,10 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .age-verification-component {
+        &-note {
+            font-size: $font-size-md;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .account-page {
+        .address-book-form-component {
+            &-submit-wrapper {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

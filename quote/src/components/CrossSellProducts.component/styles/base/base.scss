@@ -1,0 +1,77 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/ProductListSlider.component/index';
+
+.cross-sell-products-component {
+    $cross-sell-products-component-font-size: 2rem !default;
+    $cross-sell-products-component-line-height: 2.4rem !default;
+    $cross-sell-products-component-font-weight: 800 !default;
+    $cross-sell-products-component-font-family: null !default;
+    $cross-sell-products-component-product-width-3: 33.333% !default;
+    $cross-sell-products-component-product-width-2: 50% !default;
+    $cross-sell-products-component-add-cart-font-size: 1.3rem !default;
+    $cross-sell-products-component-arrow-icon-width: 0.96rem !default;
+    $cross-sell-products-component-arrow-icon-height: 1.8rem !default;
+    $cross-sell-products-component-arrow-icon-background-size: 0.96rem 1.8rem !default;
+    $cross-sell-products-component-arrow-background-image: null !default;
+    $cross-sell-products-component-add-cart-width: 14.4rem !default;
+
+    & {
+        padding: $p-primary;
+        margin-bottom: $m-primary;
+        background-color: $light;
+    }
+
+    &-title {
+        font-size: $cross-sell-products-component-font-size;
+        line-height: $cross-sell-products-component-line-height;
+        font-weight: $cross-sell-products-component-font-weight;
+        font-family: $cross-sell-products-component-font-family;
+        margin-bottom: $m-primary;
+        text-transform: uppercase;
+    }
+
+    .product-list-slider-component {
+        & {
+            margin: 0;
+        }
+
+        &-arrow {
+            width: $cross-sell-products-component-arrow-icon-width;
+            height: $cross-sell-products-component-arrow-icon-height;
+            background-image: $cross-sell-products-component-arrow-background-image;
+            background-size: $cross-sell-products-component-arrow-icon-background-size;
+            border: 0;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &-product {
+            padding-bottom: $p-primary;
+        }
+
+        .product-list-slider-component-products {
+            display: flex;
+        }
+
+        .product-list-slider-component-products-3 .product-list-slider-component-product {
+            width: $cross-sell-products-component-product-width-3;
+            min-width: $cross-sell-products-component-product-width-3;
+        }
+
+        .product-list-slider-component-products-2 .product-list-slider-component-product {
+            width: $cross-sell-products-component-product-width-2;
+            min-width: $cross-sell-products-component-product-width-2;
+        }
+
+        .product-preview-alt-component-footer .button-component {
+            width: $cross-sell-products-component-add-cart-width;
+            font-size: $cross-sell-products-component-add-cart-font-size;
+        }
+
+        .product-preview-alt-component .variation-attribute-adaptive-component {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/components/PasswordInput.component/index';
+
+.app {
+    .password-input-component {
+        $password-input-component-icon-width: 3rem;
+        $password-input-component-icon-height: 3rem;
+        $password-input-component-icon-background-size: 1.4rem 0.9rem;
+
+        &-disclose-icon {
+            & {
+                width: $password-input-component-icon-width;
+                height: $password-input-component-icon-height;
+                background-size: $password-input-component-icon-background-size;
+                background-color: transparent;
+                border-radius: 50%;
+                transition: background-color 150ms ease-in-out;
+            }
+
+            &:hover {
+                background-color: $gray-light-primary;
+            }
+        }
+
+        &-disclose-hide {
+            background-image: url('../../../../../../common/src/resources/svg/base/bat-eye-off.svg');
+        }
+
+        &-disclose-show {
+            background-image: url('../../../../../../common/src/resources/svg/base/bat-eye-on.svg');
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        .password-input-component {
+            &-disclose {
+                left: 0;
+                right: initial;
+            }
+        }
+    }
+}

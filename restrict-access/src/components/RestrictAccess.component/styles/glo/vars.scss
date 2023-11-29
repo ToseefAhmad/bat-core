@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/glo';
+
+$restrict-access-component-z-index: 2147483001; // Set restrict access popup higher than the live chat
+$restrict-access-component-title-font-size: 2rem;
+$restrict-access-component-title-line-height: 2.6rem;
+$restrict-access-component-title-color: $primary-font-color;
+$restrict-access-component-title-margin-block-end: 0;
+$restrict-access-component-text-font-size: 1.3rem;
+$restrict-access-component-text-margin-block-end: 1rem;
+$restrict-access-component-notice-font-size: 1.1rem;
+$restrict-access-component-notice-margin-block-start: $m-primary;

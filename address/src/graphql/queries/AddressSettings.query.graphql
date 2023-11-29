@@ -1,0 +1,8 @@
+query StoreConfigAddressSettings {
+    storeConfig {
+        show_company
+        street_max_lines
+        postcode_max_length
+        postcode_min_length
+    }
+}

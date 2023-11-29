@@ -1,0 +1,34 @@
+"""
+[espay][BAT]
+Configuration for Espay iframe
+https://sandbox-kit.espay.id/docs/v2/docespay/en/embedkit.php
+"""
+type EspayConfig {
+    """
+    [espay][BAT]
+    Key provided by Espay Integration Team
+    """
+    key: String
+
+    """
+    [espay][BAT]
+    Merchant url for confirmation page
+    """
+    back_url: String
+
+    """
+    [espay][BAT]
+    Display provided by Espay. There are choice provided by Espay, such as tab, select list, and radio box option,
+    Default : select For tab display set value = ‘tab’
+    For radio box display set value = ‘option’
+    """
+    display: String
+
+    """
+    [espay][BAT]
+    Redirect to the Espay payment system. It could be changed depends on the server mode:
+    Development : https://sandbox-kit.espay.id/public/signature/js
+    Production : https://kit.espay.id/public/signature/js
+    """
+    espay_url: AbsoluteUrl
+}

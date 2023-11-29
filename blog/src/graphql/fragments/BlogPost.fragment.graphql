@@ -1,0 +1,44 @@
+fragment BlogPostFragment on BlogPost {
+    post_id
+    post_url
+    identifier
+    title
+    meta_title
+    meta_keywords
+    meta_description
+    og_title
+    og_description
+    og_image
+    og_type
+    canonical_url
+    content
+    filtered_content
+    creation_time
+    update_time
+    publish_time
+    is_active
+    featured_image
+    featured_img_alt
+    author {
+        author_id
+        identifier
+        title
+        name
+    }
+    author_id
+    is_recent_posts_skip
+    short_content
+    related_posts {
+        post_id
+        post_url
+        identifier
+        title
+        featured_image
+        featured_img_alt
+        update_time
+        publish_time
+        short_content
+    }
+    enable_social_sharing
+    meta_robots
+}

@@ -1,0 +1,81 @@
+@import '../../../../../common/src/scss/variables/base';
+
+.salesforce-chat-component {
+    $salesforce-chat-component-bottom: 1rem !default;
+    $salesforce-chat-component-right: 1rem !default;
+    $salesforce-chat-component-zindex: 1035 !default;
+    $salesforce-chat-component-status-width: 4.2rem !default;
+    $salesforce-chat-component-status-height: 4.2rem !default;
+    $salesforce-chat-component-status-background: #f38120 !default;
+    $salesforce-chat-component-status-icon-width: 2.4rem !default;
+    $salesforce-chat-component-status-icon-height: 2.4rem !default;
+    $salesforce-chat-component-status-icon-background-size: 100% !default;
+    $salesforce-chat-component-status-text-font-size: 1.6rem !default;
+    $salesforce-chat-component-status-text-letter-spacing: 0.1rem !default;
+    $salesforce-chat-component-status-text-shadow: rgb(0, 0, 0) 0 0.1rem 0.3rem !default;
+    $salesforce-chat-component-status-box-shadow: none !default;
+    $salesforce-chat-component-status-border-radius: 50% !default;
+    $salesforce-chat-component-online-status-text-indent: 200% !default;
+    $salesforce-chat-component-offline-status-text-indent: 200% !default;
+    $salesforce-chat-component-tooltip-right: 0 !default;
+    $salesforce-chat-component-tooltip-bottom: 100% !default;
+    $salesforce-chat-component-tooltip-width: 24rem !default;
+    $salesforce-chat-component-tooltip-border-radius: 1rem !default;
+    $salesforce-chat-component-tooltip-box-shadow: rgba(0, 0, 0, 0.3) 0 0.4rem 1.2rem !default;
+
+    & {
+        position: fixed;
+        bottom: $salesforce-chat-component-bottom;
+        right: $salesforce-chat-component-right;
+        z-index: $salesforce-chat-component-zindex;
+    }
+
+    &-online-action,
+    &-offline-action {
+        display: flex;
+        width: $salesforce-chat-component-status-width;
+        height: $salesforce-chat-component-status-height;
+        padding: $p-secondary;
+        white-space: nowrap;
+        background: $salesforce-chat-component-status-background;
+        color: $light;
+        border-radius: $salesforce-chat-component-status-border-radius;
+        box-shadow: $salesforce-chat-component-status-box-shadow;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &-online-action:hover,
+    &-offline-action:hover {
+        color: $light;
+    }
+
+    &-tooltip {
+        position: absolute;
+        right: $salesforce-chat-component-tooltip-right;
+        bottom: $salesforce-chat-component-tooltip-bottom;
+        width: $salesforce-chat-component-tooltip-width;
+        padding: $p-secondary;
+        border-radius: $salesforce-chat-component-tooltip-border-radius;
+        margin-bottom: $m-secondary;
+        background-color: $light;
+        box-shadow: $salesforce-chat-component-tooltip-box-shadow;
+    }
+
+    &-text {
+        display: none;
+        font-size: $salesforce-chat-component-status-text-font-size;
+        text-transform: uppercase;
+        font-weight: $font-weight-semibold;
+        letter-spacing: $salesforce-chat-component-status-text-letter-spacing;
+        text-shadow: $salesforce-chat-component-status-text-shadow;
+    }
+
+    &-icon {
+        display: inline-block;
+        width: $salesforce-chat-component-status-icon-width;
+        height: $salesforce-chat-component-status-icon-height;
+        background: url('../../../../../common/src/resources/svg/base/bat-live-chat.svg') 50% 50% no-repeat;
+        background-size: $salesforce-chat-component-status-icon-background-size;
+    }
+}

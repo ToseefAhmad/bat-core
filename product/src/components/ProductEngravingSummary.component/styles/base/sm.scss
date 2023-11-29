@@ -1,0 +1,17 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app .product-engraving-summary-component {
+        &-title {
+            font-size: $h2-font-size;
+            margin: $m-primary 0;
+        }
+
+        &-actions {
+            &-update.button-component {
+                width: 100%;
+            }
+        }
+    }
+}

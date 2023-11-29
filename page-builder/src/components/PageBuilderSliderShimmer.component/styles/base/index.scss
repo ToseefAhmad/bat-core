@@ -1,0 +1,11 @@
+.page-builder-slider-shimmer-component {
+    & {
+        position: relative;
+    }
+
+    .loader-base-component {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

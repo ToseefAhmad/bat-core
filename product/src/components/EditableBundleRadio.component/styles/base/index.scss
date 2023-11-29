@@ -1,0 +1,46 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/EditableBundleRadio.component/index';
+
+.app {
+    .editable-bundle-radio-component {
+        $editable-bundle-radio-component-font-weight: null !default;
+        $editable-bundle-radio-component-label-padding-inline-start: null !default;
+        $editable-bundle-radio-component-label-before-top: null !default;
+        $editable-bundle-radio-component-label-before-size: null !default;
+        $editable-bundle-radio-component-label-before-border-width: null !default;
+        $editable-bundle-radio-component-label-before-box-shadow: null !default;
+
+        & {
+            cursor: pointer;
+        }
+
+        &-label,
+        &-price {
+            font-weight: $editable-bundle-radio-component-font-weight;
+        }
+
+        &-radio {
+            & {
+                font-weight: $font-weight-semibold;
+            }
+
+            &.radio-component .radio-component-label-text {
+                & {
+                    padding-inline-start: $editable-bundle-radio-component-label-padding-inline-start;
+                }
+
+                &::before {
+                    top: $editable-bundle-radio-component-label-before-top;
+                    width: $editable-bundle-radio-component-label-before-size;
+                    height: $editable-bundle-radio-component-label-before-size;
+                    border-width: $editable-bundle-radio-component-label-before-border-width;
+                    box-shadow: $editable-bundle-radio-component-label-before-box-shadow;
+                }
+            }
+
+            &.radio-component .radio-component-input:checked ~ .radio-component-label-text::before {
+                box-shadow: $editable-bundle-radio-component-label-before-box-shadow;
+            }
+        }
+    }
+}

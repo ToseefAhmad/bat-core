@@ -1,0 +1,8 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$settings-nav-item-component-collapse-background-color: $gray-lighter;
+$settings-nav-item-component-border-top: $border-width solid $tertiary;
+$settings-nav-item-component-background-image: bgSvgUrl('wheel');
+$settings-nav-item-component-button-color: $light;
+$settings-nav-item-component-button-background-image: url('../../../../../../common/src/resources/svg/velo/velo-plus-white.svg');
+$settings-nav-item-component-button-collapse-background-image: url('../../../../../../common/src/resources/svg/velo/velo-minus-white.svg');

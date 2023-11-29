@@ -1,0 +1,14 @@
+query StoreLocatorSettings {
+    storeConfig {
+        sl_api_key
+        sl_center_lat
+        sl_center_lng
+        sl_zoom
+        sl_min_zoom
+        sl_max_zoom
+        sl_clustering_max_zoom
+        sl_clustering_zoom_on_click
+        sl_blackwhite
+        sl_gm_enabled
+    }
+}

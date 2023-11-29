@@ -1,0 +1,82 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.store-view-switcher-component {
+    $store-view-switcher-component-icon-size: 1.6rem !default;
+    $store-view-switcher-component-icon-height: 2rem !default;
+    $store-view-switcher-component-icon-width: 2.2rem !default;
+    $store-view-switcher-component-icon-position: 50% !default;
+    $store-view-switcher-component-icon-background-image: url(../../../../../../common/src/resources/svg/base/bat-store-switcher.svg) !default;
+    $store-view-switcher-component-icon-section-top: 2rem !default;
+    $store-view-switcher-component-order: 21 !default;
+
+    & {
+        border-top: $border-width solid $dark;
+        order: $store-view-switcher-component-order;
+    }
+
+    .store-view-store-view-switcher-component-component-toggle[type='button'] {
+        &,
+        &:hover,
+        &:focus,
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled):active:focus {
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    &-icon {
+        & {
+            display: flex;
+            color: $light;
+            text-decoration: none;
+            font-size: $font-size-base;
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            align-items: center;
+        }
+
+        &::before {
+            display: block;
+            content: '';
+            background-image: $store-view-switcher-component-icon-background-image;
+            background-repeat: no-repeat;
+            background-position: $store-view-switcher-component-icon-position;
+            background-size: $store-view-switcher-component-icon-size $store-view-switcher-component-icon-size;
+            height: $store-view-switcher-component-icon-height;
+            width: $store-view-switcher-component-icon-width;
+            margin-inline-end: $m-secondary;
+        }
+
+        &:hover {
+            color: $light;
+        }
+    }
+
+    &-section {
+        & {
+            display: none;
+            position: absolute;
+            top: $store-view-switcher-component-icon-section-top;
+            background: $dark-secondary;
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+        }
+
+        &-active {
+            display: block;
+        }
+
+        &-link {
+            &,
+            &:hover {
+                color: $light;
+                text-decoration: none;
+            }
+        }
+    }
+}

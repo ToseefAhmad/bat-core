@@ -1,0 +1,79 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.product-engraving-steps-control-component {
+    $product-engraving-steps-component-item-line-height: 1.4rem;
+    $product-engraving-steps-component-item-border: 1px solid $gray-light-primary;
+    $product-engraving-steps-component-item-border-active: 2px solid $secondary;
+    $product-engraving-steps-control-component-actions-cancel-background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-left-black.svg') !default;
+    $product-engraving-steps-control-component-actions-back-padding-inline-start: 3rem;
+    $product-engraving-steps-control-component-actions-back-background-size: 2rem 1.4rem;
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: decimal;
+        list-style-position: inside;
+        padding: 0;
+        margin-bottom: $m-primary;
+    }
+
+    &-item {
+        width: 100%;
+        color: $gray;
+        text-align: center;
+        padding-bottom: $p-secondary;
+        text-transform: uppercase;
+        border-bottom: $product-engraving-steps-component-item-border;
+        line-height: $product-engraving-steps-component-item-line-height;
+
+        &.active {
+            color: $primary;
+            border-bottom: $product-engraving-steps-component-item-border-active;
+        }
+    }
+
+    &-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-actions .button-component {
+        & {
+            padding: 0;
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    &-actions-back.button-component {
+        text-transform: uppercase;
+        padding-inline-start: $product-engraving-steps-control-component-actions-back-padding-inline-start;
+        background: $product-engraving-steps-control-component-actions-cancel-background-image no-repeat;
+        background-position: center left;
+        background-size: $product-engraving-steps-control-component-actions-back-background-size;
+    }
+
+    &-actions-cancel.button-component,
+    &-actions-cancel.button-component:hover {
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+}
+
+[dir='rtl'] {
+    .app .product-engraving-steps-control-component {
+        $product-engraving-steps-control-component-actions-cancel-background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-right-black.svg') !default;
+        $product-engraving-steps-control-component-actions-back-background-size: 2rem 1.4rem;
+
+        &-actions-back.button-component {
+            background: $product-engraving-steps-control-component-actions-cancel-background-image no-repeat;
+            background-position: center right;
+            background-size: $product-engraving-steps-control-component-actions-back-background-size;
+        }
+    }
+}

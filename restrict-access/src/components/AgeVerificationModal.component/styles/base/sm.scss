@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .age-verification-modal-component {
+        $age-verification-modal-component-modal-confirm-top-sm: 50% !default;
+        $age-verification-modal-component-modal-confirm-transform-sm: -50% !default;
+
+        &.modal-component .modal-component-dialog {
+            top: $age-verification-modal-component-modal-confirm-top-sm;
+            transform: translateY($age-verification-modal-component-modal-confirm-transform-sm);
+        }
+    }
+}

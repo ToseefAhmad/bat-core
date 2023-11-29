@@ -1,0 +1,25 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    $newsletter-component-form-min-width-md: 24rem !default;
+    $newsletter-component-form-body-width-md: 38rem !default;
+
+    .app {
+        .newsletter-component {
+            &-form {
+                min-width: $newsletter-component-form-min-width-md;
+            }
+
+            &-form-title {
+                letter-spacing: $letter-spacing-desktop;
+                font-size: $font-size-lg;
+            }
+
+            &-form-body,
+            &-text {
+                width: $newsletter-component-form-body-width-md;
+            }
+        }
+    }
+}

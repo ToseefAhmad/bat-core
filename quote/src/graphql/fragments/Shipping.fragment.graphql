@@ -1,0 +1,7 @@
+#import "./ShippingAddress.fragment.graphql"
+
+fragment BatShippingFragment on Cart {
+    shipping_addresses {
+        ...BatShippingAddressFragment
+    }
+}

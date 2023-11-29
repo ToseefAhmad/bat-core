@@ -1,0 +1,29 @@
+@import './variables/base';
+
+@keyframes bounce-arrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX($arrow-translate-value);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce-arrow-rtl {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-$arrow-translate-value);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

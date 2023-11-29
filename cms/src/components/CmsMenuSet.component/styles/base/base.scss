@@ -1,0 +1,30 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .cms-menu-set-component {
+        $cms-menu-set-component-background-color: $background-primary-color !default;
+        $cms-menu-set-component-toggle-font-size: 1.2rem !default;
+        $cms-menu-set-component-toggle-padding-block: 2.3rem !default;
+
+        & {
+            background-color: $cms-menu-set-component-background-color;
+        }
+
+        &-collapse {
+            padding-block-start: 0;
+            padding-block-end: 0;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+        }
+
+        &-toggle.accordion-toggle {
+            font-size: $cms-menu-set-component-toggle-font-size;
+            font-weight: $font-weight-bold;
+            padding-block-start: $cms-menu-set-component-toggle-padding-block;
+            padding-block-end: $cms-menu-set-component-toggle-padding-block;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            line-height: 1;
+        }
+    }
+}

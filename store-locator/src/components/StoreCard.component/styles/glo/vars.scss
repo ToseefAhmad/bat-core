@@ -1,0 +1,13 @@
+@import '../../../../../../common/src/scss/variables/glo';
+
+$store-card-component-button-border-color: $button-tertiary-border-color;
+$store-card-component-button-border-width: $secondary-border-width;
+$store-card-component-button-padding-block-start: $p-secondary;
+$store-card-component-button-padding-block-end: $p-secondary;
+$store-card-component-button-padding-inline-start: $p-primary;
+$store-card-component-button-padding-inline-end: $p-primary;
+$store-card-component-button-color: $primary;
+$store-card-component-footer-width: auto;
+$store-card-component-button-border-radius: $form-border-radius;
+$store-card-component-button-focus-box-shadow: 0 0 0.9rem $secondary-dark;
+$store-card-component-button-hover-border: $button-tertiary-border-color-hover;

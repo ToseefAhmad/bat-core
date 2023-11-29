@@ -1,0 +1,19 @@
+type BlogPostsOutput {
+    """
+    [blog][BAT]
+    Total count of posts
+    """
+    total_count: Int
+
+    """
+    [blog][BAT]
+    Total count of pages
+    """
+    total_pages: Int
+
+    """
+    [blog][BAT]
+    An array of Blog posts
+    """
+    items: [BlogPost]
+}

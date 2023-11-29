@@ -1,0 +1,15 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.blog-share-component {
+    &-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &-title {
+        text-transform: uppercase;
+        font-size: $h4-font-size;
+        font-weight: $font-weight-bold;
+        margin-inline-end: $m-primary;
+    }
+}

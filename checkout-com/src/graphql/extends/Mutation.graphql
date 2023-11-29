@@ -1,0 +1,19 @@
+extend type Mutation {
+    """
+    [checkout-com][BAT]
+    Set data from checkout.com payment method and place order
+    """
+    checkoutcomPlaceOrder(input: CheckoutcomPlaceOrderInput): CheckoutOrder
+
+    """
+    [checkout-com][BAT]
+    Verify the payment with the session ID
+    """
+    checkoutcomPaymentVerify(input: Payment3DSResultInput): CheckoutOrder
+
+    """
+    [checkout-com][BAT]
+    Fail the payment with the session ID
+    """
+    checkoutcomPaymentFail(input: Payment3DSResultInput): Cart
+}

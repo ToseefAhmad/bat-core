@@ -1,0 +1,25 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$menu-set-component-category-border-top: $border-width solid $tertiary;
+$menu-set-component-modal-menu-set-background-color: $dark-blue;
+$menu-set-component-first-level-category-border-top: $border-width solid $tertiary;
+$menu-set-component-second-level-category-border-color: $tertiary;
+$menu-set-component-second-level-category-background-color: $gray-lighter;
+$menu-set-component-second-level-category-color: $dark;
+$menu-set-component-all-background-color: $tertiary;
+$menu-set-component-all-icon-background-image-url: url('../../../../../../common/src/resources/svg/velo/velo-arrow-right-white.svg');
+$menu-set-component-toggle-collapse-show-color: $light;
+$menu-set-component-toggle-background-image-url: url('../../../../../../common/src/resources/svg/velo/velo-plus-white.svg');
+$menu-set-component-toggle-collapse-show-background-image-url: url('../../../../../../common/src/resources/svg/velo/velo-minus-white.svg');
+
+// sm
+$menu-set-component-accordion-background-color-sm: $gray-lighter;
+$menu-set-component-all-background-color-sm: $gray-light;
+$menu-set-component-all-color-sm: $dark;
+$menu-set-component-all-hover-color-sm: $dark;
+$menu-set-component-all-icon-background-image-url-sm: url('../../../../../../common/src/resources/svg/velo/velo-arrow-right.svg');
+$menu-set-component-menu-set-nav-max-width-sm: 22rem;
+$menu-set-component-category-padding-sm: 1.8rem $p-tertiary;
+
+// md
+$menu-set-component-category-padding-md: 1.8rem $p-primary;

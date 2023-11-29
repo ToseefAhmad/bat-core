@@ -1,0 +1,13 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .store-locator-nav-control-component {
+        $store-locator-nav-control-component-icon-direction-sm: null !default;
+        $store-locator-nav-control-component-icon-justify-sm: null !default;
+
+        &-icon {
+            flex-direction: $store-locator-nav-control-component-icon-direction-sm;
+            justify-content: $store-locator-nav-control-component-icon-justify-sm;
+        }
+    }
+}

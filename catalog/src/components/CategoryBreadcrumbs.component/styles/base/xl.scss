@@ -1,0 +1,13 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(xl) {
+    .app {
+        .category-breadcrumbs-component {
+            $category-breadcrumbs-component-root-padding-inline-start-xl: null !default;
+
+            &-root {
+                padding-inline-start: $category-breadcrumbs-component-root-padding-inline-start-xl;
+            }
+        }
+    }
+}

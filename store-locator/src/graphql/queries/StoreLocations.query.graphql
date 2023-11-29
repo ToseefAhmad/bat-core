@@ -1,0 +1,17 @@
+query StoreLocations {
+    StoreLocations {
+        name
+        adr1
+        adr2
+        adr3
+        city
+        latitude
+        longitude
+        store_type {
+            store_name
+            full_logo
+            inactive_marker_logo
+            active_marker_logo
+        }
+    }
+}

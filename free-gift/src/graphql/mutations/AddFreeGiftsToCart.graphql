@@ -1,0 +1,7 @@
+#import "../../../../quote/src/graphql/fragments/Checkout.fragment.graphql"
+
+mutation AddFreeGiftsToCart($input: AddFreeGiftToCartInput) {
+    addFreeGiftsToCart(input: $input) @connection(key: "cart") {
+        ...BatCheckoutFragment
+    }
+}

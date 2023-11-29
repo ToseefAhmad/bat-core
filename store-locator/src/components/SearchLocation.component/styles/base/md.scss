@@ -1,0 +1,14 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .search-location-component {
+        & {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE */
+        }
+
+        &::-webkit-scrollbar {
+            width: 0 !important;
+        }
+    }
+}

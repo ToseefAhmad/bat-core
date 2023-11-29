@@ -1,0 +1,42 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.store-locator-control-component {
+    $store-locator-control-component-background-color: #efefef !default;
+    $store-locator-control-component-font-size: 2rem !default;
+    $store-locator-control-component-font-color: #2a2c2c;
+    $store-locator-control-component-icon: null !default;
+    $store-locator-control-component-icon-width: 3.4rem !default;
+    $store-locator-control-component-icon-height: 3.4rem !default;
+    $store-locator-control-component-icon-margin: 9rem !default;
+    $store-locator-control-component-title-padding-block-start: 15rem !default;
+    $store-locator-control-component-title-line-height: 2rem !default;
+    $store-locator-control-component-title-font-weight: $font-weight-semibold !default;
+    $store-locator-control-component-wrapper-padding-block-start: 9rem !default;
+
+    & {
+        background-color: $store-locator-control-component-background-color;
+        width: 100%;
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-block-start: $store-locator-control-component-wrapper-padding-block-start;
+    }
+
+    &-icon {
+        background-image: $store-locator-control-component-icon;
+        background-repeat: no-repeat;
+        width: $store-locator-control-component-icon-width;
+        height: $store-locator-control-component-icon-height;
+    }
+
+    &-title {
+        font-weight: $store-locator-control-component-title-font-weight;
+        font-size: $store-locator-control-component-font-size;
+        line-height: $store-locator-control-component-title-line-height;
+        padding-block-start: $p-primary;
+    }
+}

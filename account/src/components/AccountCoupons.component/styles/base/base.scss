@@ -1,0 +1,17 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-coupons-component {
+    $account-coupons-component-wallet-padding-inline: $p-primary !default;
+
+    & {
+        background-color: $light;
+    }
+
+    .coupons-wallet-component-item,
+    .coupons-wallet-component-empty {
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+        padding-inline-start: $account-coupons-component-wallet-padding-inline;
+        padding-inline-end: $account-coupons-component-wallet-padding-inline;
+    }
+}

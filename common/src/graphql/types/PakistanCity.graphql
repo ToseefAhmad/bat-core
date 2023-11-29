@@ -1,0 +1,13 @@
+type PakistanCity {
+    """
+    [common][VELO]
+    Courier id
+    """
+    id: ID
+
+    """
+    [common][VELO]
+    City of courier id
+    """
+    name: String
+}

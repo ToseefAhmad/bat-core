@@ -1,0 +1,7 @@
+#import "../../../../quote/src/graphql/fragments/Cart.fragment.graphql"
+
+mutation CheckoutComPaymentFail($input: Payment3DSResultInput) {
+    checkoutcomPaymentFail(input: $input) @connection(key: "cart") {
+        ...BatCartFragment
+    }
+}

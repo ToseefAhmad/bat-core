@@ -1,0 +1,82 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    $app-footer-padding-block-start-sm: null !default;
+    $app-footer-logo-margin-block-start-sm: null !default;
+    $app-footer-logo-margin-block-end-sm: $m-primary !default;
+    $app-footer-logo-margin-inline-start-sm: null !default;
+    $app-footer-logo-margin-inline-end-sm: null !default;
+    $app-footer-logo-after-top-sm: null !default;
+    $app-footer-logo-after-bottom-sm: null !default;
+    $app-footer-logo-after-left-sm: null !default;
+    $app-footer-logo-after-margin-inline-start-sm: null !default;
+    $app-footer-delimiter-height-sm: null !default;
+    $app-footer-delimiter-background-sm: null !default;
+    $app-footer-section-title-letter-spacing-sm: null !default;
+    $app-footer-section-title-font-size-sm: null !default;
+    $app-footer-section-holder-links-margin-block-end-sm: null !default;
+    $app-footer-section-holder-links-item-margin-block-end-sm: null !default;
+
+    .app-footer {
+        & {
+            padding-block-start: $app-footer-padding-block-start-sm;
+        }
+
+        &-bottom {
+            flex-direction: column;
+
+            &-logo {
+                & {
+                    margin-block-start: $app-footer-logo-margin-block-start-sm;
+                    margin-block-end: $app-footer-logo-margin-block-end-sm;
+                    margin-inline-start: $app-footer-logo-margin-inline-start-sm;
+                    margin-inline-end: $app-footer-logo-margin-inline-end-sm;
+                }
+
+                &::after {
+                    top: $app-footer-logo-after-top-sm;
+                    bottom: $app-footer-logo-after-bottom-sm;
+                    left: $app-footer-logo-after-left-sm;
+                    margin-inline-start: $app-footer-logo-after-margin-inline-start-sm;
+                }
+            }
+        }
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-top-right {
+            order: 1;
+        }
+
+        &-delimiter {
+            height: $app-footer-delimiter-height-sm;
+            background: $app-footer-delimiter-background-sm;
+        }
+
+        .footer-section-holder {
+            padding-block-start: $p-secondary;
+        }
+
+        .footer-section {
+            &-title {
+                letter-spacing: $app-footer-section-title-letter-spacing-sm;
+                font-size: $app-footer-section-title-font-size-sm;
+            }
+
+            &-holder-links {
+                margin-block-end: $app-footer-section-holder-links-margin-block-end-sm;
+                padding-inline-start: 0;
+            }
+
+            &-holder-links-item {
+                display: list-item;
+                margin-block-end: $app-footer-section-holder-links-item-margin-block-end-sm;
+                margin-inline-end: 0;
+            }
+        }
+    }
+}

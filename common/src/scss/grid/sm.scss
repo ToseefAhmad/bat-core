@@ -1,0 +1,13 @@
+@import '../variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .container {
+        max-width: map-get($container-max-widths, 'sm');
+    }
+
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

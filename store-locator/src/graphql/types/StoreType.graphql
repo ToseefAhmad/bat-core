@@ -1,0 +1,25 @@
+type StoreType {
+    """
+    [store-locator][BAT]
+    Store type name
+    """
+    store_name: String
+
+    """
+    [store-locator][BAT]
+    Store type full logo
+    """
+    full_logo: String
+
+    """
+    [store-locator][BAT]
+    Store type inactive marker logo
+    """
+    inactive_marker_logo: String
+
+    """
+    [store-locator][BAT]
+    Store type active marker logo
+    """
+    active_marker_logo: String
+}

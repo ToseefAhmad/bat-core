@@ -1,0 +1,10 @@
+fragment ProductAttributeFragment on ProductAttribute {
+    product_attribute_id
+    name
+    type
+    description
+    value
+    option_value
+    use_in_google_analytics
+    is_not_visible_on_storefront
+}

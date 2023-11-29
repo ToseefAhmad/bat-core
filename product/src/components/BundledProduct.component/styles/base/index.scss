@@ -1,0 +1,71 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .bundled-product-component {
+        $bundled-product-component-border: none !default;
+        $bundled-product-component-border-bottom: $border-width solid $quaternary-border-color !default;
+        $bundled-product-component-first-child-border-top: $bundled-product-component-border-bottom !default;
+        $bundled-product-component-padding: $p-secondary 0 !default;
+        $bundled-product-component-image-flex-basis: 6rem !default;
+        $bundled-product-component-image-block-border: $border-width solid $gray-secondary-light !default;
+        $bundled-product-component-name-font-size: $h4-font-size !default;
+        $bundled-product-component-name-font-weight: null !default;
+        $bundled-product-component-name-line-height: 2rem !default;
+        $bundled-product-component-values-font-size: $h4-font-size !default;
+        $bundled-product-component-values-line-height: 2rem !default;
+        $bundled-product-component-values-margin-inline-start: $m-primary !default;
+        $bundled-product-component-qty-color: $gray !default;
+        $bundled-product-component-price-min-width: 8rem !default;
+        $bundled-product-component-price-margin-inline-start: $m-primary !default;
+
+        & {
+            border: $bundled-product-component-border;
+            border-bottom: $bundled-product-component-border-bottom;
+            padding: $bundled-product-component-padding;
+            align-items: center;
+        }
+
+        &:first-child {
+            border-top: $bundled-product-component-first-child-border-top;
+        }
+
+        &-image {
+            flex-basis: $bundled-product-component-image-flex-basis;
+        }
+
+        .image-component-image-block {
+            border: $bundled-product-component-image-block-border;
+        }
+
+        &-body {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-name {
+            font-size: $bundled-product-component-name-font-size;
+            font-weight: $bundled-product-component-name-font-weight;
+            line-height: $bundled-product-component-name-line-height;
+            margin-bottom: 0;
+        }
+
+        &-values {
+            display: flex;
+            font-size: $bundled-product-component-values-font-size;
+            line-height: $bundled-product-component-values-line-height;
+            margin-inline-start: $bundled-product-component-values-margin-inline-start;
+        }
+
+        &-qty {
+            color: $bundled-product-component-qty-color;
+        }
+
+        &-price {
+            min-width: $bundled-product-component-price-min-width;
+            margin-inline-start: $bundled-product-component-price-margin-inline-start;
+            text-align: end;
+        }
+    }
+}

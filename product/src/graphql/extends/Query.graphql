@@ -1,0 +1,7 @@
+extend type Query {
+    """
+    [product][BAT]
+    Returns device engraving options
+    """
+    getDeviceEngravingOptions: EngraveOptions
+}

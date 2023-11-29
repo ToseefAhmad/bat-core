@@ -1,0 +1,10 @@
+#import "../fragments/ProductDetailVariation.fragment.graphql"
+
+query BatProductDetailVariation($id: ID, $variationValues: [VariationValueInput]) {
+    product(id: $id) {
+        id
+        variation(variation_values: $variationValues) {
+            ...BatProductDetailVariationFragment
+        }
+    }
+}

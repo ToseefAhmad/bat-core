@@ -1,0 +1,16 @@
+fragment BatPageCategoryFragment on Category {
+    id
+    name
+    description
+    image {
+        id
+        alt
+        url
+    }
+    meta_title
+    meta_keywords
+    meta_description
+    meta_robots
+    url
+    canonical_url
+}

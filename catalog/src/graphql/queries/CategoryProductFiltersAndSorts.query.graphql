@@ -1,0 +1,33 @@
+#import "@luft/catalog/src/graphql/fragments/Filter.fragment.graphql"
+#import "../fragments/BatSort.fragment.graphql"
+
+query CategoryProductsFiltersAndSorts(
+    $id: ID
+    $filters: [FilterInput]
+    $sort: SortInput
+    $start: Int = 0
+    $count: Int = 20
+) {
+    category(id: $id) {
+        id
+        available_sort_by
+        default_sort_by
+        available_sort_by_sorts {
+            ...BatSortFragment
+        }
+        default_sort_by_sort {
+            ...BatSortFragment
+        }
+        products(start: $start, count: $count, filters: $filters, sort: $sort) {
+            start
+            count
+            total
+            filters {
+                ...FilterFragment
+            }
+            sorts {
+                ...BatSortFragment
+            }
+        }
+    }
+}

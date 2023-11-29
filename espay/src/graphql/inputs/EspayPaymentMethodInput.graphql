@@ -1,0 +1,23 @@
+"""
+[espay][BAT]
+Input is used to send data of chosen espay payment method and order ID to form an appropriate URL on the Espay side
+"""
+input EspayPaymentMethodInput {
+    """
+    [espay][BAT]
+    Payment method's code
+    """
+    product_code: String
+
+    """
+    [espay][BAT]
+    Payment method's value
+    """
+    bank_code: String
+
+    """
+    [espay][BAT]
+    Order ID
+    """
+    order_id: ID
+}

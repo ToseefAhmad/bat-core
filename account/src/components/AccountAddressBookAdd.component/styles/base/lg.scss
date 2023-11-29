@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(lg) {
+    .app {
+        .account-address-book-add-component {
+            $account-address-book-add-component-back-display-lg: null !default;
+
+            .back-component {
+                display: $account-address-book-add-component-back-display-lg;
+            }
+        }
+    }
+}

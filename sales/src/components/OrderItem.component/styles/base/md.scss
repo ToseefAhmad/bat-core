@@ -1,0 +1,29 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .order-item-component {
+            &-date {
+                padding-block-start: $p-primary;
+                padding-block-end: 0;
+                padding-inline-start: $p-primary;
+                padding-inline-end: $p-primary;
+            }
+
+            &-info {
+                padding-block-start: 0;
+                padding-block-end: $p-secondary;
+                padding-inline-start: $p-primary;
+                padding-inline-end: $p-primary;
+            }
+
+            &-products {
+                padding-block-start: $p-secondary;
+                padding-block-end: $p-secondary;
+                padding-inline-start: $p-primary;
+                padding-inline-end: $p-primary;
+            }
+        }
+    }
+}

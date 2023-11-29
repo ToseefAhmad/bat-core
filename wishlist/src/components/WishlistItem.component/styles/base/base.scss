@@ -1,0 +1,107 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .wishlist-item-component {
+    $wishlist-item-component-action-button-size: 3rem !default;
+    $wishlist-item-component-action-button-background-color: #efefef !default;
+    $wishlist-item-component-action-button-background-color-hover: darken(
+        $wishlist-item-component-action-button-background-color,
+        10%
+    ) !default;
+    $wishlist-item-component-action-button-box-shadow-focus: 0 0 0.9rem 0 #969696 !default;
+    $wishlist-item-component-remove-icon-background-size: 1.2rem !default;
+    $wishlist-item-component-remove-icon: url('../../../../../../common/src/resources/svg/base/bat-close-black.svg') !default;
+    $wishlist-item-component-edit-icon: url('../../../../../../common/src/resources/svg/base/bat-pencil.svg') !default;
+    $wishlist-item-component-edit-icon-position: 2rem !default;
+    $wishlist-item-component-edit-icon-background-size: 1.4rem !default;
+    $wishlist-item-component-button-max-width: 18rem !default;
+    $wishlist-item-component-button-height: 4rem !default;
+
+    & {
+        position: relative;
+        background-color: $light;
+        margin-block-start: $m-secondary;
+        padding-block-end: $p-primary;
+    }
+
+    &-content {
+        & {
+            display: flex;
+            padding-block-start: $p-primary;
+            padding-block-end: $p-secondary;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            position: relative;
+        }
+
+        .wishlist-item-component-remove-button.button-component,
+        .wishlist-item-component-edit-button.button-component {
+            & {
+                padding: 0;
+                width: $wishlist-item-component-action-button-size;
+                height: $wishlist-item-component-action-button-size;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: $wishlist-item-component-action-button-background-color;
+                border-radius: 50%;
+                border: none;
+            }
+
+            &:hover {
+                background-color: $wishlist-item-component-action-button-background-color-hover;
+            }
+
+            &:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                background-color: $wishlist-item-component-action-button-background-color-hover;
+                box-shadow: $wishlist-item-component-action-button-box-shadow-focus;
+            }
+        }
+
+        .wishlist-item-component-remove-button.button-component {
+            & {
+                background-image: $wishlist-item-component-remove-icon;
+                background-size: $wishlist-item-component-remove-icon-background-size;
+            }
+
+            &:hover {
+                background-position: center;
+            }
+        }
+
+        .wishlist-item-component-edit-button.button-component {
+            & {
+                position: absolute;
+                top: $wishlist-item-component-edit-icon-position;
+                right: $wishlist-item-component-edit-icon-position;
+                background-image: $wishlist-item-component-edit-icon;
+                background-size: $wishlist-item-component-edit-icon-background-size;
+            }
+
+            &:hover {
+                background-position: center;
+            }
+        }
+    }
+
+    &-remove-block {
+        flex-shrink: 0;
+        margin-inline-end: $m-secondary;
+    }
+
+    &-action {
+        & {
+            display: flex;
+            justify-content: end;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+        }
+
+        .button-component {
+            max-width: $wishlist-item-component-button-max-width;
+            height: $wishlist-item-component-button-height;
+            padding-block-start: 0;
+            padding-block-end: 0;
+        }
+    }
+}

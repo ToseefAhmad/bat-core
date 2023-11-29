@@ -1,0 +1,10 @@
+@import '../../common/src/scss/variables/glo';
+@import '../../common/src/components/Pagination.component/styles/glo/index';
+@import '../../blog/src/components/BlogPost.component/styles/glo/index';
+@import '../../blog/src/components/BlogWidget.component/styles/glo/index';
+@import '../../blog/src/components/BlogPostTile.component/styles/glo/index';
+@import '../../blog/src/components/BlogRelatedPosts.component/styles/glo/index';
+
+.blog-post-page {
+    background-color: $background-primary-color;
+}

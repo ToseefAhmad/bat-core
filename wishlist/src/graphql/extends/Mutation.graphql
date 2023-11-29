@@ -1,0 +1,7 @@
+extend type Mutation {
+    """
+    [BAT][wishlist]
+    Add wishlist items to cart
+    """
+    addWishlistItemsToCart(wishlistId: ID!, wishlistItems: [ID!]): AddWishlistItemsToCartOutput
+}

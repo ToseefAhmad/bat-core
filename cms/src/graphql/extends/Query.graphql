@@ -1,0 +1,7 @@
+extend type Query {
+    """
+    [BAT][cms]
+    Returns detailed form information
+    """
+    recentViewedProducts(form_id: Int!): FormBuilderForm
+}

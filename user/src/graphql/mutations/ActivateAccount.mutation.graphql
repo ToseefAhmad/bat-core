@@ -1,0 +1,7 @@
+#import "../fragments/BatViewer.fragment.graphql"
+
+mutation ActivateAccount($input: ActivateAccountInput) {
+    activateAccount(input: $input) {
+        ...BatViewerFragment
+    }
+}

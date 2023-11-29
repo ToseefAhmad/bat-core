@@ -1,0 +1,55 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .editable-bundle-settings-component {
+        $editable-bundle-settings-component-price-padding-top: 3rem !default;
+        $editable-bundle-settings-component-price-font-size: 2.8rem !default;
+        $editable-bundle-settings-component-price-line-height: 2.8rem !default;
+        $editable-bundle-settings-component-price-font-family: null !default;
+        $editable-bundle-settings-component-border-width: 0.1rem !default;
+
+        & {
+            margin: 0;
+            border-top: none;
+        }
+
+        &-price {
+            padding-top: $editable-bundle-settings-component-price-padding-top;
+            margin-bottom: 0;
+            border-bottom: none;
+            border-width: $editable-bundle-settings-component-border-width;
+            border-color: $quaternary-border-color;
+        }
+
+        &-price,
+        &-qty-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &-options {
+            .editable-bundle-option-component:first-child {
+                .editable-bundle-option-component-title {
+                    border-top: none;
+                }
+            }
+        }
+
+        .editable-bundle-price-component {
+            &,
+            &-value,
+            .regular-product-price-component,
+            .final-product-price-component,
+            .minimum-product-price-component {
+                font-size: $editable-bundle-settings-component-price-font-size;
+                line-height: $editable-bundle-settings-component-price-line-height;
+                font-weight: $font-weight-bold;
+                font-family: $editable-bundle-settings-component-price-font-family;
+            }
+        }
+
+        &-required-hint {
+            display: none;
+        }
+    }
+}

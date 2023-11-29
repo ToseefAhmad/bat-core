@@ -1,0 +1,137 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.age-verification-form-component {
+    $age-verification-form-component-dropzone-border-color: $gray !default;
+    $age-verification-form-component-dropzone-icon-background-top: 3rem !default;
+    $age-verification-form-component-dropzone-padding: 3rem !default;
+    $age-verification-form-component-dropzone-background-size: 3rem 3.4rem !default;
+    $age-verification-form-component-upload-border-color: $gray !default;
+    $age-verification-form-component-actions-padding: 3rem !default;
+    $age-verification-form-component-drop-block-margin-block-start: 5rem !default;
+    $age-verification-form-component-support-secure-text-color: #aaaaaa !default;
+    $age-verification-form-component-support-secure-background-size: 1.2rem 1.6rem !default;
+    $age-verification-form-component-image-max-width: 4rem !default;
+    $age-verification-form-component-select-arrow-icon-size: 1.4rem 0.8rem !default;
+    $age-verification-form-component-select-check-valid-icon-size: 1.4rem 1.1rem !default;
+
+    &-note {
+        margin-block-end: $m-primary;
+        font-size: $font-size-mobile;
+        font-weight: $font-weight-bold;
+    }
+
+    &-note-bold {
+        font-weight: $font-weight-bold;
+    }
+
+    &-error {
+        font-size: $font-size-md;
+        margin-block-start: $m-secondary;
+    }
+
+    .form-control-component-secondary {
+        .form-control {
+            font-size: $font-size-md;
+        }
+
+        .form-control.form-field-valid {
+            background-image: url('~@luft/common/src/resources/svg/arrow-down.svg');
+            background-size: $age-verification-form-component-select-arrow-icon-size;
+            background-repeat: no-repeat;
+            appearance: none;
+        }
+    }
+
+    .form-group-component {
+        margin-block-end: $m-primary;
+    }
+
+    &-drop-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-block-start: $age-verification-form-component-drop-block-margin-block-start;
+    }
+
+    &-dropzone {
+        border: $border-width-lg dashed $age-verification-form-component-dropzone-border-color;
+        padding-block-start: $age-verification-form-component-dropzone-padding;
+        padding-block-end: $age-verification-form-component-dropzone-padding;
+        padding-inline-start: $age-verification-form-component-dropzone-padding;
+        padding-inline-end: $age-verification-form-component-dropzone-padding;
+        background: url('../../../../../../common/src/resources/svg/base/bat-upload-file.svg') center
+            $age-verification-form-component-dropzone-icon-background-top no-repeat;
+        background-size: $age-verification-form-component-dropzone-background-size;
+    }
+
+    &-note-bold {
+        font-weight: $font-weight-bold;
+    }
+
+    &-note-link {
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &-support {
+        display: flex;
+        justify-content: space-between;
+        margin-block-start: $m-secondary;
+        color: $dark-grey;
+        font-size: $font-size-base;
+    }
+
+    &-support-secure {
+        margin-inline-start: $m-primary;
+        padding-inline-start: $p-primary;
+        background: url('../../../../../../common/src/resources/svg/base/bat-secure.svg') left top no-repeat;
+        background-size: $age-verification-form-component-support-secure-background-size;
+        color: $age-verification-form-component-support-secure-text-color;
+    }
+
+    &-actions {
+        padding-block-start: $age-verification-form-component-actions-padding;
+    }
+
+    &-upload {
+        display: flex;
+        align-items: center;
+        padding-block-start: $p-secondary;
+        padding-block-end: $p-secondary;
+        padding-inline-start: $p-secondary;
+        padding-inline-end: $p-secondary;
+        border: $border-width solid $age-verification-form-component-upload-border-color;
+    }
+
+    &-remove.button-component {
+        width: auto;
+        margin-inline-start: auto;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: $p-secondary;
+        padding-inline-end: 0;
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+
+    &-file-name {
+        padding-inline-start: $p-secondary;
+        font-weight: $font-weight-bold;
+        word-break: break-word;
+    }
+
+    &-image {
+        min-width: 0;
+        overflow: hidden;
+        width: $age-verification-form-component-image-max-width;
+    }
+
+    .select-component-custom.form-field-valid .select-component-custom__indicator {
+        background-image: url('~@luft/common/src/resources/svg/arrow-down.svg');
+        background-size: $age-verification-form-component-select-check-valid-icon-size;
+    }
+}

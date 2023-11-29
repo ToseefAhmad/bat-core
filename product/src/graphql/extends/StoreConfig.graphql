@@ -1,0 +1,43 @@
+extend type StoreConfig {
+    """
+    [product][BAT]
+    Is enabled Device Personalisation
+    """
+    is_enabled_device_psn: Boolean
+
+    """
+    [product][BAT]
+    Device Personalisation Max Horizontal Characters
+    """
+    device_psn_max_characters_horizontal: Int
+
+    """
+    [product][BAT]
+    Device Personalisation Max Vertical Characters
+    """
+    device_psn_max_characters_vertical: Int
+
+    """
+    [product][BAT]
+    Device Personalisation Regular Expression
+    """
+    device_psn_regex: String
+
+    """
+    [product][BAT]
+    Device Personalisation Price
+    """
+    device_psn_price: Money
+
+    """
+    [product][BAT]
+    Device Personalisation Special Price
+    """
+    device_psn_special_price: Money
+
+    """
+    [product][BAT]
+    Device Personalisation PDP Disclaimer
+    """
+    device_psn_pdp_disclaimer: String
+}

@@ -1,0 +1,88 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.paynamics-payment-method-component {
+    $paynamics-payment-method-component-padding: 1.45rem $p-primary;
+    $paynamics-payment-method-component-radio-label-text-left: 3.5rem;
+    $paynamics-payment-method-component-radio-label-text-padding-inline-start: 10rem;
+    $paynamics-payment-method-component-item-tip-padding-top: 1.5rem;
+    $paynamics-payment-method-component-item-tip-padding-left: 3.5rem;
+    $paynamics-payment-method-component-pnx-cc-icon-width: 4.4rem;
+    $paynamics-payment-method-component-pnx-cc-icon-height: 2.9rem;
+    $paynamics-payment-method-component-pnx-cc-icon-top: -0.5rem;
+    $paynamics-payment-method-component-pnx-wechatpay-icon-width: 4.2rem;
+    $paynamics-payment-method-component-pnx-wechatpay-icon-height: 3.7rem;
+    $paynamics-payment-method-component-pnx-wechatpay-icon-top: -0.5em;
+    $paynamics-payment-method-component-pnx-gc-icon-width: 5rem;
+    $paynamics-payment-method-component-pnx-gc-icon-height: 2.7rem;
+    $paynamics-payment-method-component-pnx-gc-icon-top: -0.4rem;
+    $paynamics-payment-method-component-pnx-coins-icon-width: 4rem;
+    $paynamics-payment-method-component-pnx-coins-icon-height: 3.6rem;
+    $paynamics-payment-method-component-pnx-coins-icon-top: -0.7rem;
+    $paynamics-payment-method-component-pnx-alipay-icon-width: 5rem;
+    $paynamics-payment-method-component-pnx-alipay-icon-height: 1.3rem;
+    $paynamics-payment-method-component-pnx-alipay-icon-top: 0.3rem;
+    $paynamics-payment-method-component-pnx-grabpay-icon-width: 5rem;
+    $paynamics-payment-method-component-pnx-grabpay-icon-height: 1.4rem;
+    $paynamics-payment-method-component-pnx-grabpay-icon-top: 0.2rem;
+
+    .radio-component-label-text:after {
+        content: '';
+        position: absolute;
+        left: $paynamics-payment-method-component-radio-label-text-left;
+        background-repeat: no-repeat;
+    }
+
+    .radio-component:not(.radio-component-tick) .radio-component-label-text {
+        padding-inline-start: $paynamics-payment-method-component-radio-label-text-padding-inline-start;
+    }
+
+    &.pnx_cc .radio-component-label-text:after {
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-pnx-credit-card.svg');
+        width: $paynamics-payment-method-component-pnx-cc-icon-width;
+        height: $paynamics-payment-method-component-pnx-cc-icon-height;
+        top: $paynamics-payment-method-component-pnx-cc-icon-top;
+    }
+
+    &.pnx_wechatpay .radio-component-label-text:after {
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-pnx-wechat.svg');
+        width: $paynamics-payment-method-component-pnx-wechatpay-icon-width;
+        height: $paynamics-payment-method-component-pnx-wechatpay-icon-height;
+        top: $paynamics-payment-method-component-pnx-wechatpay-icon-top;
+    }
+
+    &.pnx_gc .radio-component-label-text:after {
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-pnx-gcash.svg');
+        width: $paynamics-payment-method-component-pnx-gc-icon-width;
+        height: $paynamics-payment-method-component-pnx-gc-icon-height;
+        top: $paynamics-payment-method-component-pnx-gc-icon-top;
+    }
+
+    &.pnx_coins .radio-component-label-text:after {
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-pnx-coins.svg');
+        width: $paynamics-payment-method-component-pnx-coins-icon-width;
+        height: $paynamics-payment-method-component-pnx-coins-icon-height;
+        top: $paynamics-payment-method-component-pnx-coins-icon-top;
+    }
+
+    &.pnx_alipay .radio-component-label-text:after {
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-pnx-alipay.svg');
+        width: $paynamics-payment-method-component-pnx-alipay-icon-width;
+        height: $paynamics-payment-method-component-pnx-alipay-icon-height;
+        top: $paynamics-payment-method-component-pnx-alipay-icon-top;
+    }
+
+    &.pnx_grabpay .radio-component-label-text:after {
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-pnx-grabpay.svg');
+        width: $paynamics-payment-method-component-pnx-grabpay-icon-width;
+        height: $paynamics-payment-method-component-pnx-grabpay-icon-height;
+        top: $paynamics-payment-method-component-pnx-grabpay-icon-top;
+    }
+}
+
+[dir='rtl'] {
+    .paynamics-payment-method-component {
+        .radio-component:not(.radio-component-tick) .radio-component-label-text {
+            padding-left: unset;
+        }
+    }
+}

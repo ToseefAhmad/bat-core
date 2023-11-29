@@ -1,0 +1,7 @@
+type SpendPoints {
+    """
+    [quote][BAT]
+    Points
+    """
+    points: Int
+}

@@ -1,0 +1,7 @@
+#import "../../../../quote/src/graphql/fragments/Checkout.fragment.graphql"
+
+mutation SetPaymentIdOnCart($input: SetIpay88PaymentIdOnCartInput) {
+    setPaymentIdOnCart(input: $input) @connection(key: "cart") {
+        ...BatCheckoutFragment
+    }
+}

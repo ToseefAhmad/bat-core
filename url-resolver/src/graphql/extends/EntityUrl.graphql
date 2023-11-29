@@ -1,0 +1,13 @@
+extend type EntityUrl {
+    """
+    [url-resolver][BAT]
+    Url, where user should be redirected if the previous one was changed
+    """
+    redirect_url: String
+
+    """
+    [url-resolver][BAT]
+    Alternative versions of the page
+    """
+    hreflangs: [Hreflang]
+}

@@ -1,0 +1,57 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app .settings-nav-item-component {
+        $settings-nav-item-component-position-sm: relative !default;
+        $settings-nav-item-component-icon-position-sm: 0.5rem 1.8rem !default;
+        $settings-nav-item-component-height-sm: 5.8rem !default;
+        $settings-nav-item-component-button-padding-inline-end-sm: 3rem;
+        $settings-nav-item-component-collapse-right-sm: 0 !default;
+
+        & {
+            border-top: none;
+            background-position: $settings-nav-item-component-icon-position-sm;
+            height: $settings-nav-item-component-height-sm;
+            padding-block-end: 0;
+            position: $settings-nav-item-component-position-sm;
+        }
+
+        .settings-nav-item-component-button.button-component {
+            height: $settings-nav-item-component-height-sm;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: $m-tertiary;
+            margin-inline-end: $m-tertiary;
+            padding-inline-start: $settings-nav-item-component-button-padding-inline-end-sm;
+            background-image: none;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+
+            &.accordion-toggle-component-active {
+                background-image: none;
+            }
+        }
+
+        &.accordion-component .accordion-collapse-component,
+        &.accordion-component .collapsing {
+            position: absolute;
+            top: 100%;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+            right: $settings-nav-item-component-collapse-right-sm;
+        }
+    }
+
+    [dir='rtl'] {
+        .app {
+            $settings-nav-item-component-button-background-position-rtl-sm: right 0.5rem top 1.7rem;
+
+            .settings-nav-item-component {
+                background-position: $settings-nav-item-component-button-background-position-rtl-sm;
+            }
+        }
+    }
+}

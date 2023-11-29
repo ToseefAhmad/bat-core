@@ -1,0 +1,29 @@
+"""
+[sales][VELO]
+Reward points discount amount
+"""
+type RewardsDiscount {
+    """
+    [sales][VELO]
+    Amount of a discount using reward points
+    """
+    amount: Money
+
+    """
+    [sales][VELO]
+    Amount of a spent reward points
+    """
+    points_spent: Int
+
+    """
+    [sales][VELO]
+    Amount of a earned reward points
+    """
+    points_earn: Int
+
+    """
+    [sales][VELO]
+    Indicates if earned points are still pending. Could be 'pending' or null
+    """
+    points_earn_flag: String
+}

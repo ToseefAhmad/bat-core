@@ -1,0 +1,101 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../hubspot/src/styles/index';
+
+.restrict-access-component {
+    $restrict-access-component-padding: 4rem !default;
+    $restrict-access-component-z-index: 1060 !default; // Set it higher than a Refresh and Push Notification popup
+    $restrict-access-component-body-max-width: 48rem !default;
+    $restrict-access-component-title-font-size: 3rem !default;
+    $restrict-access-component-title-line-height: 3.6rem !default;
+    $restrict-access-component-title-color: $secondary !default;
+    $restrict-access-component-title-margin-block-end: 2rem !default;
+    $restrict-access-component-title-font-family: null !default;
+    $restrict-access-component-title-white-space: pre-line !default;
+    $restrict-access-component-text-font-size: 1.5rem !default;
+    $restrict-access-component-text-margin-block-end: null !default;
+    $restrict-access-component-actions-max-width: 45rem !default;
+    $restrict-access-component-notice-font-size: null !default;
+    $restrict-access-component-notice-margin-block-start: null !default;
+    $restrict-access-component-notice-max-width: 45rem !default;
+
+    & {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $light;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $restrict-access-component-padding;
+        z-index: $restrict-access-component-z-index;
+    }
+
+    &-body {
+        max-width: $restrict-access-component-body-max-width;
+        width: 100%;
+        margin: auto;
+    }
+
+    &-title {
+        margin-block-end: $restrict-access-component-title-margin-block-end;
+        font-family: $restrict-access-component-title-font-family;
+        font-size: $restrict-access-component-title-font-size;
+        font-weight: $font-weight-bold;
+        line-height: $restrict-access-component-title-line-height;
+        color: $restrict-access-component-title-color;
+        text-transform: uppercase;
+        white-space: $restrict-access-component-title-white-space;
+    }
+
+    &-text {
+        margin-block-end: $restrict-access-component-text-margin-block-end;
+        font-size: $restrict-access-component-text-font-size;
+    }
+
+    &-actions {
+        max-width: $restrict-access-component-actions-max-width;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &-agree.button-component,
+    &-disagree.button-component {
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+
+    &-disagree.button-component {
+        color: $primary;
+        border-color: $primary;
+        border-width: $secondary-border-width;
+    }
+
+    &-notice {
+        font-size: $restrict-access-component-notice-font-size;
+        max-width: $restrict-access-component-notice-max-width;
+        width: 100%;
+        margin-block-start: $restrict-access-component-notice-margin-block-start;
+        margin-block-end: 0;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+        white-space: pre-line;
+    }
+}
+
+[dir='rtl'] {
+    .restrict-access-component {
+        $restrict-access-component-title-font-family-rtl: null !default;
+
+        &-title {
+            font-family: $restrict-access-component-title-font-family-rtl;
+        }
+
+        .button-component {
+            letter-spacing: normal;
+        }
+    }
+}

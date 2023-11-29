@@ -1,0 +1,14 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .review-rating-vote-component {
+        $review-rating-vote-component-star-width-sm: 2.8rem !default;
+        $review-rating-vote-component-star-height-sm: 2.7rem !default;
+
+        & &-label {
+            width: $review-rating-vote-component-star-width-sm;
+            height: $review-rating-vote-component-star-height-sm;
+            background-size: $review-rating-vote-component-star-width-sm $review-rating-vote-component-star-height-sm;
+        }
+    }
+}

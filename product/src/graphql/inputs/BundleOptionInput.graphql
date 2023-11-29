@@ -1,0 +1,23 @@
+"""
+[product][BAT]
+Input is used as a bundle_sum input
+"""
+input BundleOptionInput {
+    """
+    [product][BAT]
+    Option ID
+    """
+    option_id: ID!
+
+    """
+    [product][BAT]
+    Option values ID
+    """
+    values: [ID!]!
+
+    """
+    [product][BAT]
+    Quantity of product
+    """
+    quantity: Float
+}

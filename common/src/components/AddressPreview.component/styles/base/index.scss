@@ -1,0 +1,17 @@
+@import '../../../../scss/variables/base';
+
+.app {
+    .address-preview-component {
+        $address-preview-component-font-weight: null !default;
+
+        &-name {
+            font-weight: $address-preview-component-font-weight;
+        }
+
+        &-line {
+            word-break: break-word;
+            overflow-wrap: break-word;
+            white-space: break-spaces;
+        }
+    }
+}

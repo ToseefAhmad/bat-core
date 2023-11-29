@@ -1,0 +1,17 @@
+"""
+[quote][BAT]
+Reward points settings
+"""
+type RewardPointSettings {
+    """
+    [quote][BAT]
+    Minimum amount of reward points the user could spend
+    """
+    min_spend_points: Int
+
+    """
+    [quote][BAT]
+    Maximum amount of reward points the user could spend
+    """
+    max_spend_points: Int
+}

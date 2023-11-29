@@ -1,0 +1,18 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        $account-default-address-component-padding-inline-md: $p-primary !default;
+
+        .account-default-address-component {
+            .account-default-address-component-reserve-address,
+            .account-default-address-component-set-delivery {
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+                padding-inline-start: $account-default-address-component-padding-inline-md;
+                padding-inline-end: $account-default-address-component-padding-inline-md;
+            }
+        }
+    }
+}

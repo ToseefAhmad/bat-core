@@ -1,0 +1,37 @@
+extend input RegisterInput {
+    """
+    [user][BAT]
+    Terms and Condition
+    """
+    terms_conditions: Boolean
+
+    """
+    [user][BAT]
+    Consent
+    """
+    consent: Boolean
+
+    """
+    [user]
+    Phone number
+    """
+    phone_number: String
+
+    """
+    [user][BAT]
+    User KTP ID
+    """
+    ktp_id: String
+
+    """
+    [user][BAT]
+    Indicates if it's a registration using social network
+    """
+    is_social_register: Boolean
+
+    """
+    [user][BAT]
+    Url, where user should be redirected after confirming the account. It should look like '/account' or '/checkout'
+    """
+    back_url: String
+}

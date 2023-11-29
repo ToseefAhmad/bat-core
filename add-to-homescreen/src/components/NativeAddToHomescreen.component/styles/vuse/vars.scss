@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$native-add-to-homescreen-control-color: $secondary;
+$native-add-to-homescreen-control-color-hover: $light;
+$native-add-to-homescreen-control-color-focus: $light;
+$native-add-to-homescreen-control-color-active: $light;
+$native-add-to-homescreen-control-border-width: $border-width-lg;
+$native-add-to-homescreen-control-border-color: $button-tertiary-border-color;
+$native-add-to-homescreen-control-border-radius: 3.5rem;
+$native-add-to-homescreen-control-background-color: $darker;
+$native-add-to-homescreen-control-background-image: url('../../../../../../common/src/resources/svg/vuse/vuse-logo-small.svg');

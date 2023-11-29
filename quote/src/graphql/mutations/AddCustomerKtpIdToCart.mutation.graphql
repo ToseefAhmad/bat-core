@@ -1,0 +1,10 @@
+#import "../fragments/Checkout.fragment.graphql"
+
+mutation AddCustomerKtpIdToCart($input: AddCustomerKtpIdToCartInput) {
+    addCustomerKtpIdToCart(input: $input) @connection(key: "cart") {
+        ...BatCheckoutFragment
+        customer_ktp_id {
+            ktp_id
+        }
+    }
+}

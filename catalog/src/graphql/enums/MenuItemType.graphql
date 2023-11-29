@@ -1,0 +1,5 @@
+enum MenuItemType {
+    CMS_BLOCK
+    CATEGORY
+    CUSTOM_LINK
+}

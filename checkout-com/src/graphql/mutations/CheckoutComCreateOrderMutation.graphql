@@ -1,0 +1,5 @@
+mutation CheckoutComCreateOrder($input: CheckoutcomPlaceOrderInput) {
+    checkoutcomPlaceOrder(input: $input) {
+        redirect_url
+    }
+}

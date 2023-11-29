@@ -1,0 +1,1 @@
+export {isCategoryInPath} from './isCategoryInPath';

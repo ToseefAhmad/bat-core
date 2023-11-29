@@ -1,0 +1,70 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../common/src/scss/keyframes';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .blog-post-component {
+            $blog-post-component-image-max-height-md: 39rem !default;
+            $blog-post-component-image-block-padding-top-md: 21rem !default;
+            $blog-post-component-date-font-size-md: null !default;
+            $blog-post-component-content-font-size-md: null !default;
+            $blog-post-component-wrapper-max-width-md: 90rem !default;
+            $blog-post-component-wrapper-padding-md: 6rem 6rem $p-primary-lg !default;
+            $blog-post-component-title-font-size-md: 4.4rem !default;
+            $blog-post-component-cms-content-title-font-size-md: 2rem !default;
+
+            & {
+                position: relative;
+            }
+
+            &-image-block .image-component,
+            &-image-block .image-placeholder-component {
+                position: absolute;
+                top: 0;
+                padding-top: $blog-post-component-image-max-height-md;
+            }
+
+            &-image-block {
+                padding-top: $blog-post-component-image-block-padding-top-md;
+                background-color: transparent;
+            }
+
+            &-image-block .image-component-image-block {
+                display: flex;
+            }
+
+            &-image {
+                max-height: none;
+                width: 100%;
+            }
+
+            &-wrapper {
+                position: relative;
+                z-index: $zindex-label;
+                max-width: $blog-post-component-wrapper-max-width-md;
+                margin: auto;
+                padding: $blog-post-component-wrapper-padding-md;
+            }
+
+            &-date {
+                margin: $m-secondary 0 $m-primary;
+                font-size: $blog-post-component-date-font-size-md;
+            }
+
+            &-title {
+                margin: 0;
+                font-size: $blog-post-component-title-font-size-md;
+            }
+
+            &-content {
+                margin: $m-secondary 0 $m-primary;
+                font-size: $blog-post-component-content-font-size-md;
+            }
+
+            .cms-content-block h2 {
+                font-size: $blog-post-component-cms-content-title-font-size-md;
+            }
+        }
+    }
+}

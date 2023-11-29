@@ -1,0 +1,25 @@
+extend type Mutation {
+    """
+    [user][BAT]
+    Activate user account
+    """
+    activateAccount(input: ActivateAccountInput): Viewer
+
+    """
+    [user][BAT]
+    Send confirmation link
+    """
+    sendConfirmationLink(input: SendConfirmationLinkInput): ConfirmationLink
+
+    """
+    [user][BAT]
+    Verify customer phone confirmation code
+    """
+    verifyPhoneConfirmationCode(input: VerifyPhoneConfirmationCodeInput): Boolean
+
+    """
+    [user][BAT]
+    Send new phone confirmation code
+    """
+    sendPhoneConfirmationCode(input: SendPhoneConfirmationCodeInput): Boolean
+}

@@ -1,0 +1,123 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../common/src/scss/mixins/base';
+
+.app {
+    $recommended-products-list-component-arrow-padding: 0.7rem !default;
+    $recommended-products-list-component-products-padding: null !default;
+    $recommended-products-list-component-product-width: 54% !default;
+    $recommended-products-list-component-product-text-align: null !default;
+    $recommended-products-list-component-holder-padding-inline: 2.5rem !default;
+    $recommended-products-list-component-product-preview-link-image-height: 15.5rem !default;
+    $recommended-products-list-component-margin-block-end: 6rem !default;
+    $recommended-products-list-component-padding-inline: 0.4rem !default;
+    $recommended-products-list-component-title-font-size: 2.4rem !default;
+    $recommended-products-list-component-title-text-align: null !default;
+    $recommended-products-list-component-price-margin: null !default;
+    $recommended-products-list-component-elements-display: null !default;
+
+    .recommended-products-list-component {
+        & {
+            background: $light;
+        }
+
+        &-fixed {
+            .product-list-slider-component-products {
+                margin-block-end: $m-primary;
+                padding-block-end: $p-primary;
+
+                .product-list-slider-component-product {
+                    width: $recommended-products-list-component-product-width;
+                }
+
+                &-holder {
+                    padding-block-start: 0;
+                    padding-block-end: 0;
+                    padding-inline-start: $recommended-products-list-component-holder-padding-inline;
+                    padding-inline-end: $recommended-products-list-component-holder-padding-inline;
+                }
+            }
+        }
+
+        &:not(.recommended-products-list-component-fixed) {
+            & {
+                margin-block-end: $recommended-products-list-component-margin-block-end;
+            }
+
+            .image-component {
+                padding-block-start: 100%;
+            }
+
+            .product-list-slider-component-product {
+                padding-block-start: 0;
+                padding-block-end: 0;
+                padding-inline-start: $recommended-products-list-component-padding-inline;
+                padding-inline-end: $recommended-products-list-component-padding-inline;
+            }
+
+            .product-list-slider-component-products {
+                @include scrollable-list-media-all($item-selector: '.product-list-slider-component-product');
+                padding: $recommended-products-list-component-products-padding;
+            }
+
+            .product-list-slider-component-title {
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+                padding-inline-start: $p-primary;
+                padding-inline-end: $p-primary;
+                text-align: $recommended-products-list-component-title-text-align;
+            }
+        }
+
+        .product-list-slider-component {
+            &-products {
+                text-align: start;
+            }
+
+            &-product {
+                text-align: $recommended-products-list-component-product-text-align;
+            }
+        }
+
+        .product-list-slider-component-arrow.button-component {
+            background-color: $light;
+            background-position: center;
+            padding-block-start: $recommended-products-list-component-arrow-padding;
+            padding-block-end: $recommended-products-list-component-arrow-padding;
+            padding-inline-start: $recommended-products-list-component-arrow-padding;
+            padding-inline-end: $recommended-products-list-component-arrow-padding;
+        }
+
+        .product-list-slider-component-title {
+            font-size: $recommended-products-list-component-title-font-size;
+            font-weight: $font-weight-extrabold;
+            text-transform: uppercase;
+            text-align: $recommended-products-list-component-title-text-align;
+        }
+
+        .product-preview-alt-component-footer,
+        .variation-attributes-component {
+            display: none;
+        }
+
+        .product-price-component {
+            margin: 0;
+        }
+
+        .product-preview-alt-component-link-name,
+        .product-price-component-regular-value,
+        .product-price-component-minimum-value {
+            font-size: $font-size-mobile;
+        }
+
+        .product-preview-alt-component-link-image {
+            .image-component {
+                height: $recommended-products-list-component-product-preview-link-image-height;
+            }
+        }
+
+        .product-preview-alt-component-footer,
+        .variation-attributes-component {
+            display: $recommended-products-list-component-elements-display;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export {useInitializeGtm} from './useInitializeGtm';

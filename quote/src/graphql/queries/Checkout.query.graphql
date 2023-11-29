@@ -1,0 +1,66 @@
+#import "@luft/product/src/graphql/fragments/ProductDetailLimited.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/ConfigurableProductDetailLimited.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/BundledProductsFragment.fragment.graphql"
+#import "../../../../product/src/graphql/fragments/BundleInfo.fragment.graphql"
+#import "../fragments/Checkout.fragment.graphql"
+#import "../fragments/EngravedOptions.fragment.graphql"
+
+query BatCheckout($cart_id: ID) {
+    cart(cart_id: $cart_id) @connection(key: "cart") {
+        ...BatCheckoutFragment
+        customer_note {
+            code
+        }
+        customer_ktp_id {
+            ktp_id
+        }
+        items {
+            added_at
+            cart_item_id
+            product {
+                ...ConfigurableProductDetailLimitedFragment
+                ...BundledProductsFragment
+            }
+            quantity
+            price_label
+            product_type
+            configurable_variation {
+                product {
+                    ...ProductDetailLimitedFragment
+                }
+                variation_values {
+                    variation_attribute_id
+                    value
+                }
+            }
+            engraved_options {
+                ...EngravedOptionsFragment
+            }
+            bundle_info {
+                ...BatBundleInfoFragment
+            }
+        }
+        spend_points {
+            points
+        }
+        earn_points {
+            points
+        }
+        reward_discount {
+            amount {
+                currency
+                value
+            }
+        }
+        referral_code {
+            referral_code
+        }
+        dob {
+            dob
+        }
+        error_info {
+            has_error
+            errors
+        }
+    }
+}

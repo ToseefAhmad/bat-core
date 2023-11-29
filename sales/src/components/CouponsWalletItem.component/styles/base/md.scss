@@ -1,0 +1,21 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(md) {
+    .coupons-wallet-component-item {
+        $description-max-width: none;
+        $date-width: 100%;
+
+        &-description {
+            &-not-single {
+                max-width: $description-max-width;
+            }
+        }
+
+        &-date {
+            width: $date-width;
+            margin-block-start: $m-secondary;
+            text-align: right;
+        }
+    }
+}

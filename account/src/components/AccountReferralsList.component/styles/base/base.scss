@@ -1,0 +1,62 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-referrals-list-component {
+    $account-referrals-list-component-border: $border-width solid $gray-light-primary !default;
+    $account-referrals-list-component-before-label-width: 0 0 8rem !default;
+
+    & {
+        border-top: $account-referrals-list-component-border;
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+        padding-inline-start: $p-primary;
+        padding-inline-end: $p-primary;
+    }
+
+    &-header {
+        & {
+            border-bottom: $account-referrals-list-component-border;
+            padding-block-end: $p-primary;
+        }
+
+        &-title {
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            margin-block-end: $m-secondary;
+        }
+
+        &-content-referrals {
+            color: $tertiary;
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    &-content {
+        &-item {
+            & {
+                border-bottom: $account-referrals-list-component-border;
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+            }
+
+            &-data {
+                display: flex;
+                overflow: hidden;
+
+                &:first-child {
+                    margin-block-end: $m-secondary;
+                }
+
+                &::before {
+                    content: attr(data-label);
+                    font-weight: $font-weight-semibold;
+                    flex: $account-referrals-list-component-before-label-width;
+                }
+
+                &-text {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}

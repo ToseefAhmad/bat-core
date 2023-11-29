@@ -1,0 +1,29 @@
+"""
+[free-gift][BAT]
+Input is used as an argument for adding free gift items to cart
+"""
+input AddFreeGiftToCartInput {
+    """
+    [free-gift][BAT]
+    Cart ID
+    """
+    cart_id: ID
+
+    """
+    [free-gift][BAT]
+    Referral code
+    """
+    rule_id: ID
+
+    """
+    [free-gift][BAT]
+    SKU
+    """
+    sku: String
+
+    """
+    [free-gift][BAT]
+    Quantity
+    """
+    qty: Int
+}

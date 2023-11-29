@@ -1,0 +1,5 @@
+mutation RemoveCustomerReferralCodeFromCart($input: RemoveReferralCodeFromCartInput) {
+    removeReferralCodeFromCart(input: $input) @connection(key: "cart") {
+        referral_code
+    }
+}

@@ -1,0 +1,7 @@
+extend input UpdateWishlistItemInput {
+    """
+    [wishlist][BAT]
+    Engraved Options
+    """
+    engraved_options: EngravedOptionsInfo
+}

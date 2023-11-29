@@ -1,0 +1,17 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .product-title-component {
+        $product-title-component-font-size: 2.6rem !default;
+        $product-title-component-font-line-height: 1 !default;
+        $product-title-component-font-weight: $font-weight-extrabold !default;
+        $product-title-component-margin-bottom: 0 !default;
+
+        & {
+            font-size: $product-title-component-font-size;
+            line-height: $product-title-component-font-line-height;
+            font-weight: $product-title-component-font-weight;
+            margin-bottom: $product-title-component-margin-bottom;
+        }
+    }
+}

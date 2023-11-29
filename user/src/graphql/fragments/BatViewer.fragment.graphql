@@ -1,0 +1,13 @@
+#import "./BatUser.fragment.graphql"
+#import "./UserForSocialRegister.fragment.graphql"
+
+fragment BatViewerFragment on Viewer {
+    token
+    confirmed
+    user {
+        ...BatUserFragment
+    }
+    user_for_social_register {
+        ...UserForSocialRegisterFragment
+    }
+}

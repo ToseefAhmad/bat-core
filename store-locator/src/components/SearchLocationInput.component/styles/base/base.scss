@@ -1,0 +1,73 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.search-location-input-component {
+    $search-location-input-component-map-width: 43rem !default;
+    $search-location-input-component-map-height: 4rem !default;
+    $search-location-input-component-button-margin-block-start: 1.8rem !default;
+    $search-location-input-component-button-background-position: 97% 50% !default;
+    $search-location-input-component-button-icon-size: 1.8rem 1.8rem !default;
+    $search-location-input-component-lookup-background-color: #efefef !default;
+    $search-location-input-component-lookup-background-image: url('../../../../../../common/src/resources/svg/base/bat-path-black.svg') !default;
+    $search-location-input-component-map-padding-inline-start: $p-primary !default;
+    $search-location-input-component-map-padding-inline-end: $p-primary-lg !default;
+    $search-location-input-component-map-list-border: $border-width solid $primary-border-color !default;
+
+    & {
+        font-size: $h4-font-size;
+    }
+
+    &-lookup {
+        background-image: $search-location-input-component-lookup-background-image;
+        background-repeat: no-repeat;
+        margin-block-start: $search-location-input-component-button-margin-block-start;
+        background-position: $search-location-input-component-button-background-position;
+        background-size: $search-location-input-component-button-icon-size;
+        width: 100%;
+        height: $search-location-input-component-map-height;
+        background-color: $search-location-input-component-lookup-background-color;
+        border: none;
+        box-shadow: none;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: $search-location-input-component-map-padding-inline-start;
+        padding-inline-end: $search-location-input-component-map-padding-inline-end;
+        outline: none;
+    }
+
+    &-list {
+        border: $search-location-input-component-map-list-border;
+        display: flex;
+        flex-direction: column;
+        width: $search-location-input-component-map-width;
+
+        &-item {
+            padding-block-start: $p-secondary;
+            padding-block-end: $p-secondary;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            display: flex;
+            align-items: center;
+
+            &-text-main {
+                padding-block-start: 0;
+                padding-block-end: 0;
+                padding-inline-start: $p-secondary;
+                padding-inline-end: $p-secondary;
+            }
+        }
+
+        &-item:hover {
+            background-color: $search-location-input-component-lookup-background-color;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .search-location-input-component {
+        $search-button-background-position-x: 2rem;
+
+        &-lookup {
+            background-position-x: $search-button-background-position-x;
+        }
+    }
+}

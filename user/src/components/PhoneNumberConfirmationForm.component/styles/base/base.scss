@@ -1,0 +1,35 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.phone-number-confirmation-form-component {
+    $phone-number-confirmation-form-component-note-line-height: 2rem !default;
+
+    &-note {
+        margin-bottom: $m-primary;
+        line-height: $phone-number-confirmation-form-component-note-line-height;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    &-code.form-group-component {
+        margin-bottom: 0;
+    }
+
+    &-request.button-component {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &-request.button-component,
+    &-submit.button-component {
+        height: $button-height;
+    }
+
+    &-submit.button-component-block.button-component {
+        margin-top: $m-secondary;
+    }
+
+    .validation-error-component {
+        text-align: start;
+    }
+}

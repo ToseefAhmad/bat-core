@@ -1,0 +1,31 @@
+extend type Query {
+    """
+    [sales][BAT]
+    Get customer affiliate program dashboard
+    """
+    getCustomerAffiliateProgramDashboard: [CustomerAffiliateProgramDashboard]
+
+    """
+    [sales][BAT]
+    Get customer affiliate program referrals data
+    """
+    getReferrals(input: ReferralsInput): Referrals
+
+    """
+    [sales][BAT]
+    Get customer affiliate program referral url
+    """
+    getReferralUrl: ReferralUrl
+
+    """
+    [sales][BAT]
+    Get wallet rules with coupons
+    """
+    getWalletRulesWithCoupons: [WalletRulesWithCoupons]
+
+    """
+    [sales][BAT]
+    Get transactions
+    """
+    getTransactions(input: TransactionsInput): Transactions
+}

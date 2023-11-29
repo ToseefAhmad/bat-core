@@ -1,0 +1,23 @@
+"""
+[product][BAT]
+Provides product design attributes
+"""
+type BundleOptionInput {
+    """
+    [product][BAT]
+    Option ID
+    """
+    option_id: ID
+
+    """
+    [product][BAT]
+    Option value IDs
+    """
+    values: [ID]
+
+    """
+    [product][BAT]
+    Quantity of product
+    """
+    quantity: Float
+}

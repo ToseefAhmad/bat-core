@@ -1,0 +1,71 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .blog-widget-component {
+        $blog-widget-component-action-block-margin-bottom: null !default;
+        $blog-widget-component-action-button-arrow-width: 2rem !default;
+        $blog-widget-component-action-button-arrow-height: 1.4rem !default;
+        $blog-widget-component-action-button-arrow-top: 0.3rem !default;
+        $blog-widget-component-action-block-title-font-size: 2.6rem !default;
+        $blog-widget-component-action-block-title-padding-bottom: null !default;
+        $blog-widget-component-action-block-title-font-weight: null !default;
+        $blog-widget-component-action-block-title-color: null !default;
+        $blog-widget-component-action-block-subtitle-color: null !default;
+
+        &-action-block {
+            padding: $p-primary-lg $p-primary $p-primary;
+            margin-bottom: $blog-widget-component-action-block-margin-bottom;
+            text-align: center;
+        }
+
+        &-action-block-title {
+            margin-bottom: $m-primary;
+            padding-bottom: $blog-widget-component-action-block-title-padding-bottom;
+            font-size: $blog-widget-component-action-block-title-font-size;
+            font-weight: $blog-widget-component-action-block-title-font-weight;
+            text-transform: uppercase;
+            color: $blog-widget-component-action-block-title-color;
+        }
+
+        &-action-block-subtitle {
+            color: $blog-widget-component-action-block-subtitle-color;
+        }
+
+        &-action-block-action {
+            padding: 0;
+            display: inline-block;
+            margin: 0;
+            font-size: $font-size-md;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: normal;
+
+            &:after {
+                content: '';
+                position: relative;
+                top: $blog-widget-component-action-button-arrow-top;
+                display: inline-block;
+                width: $blog-widget-component-action-button-arrow-width;
+                height: $blog-widget-component-action-button-arrow-height;
+                margin-left: $m-secondary;
+                background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-right.svg');
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        .blog-widget-component {
+            &-action-block-action {
+                &:after {
+                    margin-left: 0;
+                    margin-right: $m-secondary;
+                    background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-left.svg');
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}

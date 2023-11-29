@@ -1,0 +1,111 @@
+@import '~@luft/common/src/scss/variables';
+
+// Bootstrap
+$transition-collapse: none !default;
+$max-content-width: 128rem !default;
+
+// Pages
+$page-bg: #f0f0f0 !default;
+
+// font-size
+$font-family: 'velosans-regular', sans-serif !default;
+$h1-font-size: 4rem !default;
+$h2-font-size: 2.6rem !default;
+$h4-font-size: 1.4rem !default;
+$font-size-mobile: 1.3rem !default;
+
+$letter-spacing-desktop: 0.02rem;
+$letter-spacing-mobile: 0.01rem;
+
+$font-weight-normal: 400 !default;
+$font-weight-semibold: 500 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extrabold: 900 !default;
+
+// color
+$primary: #5862bf !default;
+$secondary: #00a2c7 !default;
+$tertiary: #041e42 !default;
+$light: #ffffff !default;
+$dark: #000000 !default;
+$gray: #dbdbdb !default;
+$gray-light: #e7e7e7 !default;
+$gray-light-primary: #dedede !default;
+$gray-light-secondary: #efefef !default;
+$gray-secondary-light: #f7f7f7 !default;
+$dark-blue: #001734 !default;
+$dark-grey: #6b6b6b !default;
+
+$placeholder-color: #f0f0f0 !default;
+$disabled-color: #f4f4f4 !default;
+$image-background-color: #f5f5f5 !default;
+
+$button-secondary-background-color: #4f868e !default;
+$background-primary-color: #f0f0f0 !default;
+$background-secondary-color: #eeeff9 !default;
+
+$primary-font-color: #000000 !default;
+$secondary-font-color: #5862bf !default;
+$tertiary-font-color: #00a2c7 !default;
+$placeholder-font-color: #969696 !default;
+$disabled-font-color: #757778 !default;
+
+$primary-border-color: #dbdbdb !default;
+$secondary-border-color: #dbdbdb !default;
+$tertiary-border-color: #5862bf !default;
+$quaternary-border-color: #d8d8d8 !default;
+$disabled-border-color: $gray !default;
+
+$scroll-bg: #ccc !default;
+$scroll-color: $primary !default;
+
+$success: #02d36e !default;
+$success-light: #ccf4ef !default;
+$danger: #eb0000 !default;
+$danger-light: #faeff1 !default;
+
+$carousel-indicators-inactive-background: #c1c2c2 !default;
+$carousel-inner-background-color: #f9f9f9 !default;
+
+$secondary-border-width: 0.2rem !default;
+
+// Input
+$input-border-color: $secondary-border-color !default;
+$input-color: $primary-font-color !default;
+$input-height: 5rem;
+
+// Margin
+$m-primary-lg: 4rem !default;
+
+// Padding
+$p-primary-lg: 4rem !default;
+
+// global message
+$top-message-height: 4rem !default;
+
+// Header
+$header-height-top-bar: 6.6rem !default;
+$header-icon-height: 4rem !default;
+$header-elements-z-index: 2 !default;
+$form-control-height: 5.2rem !default;
+
+$final-price-color: #eb0000 !default;
+$arrow-translate-value: 1rem !default;
+
+// Layout
+$total-column-width: 46rem;
+
+// Button
+$button-height: 5rem !default;
+$btn-font-weight: 500 !default;
+$button-font-weight: 700 !default;
+
+// Grid breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 640px,
+    smd: 768px,
+    md: 1024px,
+    lg: 1280px,
+    xl: 1440px
+);

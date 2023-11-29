@@ -1,0 +1,23 @@
+query MenuItemsByCodeQuery($menu_set_code: String!, $is_logged_in: Boolean) {
+    menuItemsByCode(menu_set_code: $menu_set_code, is_logged_in: $is_logged_in) {
+        id
+        type
+        title
+        identifier
+        parent
+        position
+        is_link
+        url
+        is_logged_in
+        frontend_class
+        style
+        content
+        cms_block_content
+        meta_keywords
+        meta_title
+        meta_description
+        children {
+            id
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/components/Radio.component/index';
+
+.app,
+.modal-component {
+    .radio-component {
+        $radio-component-check-mark-background-image: url('../../../../resources/svg/base/bat-check-symbol.svg') !default;
+        $radio-component-check-mark-background-size: 1.6rem 1.4rem !default;
+        $radio-component-label-text-line-height: null !default;
+        $radio-component-label-text-padding-inline-start: null !default;
+        $radio-component-label-text-border-width: null !default;
+        $radio-component-label-text-box-shadow: null !default;
+        $radio-component-label-text-box-shadow: 0 0 0 0.1rem $primary !default;
+        $radio-component-label-text-left: null !default;
+        $radio-component-label-text-size: null !default;
+
+        & {
+            color: $primary-font-color;
+        }
+
+        &.radio-component-tick .radio-component-check-mark {
+            background-image: $radio-component-check-mark-background-image;
+            background-size: $radio-component-check-mark-background-size;
+        }
+
+        &:not(.radio-component-tick) {
+            .radio-component-label-text {
+                & {
+                    line-height: $radio-component-label-text-line-height;
+                    padding-inline-start: $radio-component-label-text-padding-inline-start;
+                }
+
+                &::before {
+                    border-width: $radio-component-label-text-border-width;
+                    box-shadow: $radio-component-label-text-box-shadow;
+                    left: $radio-component-label-text-left;
+                    height: $radio-component-label-text-size;
+                    width: $radio-component-label-text-size;
+                }
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .radio-component {
+        &:not(.radio-component-tick) {
+            .radio-component-label-text {
+                & {
+                    padding-left: initial;
+                }
+
+                &::before {
+                    left: initial;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+type District {
+    """
+    [common][BAT]
+    District ID
+    """
+    id: ID
+
+    """
+    [common][BAT]
+    District Code
+    """
+    code: String
+
+    """
+    [common][BAT]
+    District Name
+    """
+    name: String
+}

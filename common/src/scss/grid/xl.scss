@@ -1,0 +1,8 @@
+@import '../variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(xl) {
+    .container {
+        max-width: map-get($container-max-widths, 'xl');
+    }
+}

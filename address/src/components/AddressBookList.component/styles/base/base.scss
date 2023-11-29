@@ -1,0 +1,28 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app,
+.modal-component {
+    .address-book-list-component {
+        $address-book-list-component-item-border-color: $background-primary-color !default;
+        $address-book-list-component-preview-padding-block-start: null !default;
+        $address-book-list-component-button-line-height: null !default;
+        $address-book-list-component-button-color: null !default;
+
+        &-item {
+            border-color: $address-book-list-component-item-border-color;
+        }
+
+        &-preview {
+            padding-block-start: $address-book-list-component-preview-padding-block-start;
+        }
+
+        &-actions-link.button-component {
+            margin-block-start: $m-secondary;
+            font-size: $font-size-mobile;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            line-height: $address-book-list-component-button-line-height;
+            color: $address-book-list-component-button-color;
+        }
+    }
+}

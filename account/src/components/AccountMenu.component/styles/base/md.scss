@@ -1,0 +1,40 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .account-menu-component {
+            $account-menu-component-link-background-image-md: null !default;
+            $account-menu-component-link-color-md: $primary !default;
+            $account-menu-component-link-box-shadow-md: inset -0.5rem 0 0 0 $primary !default;
+
+            &-link {
+                background-image: $account-menu-component-link-background-image-md;
+            }
+
+            &-link:hover {
+                color: $account-menu-component-link-color-md;
+            }
+
+            &-link.active {
+                box-shadow: $account-menu-component-link-box-shadow-md;
+            }
+
+            .account-menu-title-component {
+                text-transform: none;
+            }
+        }
+    }
+
+    [dir='rtl'] {
+        .app {
+            .account-menu-component {
+                $account-menu-component-link-box-shadow-rtl: inset 0.5rem 0 0 0 $green !default;
+
+                &-link.active {
+                    box-shadow: $account-menu-component-link-box-shadow-rtl;
+                }
+            }
+        }
+    }
+}

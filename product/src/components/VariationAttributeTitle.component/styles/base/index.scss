@@ -1,0 +1,19 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .variation-attribute-title-component {
+        $variation-attribute-title-component-font-size: 1.3rem !default;
+
+        & {
+            padding-block-end: $p-secondary;
+            margin-block-end: 0;
+            font-size: $variation-attribute-title-component-font-size;
+            text-transform: uppercase;
+        }
+
+        &-value-name {
+            padding-inline-start: $p-tertiary;
+            font-weight: normal;
+        }
+    }
+}

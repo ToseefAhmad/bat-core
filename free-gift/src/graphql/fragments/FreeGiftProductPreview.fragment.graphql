@@ -1,0 +1,17 @@
+fragment FreeGiftProductPreview on Product {
+    id
+    name
+    sku
+    type
+    small_image {
+        id
+        alt
+        name
+        url
+    }
+    inventory {
+        in_stock
+    }
+    url
+    rule_id
+}

@@ -1,0 +1,54 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../quote/src/components/AddToCart.component/styles/base/index';
+
+.app {
+    .add-to-cart-panel-component {
+        $add-to-cart-panel-component-padding: $p-primary !default;
+        $add-to-cart-panel-component-buttons-height: $button-height !default;
+        $add-to-cart-panel-component-add-to-cart-title-font-size: null !default;
+        $add-to-cart-panel-component-add-to-cart-title-letter-spacing: null !default;
+        $add-to-cart-panel-component-button-plus-button-margin-top: $m-secondary !default;
+
+        & {
+            position: sticky;
+            z-index: $zindex-sticky;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background-color: $light;
+            padding-block-start: $add-to-cart-panel-component-padding;
+            padding-block-end: $add-to-cart-panel-component-padding;
+            padding-inline-start: $add-to-cart-panel-component-padding;
+            padding-inline-end: $add-to-cart-panel-component-padding;
+        }
+
+        &-actions {
+            width: 100%;
+        }
+
+        .button-component {
+            & {
+                display: inline-block;
+                height: $add-to-cart-panel-component-buttons-height;
+                vertical-align: top;
+                width: 100%;
+            }
+
+            .loader-component {
+                display: none;
+            }
+
+            &-title {
+                font-size: $add-to-cart-panel-component-add-to-cart-title-font-size;
+                letter-spacing: $add-to-cart-panel-component-add-to-cart-title-letter-spacing;
+            }
+        }
+
+        .button-component + .button-component {
+            margin-top: $add-to-cart-panel-component-button-plus-button-margin-top;
+        }
+    }
+}

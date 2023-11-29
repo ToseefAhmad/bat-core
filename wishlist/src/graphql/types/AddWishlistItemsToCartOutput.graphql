@@ -1,0 +1,19 @@
+type AddWishlistItemsToCartOutput {
+    """
+    [BAT][wishlist]
+    Contains the wish list with all items that were successfully added.
+    """
+    wishlist: Wishlist!
+
+    """
+    [BAT][wishlist]
+    Indicates whether the attempt to add items to the customer's cart was successful.
+    """
+    status: Boolean!
+
+    """
+    [BAT][wishlist]
+    An array of errors encountered while adding products to the customer's cart.
+    """
+    add_wishlist_items_to_cart_user_errors: [WishlistCartUserInputError!]!
+}

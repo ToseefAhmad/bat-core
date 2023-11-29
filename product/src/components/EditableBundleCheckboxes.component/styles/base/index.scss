@@ -1,0 +1,28 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/EditableBundleCheckboxes.component/index';
+
+.app {
+    .editable-bundle-checkboxes-component {
+        $editable-bundle-checkboxes-component-padding-inline-start: null !default;
+        $editable-bundle-checkboxes-component-font-weight: null !default;
+
+        &-checkbox {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &-label,
+        &-price {
+            font-weight: $editable-bundle-checkboxes-component-font-weight;
+        }
+
+        .checkbox-component-center .checkbox-component-label-text::before {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .checkbox-component-label-text {
+            padding-inline-start: $editable-bundle-checkboxes-component-padding-inline-start;
+        }
+    }
+}

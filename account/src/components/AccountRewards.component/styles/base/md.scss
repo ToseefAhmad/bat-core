@@ -1,0 +1,84 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-rewards-component {
+        $account-rewards-component-details-width-md: 50% !default;
+        $account-rewards-component-points-width-md: 15% !default;
+        $account-rewards-component-date-width-md: 15% !default;
+        $account-rewards-component-expiry-date-width-md: 20% !default;
+        $account-rewards-component-title-padding-inline-md: $p-primary !default;
+        $account-rewards-component-label-padding-block-start-md: $p-secondary !default;
+        $account-rewards-component-label-padding-block-end-md: 0.8rem !default;
+        $account-rewards-component-label-margin-inline-md: $p-primary !default;
+        $account-rewards-component-label-line-height-md: null !default;
+        $account-rewards-component-empty-padding-inline-md: $p-primary !default;
+        $account-rewards-component-label-font-weight-md: $font-weight-semibold !default;
+        $account-rewards-component-label-background-color-md: $background-primary-color !default;
+        $account-rewards-component-label-border-md: 0.2rem solid transparent !default;
+
+        & {
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+        }
+
+        &-title {
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $account-rewards-component-title-padding-inline-md;
+            padding-inline-end: $account-rewards-component-title-padding-inline-md;
+            border-bottom: none;
+        }
+
+        &-content {
+            & {
+                padding-block-end: $p-primary;
+            }
+
+            &-label {
+                & {
+                    display: flex;
+                    padding-block-start: $account-rewards-component-label-padding-block-start-md;
+                    padding-block-end: $account-rewards-component-label-padding-block-end-md;
+                    margin-inline-start: $account-rewards-component-label-margin-inline-md;
+                    margin-inline-end: $account-rewards-component-label-margin-inline-md;
+                    margin-block-end: $m-primary;
+                    font-weight: $account-rewards-component-label-font-weight-md;
+                    line-height: $account-rewards-component-label-line-height-md;
+                    text-transform: uppercase;
+                    border-bottom: $account-rewards-component-label-border-md;
+                }
+
+                &-wrapper {
+                    background-color: $account-rewards-component-label-background-color-md;
+                }
+
+                &-details {
+                    flex: 0 0 $account-rewards-component-details-width-md;
+                }
+
+                &-points {
+                    flex: 0 0 $account-rewards-component-points-width-md;
+                    flex-grow: 1;
+                }
+
+                &-date {
+                    flex: 0 0 $account-rewards-component-date-width-md;
+                    flex-grow: 1;
+                }
+
+                &-expiry-date {
+                    flex: 0 0 $account-rewards-component-expiry-date-width-md;
+                    text-align: end;
+                }
+            }
+        }
+
+        &-empty {
+            padding-block-start: 0;
+            padding-block-end: $p-primary;
+            padding-inline-start: $account-rewards-component-empty-padding-inline-md;
+            padding-inline-end: $account-rewards-component-empty-padding-inline-md;
+        }
+    }
+}

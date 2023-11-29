@@ -1,0 +1,9 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .store-card-component {
+        width: 100%;
+        height: auto;
+    }
+}

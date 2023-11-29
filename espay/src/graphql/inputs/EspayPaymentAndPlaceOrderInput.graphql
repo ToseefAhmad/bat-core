@@ -1,0 +1,11 @@
+"""
+[espay][BAT]
+Input is used to send data of chosen espay payment method
+"""
+input EspayPaymentAndPlaceOrderInput {
+    """
+    [espay][BAT]
+    Cart ID
+    """
+    cart_id: ID
+}

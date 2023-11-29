@@ -1,0 +1,24 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .cross-sell-products-component {
+        $cross-sell-products-component-max-width-md: 66rem !default;
+        $cross-sell-products-component-add-cart-width-md: 15rem !default;
+        $cross-sell-products-component-holder-padding-md: 0 3rem !default;
+
+        & {
+            max-width: $cross-sell-products-component-max-width-md;
+        }
+
+        .product-list-slider-component {
+            &-products-holder {
+                padding: $cross-sell-products-component-holder-padding-md;
+            }
+        }
+
+        .product-preview-alt-component-footer .button-component {
+            width: $cross-sell-products-component-add-cart-width-md;
+        }
+    }
+}

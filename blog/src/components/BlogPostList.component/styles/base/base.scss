@@ -1,0 +1,22 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.blog-post-list-component {
+    $blog-post-list-component-title-font-size: 3.4rem !default;
+    $blog-post-list-component-title-font-weight: null !default;
+    $blog-post-list-component-title-text-align: null !default;
+    $blog-post-list-component-title-line-height: null !default;
+    $blog-post-list-component-empty-margin-bottom: 4rem !default;
+
+    &-title {
+        margin: $m-primary-lg $m-primary;
+        font-size: $blog-post-list-component-title-font-size;
+        font-weight: $blog-post-list-component-title-font-weight;
+        text-transform: uppercase;
+        text-align: $blog-post-list-component-title-text-align;
+        line-height: $blog-post-list-component-title-line-height;
+    }
+
+    &-empty {
+        margin-bottom: $blog-post-list-component-empty-margin-bottom;
+    }
+}

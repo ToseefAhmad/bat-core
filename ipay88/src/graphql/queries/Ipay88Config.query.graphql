@@ -1,0 +1,17 @@
+#import "../fragments/Ipay88PaymentMethod.fragment.graphql"
+
+query iPay88Config {
+    storeConfig {
+        ipay88_payment_config {
+            online {
+                ...Ipay88PaymentMethodFragment
+            }
+            credit {
+                ...Ipay88PaymentMethodFragment
+            }
+            wallet {
+                ...Ipay88PaymentMethodFragment
+            }
+        }
+    }
+}

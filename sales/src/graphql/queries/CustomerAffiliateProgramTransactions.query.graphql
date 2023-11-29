@@ -1,0 +1,14 @@
+query CustomerAffiliateProgramTransactions($start: Int = 0, $count: Int = 5) {
+    getTransactions(input: {start: $start, count: $count}) {
+        start
+        count
+        total
+        isExpirationEnabled
+        items {
+            comment
+            points
+            created
+            expires
+        }
+    }
+}

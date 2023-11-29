@@ -1,0 +1,7 @@
+type UpdatePreferencesOutput {
+    """
+    [BAT][account]
+    Response after success preferences updates
+    """
+    success: Boolean
+}

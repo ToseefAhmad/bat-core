@@ -1,0 +1,19 @@
+extend input DocumentInput {
+    """
+    [restrict-access][BAT]
+    The name of uploaded file
+    """
+    filename: String
+
+    """
+    [restrict-access][BAT]
+    String convertation to base64 format
+    """
+    base64_file: String
+
+    """
+    [restrict-access][BAT]
+    Document type
+    """
+    document_type: String
+}

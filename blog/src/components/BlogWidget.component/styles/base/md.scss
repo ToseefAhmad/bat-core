@@ -1,0 +1,49 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../common/src/scss/keyframes';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .blog-widget-component {
+            $blog-widget-component-action-block-title-padding-top-md: 6rem !default;
+
+            &-action-block {
+                max-width: calc(#{$max-content-width} + #{$p-primary});
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: $blog-widget-component-action-block-title-padding-top-md $p-secondary $p-primary;
+                margin: auto;
+            }
+
+            &-action-block-title {
+                display: flex;
+                margin: 0;
+            }
+
+            &-action-block-subtitle {
+                margin-left: $m-tertiary;
+            }
+
+            &-action-block-action {
+                padding: 0;
+                margin: 0;
+                width: auto;
+            }
+
+            &-action-block-action:hover::after {
+                animation: bounce-arrow 2s ease-in-out infinite;
+            }
+        }
+    }
+
+    [dir='rtl'] {
+        .app {
+            .blog-widget-component {
+                &-action-block-action:hover::after {
+                    animation: bounce-arrow-rtl 2s ease-in-out infinite;
+                }
+            }
+        }
+    }
+}

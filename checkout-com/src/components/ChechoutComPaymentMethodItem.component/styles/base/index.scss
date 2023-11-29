@@ -1,0 +1,64 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.checkoutcom-payment-method-item-component {
+    $checkoutcom-payment-method-item-component-radio-label-text-width: 5rem !default;
+    $checkoutcom-payment-method-item-component-radio-label-text-height: 3.2rem !default;
+    $checkoutcom-payment-method-item-component-radio-label-text-top: -0.6rem !default;
+    $checkoutcom-payment-method-item-component-radio-label-right: 2rem !default;
+    $checkoutcom-payment-method-item-component-radio-label-top: 1rem !default;
+    $checkoutcom-payment-method-item-component-radio-label-text-right: 6rem !default;
+
+    .radio-component-label::after,
+    .radio-component-label-text::after {
+        content: '';
+        position: absolute;
+        top: $checkoutcom-payment-method-item-component-radio-label-text-top;
+        display: inline-block;
+        height: $checkoutcom-payment-method-item-component-radio-label-text-height;
+        width: $checkoutcom-payment-method-item-component-radio-label-text-width;
+        background-repeat: no-repeat;
+    }
+
+    .radio-component-label {
+        & {
+            position: relative;
+        }
+
+        &::after {
+            right: $checkoutcom-payment-method-item-component-radio-label-right;
+            top: $checkoutcom-payment-method-item-component-radio-label-top;
+            background-image: url('../../../../../../common/src/resources/svg/base/bat-mastercard.svg');
+        }
+    }
+
+    .radio-component-label-text {
+        & {
+            width: 100%;
+        }
+
+        &::after {
+            right: $checkoutcom-payment-method-item-component-radio-label-text-right;
+            background-image: url('../../../../../../common/src/resources/svg/base/bat-visa.svg');
+        }
+    }
+}
+
+[dir='rtl'] {
+    .checkoutcom-payment-method-item-component {
+        $checkoutcom-payment-method-item-component-radio-label-text-left-rtl: 6rem;
+
+        .radio-component-label {
+            &::after {
+                left: 0;
+                right: initial;
+            }
+        }
+
+        .radio-component-label-text {
+            &::after {
+                left: $checkoutcom-payment-method-item-component-radio-label-text-left-rtl;
+                right: initial;
+            }
+        }
+    }
+}

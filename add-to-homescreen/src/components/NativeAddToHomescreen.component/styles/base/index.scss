@@ -1,0 +1,54 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .native-add-to-homescreen {
+        $native-add-to-homescreen-control-color: null !default;
+        $native-add-to-homescreen-control-color-hover: null !default;
+        $native-add-to-homescreen-control-color-focus: null !default;
+        $native-add-to-homescreen-control-color-active: null !default;
+        $native-add-to-homescreen-control-border-width: $border-width !default;
+        $native-add-to-homescreen-control-border-color: $light !default;
+        $native-add-to-homescreen-control-border-color-hover: null !default;
+        $native-add-to-homescreen-control-border-color-focus: null !default;
+        $native-add-to-homescreen-control-border-color-active: null !default;
+        $native-add-to-homescreen-control-border-radius: null !default;
+        $native-add-to-homescreen-control-background-color: null !default;
+        $native-add-to-homescreen-control-background-image: null !default;
+        $native-add-to-homescreen-control-box-shadow-focus: null !default;
+
+        &-control.button-component {
+            & {
+                background-image: none;
+                background-color: transparent;
+                border: $native-add-to-homescreen-control-border-width solid
+                    $native-add-to-homescreen-control-border-color;
+                border-radius: $native-add-to-homescreen-control-border-radius;
+                color: $native-add-to-homescreen-control-color;
+                transition: color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+            }
+
+            &::before {
+                background-color: $native-add-to-homescreen-control-background-color;
+                background-image: $native-add-to-homescreen-control-background-image;
+            }
+
+            &:hover {
+                color: $native-add-to-homescreen-control-color-hover;
+                border-color: $native-add-to-homescreen-control-border-color-hover;
+                background-color: transparent;
+            }
+
+            &:not(:disabled):not(.disabled):focus {
+                color: $native-add-to-homescreen-control-color-focus;
+                border-color: $native-add-to-homescreen-control-border-color-focus;
+                box-shadow: $native-add-to-homescreen-control-box-shadow-focus;
+            }
+
+            &:not(:disabled):not(.disabled):active {
+                color: $native-add-to-homescreen-control-color-active;
+                border-color: $native-add-to-homescreen-control-border-color-active;
+                background-color: transparent;
+            }
+        }
+    }
+}

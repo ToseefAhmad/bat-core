@@ -1,0 +1,26 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../common/src/scss/mixins/base';
+
+.product-slider-component {
+    // This variables make an item's width of a pagebuilder slider compatible with width of items in
+    // our sliders that uses scrollable-list-media-all mixin
+    $product-slider-component-number: 2 !default;
+    $product-slider-component-partial-coefficient: 0.4 !default;
+
+    .swiper-wrapper {
+        @include scrollable-list-media-all($item-selector: '.swiper-slide', $min-items: 1, $max-items: 4);
+    }
+
+    .add-to-cart-component,
+    .variation-attributes-component,
+    .product-preview-alt-component-footer,
+    .swiper-button-next,
+    .swiper-button-prev,
+    .swiper-pagination {
+        display: none;
+    }
+
+    .swiper-slide {
+        width: #{100% / ($product-slider-component-number + $product-slider-component-partial-coefficient)} !important;
+    }
+}

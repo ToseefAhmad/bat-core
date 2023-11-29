@@ -1,0 +1,13 @@
+extend type Viewer {
+    """
+    [user][BAT]
+    Flag, which identifies that user has confirmed the account (if account confirmation feature is turned off in admin panel, this field will be true for all users). The value could be boolean or null (null will meant literally the same as true)
+    """
+    confirmed: Boolean
+
+    """
+    [user][BAT]
+    User information for the registration using social network
+    """
+    user_for_social_register: UserForSocialRegister
+}

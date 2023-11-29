@@ -1,0 +1,13 @@
+extend type Order {
+    """
+    [sales][BAT]
+    Discount using reward points
+    """
+    rewards_discount: RewardsDiscount
+
+    """
+    [sales][BAT]
+    Discount
+    """
+    discount: Discount
+}

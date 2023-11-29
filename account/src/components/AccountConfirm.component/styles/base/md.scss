@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-confirm-component {
+        & {
+            @include block-wrapper();
+        }
+
+        &-form {
+            margin: $m-primary auto $m-tertiary;
+            max-width: $input-max-width-sm;
+            padding: 0;
+        }
+    }
+}

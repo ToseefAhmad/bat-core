@@ -1,0 +1,31 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .bundled-product-settings-component {
+        $bundled-product-settings-component-title-font-size: $font-size-mobile !default;
+        $bundled-product-settings-component-title-font-weight: $font-weight-normal !default;
+        $bundled-product-settings-component-title-name-font-family: null !default;
+        $bundled-product-settings-component-title-line-height: null !default;
+
+        &-title {
+            font-size: $bundled-product-settings-component-title-font-size;
+            font-weight: $bundled-product-settings-component-title-font-weight;
+            font-family: $bundled-product-settings-component-title-name-font-family;
+            line-height: $bundled-product-settings-component-title-line-height;
+            margin-bottom: $m-primary;
+            margin-top: $m-secondary;
+        }
+
+        &-wrapper {
+            margin-bottom: $m-primary;
+        }
+
+        .bundled-product-component:not(:last-child) {
+            margin-bottom: 0;
+        }
+
+        .bundled-product-component-name {
+            font-family: $bundled-product-settings-component-title-name-font-family;
+        }
+    }
+}

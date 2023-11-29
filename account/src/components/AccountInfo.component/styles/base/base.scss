@@ -1,0 +1,54 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/account/src/components/AccountInfo.component/index';
+
+.app {
+    .account-info-component {
+        $account-info-component-update-fields-margin-block-end: null !default;
+        $account-info-component-toggle-letter-spacing: null !default;
+        $account-info-component-toggle-margin-block-start: null !default;
+        $account-info-component-toggle-text-align: null !default;
+        $account-info-component-checkbox-margin-block-start: null !default;
+        $account-info-component-checkbox-margin-block-end: null !default;
+        $account-info-component-age-checkbox-background-image: null !default;
+        $account-info-component-age-checkbox-background-size: null !default;
+        $account-info-component-age-checkbox-background-position: null !default;
+        $account-info-component-age-checkbox-background-repeat: null !default;
+        $account-info-component-age-checkbox-background-color: null !default;
+        $account-info-component-age-checkbox-label-cursor: null !default;
+
+        &-update-fields {
+            margin-block-end: $account-info-component-update-fields-margin-block-end;
+        }
+
+        &-toggle-fields,
+        &-toggle-fields.button-component {
+            letter-spacing: $account-info-component-toggle-letter-spacing;
+            margin-block-start: $account-info-component-toggle-margin-block-start;
+
+            &.button-component {
+                text-align: $account-info-component-toggle-text-align;
+            }
+        }
+
+        .checkbox-component {
+            margin-block-start: $account-info-component-checkbox-margin-block-start;
+            margin-block-end: $account-info-component-checkbox-margin-block-end;
+        }
+
+        .age-verified-checkbox {
+            .checkbox-component-input:checked:disabled
+                + .checkbox-component-label
+                .checkbox-component-label-text::before {
+                background-image: $account-info-component-age-checkbox-background-image;
+                background-size: $account-info-component-age-checkbox-background-size;
+                background-position: $account-info-component-age-checkbox-background-position;
+                background-repeat: $account-info-component-age-checkbox-background-repeat;
+                background-color: $account-info-component-age-checkbox-background-color;
+            }
+
+            .checkbox-component-label {
+                cursor: $account-info-component-age-checkbox-label-cursor;
+            }
+        }
+    }
+}

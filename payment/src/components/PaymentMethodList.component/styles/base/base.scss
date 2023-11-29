@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .payment-method-list-component {
+    &-items:not(:last-child) .payment-method-item-component {
+        border-bottom: $border-width solid $gray-light-primary;
+    }
+
+    .back-component-control-title {
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+}

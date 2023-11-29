@@ -1,0 +1,13 @@
+extend type Query {
+    """
+    [quote][BAT]
+    Client purchase data
+    """
+    purchase: ClientPurchase
+
+    """
+    [quote][BAT]
+    Returns reward points settings
+    """
+    getRewardsPointSettings(input: RewardsSettingInput): RewardPointSettings
+}

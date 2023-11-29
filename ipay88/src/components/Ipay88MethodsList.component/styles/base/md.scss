@@ -1,0 +1,20 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .ipay88-methods-list-component {
+        $ipay88-methods-list-component-margin: -2.6rem $m-primary $m-primary !default;
+        $ipay88-methods-list-component-border-width: 0 $border-width $border-width !default;
+        $ipay88-methods-list-component-border-style: solid !default;
+        $ipay88-methods-list-component-border-color: $gray-light-primary !default;
+
+        & {
+            background: $light;
+            border-width: $ipay88-methods-list-component-border-width;
+            border-style: $ipay88-methods-list-component-border-style;
+            border-color: $ipay88-methods-list-component-border-color;
+            margin: $ipay88-methods-list-component-margin;
+            padding-top: $p-secondary;
+        }
+    }
+}

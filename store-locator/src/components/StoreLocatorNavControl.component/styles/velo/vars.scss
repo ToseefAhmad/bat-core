@@ -1,0 +1,10 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$store-locator-nav-control-component-button-color: $tertiary;
+
+// xs
+$store-locator-nav-control-component-background-image-xs: url('../../../../../../common/src/resources/svg/velo/velo-mobile-shape.svg');
+
+// sm
+$store-locator-nav-control-component-icon-direction-sm: column;
+$store-locator-nav-control-component-icon-justify-sm: flex-end;

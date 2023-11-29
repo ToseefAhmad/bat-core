@@ -1,0 +1,39 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .product-preview-alt-component {
+        $product-preview-alt-component-add-to-cart-button-letter-spacing-sm: 0.075rem !default;
+        $product-preview-alt-component-cms-block-label-line-height-sm: 1.6rem;
+
+        .variation-attribute-adaptive-component {
+            &-name-small {
+                font-size: $font-size-sm;
+            }
+
+            &-name-large {
+                font-size: $h2-font-size;
+            }
+
+            &-indicators {
+                width: 100%;
+            }
+        }
+
+        &-footer .button-component {
+            & {
+                font-size: $font-size-md;
+                letter-spacing: $product-preview-alt-component-add-to-cart-button-letter-spacing-sm;
+            }
+
+            .loader-component {
+                display: flex;
+            }
+        }
+
+        .cms-subscribe-up-label {
+            font-size: $h5-font-size;
+            line-height: $product-preview-alt-component-cms-block-label-line-height-sm;
+        }
+    }
+}

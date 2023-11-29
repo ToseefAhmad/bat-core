@@ -1,0 +1,7 @@
+extend type Mutation {
+    """
+    [espay][BAT]
+    Set data from chosen espay payment method and place order
+    """
+    setEspayAndPlaceOrder(input: EspayPaymentAndPlaceOrderInput): CheckoutOrder
+}

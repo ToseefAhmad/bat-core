@@ -1,0 +1,15 @@
+#import "../../../../url-resolver/src/graphql/fragments/EntityUrl.fragment.graphql"
+
+fragment BatCmsPageFragment on CmsPage {
+    id
+    title
+    content
+    url_rewrite {
+        ...BatEntityUrlFragment
+    }
+    meta_description
+    meta_keywords
+    meta_robots
+    meta_title
+    canonical_url
+}

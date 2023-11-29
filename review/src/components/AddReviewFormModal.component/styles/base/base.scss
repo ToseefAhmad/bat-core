@@ -1,0 +1,38 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.modal-component {
+    &.add-review-form-modal-component-new {
+        $add-review-form-modal-component-new-font-size: $font-size-mobile !default;
+        $add-review-form-modal-component-new-title-font-size: 1.3rem !default;
+        $add-review-form-modal-component-new-legend-color: inherit !default;
+        $add-review-form-modal-component-new-legend-text-transform: none !default;
+        $add-review-form-modal-component-new-legend-font-weight: normal !default;
+        $add-review-form-modal-component-new-form-control-label-transform: null !default;
+
+        & {
+            pointer-events: auto;
+        }
+
+        .modal-component-header .modal-component-close {
+            opacity: 1;
+            margin-left: -#{$m-secondary};
+        }
+
+        .form-group-component {
+            margin-bottom: 0;
+        }
+
+        .form-control-component-secondary .form-control-label-transform {
+            color: $add-review-form-modal-component-new-form-control-label-transform;
+        }
+
+        legend {
+            margin-bottom: $m-tertiary;
+            font-size: $add-review-form-modal-component-new-font-size;
+            line-height: inherit;
+            color: $add-review-form-modal-component-new-legend-color;
+            text-transform: $add-review-form-modal-component-new-legend-text-transform;
+            font-weight: $add-review-form-modal-component-new-legend-font-weight;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+#import "../fragments/BlogPost.fragment.graphql"
+
+query BlogPost($id: String) {
+    blogPost(id: $id) {
+        ...BlogPostFragment
+    }
+}

@@ -1,0 +1,40 @@
+@import '../../../../scss/variables/base';
+
+.app {
+    .applied-discount-item-component {
+        $applied-discount-item-component-icon-holder-width: 2.3rem !default;
+        $applied-discount-item-component-icon-size: 1.6rem 1.6rem !default;
+        $applied-discount-item-component-item-padding-block-start: null !default;
+        $applied-discount-item-component-text-margin-block-end: null !default;
+        $applied-discount-item-component-background-image: url('../../../../resources/svg/base/bat-success.svg') !default;
+
+        & {
+            padding-block-start: $applied-discount-item-component-item-padding-block-start;
+        }
+
+        &::before {
+            background: top left no-repeat $applied-discount-item-component-background-image;
+            background-size: $applied-discount-item-component-icon-size;
+            width: $applied-discount-item-component-icon-holder-width;
+        }
+
+        &-body {
+            &-title,
+            &-code {
+                margin-block-end: $applied-discount-item-component-text-margin-block-end;
+            }
+        }
+
+        &-remove {
+            font-size: $font-size-base;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .applied-discount-item-component {
+        &::before {
+            background-position-x: 100%;
+        }
+    }
+}

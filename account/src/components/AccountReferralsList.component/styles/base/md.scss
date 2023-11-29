@@ -1,0 +1,77 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-referrals-list-component {
+        $account-referrals-list-component-header-padding-inline-md: $p-primary !default;
+        $account-referrals-list-component-content-header-padding-inline-md: $p-primary !default;
+        $account-referrals-list-component-item-flex-md: 0 0 50% !default;
+
+        & {
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            padding-block-start: 0;
+            padding-block-end: 0;
+        }
+
+        &-header {
+            border-bottom: none;
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $account-referrals-list-component-header-padding-inline-md;
+            padding-inline-end: $account-referrals-list-component-header-padding-inline-md;
+        }
+
+        &-content {
+            &-header {
+                & {
+                    background-color: $background-primary-color;
+                    display: flex;
+                    padding-inline-start: $account-referrals-list-component-content-header-padding-inline-md;
+                    padding-inline-end: $account-referrals-list-component-content-header-padding-inline-md;
+                    margin-block-end: $m-primary;
+                }
+
+                &-item {
+                    & {
+                        flex: $account-referrals-list-component-item-flex-md;
+                        padding-block-start: $p-tertiary;
+                        padding-block-end: $p-tertiary;
+                        font-weight: $font-weight-semibold;
+                    }
+
+                    & + & {
+                        padding-inline-start: $p-primary;
+                    }
+                }
+            }
+
+            &-item {
+                & {
+                    border: none;
+                    display: flex;
+                    padding-block-start: 0;
+                    padding-block-end: 0;
+                    padding-inline-start: $p-primary-lg;
+                    padding-inline-end: $p-primary-lg;
+                }
+
+                &-data {
+                    & {
+                        padding-block-start: $p-tertiary;
+                        padding-block-end: $p-tertiary;
+                        flex: $account-referrals-list-component-item-flex-md;
+                    }
+
+                    & + & {
+                        padding-inline-start: $p-primary;
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

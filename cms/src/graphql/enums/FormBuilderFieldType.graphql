@@ -1,0 +1,28 @@
+"""
+[BAT][cms]
+Defines the form bilder field type
+"""
+enum FormBuilderFieldTypeEnum {
+    TEXT
+    EMAIL
+    NUMBER
+    URL
+    PASSWORD
+    AUTOCOMPLETE
+    TEXTAREA
+    WYSIWYG
+    SELECT
+    RADIO
+    CHECKBOX
+    CONTACT
+    COUNTRY
+    SUBSCRIBE
+    DATE
+    DATETIME
+    DOB
+    STARS
+    FILE
+    IMAGE
+    HTML
+    HIDDEN
+}

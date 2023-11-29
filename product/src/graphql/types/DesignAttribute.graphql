@@ -1,0 +1,23 @@
+"""
+[product][BAT]
+Provides product design attributes
+"""
+type DesignAttribute {
+    """
+    [product][BAT]
+    A place. Specifies where data is inserted
+    """
+    place: String
+
+    """
+    [product][BAT]
+    Attribute value
+    """
+    value: String
+
+    """
+    [product][BAT]
+    Attribute code
+    """
+    code: String
+}

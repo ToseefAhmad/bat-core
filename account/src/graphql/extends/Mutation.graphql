@@ -1,0 +1,19 @@
+extend type Mutation {
+    """
+    [BAT][account]
+    Update and verify registered user information
+    """
+    updateAndVerifyViewer(input: UpdateViewerInput): Viewer
+
+    """
+    [BAT][account]
+    Set data from chosen marketing preferences
+    """
+    updatePreferencesMutation(input: UpdatePreferencesInput): UpdatePreferencesOutput
+
+    """
+    [BAT][account]
+    Set data for sharing wishlist
+    """
+    shareWishlist(input: ShareWishlistInput): Wishlist
+}

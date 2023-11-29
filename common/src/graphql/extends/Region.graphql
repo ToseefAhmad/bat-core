@@ -1,0 +1,7 @@
+extend type Region {
+    """
+    [common][BAT]
+    List of Cities
+    """
+    cities: [City]
+}

@@ -1,0 +1,37 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app .product-engraving-summary-item-component {
+        $product-engraving-summary-item-component-image-box-size-sm: 5rem;
+        $product-engraving-summary-item-component-params-min-width-sm: 8rem;
+        $product-engraving-summary-item-component-padding-inline-start-sm: 7rem;
+        $product-engraving-summary-item-component-padding-inline-end-sm: 5rem;
+
+        &-image-box {
+            width: $product-engraving-summary-item-component-image-box-size-sm;
+            min-width: $product-engraving-summary-item-component-image-box-size-sm;
+            height: $product-engraving-summary-item-component-image-box-size-sm;
+        }
+
+        &-product-price {
+            margin-inline-end: $m-primary;
+        }
+
+        &-options {
+            &-title {
+                padding-inline-start: $product-engraving-summary-item-component-padding-inline-start-sm;
+                padding-inline-end: $product-engraving-summary-item-component-padding-inline-end-sm;
+            }
+
+            &-item-params-name {
+                min-width: $product-engraving-summary-item-component-params-min-width-sm;
+            }
+
+            &-item-actions-edit.button-component {
+                font-size: $font-size-base;
+                margin-inline-end: $m-primary;
+            }
+        }
+    }
+}

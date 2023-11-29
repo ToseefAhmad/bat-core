@@ -1,0 +1,17 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .billing-address-form-component {
+            fieldset:not(:last-of-type) {
+                margin-block-end: $m-primary;
+            }
+
+            legend {
+                font-size: $font-size-lg;
+                letter-spacing: $letter-spacing-desktop;
+            }
+        }
+    }
+}

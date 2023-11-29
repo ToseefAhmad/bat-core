@@ -1,0 +1,7 @@
+extend type CartItem {
+    """
+    [free-gift][BAT]
+    Free gift items price label
+    """
+    price_label: String
+}

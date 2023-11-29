@@ -1,0 +1,11 @@
+"""
+[quote][BAT]
+Reward points discount amount
+"""
+type RewardDiscount {
+    """
+    [quote][BAT]
+    Amount of a discount using reward points
+    """
+    amount: Money
+}

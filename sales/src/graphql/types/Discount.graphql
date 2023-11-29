@@ -1,0 +1,17 @@
+"""
+[sales][BAT]
+Provides order discount data
+"""
+type Discount {
+    """
+    [sales][BAT]
+    Discount amount
+    """
+    amount: Money
+
+    """
+    [sales][BAT]
+    Discount label
+    """
+    label: String
+}

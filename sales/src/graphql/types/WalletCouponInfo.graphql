@@ -1,0 +1,24 @@
+type WalletCouponInfo {
+    """
+    [sales][VELO]
+    Coupon's expiration day
+    """
+    exp_day: String
+
+    """
+    [sales][VELO]
+    Coupon's code
+    """
+    code: String
+    """
+    [sales][VELO]
+    Coupon's description
+    """
+    description: String
+
+    """
+    [sales][VELO]
+    Shows that the coupon may use
+    """
+    is_usable: Boolean
+}

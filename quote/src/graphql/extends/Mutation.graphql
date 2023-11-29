@@ -1,0 +1,49 @@
+extend type Mutation {
+    """
+    [quote][BAT]
+    Add customer KTP ID to cart
+    """
+    addCustomerKtpIdToCart(input: AddCustomerKtpIdToCartInput): Cart
+
+    """
+    [quote][BAT]
+    Add customer note to cart
+    """
+    addCustomerNoteToCart(input: AddCustomerNoteToCartInput): Cart
+
+    """
+    [quote][BAT]
+    Remove customer note from cart
+    """
+    removeCustomerNoteFromCart(input: RemoveCustomerNoteFromCartInput): Cart
+
+    """
+    [quote][BAT]
+    Add referral code to cart
+    """
+    addReferralCodeToCart(input: AddReferralCodeToCartInput): ReferralCode
+
+    """
+    [quote][BAT]
+    Remove referral code from cart
+    """
+    removeReferralCodeFromCart(input: RemoveReferralCodeFromCartInput): ReferralCode
+
+    """
+    [quote][BAT]
+    Add DoB to cart
+    """
+    addDobToCart(input: AddDobToCartInput): Cart
+
+    """
+    [quote][BAT]
+    Apply points to cart
+    """
+    applyPointsToCart(input: ApplyPointsToCartInput): Cart
+
+    """
+    [quote][BAT]
+    Remove points from cart
+    """
+    removePointsFromCart(input: RemovePointsFromCartInput): Cart
+}

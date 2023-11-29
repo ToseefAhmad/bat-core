@@ -1,0 +1,5 @@
+mutation SendConfirmationLink($input: SendConfirmationLinkInput) {
+    sendConfirmationLink(input: $input) {
+        success
+    }
+}

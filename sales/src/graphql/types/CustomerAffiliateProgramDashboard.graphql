@@ -1,0 +1,29 @@
+"""
+[sales][VELO]
+Provides affiliate program dasboard data
+"""
+type CustomerAffiliateProgramDashboard {
+    """
+    [sales][VELO]
+    Number of points
+    """
+    points: Int
+
+    """
+    [sales][VELO]
+    Earning rules
+    """
+    earning_rules: [EarningRule]
+
+    """
+    [sales][VELO]
+    Spending rules
+    """
+    spending_rules: [SpendingRule]
+
+    """
+    [sales][VELO]
+    Tier info
+    """
+    tier_info: TierInfo
+}

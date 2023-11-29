@@ -1,0 +1,11 @@
+fragment EngravedOptionsFragment on EngravedOptionsInfo {
+    psn_is_personalisable
+    psn_front_pattern_id
+    psn_front_pattern
+    psn_front_icon_id
+    psn_front_icon
+    psn_back_text
+    psn_back_text_direction
+    psn_back_text_font_family_id
+    psn_back_text_font_family
+}

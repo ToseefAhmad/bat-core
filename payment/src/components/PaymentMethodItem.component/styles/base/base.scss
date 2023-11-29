@@ -1,0 +1,41 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .payment-method-item-component {
+    $payment-method-item-component-padding-start: 1.5rem !default;
+    $payment-method-item-component-background-hover: #fafafa !default;
+    $payment-method-item-component-radio-label-text-font-size: 1.3rem !default;
+    $payment-method-item-component-padding-inline-start: 5rem !default;
+    $payment-method-item-component-padding-inline-end: 1.5rem !default;
+    $payment-method-item-component-padding-block-end: 1.5rem !default;
+
+    & {
+        border-color: $gray-light-primary;
+        text-transform: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $payment-method-item-component-background-hover;
+        }
+    }
+
+    &-radio {
+        padding: 0;
+    }
+
+    & .radio-component-label {
+        padding-block-start: $payment-method-item-component-padding-start;
+        padding-block-end: $p-primary;
+        padding-inline-start: $payment-method-item-component-padding-start;
+        padding-inline-end: $p-primary;
+    }
+
+    .radio-component-label-text {
+        font-size: $payment-method-item-component-radio-label-text-font-size;
+    }
+
+    &-tip {
+        padding-inline-start: $payment-method-item-component-padding-inline-start;
+        padding-inline-end: $payment-method-item-component-padding-inline-end;
+        padding-block-end: $payment-method-item-component-padding-block-end;
+    }
+}

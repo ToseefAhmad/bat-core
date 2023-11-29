@@ -1,0 +1,13 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app .product-engraving-steps-control-component {
+        &-actions {
+            &-back.button-component,
+            &-cancel.button-component {
+                font-size: $font-size-base;
+            }
+        }
+    }
+}

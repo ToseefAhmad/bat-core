@@ -1,0 +1,118 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .blog-post-tile-component {
+        $blog-post-tile-component-margin-bottom: 1.5rem !default;
+        $blog-post-tile-component-image-component-padding-top: 51% !default;
+        $blog-post-tile-component-link-wrapper-padding-bottom: 1.5rem !default;
+        $blog-post-tile-component-date-color: #686868 !default;
+        $blog-post-tile-component-date-text-transform: null !default;
+        $blog-post-tile-component-title-font-size: 2rem !default;
+        $blog-post-tile-component-title-font-weight: $font-weight-semibold !default;
+        $blog-post-tile-component-title-string-number: 2 !default;
+        $blog-post-tile-component-content-margin: $m-secondary $m-primary $m-primary !default;
+        $blog-post-tile-component-content-font-size: $font-size-md !default;
+        $blog-post-tile-component-content-color: null !default;
+        $blog-post-tile-component-content-string-number: 3 !default;
+        $blog-post-tile-component-button-arrow-width: 2rem !default;
+        $blog-post-tile-component-button-arrow-height: 1.4rem !default;
+        $blog-post-tile-component-button-arrow-top: 0.3rem !default;
+
+        & {
+            margin-bottom: $blog-post-tile-component-margin-bottom;
+        }
+
+        &-link-wrapper {
+            display: block;
+            text-decoration: none;
+            color: $primary-font-color;
+            padding-bottom: $blog-post-tile-component-link-wrapper-padding-bottom;
+        }
+
+        &-title {
+            margin: 0 $m-primary;
+            font-size: $blog-post-tile-component-title-font-size;
+            font-weight: $blog-post-tile-component-title-font-weight;
+            text-transform: uppercase;
+        }
+
+        &-title,
+        &-content .cms-content-block {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            white-space: normal;
+            overflow: hidden;
+            line-clamp: $blog-post-tile-component-title-string-number;
+            -webkit-line-clamp: $blog-post-tile-component-title-string-number;
+        }
+
+        &-image {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-component,
+        .image-placeholder-component {
+            padding-top: $blog-post-tile-component-image-component-padding-top;
+        }
+
+        &-date {
+            margin: $m-secondary $m-primary;
+            font-size: $font-size-md;
+            text-transform: $blog-post-tile-component-date-text-transform;
+            color: $blog-post-tile-component-date-color;
+        }
+
+        &-content {
+            margin: $blog-post-tile-component-content-margin;
+            font-size: $blog-post-tile-component-content-font-size;
+            color: $blog-post-tile-component-content-color;
+        }
+
+        &-content .cms-content-block {
+            line-clamp: $blog-post-tile-component-content-string-number;
+            -webkit-line-clamp: $blog-post-tile-component-content-string-number;
+        }
+
+        &-action {
+            padding: 0 0 0 $p-primary;
+            display: inline-block;
+            font-size: $font-size-md;
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+            text-align: left;
+            line-height: normal;
+
+            &:after {
+                content: '';
+                position: relative;
+                top: $blog-post-tile-component-button-arrow-top;
+                display: inline-block;
+                width: $blog-post-tile-component-button-arrow-width;
+                height: $blog-post-tile-component-button-arrow-height;
+                margin-left: $m-secondary;
+                background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-right.svg');
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app .blog-post-tile-component {
+        &-action {
+            padding: 0 $p-primary 0 0;
+        }
+
+        &-action.button-component {
+            text-align: right;
+
+            &:after {
+                margin-left: 0;
+                margin-right: $m-secondary;
+                background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-left.svg');
+                background-size: 100%;
+            }
+        }
+    }
+}

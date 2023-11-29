@@ -1,0 +1,13 @@
+#import "../fragments/Wishlist.fragment.graphql"
+
+query Wishlist($start: Int, $count: Int) {
+    viewer {
+        token
+        user {
+            id
+            wishlist {
+                ...WishlistFragment
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app .review-summary-component {
+        margin-block-end: $m-primary;
+    }
+}

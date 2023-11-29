@@ -1,0 +1,11 @@
+"""
+[sales][VELO]
+Provides affiliate program referral url
+"""
+type ReferralUrl {
+    """
+    [sales][VELO]
+    Referral url
+    """
+    referral_url: String
+}

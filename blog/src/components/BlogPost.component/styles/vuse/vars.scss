@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$blog-post-component-title-font-size: $font-size-title;
+$blog-post-component-title-font-weight: $font-weight-normal;
+$blog-post-component-title-margin: 0 0 $m-secondary;
+$blog-post-component-date-color: $dark-grey;
+$blog-post-component-cms-content-title-font-size: 2.4rem;
+
+// md
+$blog-post-component-title-font-size-md: 3.2rem;
+$blog-post-component-cms-content-title-font-size-md: $font-size-title;

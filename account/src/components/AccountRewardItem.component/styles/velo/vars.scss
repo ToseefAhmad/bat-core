@@ -1,0 +1,9 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$account-reward-item-component-border-bottom: $border-width solid $primary-border-color;
+$account-reward-item-component-earned-color: #10ae62;
+$account-reward-item-component-spent-color: #d20000;
+
+// md
+$account-reward-item-component-padding-inline-md: $p-primary-lg;
+$account-reward-item-component-border-md: none;

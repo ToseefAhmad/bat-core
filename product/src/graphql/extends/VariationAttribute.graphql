@@ -1,0 +1,7 @@
+extend type VariationAttribute {
+    """
+    [product][BAT]
+    Total amount of variations
+    """
+    options_count: Int
+}

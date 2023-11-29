@@ -1,0 +1,7 @@
+extend type Mutation {
+    """
+    [product][BAT]
+    Validate engraving text
+    """
+    validateEngravingText(input: EngravingTextInput): EngravingTextOutput
+}

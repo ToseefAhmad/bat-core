@@ -1,0 +1,11 @@
+"""
+[sales][VELO]
+Tier info
+"""
+type TierInfo {
+    """
+    [sales][VELO]
+    Tier info label
+    """
+    label: String
+}

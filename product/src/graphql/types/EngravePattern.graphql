@@ -1,0 +1,35 @@
+"""
+[product][BAT]
+Device engraving pattern
+"""
+type EngravePattern {
+    """
+    [product][BAT]
+    Pattern identifier
+    """
+    id: ID
+
+    """
+    [product][BAT]
+    Pattern name
+    """
+    name: String
+
+    """
+    [product][BAT]
+    Pattern thumbnail image
+    """
+    thumbnail_image: String
+
+    """
+    [product][BAT]
+    Pattern image
+    """
+    pattern_image: String
+
+    """
+    [product][BAT]
+    Pattern category name
+    """
+    category_name: String
+}

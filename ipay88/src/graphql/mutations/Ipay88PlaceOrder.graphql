@@ -1,0 +1,9 @@
+mutation Ipay88PlaceOrder($input: CreateOrderInput) {
+    ipay88PlaceOrder(input: $input) {
+        action
+        fields {
+            name
+            value
+        }
+    }
+}

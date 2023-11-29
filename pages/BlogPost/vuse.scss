@@ -1,0 +1,10 @@
+@import '../../common/src/scss/variables/vuse';
+@import '../../common/src/components/Pagination.component/styles/vuse/index';
+@import '../../blog/src/components/BlogPost.component/styles/vuse/index';
+@import '../../blog/src/components/BlogWidget.component/styles/vuse/index';
+@import '../../blog/src/components/BlogPostTile.component/styles/vuse/index';
+@import '../../blog/src/components/BlogRelatedPosts.component/styles/vuse/index';
+
+.blog-post-page {
+    background-color: $background-primary-color;
+}

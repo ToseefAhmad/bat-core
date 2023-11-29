@@ -1,0 +1,73 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/components/Back.component/index';
+
+.app {
+    .back-component {
+        $back-component-min-height: null !default;
+        $back-component-border-bottom: null !default;
+        $back-component-icon-background-size: null !default;
+        $back-component-title-font-weight: null !default;
+        $back-component-title-line-height: null !default;
+        $back-component-title-font-size: null !default;
+        $back-component-title-text-transform: null !default;
+        $back-component-button-background-image: url('../../../../resources/svg/base/bat-back.svg') !default;
+        $back-component-button-line-height: null !default;
+        $back-component-control-padding-y: null !default;
+        $back-component-button-letter-spacing: null !default;
+        $back-component-control-padding-block-start: null !default;
+        $back-component-control-padding-block-end: null !default;
+        $back-component-header-button-text-align: null !default;
+
+        & {
+            min-height: $back-component-min-height;
+            border-bottom: $back-component-border-bottom;
+        }
+
+        .button-component {
+            letter-spacing: $back-component-button-letter-spacing;
+        }
+
+        &-control {
+            & {
+                padding-block-start: $back-component-control-padding-block-start;
+                padding-block-end: $back-component-control-padding-block-end;
+            }
+
+            &.button-component {
+                background-image: $back-component-button-background-image;
+                background-size: $back-component-icon-background-size;
+                line-height: $back-component-button-line-height;
+            }
+
+            &-title {
+                display: inline-block;
+                font-size: $back-component-title-font-size;
+                font-weight: $back-component-title-font-weight;
+                line-height: $back-component-title-line-height;
+                text-transform: $back-component-title-text-transform;
+            }
+        }
+
+        &.back-component-header {
+            .back-component-control.button-component {
+                text-align: $back-component-header-button-text-align;
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        $back-component-button-background-position: right center;
+
+        .back-component {
+            &-control {
+                &.button-component,
+                &.button-component:hover {
+                    background-image: url('../../../../resources/svg/base/bat-arrow-right.svg');
+                    background-position: $back-component-button-background-position;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+extend type Wishlist {
+    """
+    [wishlist][BAT]
+    Wishlist id
+    """
+    id: Int
+}

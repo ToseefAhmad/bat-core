@@ -1,0 +1,6 @@
+fragment BatSortFragment on Sort {
+    sort_option_id
+    name
+    is_default
+    direction
+}

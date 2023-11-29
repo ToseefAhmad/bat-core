@@ -1,0 +1,11 @@
+"""
+[ccavenue][BAT]
+Input is used as an argument for 'ccavenueRedirect' mutation
+"""
+input CcAvenueRedirectInput {
+    """
+    [ccavenue][BAT]
+    Cart identifier
+    """
+    cart_id: ID
+}

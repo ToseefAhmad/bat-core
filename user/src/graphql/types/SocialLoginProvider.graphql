@@ -1,0 +1,13 @@
+type SocialLoginProvider {
+    """
+    [user][BAT]
+    Provider type
+    """
+    type: SocialLoginProviderEnum
+
+    """
+    [user][BAT]
+    Redirect URL of social provider
+    """
+    url: String
+}

@@ -1,0 +1,21 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .billing-address-as-shipping-component {
+            $billing-address-as-shipping-component-label-font-size-md: null !default;
+
+            .checkbox-component,
+            .checkbox-component-label {
+                height: 100%;
+            }
+
+            .checkbox-component-label-text {
+                display: inline-flex;
+                align-items: center;
+                font-size: $billing-address-as-shipping-component-label-font-size-md;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    [dir='rtl'] {
+        .add-review-form-modal-component-new {
+            $add-review-form-modal-component-new-modal-dialog-float-sm-rtl: left !default;
+
+            .modal-component-dialog {
+                float: $add-review-form-modal-component-new-modal-dialog-float-sm-rtl;
+            }
+        }
+    }
+}

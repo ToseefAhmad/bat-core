@@ -1,0 +1,7 @@
+fragment TaxItemFragment on TaxItem {
+    label
+    amount {
+        currency
+        value
+    }
+}

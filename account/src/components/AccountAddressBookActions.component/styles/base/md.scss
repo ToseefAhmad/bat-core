@@ -1,0 +1,28 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .account-address-book-actions-component {
+            $account-address-book-actions-component-top-md: null !default;
+            $account-address-book-actions-component-right-md: null !default;
+
+            & {
+                top: $account-address-book-actions-component-top-md;
+                right: $account-address-book-actions-component-right-md;
+            }
+        }
+    }
+
+    [dir='rtl'] {
+        .account-address-book-actions-component {
+            $account-address-book-actions-component-right-md-rtl: null !default;
+            $account-address-book-actions-component-left-md-rtl: null !default;
+
+            & {
+                right: $account-address-book-actions-component-right-md-rtl;
+                left: $account-address-book-actions-component-left-md-rtl;
+            }
+        }
+    }
+}

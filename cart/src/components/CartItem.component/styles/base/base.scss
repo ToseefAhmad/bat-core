@@ -1,0 +1,123 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/StockStatus.component/index';
+
+.app {
+    .cart-item-component {
+        $cart-item-component-action-button-size: 3rem;
+        $cart-item-component-action-button-background-color: #efefef;
+        $cart-item-component-action-button-background-color-hover: darken(#efefef, 10%);
+        $cart-item-component-action-button-box-shadow-focus: 0 0 0.9rem 0 #969696;
+        $cart-item-component-remove-icon-background-size: 1.2rem;
+        $cart-item-component-remove-icon: url('../../../../../../common/src/resources/svg/base/bat-close-black.svg') !default;
+        $cart-item-component-edit-icon: url('../../../../../../common/src/resources/svg/base/bat-pencil.svg') !default;
+        $cart-item-component-edit-icon-position: 2rem;
+        $cart-item-component-edit-icon-background-size: 1.4rem;
+        $cart-item-component-move-to-wishlist-component-margin-block-start: -4.7rem !default;
+        $cart-item-component-move-to-wishlist-component-font-weight: $font-weight-bold !default;
+        $cart-item-component-move-to-wishlist-component-font-color: $dark !default;
+        $cart-item-component-move-to-wishlist-component-line-height: 1.4rem !default;
+        $cart-item-component-move-to-wishlist-component-font-size: 1.2rem !default;
+
+        & {
+            position: relative;
+            background-color: $light;
+        }
+
+        &-content {
+            display: flex;
+            padding: $p-primary $p-secondary;
+        }
+
+        &-remove-block {
+            flex-shrink: 0;
+            margin-right: $m-secondary;
+        }
+
+        .move-to-wishlist-component {
+            color: $cart-item-component-move-to-wishlist-component-font-color;
+            font-weight: $cart-item-component-move-to-wishlist-component-font-weight;
+            line-height: $cart-item-component-move-to-wishlist-component-line-height;
+            font-size: $cart-item-component-move-to-wishlist-component-font-size;
+            width: auto;
+            margin-block-start: $cart-item-component-move-to-wishlist-component-margin-block-start;
+            position: absolute;
+            right: 0;
+            text-decoration: underline;
+            border: none;
+
+            &:hover {
+                background-color: transparent;
+                border-color: transparent;
+                text-decoration: $link-hover-decoration;
+            }
+        }
+
+        &-remove-button.button-component,
+        &-edit-button.button-component {
+            & {
+                padding: 0;
+                width: $cart-item-component-action-button-size;
+                height: $cart-item-component-action-button-size;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: $cart-item-component-action-button-background-color;
+                border-radius: 50%;
+                border: none;
+            }
+
+            &:hover {
+                background-color: $cart-item-component-action-button-background-color-hover;
+            }
+
+            &:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                background-color: $cart-item-component-action-button-background-color-hover;
+                box-shadow: $cart-item-component-action-button-box-shadow-focus;
+            }
+        }
+
+        &-remove-button.button-component {
+            & {
+                background-image: $cart-item-component-remove-icon;
+                background-size: $cart-item-component-remove-icon-background-size;
+            }
+
+            &:hover {
+                background-position: center;
+            }
+        }
+
+        &-edit-button.button-component {
+            & {
+                position: absolute;
+                top: $cart-item-component-edit-icon-position;
+                right: $cart-item-component-edit-icon-position;
+                background-image: $cart-item-component-edit-icon;
+                background-size: $cart-item-component-edit-icon-background-size;
+            }
+
+            &:hover {
+                background-position: center;
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        .cart-item-component {
+            $cart-item-component-edit-icon-left-rtl: 1rem;
+
+            &-edit-button.button-component.button-component-primary {
+                left: $cart-item-component-edit-icon-left-rtl;
+                right: initial;
+            }
+
+            .move-to-wishlist-component {
+                right: initial;
+                left: 0;
+            }
+        }
+    }
+}

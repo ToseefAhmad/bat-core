@@ -1,0 +1,18 @@
+fragment BatBundleInfoFragment on BundleInfo {
+    total_sum {
+        currency
+        value
+    }
+    selected_options {
+        option_id
+        values {
+            value_id
+            label
+            cost {
+                currency
+                value
+            }
+            quantity
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        $recommended-products-list-component-height-md: 31rem !default;
+        $recommended-products-list-component-margin-block-start-md: 0 !default;
+        $recommended-products-list-component-margin-block-end-md: 6rem !default;
+        $recommended-products-list-component-margin-inline-md: 8rem !default;
+        $recommended-products-list-component-title-font-size-md: 2.6rem !default;
+        $recommended-products-list-component-price-font-size-md: 1.6rem !default;
+
+        .recommended-products-list-component {
+            &:not(.recommended-products-list-component-fixed) {
+                & {
+                    width: auto;
+                    margin-block-start: $recommended-products-list-component-margin-block-start-md;
+                    margin-block-end: $recommended-products-list-component-margin-block-end-md;
+                    margin-inline-start: $recommended-products-list-component-margin-inline-md;
+                    margin-inline-end: $recommended-products-list-component-margin-inline-md;
+                }
+
+                .product-list-slider-component-title {
+                    font-size: $recommended-products-list-component-title-font-size-md;
+                    padding-block-start: $p-primary;
+                    padding-block-end: $p-primary;
+                    padding-inline-start: 0;
+                    padding-inline-end: 0;
+                    text-align: initial;
+                }
+            }
+
+            &-fixed {
+                height: $recommended-products-list-component-height-md;
+            }
+
+            .product-preview-alt-component-link-name {
+                font-size: $h4-font-size;
+            }
+
+            .product-price-component-regular-value,
+            .product-price-component-minimum-value {
+                font-size: $recommended-products-list-component-price-font-size-md;
+            }
+        }
+    }
+}

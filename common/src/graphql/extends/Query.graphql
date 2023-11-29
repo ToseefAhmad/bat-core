@@ -1,0 +1,13 @@
+extend type Query {
+    """
+    [common][BAT]
+    Returns a list of Pakistan city distributors
+    """
+    cityDistributors(regionId: ID): [CityDistributor]
+
+    """
+    [common][BAT]
+    Returns a list of Pakistan cities
+    """
+    pk_cities(regionId: ID!): [PakistanCity]
+}

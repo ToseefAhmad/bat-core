@@ -1,0 +1,8 @@
+#import "./FreeGiftProductPreview.fragment.graphql"
+
+fragment FreeGiftCartItem on CartItem {
+    price_label
+    product {
+        ...FreeGiftProductPreview
+    }
+}

@@ -1,0 +1,80 @@
+@import '../../../../scss/variables/base';
+
+.pagination-component {
+    $pagination-component-arrow-link-width: 1.2rem !default;
+    $pagination-component-arrow-link-height: 1.2rem !default;
+    $pagination-component-arrow-link-margin: 0 1.5rem !default;
+    $pagination-component-arrow-link-top: null !default;
+    $pagination-component-active-link-size: 3rem !default;
+    $pagination-component-item-active-color: $secondary !default;
+
+    & {
+        padding: $p-primary-lg 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        list-style-type: none;
+        font-size: $font-size-md;
+    }
+
+    &-item {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-item:not(.active) {
+        padding: 0 $p-secondary;
+    }
+
+    &-previous,
+    &-next {
+        display: inline-block;
+        margin: $pagination-component-arrow-link-margin;
+
+        &.disabled {
+            display: none;
+        }
+    }
+
+    &-previous-link,
+    &-next-link {
+        display: inline-block;
+        width: $pagination-component-arrow-link-width;
+        height: $pagination-component-arrow-link-height;
+        position: relative;
+        top: $pagination-component-arrow-link-top;
+        background-image: url('../../../../resources/svg/base/bat-chevron-dark.svg');
+    }
+
+    &-next-link {
+        background-image: url('../../../../resources/svg/base/bat-chevron-dark-right.svg');
+    }
+
+    &-item.active {
+        border-radius: 50%;
+        background-color: $pagination-component-item-active-color;
+        line-height: $pagination-component-active-link-size;
+        height: $pagination-component-active-link-size;
+        width: $pagination-component-active-link-size;
+    }
+
+    &-break {
+        display: inline-block;
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        .pagination-component {
+            &-previous-link {
+                background-image: url('../../../../resources/svg/base/bat-chevron-dark-right.svg');
+            }
+
+            &-next-link {
+                background-image: url('../../../../resources/svg/base/bat-chevron-dark.svg');
+            }
+        }
+    }
+}

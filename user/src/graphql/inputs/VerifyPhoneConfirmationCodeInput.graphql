@@ -1,0 +1,17 @@
+"""
+[user][BAT]
+Input is used as an argument to verify confirmation code
+"""
+input VerifyPhoneConfirmationCodeInput {
+    """
+    [user][BAT]
+    Phone number for confirmation
+    """
+    phone_number: String
+
+    """
+    [user][BAT]
+    Phone confirmation code from SMS
+    """
+    code: String
+}

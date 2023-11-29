@@ -1,0 +1,93 @@
+@import '../../../../scss/variables/base';
+
+.app-header {
+    $app-header-zindex: $zindex-sticky + 1 !default;
+    $app-header-top-bar-background-color: $primary !default;
+    $app-header-top-global-message-color: $light !default;
+    $app-header-top-global-message-link-height: null !default;
+    $app-header-top-promo-block-color: $light !default;
+    $app-header-offline-bar-message-color: $light !default;
+    $app-header-content-background-color: $dark !default;
+    $app-header-content-button-navigation-border: $border-width solid $primary-border-color !default;
+
+    & {
+        position: sticky;
+        top: 0;
+        z-index: $app-header-zindex;
+    }
+
+    &-top-bar {
+        position: relative;
+        background-color: $app-header-top-bar-background-color;
+    }
+
+    .top-global-message {
+        a {
+            display: block;
+            height: $app-header-top-global-message-link-height;
+            line-height: $app-header-top-global-message-link-height;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: none;
+        }
+
+        > div > div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $app-header-top-global-message-color;
+        }
+    }
+
+    .top-promo-block {
+        > div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $app-header-top-promo-block-color;
+        }
+    }
+
+    .offline-bar-message {
+        color: $app-header-offline-bar-message-color;
+    }
+
+    &-content {
+        & {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        &-menu-block {
+            background-color: $app-header-content-background-color;
+        }
+
+        .button-component-navigation {
+            border-top: $app-header-content-button-navigation-border;
+            font-weight: $font-weight-bold;
+            text-decoration: none;
+            background: none;
+
+            &:not(:last-child) {
+                border-bottom: none;
+            }
+
+            &:last-child {
+                border-bottom: $app-header-content-button-navigation-border;
+            }
+        }
+
+        .button-component-navigation + .button-component-navigation {
+            margin-block-start: 0;
+        }
+
+        .menu-modal-header {
+            display: flex;
+            position: sticky;
+            top: 0;
+            z-index: $zindex-sticky;
+        }
+    }
+}

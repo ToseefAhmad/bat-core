@@ -1,0 +1,56 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-reward-item-component {
+        $account-reward-item-component-padding-inline-md: $p-primary !default;
+        $account-reward-item-component-details-width-md: 50% !default;
+        $account-reward-item-component-points-width-md: 15% !default;
+        $account-reward-item-component-date-width-md: 15% !default;
+        $account-reward-item-component-expire-date-width-md: 20% !default;
+        $account-reward-item-component-border-md: 0.1rem solid $placeholder-color !default;
+
+        & {
+            display: flex;
+            padding-block-start: $p-secondary;
+            padding-block-end: $p-secondary;
+            margin-inline-start: $account-reward-item-component-padding-inline-md;
+            margin-inline-end: $account-reward-item-component-padding-inline-md;
+            border-bottom: $account-reward-item-component-border-md;
+        }
+
+        &-row {
+            & {
+                display: flex;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            &-text {
+                margin-block-end: 0;
+                width: 100%;
+            }
+
+            &-details {
+                flex: 0 0 $account-reward-item-component-details-width-md;
+            }
+
+            &-points {
+                flex: 0 0 $account-reward-item-component-points-width-md;
+                flex-grow: 1;
+            }
+
+            &-date {
+                flex: 0 0 $account-reward-item-component-date-width-md;
+                flex-grow: 1;
+            }
+
+            &-expire-date {
+                flex: 0 0 $account-reward-item-component-expire-date-width-md;
+                text-align: end;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-preferences-component {
+    $account-preferences-component-button-width: 36rem !default;
+    $account-preferences-component-data-sharing-padding-block: 3rem !default;
+    $account-preferences-component-email-border: $border-width-lg solid $gray-light-primary !default;
+    $account-preferences-component-data-sharing-border: $border-width-lg solid $gray-light-primary !default;
+
+    & {
+        background-color: $light;
+        position: relative;
+    }
+
+    &-content {
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+        padding-inline-start: $p-primary;
+        padding-inline-end: $p-primary;
+        font-size: $h4-font-size;
+
+        &-email {
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            border: $account-preferences-component-email-border;
+            margin-block-start: $m-primary;
+            margin-block-end: $m-primary;
+
+            &-notes {
+                font-size: $font-size-base;
+                padding-block-start: $p-secondary;
+                padding-inline-start: $p-primary-lg;
+            }
+        }
+
+        &-data-sharing {
+            padding-block-start: $account-preferences-component-data-sharing-padding-block;
+            padding-block-end: $account-preferences-component-data-sharing-padding-block;
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+            border: $account-preferences-component-data-sharing-border;
+            margin-block-end: $m-primary;
+        }
+
+        &-link a {
+            color: $primary;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    &-label {
+        font-weight: $font-weight-bold;
+        padding-inline-start: $p-secondary;
+    }
+
+    .button-component {
+        width: $account-preferences-component-button-width;
+    }
+}

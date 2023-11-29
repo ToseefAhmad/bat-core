@@ -1,0 +1,67 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .contact-us-component {
+        $contact-us-component-padding-sm: 4rem $p-primary;
+        $contact-us-component-success-padding-sm: 10rem $p-primary 3rem $p-primary;
+        $contact-us-component-success-background-position-sm: 50% 3rem;
+        $contact-us-component-cms-contact-us-title-font-size-sm: 2.6rem;
+        $contact-us-component-cms-contact-us-title-font-size-sm: 2.4rem;
+
+        & {
+            padding: $contact-us-component-padding-sm;
+        }
+
+        &-form {
+            padding: 0;
+        }
+
+        &-wrapper {
+            margin: 0;
+        }
+
+        &-success {
+            padding: $contact-us-component-success-padding-sm;
+            background-position: $contact-us-component-success-background-position-sm;
+        }
+
+        .cms-block-contact-us {
+            .contact-us-title {
+                font-size: $contact-us-component-cms-contact-us-title-font-size-sm;
+            }
+
+            .contact-us-subtitle {
+                font-size: $contact-us-component-cms-contact-us-title-font-size-sm;
+            }
+        }
+
+        .cms-block-customer-service {
+            .customer-service-title {
+                font-size: $contact-us-component-cms-contact-us-title-font-size-sm;
+            }
+
+            .customer-service-column {
+                margin: 0 !important;
+            }
+
+            .customer-service-column:first-child {
+                margin-bottom: $m-secondary !important;
+            }
+
+            .customer-service-column > div {
+                justify-content: left;
+            }
+        }
+
+        .customer-service-contacts {
+            > div > div {
+                flex-wrap: nowrap;
+            }
+
+            span {
+                font-size: $font-size-md !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+"""
+[checkout-com][BAT]
+Configuration for Checkout.com iframe
+"""
+type CheckoutComConfig {
+    """
+    [checkout-com][BAT]
+    Public key
+    """
+    public_key: String
+
+    """
+    [checkout-com][BAT]
+    Flag that responsible for enabling view console messages
+    """
+    debug: Boolean
+
+    """
+    [checkout-com][BAT]
+    String, allows to use one of the supported languages
+    """
+    localization: String
+
+    """
+    [checkout-com][BAT]
+    String with styles to customize the look and feel of Frames' controlled fields
+    """
+    style: String
+}

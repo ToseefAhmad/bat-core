@@ -1,0 +1,35 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-referral-link-component {
+        $account-referral-link-component-padding-inline-md: $p-primary !default;
+        $account-referral-link-component-content-justify-content-md: null !default;
+        $account-referral-link-component-content-item-flex-md: null !default;
+
+        & {
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: $account-referral-link-component-padding-inline-md;
+            padding-inline-end: $account-referral-link-component-padding-inline-md;
+        }
+
+        &-content {
+            & {
+                display: flex;
+                justify-content: $account-referral-link-component-content-justify-content-md;
+            }
+
+            &-item {
+                & {
+                    flex: $account-referral-link-component-content-item-flex-md;
+                }
+
+                & + & {
+                    margin-block-start: 0;
+                    padding-inline-start: $m-primary;
+                }
+            }
+        }
+    }
+}

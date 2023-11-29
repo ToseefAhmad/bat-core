@@ -1,0 +1,11 @@
+#import "../fragments/FreeGiftCartItem.fragment.graphql"
+
+query FreeGiftRules ($cart_id: ID) {
+    getFreeGiftRules(cart_id: $cart_id) {
+        rule_id
+        is_auto_add
+        items {
+            ...FreeGiftCartItem
+        }
+    }
+}

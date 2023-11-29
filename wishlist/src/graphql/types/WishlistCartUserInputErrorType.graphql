@@ -1,0 +1,6 @@
+enum WishlistCartUserInputErrorType {
+    PRODUCT_NOT_FOUND
+    NOT_SALABLE
+    INSUFFICIENT_STOCK
+    UNDEFINED
+}

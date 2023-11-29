@@ -1,0 +1,76 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.checkout-com-renderer-component {
+    $checkout-com-renderer-component-padding-block-end: 3rem !default;
+    $checkout-com-renderer-component-card-image-width: 4rem !default;
+    $checkout-com-renderer-component-card-image-height: 3rem !default;
+    $checkout-com-renderer-component-input-width-mobile: 50% !default;
+    $checkout-com-renderer-component-input-height: 5rem !default;
+    $checkout-com-renderer-component-label-font-size: 0.9rem !default;
+    $checkout-com-renderer-component-label-top: 0.5rem !default;
+    $checkout-com-renderer-component-label-left: 2rem !default;
+
+    & {
+        margin-block-end: $m-primary;
+        margin-inline-start: $m-primary;
+        margin-inline-end: $m-primary;
+        padding-block-start: $p-primary;
+        padding-block-end: $checkout-com-renderer-component-padding-block-end;
+        padding-inline-start: $p-primary;
+        padding-inline-end: $p-primary;
+        border: $border-width solid $gray-light-primary;
+    }
+
+    &-card-number {
+        height: $checkout-com-renderer-component-input-height;
+        margin-block-end: $m-secondary;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &-date {
+        position: relative;
+        width: 100%;
+        height: $checkout-com-renderer-component-input-height;
+        margin-block-end: $m-secondary;
+    }
+
+    &-date-label {
+        position: absolute;
+        top: $checkout-com-renderer-component-label-top;
+        left: $checkout-com-renderer-component-label-left;
+        font-size: $checkout-com-renderer-component-label-font-size;
+        font-weight: $font-weight-bold;
+        color: $dark-grey;
+    }
+
+    &-code {
+        width: $checkout-com-renderer-component-input-width-mobile;
+        height: $checkout-com-renderer-component-input-height;
+    }
+
+    &-image {
+        display: inline;
+        width: $checkout-com-renderer-component-card-image-width;
+        height: $checkout-com-renderer-component-card-image-height;
+        margin-inline-start: $m-secondary;
+        background: center center no-repeat
+            url('../../../../../../common/src/resources/svg/base/bat-checkout-com-card.svg');
+        background-size: 100%;
+    }
+}
+
+[dir='rtl'] {
+    .checkout-com-renderer-component {
+        $checkout-com-renderer-component-label-right-rtl: 2rem;
+
+        &-date-label {
+            left: initial;
+            right: $checkout-com-renderer-component-label-right-rtl;
+        }
+    }
+}

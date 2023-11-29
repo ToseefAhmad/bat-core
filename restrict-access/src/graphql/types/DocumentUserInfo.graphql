@@ -1,0 +1,25 @@
+type DocumentUserInfo {
+    """
+    [restrict-access][BAT]
+    User first name
+    """
+    first_name: String
+
+    """
+    [restrict-access][BAT]
+    User last name
+    """
+    last_name: String
+
+    """
+    [restrict-access][BAT]
+    User date of birth
+    """
+    dob: String
+
+    """
+    [restrict-access][BAT]
+    Verified document number
+    """
+    document_number: String
+}

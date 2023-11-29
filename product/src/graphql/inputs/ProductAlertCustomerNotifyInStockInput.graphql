@@ -1,0 +1,11 @@
+"""
+[product][BAT]
+Input is used as an argument for 'ProductAlertNotifyMutation' mutation
+"""
+input productAlertCustomerNotifyInStockInput {
+    """
+    [product][BAT]
+    Product id
+    """
+    product_id: ID
+}

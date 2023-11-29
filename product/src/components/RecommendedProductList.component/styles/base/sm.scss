@@ -1,0 +1,72 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        $recommended-products-list-component-products-scroll-snap-type-sm: null !default;
+        $recommended-products-list-component-products-margin-inline-sm: null !default;
+
+        .recommended-products-list-component {
+            & {
+                margin-block-start: 0;
+                margin-block-end: $m-primary;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+            }
+
+            .product-list-slider-component-products {
+                & {
+                    padding-block-end: $m-primary-lg;
+                }
+
+                &:not(.recommended-products-list-component-fixed) {
+                    & {
+                        scroll-snap-type: $recommended-products-list-component-products-scroll-snap-type-sm;
+                    }
+                }
+
+                &-holder {
+                    padding-block-start: 0;
+                    padding-block-end: 0;
+                    padding-inline-start: 0;
+                    padding-inline-end: 0;
+                }
+            }
+
+            .product-list-slider-component-products::-webkit-scrollbar {
+                display: block;
+            }
+
+            .product-list-slider-component-title {
+                margin-block-start: $m-primary;
+            }
+
+            .product-list-slider-component-product {
+                &:first-child {
+                    margin-inline-start: $recommended-products-list-component-products-margin-inline-sm;
+                }
+
+                &:last-child {
+                    margin-inline-end: $recommended-products-list-component-products-margin-inline-sm;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .app {
+        $recommended-products-list-component-title-padding-inline-sm: 8rem !default;
+
+        .recommended-products-list-component {
+            &:not(.recommended-products-list-component-fixed) {
+                .product-list-slider-component-title {
+                    padding-block-start: $p-primary;
+                    padding-block-end: $p-primary;
+                    padding-inline-start: 0;
+                    padding-inline-end: $recommended-products-list-component-title-padding-inline-sm;
+                }
+            }
+        }
+    }
+}

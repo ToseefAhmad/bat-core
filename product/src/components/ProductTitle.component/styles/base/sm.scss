@@ -1,0 +1,18 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .product-title-component {
+            $product-title-component-font-size-sm: $h1-font-size !default;
+            $product-title-component-font-line-height-sm: 3.6rem !default;
+            $product-title-component-margin-bottom-sm: $m-primary !default;
+
+            & {
+                font-size: $product-title-component-font-size-sm;
+                line-height: $product-title-component-font-line-height-sm;
+                margin-bottom: $product-title-component-margin-bottom-sm;
+            }
+        }
+    }
+}

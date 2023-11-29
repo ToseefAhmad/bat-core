@@ -1,0 +1,185 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/components/Accordion.component/index';
+
+.menu-set-component {
+    $menu-set-component-category-border-top: $border-width solid $dark !default;
+    $menu-set-component-category-color: $light !default;
+    $menu-set-component-category-hover-color: $light !default;
+    $menu-set-component-category-font-size: $font-size-base !default;
+    $menu-set-component-category-font-weight: $font-weight-bold !default;
+    $menu-set-component-toggle-background-image-size: 2rem 2rem !default;
+    $menu-set-component-toggle-button-padding: 1.8rem $p-primary !default;
+    $menu-set-component-toggle-background-image-url: url('../../../../../../common/src/resources/svg/base/bat-plus-white.svg') !default;
+    $menu-set-component-toggle-collapse-show-background-image-url: url('../../../../../../common/src/resources/svg/base/bat-minus-white.svg') !default;
+    $menu-set-component-toggle-collapse-show-color: $secondary !default;
+    $menu-set-component-toggle-color: $light !default;
+    $menu-set-component-first-level-category-height: 6rem !default;
+    $menu-set-component-first-level-category-border-top: $border-width solid $primary !default;
+    $menu-set-component-second-level-category-height: 8rem !default;
+    $menu-set-component-second-level-category-border-color: $dark !default;
+    $menu-set-component-second-level-category-background-color: $dark !default;
+    $menu-set-component-second-level-category-color: $light !default;
+    $menu-set-component-icon-size: 2.2rem !default;
+    $menu-set-component-second-level-icon-size: 4rem !default;
+    $menu-set-component-second-level-icon-image-max-height: null !default;
+    $menu-set-component-arrow-icon-width: 2rem !default;
+    $menu-set-component-arrow-icon-height: 1.5rem !default;
+    $menu-set-component-all-background-color: $dark !default;
+    $menu-set-component-all-color: $light !default;
+    $menu-set-component-all-hover-color: $light !default;
+    $menu-set-component-all-block-height: 5rem !default;
+    $menu-set-component-all-icon-background-image-url: url('../../../../../../common/src/resources/svg/base/bat-arrow-right-white.svg') !default;
+
+    & {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accordion-toggle-component.button-component {
+        border-top: none;
+        color: $menu-set-component-toggle-color;
+        background-color: transparent;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:not(:disabled):not(.disabled):active {
+            color: $menu-set-component-toggle-color;
+        }
+    }
+
+    &-category {
+        display: flex;
+        align-items: center;
+        padding: $p-primary;
+        max-height: $menu-set-component-first-level-category-height;
+        border-top: $menu-set-component-category-border-top;
+        color: $menu-set-component-category-color;
+        text-decoration: none;
+        font-size: $menu-set-component-category-font-size;
+        font-weight: $menu-set-component-category-font-weight;
+
+        &:hover {
+            color: $menu-set-component-category-hover-color;
+        }
+    }
+
+    .menu-set-component-category.accordion-toggle-component.button-component {
+        font-weight: $menu-set-component-category-font-weight;
+    }
+
+    &-icon {
+        width: $menu-set-component-icon-size;
+        margin-inline-end: $m-secondary;
+    }
+
+    &-toggle.accordion-toggle-component.button-component {
+        display: flex;
+        align-items: center;
+        max-height: $menu-set-component-first-level-category-height;
+        border-top: $menu-set-component-first-level-category-border-top;
+        padding: $menu-set-component-toggle-button-padding;
+        background-image: $menu-set-component-toggle-background-image-url;
+        background-size: $menu-set-component-toggle-background-image-size;
+        font-size: $font-size-base;
+    }
+
+    &-toggle.accordion-toggle-component.button-component.accordion-toggle-component-active {
+        background-image: $menu-set-component-toggle-collapse-show-background-image-url;
+        color: $menu-set-component-toggle-collapse-show-color;
+    }
+
+    &-toggle.accordion-toggle-component.button-component .nav-item-image-hover {
+        display: none;
+    }
+
+    &-toggle.accordion-toggle-component.button-component.accordion-toggle-component-active {
+        .nav-item-image {
+            display: none;
+        }
+
+        .nav-item-image-hover {
+            display: block;
+        }
+    }
+
+    &-collapse-content .menu-set-component-category {
+        min-height: $menu-set-component-second-level-category-height;
+        padding: $p-secondary;
+        border-width: $border-width-lg;
+        border-color: $menu-set-component-second-level-category-border-color;
+        background-color: $menu-set-component-second-level-category-background-color;
+        align-items: center;
+        font-size: $font-size-md;
+        color: $menu-set-component-second-level-category-color;
+    }
+
+    .menu-set-component-icon figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    &-collapse-content .menu-set-component-icon {
+        & {
+            width: $menu-set-component-second-level-icon-size;
+        }
+
+        img {
+            max-height: $menu-set-component-second-level-icon-image-max-height;
+        }
+    }
+
+    &-all {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $p-primary 0;
+        background-color: $menu-set-component-all-background-color;
+        color: $menu-set-component-all-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        height: $menu-set-component-all-block-height;
+
+        &:hover {
+            color: $menu-set-component-all-hover-color;
+        }
+    }
+
+    &-all-icon {
+        width: $menu-set-component-arrow-icon-width;
+        height: $menu-set-component-arrow-icon-height;
+        margin-inline-start: $m-tertiary;
+        background-image: $menu-set-component-all-icon-background-image-url;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .settings-nav-item-component-button.button-component {
+        font-size: $font-size-base;
+    }
+}
+
+.modal-component {
+    $menu-set-component-modal-menu-set-background-color: $dark !default;
+
+    .menu-set-component {
+        background-color: $menu-set-component-modal-menu-set-background-color;
+    }
+}
+
+[dir='rtl'] {
+    .menu-set-component {
+        $menu-set-component-all-icon-background-image-url-rtl: url('../../../../../../common/src/resources/svg/base/bat-arrow-left-white.svg') !default;
+        $menu-set-component-toggle-button-background-position-x: 2rem !default;
+
+        &-all-icon {
+            background-image: $menu-set-component-all-icon-background-image-url-rtl;
+        }
+
+        .accordion-toggle-component.button-component {
+            background-position-x: $menu-set-component-toggle-button-background-position-x;
+        }
+    }
+}

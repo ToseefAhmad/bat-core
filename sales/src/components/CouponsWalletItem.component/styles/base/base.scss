@@ -1,0 +1,95 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.coupons-wallet-component-item {
+    $coupons-wallet-component-item-border-top: $border-width solid $gray-light-primary !default;
+    $coupons-wallet-component-item-description-max-width: 60% !default;
+    $coupons-wallet-component-item-full-width: 100% !default;
+    $coupons-wallet-component-item-row-margin-block-start: $m-primary !default;
+    $coupons-wallet-component-item-align-right-justify-content: null !default;
+    $coupons-wallet-component-item-apply-display: null !default;
+    $coupons-wallet-component-item-apply-align-items: null !default;
+    $coupons-wallet-component-item-apply-height: null !default;
+    $coupons-wallet-component-item-apply-font-size: null !default;
+    $coupons-wallet-component-item-code-padding-inline: 3rem !default;
+    $coupons-wallet-component-item-code-display: null !default;
+    $coupons-wallet-component-item-code-align-items: null !default;
+    $coupons-wallet-component-item-code-height: null !default;
+    $coupons-wallet-component-item-code-font-weight: $font-weight-bold !default;
+    $coupons-wallet-component-item-code-background-color: $gray-light-secondary !default;
+    $coupons-wallet-component-item-label-font-weight: $font-weight-bold !default;
+    $coupons-wallet-component-item-more-text-transform: null !default;
+    $coupons-wallet-component-item-more-text-color: null !default;
+    $coupons-wallet-component-item-date-font-size: $h5-font-size !default;
+
+    & + & {
+        border-top: $coupons-wallet-component-item-border-top;
+    }
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+
+        & + & {
+            align-items: flex-end;
+            margin-block-start: $coupons-wallet-component-item-row-margin-block-start;
+            flex-wrap: wrap;
+            white-space: normal;
+        }
+
+        &-align-right {
+            justify-content: $coupons-wallet-component-item-align-right-justify-content;
+        }
+    }
+
+    &-apply.button-component.button-component-sm {
+        display: $coupons-wallet-component-item-apply-display;
+        align-items: $coupons-wallet-component-item-apply-align-items;
+        height: $coupons-wallet-component-item-apply-height;
+        font-size: $coupons-wallet-component-item-apply-font-size;
+    }
+
+    &-code {
+        display: $coupons-wallet-component-item-code-display;
+        align-items: $coupons-wallet-component-item-code-align-items;
+        height: $coupons-wallet-component-item-code-height;
+        color: $primary-font-color;
+        font-weight: $coupons-wallet-component-item-code-font-weight;
+        background-color: $coupons-wallet-component-item-code-background-color;
+        text-transform: uppercase;
+        padding-block-start: $p-secondary;
+        padding-block-end: $p-secondary;
+        padding-inline-start: $coupons-wallet-component-item-code-padding-inline;
+        padding-inline-end: $coupons-wallet-component-item-code-padding-inline;
+    }
+
+    &-label {
+        font-weight: $coupons-wallet-component-item-label-font-weight;
+
+        &-full-width {
+            width: $coupons-wallet-component-item-full-width;
+            margin-block-end: $m-secondary;
+        }
+    }
+
+    &-description {
+        &-not-single {
+            max-width: $coupons-wallet-component-item-description-max-width;
+        }
+
+        &-more {
+            font-weight: $font-weight-semibold;
+            cursor: pointer;
+            text-transform: $coupons-wallet-component-item-more-text-transform;
+            color: $coupons-wallet-component-item-more-text-color;
+        }
+    }
+
+    &-date {
+        font-size: $coupons-wallet-component-item-date-font-size;
+        font-weight: $font-weight-semibold;
+
+        &-expired {
+            color: $danger;
+        }
+    }
+}

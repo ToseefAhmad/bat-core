@@ -1,0 +1,31 @@
+#import "../../../../quote/src/graphql/fragments/CartItem.fragment.graphql"
+#import "../../../../sales/src/graphql/fragments/Order.fragment.graphql"
+
+query ClientPurchase {
+    purchase @client {
+        actionField {
+            id
+            affiliation
+            revenue
+            shipping
+            coupon
+            referral_code {
+                referral_code
+            }
+            payment_method
+            taxes {
+                label
+                amount {
+                    currency
+                    value
+                }
+            }
+        }
+        products {
+            ...BatCartItemFragment
+        }
+        order {
+            ...BatOrderFragment
+        }
+    }
+}

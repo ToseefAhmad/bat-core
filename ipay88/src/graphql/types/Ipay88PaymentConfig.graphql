@@ -1,0 +1,19 @@
+type Ipay88PaymentConfig {
+    """
+    [ipay88][BAT]
+    Ipay88 online payment methods
+    """
+    online: [Ipay88PaymentMethod]
+
+    """
+    [ipay88][BAT]
+    Ipay88 credit payment methods
+    """
+    credit: [Ipay88PaymentMethod]
+
+    """
+    [ipay88][BAT]
+    Ipay88 wallet payment methods
+    """
+    wallet: [Ipay88PaymentMethod]
+}

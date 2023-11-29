@@ -1,0 +1,11 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .contact-us-component {
+        $contact-us-component-form-submit-max-width-md: 27.5rem;
+
+        &-form-submit.button-component {
+            max-width: $contact-us-component-form-submit-max-width-md;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+fragment BatPaymentMethodFragment on PaymentMethod {
+    code
+    name
+    instruction
+    payment_id
+}

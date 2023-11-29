@@ -1,0 +1,15 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$account-info-component-margin-block-end: $m-secondary;
+$account-info-component-age-checkbox-background-image: url('../../../../../../common/src/resources/svg/velo/velo-check-symbol.svg');
+$account-info-component-age-checkbox-background-size: 1.6rem 1.6rem !default;
+$account-info-component-age-checkbox-background-position: center !default;
+$account-info-component-age-checkbox-background-repeat: no-repeat !default;
+$account-info-component-age-checkbox-background-color: $disabled-color !default;
+$account-info-component-age-checkbox-label-cursor: auto;
+$account-info-component-checkbox-margin-block-end: $p-primary;
+
+// md
+$account-info-component-content-padding-block-start-md: $p-primary;
+$account-info-component-content-padding-block-end-md: $p-primary;
+$account-info-component-content-padding-inline-md: $p-primary-lg;

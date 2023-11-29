@@ -1,0 +1,28 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .store-locator-control-component {
+        $store-locator-control-component-min-height-sm: 30rem !default;
+        $store-locator-control-component-title-font-size-sm: 1.8rem !default;
+        $store-locator-control-component-title-line-height-sm: 2.4rem !default;
+
+        & {
+            min-height: $store-locator-control-component-min-height-sm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-wrapper {
+            padding-block-start: 0;
+        }
+
+        &-title {
+            width: 100%;
+            text-align: center;
+            font-size: $store-locator-control-component-title-font-size-sm;
+            line-height: $store-locator-control-component-title-line-height-sm;
+        }
+    }
+}

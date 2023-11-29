@@ -1,0 +1,43 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .app {
+        .add-to-cart-panel-component {
+            $add-to-cart-panel-component-padding-block-start-sm: $p-primary !default;
+            $add-to-cart-panel-component-padding-block-end-sm: $p-primary-lg !default;
+            $add-to-cart-panel-component-padding-inline-start-sm: $p-primary-lg !default;
+            $add-to-cart-panel-component-padding-inline-end-sm: $p-primary-lg !default;
+            $add-to-cart-panel-component-max-width-sm: 22rem !default;
+            $add-to-cart-panel-component-button-padding-inline-start-sm: 1.8rem;
+            $add-to-cart-panel-component-button-padding-inline-end-sm: 1.8rem;
+
+            & {
+                position: static;
+                padding-block-start: $add-to-cart-panel-component-padding-block-start-sm;
+                padding-block-end: $add-to-cart-panel-component-padding-block-end-sm;
+                padding-inline-start: $add-to-cart-panel-component-padding-inline-start-sm;
+                padding-inline-end: $add-to-cart-panel-component-padding-inline-end-sm;
+            }
+
+            .button-component {
+                & {
+                    margin-top: 0;
+                    max-width: $add-to-cart-panel-component-max-width-sm;
+                    padding-inline-start: $add-to-cart-panel-component-button-padding-inline-start-sm;
+                    padding-inline-end: $add-to-cart-panel-component-button-padding-inline-end-sm;
+                    letter-spacing: normal;
+                }
+
+                &:first-child {
+                    margin-inline-end: $m-primary;
+                    margin-bottom: $m-secondary;
+                }
+            }
+
+            .button-component + .button-component {
+                margin-top: 0;
+            }
+        }
+    }
+}

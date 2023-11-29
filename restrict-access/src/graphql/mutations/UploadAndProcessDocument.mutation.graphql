@@ -1,0 +1,8 @@
+mutation UploadAndProcessDocumentMutation($input: DocumentInput) {
+    uploadAndProcessDocument(input: $input) {
+        first_name
+        last_name
+        dob
+        document_number
+    }
+}

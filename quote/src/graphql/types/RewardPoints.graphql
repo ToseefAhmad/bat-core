@@ -1,0 +1,11 @@
+"""
+[quote][BAT]
+Reward points amount
+"""
+type RewardPoints {
+    """
+    [quote][BAT]
+    Amount of reward points
+    """
+    points: Int
+}

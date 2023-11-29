@@ -1,0 +1,25 @@
+type WishlistCartUserInputError {
+    """
+    [BAT][wishlist]
+    Error message
+    """
+    message: String!
+
+    """
+    [BAT][wishlist]
+    An error code that describes the error encountered
+    """
+    code: WishlistCartUserInputErrorType!
+
+    """
+    [BAT][wishlist]
+    Wishlist ID
+    """
+    wishlistId: ID!
+
+    """
+    [BAT][wishlist]
+    Wishlist item ID
+    """
+    wishlistItemId: ID!
+}

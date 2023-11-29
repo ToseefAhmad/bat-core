@@ -1,0 +1,7 @@
+extend type Mutation {
+    """
+    [contact-us][BAT]
+    Send Contact Us form data to CRM
+    """
+    sendContactUsFormToCRM(input: ContactUsFormInput): ContactUsFormOutput
+}

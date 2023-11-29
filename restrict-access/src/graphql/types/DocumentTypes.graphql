@@ -1,0 +1,13 @@
+type DocumentTypes {
+    """
+    [restrict-access][BAT]
+    The type of document
+    """
+    key: String
+
+    """
+    [restrict-access][BAT]
+    Document type name
+    """
+    label: String
+}

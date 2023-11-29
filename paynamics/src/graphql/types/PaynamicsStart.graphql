@@ -1,0 +1,25 @@
+type PaynamicsStart {
+    """
+    [paynamics][BAT]
+    URL for redirect
+    """
+    form_url: String
+
+    """
+    [paynamics][BAT]
+    Form method
+    """
+    form_method: String
+
+    """
+    [paynamics][BAT]
+    XML encoded in base 64
+    """
+    input_value: String
+
+    """
+    [paynamics][BAT]
+    Name of field for input_value
+    """
+    input_name: String
+}

@@ -1,0 +1,29 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .account-title-component {
+        $account-title-component-name-font-size: $h1-font-size !default;
+
+        &-name {
+            border-color: $gray-light-primary;
+            font-size: $account-title-component-name-font-size;
+            font-weight: $font-weight-extrabold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        .account-title-component {
+            $account-title-component-back-icon-right-position-rtl: 2rem !default;
+
+            .back-component-control.button-component {
+                &,
+                &:hover {
+                    background-position: right $account-title-component-back-icon-right-position-rtl center;
+                }
+            }
+        }
+    }
+}

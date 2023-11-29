@@ -1,0 +1,51 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(xs) {
+    .wishlist-nav-item-component {
+        $wishlist-nav-item-component-order-xs: 20 !default;
+        $wishlist-nav-item-component-height-xs: 6rem !default;
+        $wishlist-nav-item-component-background-size-xs: 1.8rem 1.5rem !default;
+        $wishlist-nav-item-component-background-position-xs: 2.1rem 50% !default;
+        $wishlist-nav-item-component-border-color-xs: $tertiary !default;
+        $wishlist-nav-item-component-background-image-xs: url('../../../../../../common/src/resources/svg/base/bat-wishlist-gray.svg') !default;
+        $wishlist-nav-item-component-text-padding-inline-start-xs: 5rem !default;
+
+        & {
+            height: $wishlist-nav-item-component-height-xs;
+            order: $wishlist-nav-item-component-order-xs;
+            background-image: $wishlist-nav-item-component-background-image-xs;
+            background-position: $wishlist-nav-item-component-background-position-xs;
+            background-repeat: no-repeat;
+            background-size: $wishlist-nav-item-component-background-size-xs;
+            border-top: $border-width solid $wishlist-nav-item-component-border-color-xs;
+            margin-inline-start: 0;
+        }
+
+        button.wishlist-nav-item-component-icon.button-component {
+            background: none;
+            align-items: center;
+        }
+
+        &-icon-text {
+            color: $light;
+            width: 100%;
+            text-align: start;
+            padding-inline-start: $wishlist-nav-item-component-text-padding-inline-start-xs;
+            white-space: normal;
+            text-transform: uppercase;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    [dir='rtl'] {
+        .wishlist-nav-item-component {
+            $wishlist-nav-item-component-icon-background-position-xs: right 2rem top 50% !default;
+
+            & {
+                background-position: $wishlist-nav-item-component-icon-background-position-xs;
+            }
+        }
+    }
+}

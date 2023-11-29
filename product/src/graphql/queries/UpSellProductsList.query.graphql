@@ -1,0 +1,10 @@
+#import '@luft/product/src/graphql/fragments/ProductPreview.fragment.graphql'
+
+query UpSellProductsList($id: ID) {
+    product(id: $id) {
+        id
+        upsell_products_list {
+            ...ProductPreviewFragment
+        }
+    }
+}

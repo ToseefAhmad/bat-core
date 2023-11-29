@@ -1,0 +1,42 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-referral-link-component {
+    $account-referral-link-component-title-font-weight: $font-weight-bold !default;
+    $account-referral-link-component-content-item-width: null !default;
+    $account-referral-link-component-content-button-padding-inline: null !default;
+
+    & {
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+        padding-inline-start: $p-primary;
+        padding-inline-end: $p-primary;
+    }
+
+    &-title {
+        text-transform: uppercase;
+        font-weight: $account-referral-link-component-title-font-weight;
+        margin-block-end: $m-tertiary;
+    }
+
+    &-content {
+        &-item {
+            & {
+                width: $account-referral-link-component-content-item-width;
+            }
+
+            & + & {
+                margin-block-start: $m-primary;
+            }
+
+            &-url {
+                color: $secondary-font-color;
+                margin-block-start: $m-tertiary;
+            }
+
+            &-button.button-component {
+                padding-inline-start: $account-referral-link-component-content-button-padding-inline;
+                padding-inline-end: $account-referral-link-component-content-button-padding-inline;
+            }
+        }
+    }
+}

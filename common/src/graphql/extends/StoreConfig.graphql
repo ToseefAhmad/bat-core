@@ -1,0 +1,367 @@
+extend type StoreConfig {
+    """
+    [common][BAT]
+    Indicator, which is used for applying a particular settings to 'company' field. It could have three values: 'required', 'optional' and null
+    """
+    show_company: String
+
+    """
+    [common][BAT]
+    Amount of 'street' fields
+    """
+    street_max_lines: Int
+
+    """
+    [common][BAT]
+    Postcode maximum length, used for validation
+    """
+    postcode_max_length: Int
+
+    """
+    [common][BAT]
+    Postcode minimum length, used for validation
+    """
+    postcode_min_length: Int
+
+    """
+    [common][BAT]
+    Flag that responsible for enabling a coupons wallet
+    """
+    show_coupon_wallet: Boolean
+
+    """
+    [common][BAT]
+    Flag that responsible for show referral program menu item
+    """
+    show_referral_program_menu: Boolean
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the referral program features (such as reward points on checkout page, referral link on register page and so on)
+    """
+    is_referral_program_enabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the minicart
+    """
+    is_minicart_enabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the push notifications (push notifications page is hidden in case it's false)
+    """
+    is_push_notification_enabled: Boolean
+
+    """
+    [common][BAT]
+    Add to cart free gift message
+    """
+    add_freegift_to_cart_message: String
+
+    """
+    [common][BAT]
+    Flag, responsible for disabling registration logic
+    """
+    is_registration_disabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the Google optimize
+    """
+    google_opt_enabled: Boolean
+
+    """
+    [common][BAT]
+    Google optimize container id
+    """
+    google_opt_container_id: String
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the GTM
+    """
+    is_gtm_enabled: Boolean
+
+    """
+    [common][BAT]
+    GTM container id
+    """
+    gtm_container_id: String
+
+    """
+    [common][BAT]
+    GTM authorization key
+    """
+    gtm_authorization_key: String
+
+    """
+    [common][BAT]
+    GTM preview
+    """
+    gtm_preview: String
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the HAV via Azure service
+    """
+    is_azure_enabled: Boolean
+
+    """
+    [common][BAT]
+    Amount of attempts, the user could upload an image for verification. It's needed for HAV via Azure service
+    """
+    azure_failed_limit: Int
+
+    """
+    [common][BAT]
+    The amount of hours the user will not be able to upload an image for verification. It's needed for HAV via Azure service
+    """
+    azure_failed_lifetime: Int
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the date of birth autocomplete using the ktp id data
+    """
+    is_enabled_dob_autocomplete: Boolean
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the tab My Rewards in My Account
+    """
+    is_show_dashboard_tab_in_my_account: Boolean
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the tab My Rewards in My Account
+    """
+    is_show_my_rewards_tab_in_my_account: Boolean
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling tabs in Referral Program in My Account
+    """
+    is_show_points_menu: Boolean
+
+    """
+    [common][BAT]
+    Soft Age Verification lifetime (in hours). After acceptance, the SAV popup will be hidden for this period of time
+    """
+    verification_lifetime: Int
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling the DotDigital live chat
+    """
+    chat_enabled: Boolean
+
+    """
+    [common][BAT]
+    Api space needed for DotDigital live chat
+    """
+    ddg_chat_api_space: String
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling an autocomplete of user first and last name in contact details
+    """
+    enable_recipient_autocomplete: Boolean
+
+    """
+    [common][BAT]
+    Age of majority, which is used during ktp id (national id) validation
+    """
+    age_of_majority: Int
+
+    """
+    [common][BAT]
+    Flag, responsible for enabling a store locator functionality
+    """
+    sl_enabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, which indicates that ktp id validation for guest is enabled
+    """
+    guest_validate_ktp_id: Boolean
+
+    """
+    [common][BAT]
+    Flag, which indicates that blog functionality is enabled
+    """
+    is_blog_enabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, which indicates that blog widget is enabled for a Home Page
+    """
+    mfblog_homepage_related_posts_enabled: Boolean
+
+    """
+    [common][BAT]
+    A number of posts in a blog widget for a Home Page
+    """
+    mfblog_homepage_related_posts_number_of_posts: Int
+
+    """
+    [common][BAT]
+    Store currency symbol
+    """
+    base_currency_code: String
+
+    """
+    [common][BAT]
+    Flag, which indicate an ordered items can be reorderable for specific marketplace
+    """
+    is_reorder_enabled: Boolean
+
+    """
+    [common][BAT]
+    Provides Homepage Meta Information
+    """
+    homepage_meta: HomepageMeta
+
+    """
+    [common][BAT]
+    Flag, which indicates that Salesforce chat is enabled
+    """
+    salesforce_chat_enabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, which indicates that Web to case is enabled
+    """
+    web_to_case_enabled: Boolean
+
+    """
+    [common][BAT]
+    Config for recaptcha on Contact US Page
+    """
+    recaptcha_contact: RecaptchaConfig
+
+    """
+    [common][BAT]
+    Meta Robots tags by default for store
+    """
+    meta_robots: String
+
+    """
+    [common][BAT]
+    Free device pickup options list
+    """
+    free_device_pickup_option: [PickupOption]
+
+    """
+    [common][BAT]
+    Flag, which indicates that free pick-up for device is enabled
+    """
+    is_show_offline_pickup_options: Boolean
+
+    """
+    [common][BAT]
+    Free device pickup options label
+    """
+    free_device_pickup_option_attr_label: String
+
+    """
+    [common][BAT]
+    Youtube media link
+    """
+    youtube_url: String
+
+    """
+    [common][BAT]
+    Facebook media link
+    """
+    facebook_url: String
+
+    """
+    [common][BAT]
+    Instagram media link
+    """
+    instagram_url: String
+
+    """
+    [common][BAT]
+    Search recommendation category ID
+    """
+    search_recommendation_category_id: String
+
+    """
+    [common][BAT]
+    Flag, which indicates that hubspot contact us form is enabled
+    """
+    hubspot_contact_us_form_enabled: Boolean
+
+    """
+    [common][BAT]
+    Hubspot contact us form region
+    """
+    hubspot_contact_us_form_region: String
+
+    """
+    [common][BAT]
+    Hubspot contact us form portal id
+    """
+    hubspot_contact_us_form_portal_id: String
+
+    """
+    [common][BAT]
+    Hubspot contact us form id
+    """
+    hubspot_contact_us_form_form_id: String
+
+    """
+    [common][BAT]
+    Minimum password length
+    """
+    customer_minimum_password_length: Int
+
+    """
+    [common][BAT]
+    Password required character classes count
+    """
+    password_required_character_classes_number: Int
+
+    """
+    [common][BAT]
+    Flag, which indicates that login by phone is enabled
+    """
+    login_by_phone_enabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, which indicates that sms confirmation is enabled
+    """
+    sms_confirmation_enabled: Boolean
+
+    """
+    [common][BAT]
+    Confirmation code request frequency (sec)
+    """
+    confirmation_code_request_frequency: Int
+
+    """
+    [common][BAT]
+    Timezone (used for Google Analytics)
+    """
+    timezone: String
+
+    """
+    [common][BAT]
+    Flag, which indicates that product alert stock is enabled
+    """
+    is_product_alert_stock_enabled: Boolean
+
+    """
+    [common][BAT]
+    Flag, which indicates that wishlist is enabled
+    """
+    magento_wishlist_general_is_enabled: String
+
+    """
+    [common][BAT]
+    Show Cross-sell Items in the Shopping Cart
+    """
+    show_crosssell_items_in_cart: Boolean
+}

@@ -1,0 +1,7 @@
+extend type Address {
+    """
+    [address][BAT]
+    District Address
+    """
+    district: String
+}

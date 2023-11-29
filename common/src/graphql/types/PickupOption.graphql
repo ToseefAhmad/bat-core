@@ -1,0 +1,13 @@
+type PickupOption {
+    """
+    [common][BAT]
+    Option ID
+    """
+    id: ID
+
+    """
+    [common][BAT]
+    Option value
+    """
+    label: String
+}

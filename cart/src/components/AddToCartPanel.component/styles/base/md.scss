@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .add-to-cart-panel-component {
+            $add-to-cart-panel-component-padding-inline-start-md: 9rem !default;
+            $add-to-cart-panel-component-padding-inline-end-md: 8rem !default;
+
+            & {
+                padding-inline-start: $add-to-cart-panel-component-padding-inline-start-md;
+                padding-inline-end: $add-to-cart-panel-component-padding-inline-end-md;
+            }
+        }
+    }
+}

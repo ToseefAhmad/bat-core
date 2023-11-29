@@ -1,0 +1,13 @@
+type HomepageMeta {
+    """
+    [common][BAT]
+    Home Page meta title
+    """
+    title: String
+
+    """
+    [common][BAT]
+    Home Page meta description
+    """
+    description: String
+}

@@ -1,0 +1,23 @@
+"""
+[free-gift][BAT]
+Provides free gift items
+"""
+type FreeGiftItems {
+    """
+    [free-gift][BAT]
+    Sales rule ID
+    """
+    rule_id: ID
+
+    """
+    [free-gift][BAT]
+    Flag shows that free gift items are automatically applied
+    """
+    is_auto_add: Boolean
+
+    """
+    [free-gift][BAT]
+    Free gift items
+    """
+    items: [CartItem]
+}

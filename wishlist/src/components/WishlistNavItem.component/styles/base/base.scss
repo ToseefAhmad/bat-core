@@ -1,0 +1,43 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.wishlist-nav-item-component {
+    $wishlist-nav-item-component-margin-inline-start: 3rem !default;
+    $wishlist-nav-item-component-z-index: 2 !default;
+    $wishlist-nav-item-component-icon-background-image: url('../../../../../../common/src/resources/svg/base/bat-wishlist.svg') !default;
+    $wishlist-nav-item-component-icon-size: 1.9rem 1.6rem !default;
+    $wishlist-nav-item-component-icon-text-line-height: 1.2 !default;
+
+    & {
+        display: flex;
+        flex-direction: column;
+        height: $header-icon-height;
+        margin-inline-start: $wishlist-nav-item-component-margin-inline-start;
+        position: relative;
+        z-index: $wishlist-nav-item-component-z-index;
+    }
+
+    &-icon.button-component {
+        & {
+            background-image: $wishlist-nav-item-component-icon-background-image;
+            background-size: $wishlist-nav-item-component-icon-size;
+            background-repeat: no-repeat;
+            background-position: top center;
+            border: none;
+            display: flex;
+            align-items: flex-end;
+            padding: 0;
+            height: 100%;
+        }
+
+        &:focus {
+            box-shadow: unset;
+        }
+    }
+
+    &-icon-text {
+        color: $light;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-base;
+        line-height: $wishlist-nav-item-component-icon-text-line-height;
+    }
+}

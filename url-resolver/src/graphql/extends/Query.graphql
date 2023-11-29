@@ -1,0 +1,13 @@
+extend type Query {
+    """
+    [url-resolver][BAT]
+    returns Object defining Entity (Category, Product, CMS page) that matches with url passed as param
+    """
+    urlResolver(url: String!): EntityUrl
+
+    """
+    [url-resolver][BAT]
+    returns Object defining list of Entities (Category, Product, CMS page) that match with urls passed as param
+    """
+    urlResolvers(urls: [String]): [EntityUrl]
+}

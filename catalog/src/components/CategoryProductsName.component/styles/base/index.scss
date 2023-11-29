@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.category-products-name-component {
+    $category-products-name-component-font-size: null !default;
+    $category-products-name-component-font-weight: null !default;
+    $category-products-name-component-margin-bottom: 1.5rem !default;
+
+    & {
+        font-size: $category-products-name-component-font-size;
+        font-weight: $category-products-name-component-font-weight;
+        text-transform: uppercase;
+        margin-bottom: $category-products-name-component-margin-bottom;
+    }
+}

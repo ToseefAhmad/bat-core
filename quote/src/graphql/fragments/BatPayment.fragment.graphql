@@ -1,0 +1,16 @@
+#import "@luft/quote/src/graphql/fragments/BillingAddress.fragment.graphql"
+#import "./BatPaymentMethod.fragment.graphql"
+
+fragment BatPaymentFragment on Cart {
+    billing_address {
+        ...BillingAddressFragment
+    }
+    payment_methods {
+        ...BatPaymentMethodFragment
+    }
+    selected_payment_method {
+        payment_method {
+            ...BatPaymentMethodFragment
+        }
+    }
+}

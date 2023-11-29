@@ -1,0 +1,51 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .no-match-component {
+        $no-match-component-padding-md: 10rem 0 5rem;
+        $no-match-component-background-position-md: center 5rem;
+        $no-match-component-title-font-size-md: 2rem;
+        $no-match-component-button-width-md: 24rem;
+        $no-match-component-slider-padding-md: 2rem 0 4rem;
+        $no-match-component-slider-title-font-size-md: 2.6rem;
+
+        &-box {
+            padding: $no-match-component-padding-md;
+            background-position: $no-match-component-background-position-md;
+        }
+
+        &-title {
+            font-size: $no-match-component-title-font-size-md;
+        }
+
+        &-actions {
+            & {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &-button {
+                max-width: $no-match-component-button-width-md;
+                margin: 0 $m-secondary;
+            }
+
+            &-button:last-child {
+                margin-top: 0;
+            }
+        }
+
+        &-slider {
+            & {
+                max-width: $max-content-width;
+                margin: 0 auto;
+                padding: $no-match-component-slider-padding-md;
+            }
+
+            .product-list-slider-component-title {
+                font-size: $no-match-component-slider-title-font-size-md;
+            }
+        }
+    }
+}

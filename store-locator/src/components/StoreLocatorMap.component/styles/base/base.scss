@@ -1,0 +1,151 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.store-locator-map-component {
+    $store-locator-map-component-height: 88vh !default;
+    $store-locator-map-component-title-info-window-font-size: 1.6rem !default;
+    $store-locator-map-component-close-button-size: 1rem !important !default;
+    $store-locator-map-component-close-button-position: 50% !important !default;
+    $store-locator-map-component-info-window-max-height: null !default;
+    $store-locator-map-component-info-window-width: 43rem !important !default;
+    $store-locator-map-component-close-button-top: 1.5rem !important !default;
+    $store-locator-map-component-close-button-right: 1.5rem !important !default;
+    $store-locator-map-component-close-button-background-image: null !default;
+    $store-locator-map-component-close-button-width: 1.4rem !important !default;
+    $store-locator-map-component-close-button-height: 1.4rem !important !default;
+    $store-locator-map-component-close-button-img-display: none !important !default;
+    $store-locator-map-component-info-window-border: $border-width-lg solid #dedede !default;
+    $store-locator-map-component-style-top: 2rem !default;
+    $store-locator-map-component-style-iw-c-padding-inline-start: null !default;
+    $store-locator-map-component-style-iw-c-padding-inline-end: null !default;
+    $store-locator-map-component-style-iw-c-padding-block-start: 0 !default;
+    $store-locator-map-component-style-iw-c-padding-block-end: null !default;
+    $store-locator-map-component-cluster-image-font-size: 1.8rem !default;
+    $store-locator-map-component-title-font-size: 1.6rem !default;
+    $store-locator-map-component-title-color: #686868 !default;
+    $store-locator-map-component-info-window-title-padding-block-start: $p-primary !default;
+    $store-locator-map-component-info-window-title-padding-block-end: $p-secondary !default;
+    $store-locator-map-component-info-window-title-background-size: 2rem 2.5rem !default;
+    $store-locator-map-component-info-window-title-background-position: 0 2rem !default;
+    $store-locator-map-component-info-window-title-logo-padding-inline-start: 2.5rem !default;
+    $store-locator-map-component-title-padding-inline-start: $p-secondary !default;
+    $store-locator-map-component-title-padding-inline-end: 2.6rem !default;
+    $store-locator-map-component-info-window-title-color: null !default;
+    $store-locator-map-component-info-window-address-color: #686868 !default;
+    $store-locator-map-component-info-window-address-margin-block-end: null !default;
+    $store-locator-map-component-cluster-2-color: $dark !default;
+
+    & {
+        width: 100%;
+        height: $store-locator-map-component-height;
+    }
+
+    .gm-style {
+        .gm-style-iw {
+            max-height: $store-locator-map-component-info-window-max-height;
+            width: $store-locator-map-component-info-window-width;
+            border: $store-locator-map-component-info-window-border;
+            border-radius: 0;
+
+            button {
+                top: $store-locator-map-component-close-button-top;
+                right: $store-locator-map-component-close-button-right;
+                width: $store-locator-map-component-close-button-width;
+                height: $store-locator-map-component-close-button-height;
+                background-image: $store-locator-map-component-close-button-background-image;
+                background-repeat: no-repeat !important;
+                background-size: $store-locator-map-component-close-button-size;
+                background-position: $store-locator-map-component-close-button-position;
+            }
+
+            button span {
+                display: none !important;
+            }
+
+            button img {
+                display: $store-locator-map-component-close-button-img-display;
+            }
+        }
+
+        .gm-style-iw-t:after {
+            content: none;
+        }
+
+        .gm-style-iw-c {
+            top: $store-locator-map-component-style-top;
+            padding-block-start: $store-locator-map-component-style-iw-c-padding-block-start;
+            padding-block-end: $store-locator-map-component-style-iw-c-padding-block-end;
+            padding-inline-start: $store-locator-map-component-style-iw-c-padding-inline-start;
+            padding-inline-end: $store-locator-map-component-style-iw-c-padding-inline-end;
+        }
+    }
+
+    .store-locator-map-title-info-window {
+        font-size: $store-locator-map-component-title-info-window-font-size;
+        font-weight: $font-weight-bold;
+    }
+
+    &-cluster {
+        span {
+            font-size: $store-locator-map-component-cluster-image-font-size;
+            font-weight: $font-weight-bold;
+        }
+
+        &.cluster-0 span,
+        &.cluster-1 span {
+            color: $light;
+        }
+
+        &.cluster-2 span {
+            color: $store-locator-map-component-cluster-2-color;
+        }
+    }
+
+    &-info-window-title {
+        font-weight: $font-weight-bold;
+        font-size: $store-locator-map-component-title-font-size;
+        color: $store-locator-map-component-info-window-title-color;
+        padding-block-start: $store-locator-map-component-info-window-title-padding-block-start;
+        padding-block-end: $store-locator-map-component-info-window-title-padding-block-end;
+        padding-inline-start: $store-locator-map-component-title-padding-inline-start;
+        padding-inline-end: $store-locator-map-component-title-padding-inline-end;
+    }
+
+    &-info-window-title-logo {
+        padding-inline-start: $store-locator-map-component-info-window-title-logo-padding-inline-start;
+        background-repeat: no-repeat;
+        background-size: $store-locator-map-component-info-window-title-background-size;
+        background-position: $store-locator-map-component-info-window-title-background-position;
+    }
+
+    &-info-window-address {
+        color: $store-locator-map-component-info-window-address-color;
+        font-size: $h4-font-size;
+        padding-inline-start: $p-secondary;
+        margin-bottom: $store-locator-map-component-info-window-address-margin-block-end;
+    }
+}
+
+[dir='rtl'] {
+    .store-locator-map-component {
+        $store-locator-map-component-close-button-left: 1rem;
+
+        .gm-style {
+            .gm-style-iw {
+                button {
+                    right: auto !important;
+                    left: $store-locator-map-component-close-button-left;
+                }
+            }
+        }
+    }
+}
+
+body:not([dir='rtl']) {
+    .store-locator-map-component {
+        &-cluster {
+            span {
+                font-family: $font-family;
+            }
+        }
+    }
+}

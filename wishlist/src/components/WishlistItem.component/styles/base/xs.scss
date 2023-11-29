@@ -1,0 +1,29 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(xs) {
+    .app .wishlist-item-component {
+        $wishlist-item-component-padding-block-end: 1.5rem;
+
+        & {
+            padding-block-end: $wishlist-item-component-padding-block-end;
+        }
+
+        &-content {
+            padding-block-start: $p-secondary;
+            padding-inline-start: $p-secondary;
+            padding-inline-end: $p-secondary;
+        }
+
+        &-action {
+            & {
+                padding-inline-start: $p-secondary;
+                padding-inline-end: $p-secondary;
+            }
+
+            .button-component {
+                max-width: unset;
+            }
+        }
+    }
+}

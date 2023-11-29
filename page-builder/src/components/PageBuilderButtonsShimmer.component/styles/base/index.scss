@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.page-builder-buttons-shimmer-component {
+    $page-builder-buttons-shimmer-component-min-height: 5rem !default;
+
+    & {
+        min-height: $page-builder-buttons-shimmer-component-min-height;
+        margin-bottom: $m-tertiary; // @magento/pagebuilder styles
+    }
+
+    &-inline {
+        margin-inline-end: $m-tertiary; // @magento/pagebuilder styles
+    }
+}

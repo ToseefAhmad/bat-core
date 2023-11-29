@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-wishlist-component {
+    & {
+        background: $gray-light-secondary;
+    }
+    .account-title-component-name {
+        margin-bottom: 0;
+    }
+
+    .account-title-component {
+        background: $light;
+    }
+}

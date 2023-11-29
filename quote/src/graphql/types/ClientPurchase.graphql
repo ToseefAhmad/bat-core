@@ -1,0 +1,19 @@
+type ClientPurchase {
+    """
+    [quote][BAT]
+    Checkout action field
+    """
+    actionField: ClientPurchaseActionField
+
+    """
+    [quote][BAT]
+    Cart items
+    """
+    products: [CartItem]
+
+    """
+    [quote][BAT]
+    Order information
+    """
+    order: Order
+}

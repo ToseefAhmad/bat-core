@@ -1,0 +1,34 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .restrict-access-component {
+        $restrict-access-component-actions-button-width-md: 46.5% !default;
+        $restrict-access-component-actions-button-margin-block-md: null !default;
+        $restrict-access-component-actions-button-margin-inline-md: null !default;
+        $restrict-access-component-title-font-size-md: null !default;
+        $restrict-access-component-title-white-space-md: null !default;
+
+        &-actions {
+            & {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+
+            .button-component.button-component-block {
+                margin-top: 0;
+                margin-block-start: $restrict-access-component-actions-button-margin-block-md;
+                margin-block-end: $restrict-access-component-actions-button-margin-block-md;
+                margin-inline-start: $restrict-access-component-actions-button-margin-inline-md;
+                margin-inline-end: $restrict-access-component-actions-button-margin-inline-md;
+                width: $restrict-access-component-actions-button-width-md;
+            }
+        }
+
+        &-title {
+            font-size: $restrict-access-component-title-font-size-md;
+            white-space: $restrict-access-component-title-white-space-md;
+        }
+    }
+}

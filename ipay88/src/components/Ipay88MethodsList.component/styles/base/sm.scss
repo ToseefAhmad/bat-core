@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .ipay88-methods-list-component {
+        $ipay88-methods-list-component-grid-template-columns-sm: repeat(5, 1fr) !default;
+
+        &-row {
+            grid-template-columns: $ipay88-methods-list-component-grid-template-columns-sm;
+        }
+    }
+}

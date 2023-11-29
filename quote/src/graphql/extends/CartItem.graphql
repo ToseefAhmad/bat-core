@@ -1,0 +1,13 @@
+extend type CartItem {
+    """
+    [quote][BAT]
+    Engraved product options
+    """
+    engraved_options: EngravedOptionsInfo
+
+    """
+    [quote][BAT]
+    Product type
+    """
+    product_type: ProductType @deprecated(reason: "Removed")
+}

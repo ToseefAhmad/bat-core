@@ -1,0 +1,7 @@
+#import "../../../../user/src/graphql/fragments/BatViewer.fragment.graphql"
+
+mutation BatUpdateViewerMutation($input: UpdateViewerInput) {
+    updateViewer(input: $input) {
+        ...BatViewerFragment
+    }
+}

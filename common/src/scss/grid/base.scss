@@ -1,0 +1,25 @@
+@import '../variables/base';
+
+.container {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline-start: -#{$m-tertiary};
+    margin-inline-end: -#{$m-tertiary};
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-inline-start: $p-tertiary;
+    padding-inline-end: $p-tertiary;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}

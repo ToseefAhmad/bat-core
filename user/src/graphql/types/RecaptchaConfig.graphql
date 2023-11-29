@@ -1,0 +1,31 @@
+type RecaptchaConfig {
+    """
+    [user][BAT]
+    Flag, which indicates that Recaptcha is enabled
+    """
+    enabled: Boolean
+
+    """
+    [user][BAT]
+    The API client key
+    """
+    public_key: String
+
+    """
+    [user][BAT]
+    The theme of the widget {light | dark}
+    """
+    theme: String
+
+    """
+    [user][BAT]
+    Language code allows the captcha to be used from different languages
+    """
+    lang: String
+
+    """
+    [user][BAT]
+    This allows to change the size or do invisible {compact | normal | invisible}
+    """
+    size: String
+}

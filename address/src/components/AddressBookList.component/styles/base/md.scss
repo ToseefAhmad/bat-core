@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .address-book-list-component {
+            &-actions-link.button-component {
+                margin-block-start: 0;
+            }
+        }
+    }
+}

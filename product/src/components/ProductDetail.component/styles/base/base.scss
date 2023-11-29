@@ -1,0 +1,185 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/StockStatus.component/index';
+@import '~@luft/product/src/components/ProductAttributes.component/index';
+@import '~@luft/product/src/components/ProductSettings.component/index';
+@import '~@luft/product/src/components/RecommendedProductsList.container/index';
+@import '~@luft/quote/src/components/AddToCart.component/index';
+
+.app {
+    .product-detail-component {
+        $product-detail-component-info-padding: $p-secondary $p-primary !default;
+        $product-detail-component-subtitle-font-size: 2rem !default;
+        $product-detail-component-product-qty-width: 14rem !default;
+        $product-detail-component-product-price-font-size: 2.8rem !default;
+        $product-detail-component-product-price-line-height: null !default;
+        $product-detail-component-number-input-control-padding-block: null !default;
+        $product-detail-component-update-button-color: null !default;
+        $product-detail-component-update-button-max-width: calc(100% - #{$p-primary}* 2) !default;
+        $product-detail-component-wishlist-button-background-size: 3rem auto !default;
+        $product-detail-component-wishlist-button-size: 6rem !default;
+
+        & {
+            background-color: $light;
+        }
+
+        &-variation-error {
+            width: 100%;
+        }
+
+        &-gallery {
+            background-color: $background-primary-color;
+            width: 100%;
+        }
+
+        &-info {
+            &-wrapper {
+                padding: $product-detail-component-info-padding;
+            }
+
+            .cms-block-component {
+                margin-top: auto;
+            }
+        }
+
+        &-gallery + .product-detail-component-info-wrapper {
+            padding-block-end: 0;
+        }
+
+        &-brand {
+            font-size: $h2-font-size;
+            font-weight: $font-weight-bold;
+            line-height: 1;
+        }
+
+        &-subtitle {
+            & {
+                font-size: $product-detail-component-subtitle-font-size;
+                font-weight: $font-weight-semibold;
+                margin-bottom: $m-secondary;
+            }
+        }
+
+        &-short-description {
+            font-size: $font-size-md;
+            margin-bottom: $m-primary;
+        }
+
+        &-sticky-panel {
+            margin-top: $m-secondary;
+        }
+
+        .product-qty-component {
+            margin-bottom: 0;
+            width: $product-detail-component-product-qty-width;
+        }
+
+        .product-price-component {
+            .regular-product-price-component,
+            .final-product-price-component,
+            .minimum-product-price-component,
+            .editable-bundle-price-component-value {
+                font-size: $product-detail-component-product-price-font-size;
+                font-weight: $font-weight-bold;
+                line-height: $product-detail-component-product-price-line-height;
+                margin-bottom: 0;
+            }
+
+            .editable-bundle-price-component {
+                font-size: $product-detail-component-product-price-font-size;
+                margin-bottom: 0;
+            }
+        }
+
+        .product-qty-component + .product-price-component,
+        .configurable-product-settings-component + .product-price-component {
+            margin-top: $m-primary;
+        }
+
+        .stock-status-component-out-of-stock {
+            font-size: $font-size-base;
+        }
+
+        .number-input-control {
+            padding-block-start: $product-detail-component-number-input-control-padding-block;
+            padding-block-end: $product-detail-component-number-input-control-padding-block;
+            padding-inline-start: $p-secondary;
+            padding-inline-end: $p-secondary;
+        }
+
+        .number-input-increment,
+        .number-input-decrement {
+            &-group .button-component:focus {
+                box-shadow: none;
+            }
+        }
+
+        .product-price-component {
+            margin-block-end: 0;
+        }
+
+        .product-engraving-component {
+            margin: $m-primary 0;
+        }
+
+        .delivery-cms-block {
+            & {
+                display: flex;
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+                padding-inline-start: $p-primary;
+                padding-inline-end: $p-primary;
+                align-items: center;
+                background-color: $background-primary-color;
+            }
+
+            &-icon {
+                margin-left: $m-secondary;
+            }
+
+            &-content-title {
+                text-transform: uppercase;
+                font-weight: $font-weight-bold;
+                margin-bottom: $m-tertiary;
+            }
+        }
+
+        &-update-button.button-component {
+            border-top: none;
+            margin-block-end: $m-primary;
+            margin-block-start: $m-primary;
+            margin-inline-start: $m-primary;
+            max-width: $product-detail-component-update-button-max-width;
+            color: $product-detail-component-update-button-color;
+        }
+
+        .add-to-wishlist-component,
+        .remove-from-wishlist-component {
+            background-size: $product-detail-component-wishlist-button-background-size;
+            height: $product-detail-component-wishlist-button-size;
+            width: $product-detail-component-wishlist-button-size;
+        }
+    }
+}
+
+body:not([dir='rtl']) {
+    .app {
+        .product-detail-component {
+            $product-detail-component-primary-information-brand-font-family-rtl: null !default;
+            $product-detail-component-product-price-font-family-rtl: null !default;
+            $product-detail-component-product-delivery-cms-block-icon-margin-rlt: 1rem !default;
+
+            &-primary-information-brand {
+                font-family: $product-detail-component-primary-information-brand-font-family-rtl;
+            }
+
+            .product-price-component {
+                font-family: $product-detail-component-product-price-font-family-rtl;
+            }
+
+            .delivery-cms-block-icon {
+                margin-right: $product-detail-component-product-delivery-cms-block-icon-margin-rlt;
+                margin-left: 0;
+            }
+        }
+    }
+}

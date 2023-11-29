@@ -1,0 +1,9 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$restrict-access-component-z-index: 2147483648; // Set restrict access popup higher than hubspot live chat
+$restrict-access-component-text-margin-block-end: 2.5rem;
+$restrict-access-component-notice-margin-block-start: $m-primary;
+$restrict-access-component-title-white-space: null;
+
+// md
+$restrict-access-component-title-white-space-md: pre-line;

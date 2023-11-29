@@ -1,0 +1,22 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .account-menu-title-component {
+            $account-menu-title-component-font-size-md: $font-size-lg !default;
+            $account-menu-title-component-letter-spacing-md: null !default;
+            $account-menu-title-component-padding-block-start-md: null !default;
+            $account-menu-title-component-padding-block-end-md: null !default;
+            $account-menu-title-component-text-transform-md: null !default;
+
+            & {
+                font-size: $account-menu-title-component-font-size-md;
+                letter-spacing: $account-menu-title-component-letter-spacing-md;
+                padding-block-start: $account-menu-title-component-padding-block-start-md;
+                padding-block-end: $account-menu-title-component-padding-block-end-md;
+                text-transform: $account-menu-title-component-text-transform-md;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// TODO: Need import ButtonComponent styles when it will moved to bat-core
+
+.app {
+    .add-to-cart-component {
+        $add-to-cart-component-justify-content: center !default;
+        $add-to-cart-component-white-space: nowrap !default;
+
+        & {
+            display: flex;
+            justify-content: $add-to-cart-component-justify-content;
+        }
+
+        &-title {
+            white-space: $add-to-cart-component-white-space;
+        }
+    }
+}

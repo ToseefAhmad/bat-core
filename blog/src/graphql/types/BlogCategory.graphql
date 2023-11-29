@@ -1,0 +1,121 @@
+type BlogCategory {
+    """
+    [blog][BAT]
+    Blog Category Canonical URL
+    """
+    canonical_url: String
+
+    """
+    [blog][BAT]
+    Id of the Blog Post Category
+    """
+    category_id: Int
+
+    """
+    [blog][BAT]
+    Category Level
+    """
+    category_level: Int
+
+    """
+    [blog][BAT]
+    URL of the Blog Post Category
+    """
+    category_url: String
+
+    """
+    [blog][BAT]
+    Relative URL of the Blog Post Category
+    """
+    category_url_path: String
+
+    """
+    [blog][BAT]
+    Blog Category content
+    """
+    content: String
+
+    """
+    [blog][BAT]
+    Blog Category Content heading
+    """
+    content_heading: String
+
+    """
+    [blog][BAT]
+    Blog Category Display mode
+    """
+    display_mode: Int
+
+    """
+    [blog][BAT]
+    URL key of Blog Category
+    """
+    identifier: String
+
+    """
+    [blog][BAT]
+    Blog Category Include in menu
+    """
+    include_in_menu: Int
+
+    """
+    [blog][BAT]
+    Blog Category Is active
+    """
+    is_active: Int
+
+    """
+    [blog][BAT]
+    Blog Category Meta description
+    """
+    meta_description: String
+
+    """
+    [blog][BAT]
+    Blog Category Meta keywords
+    """
+    meta_keywords: String
+
+    """
+    [blog][BAT]
+    Blog Category Meta title
+    """
+    meta_title: String
+
+    """
+    [blog][BAT]
+    Id of the Blog Post Parent Category
+    """
+    parent_category_id: Int
+
+    """
+    [blog][BAT]
+    Blog Category Path
+    """
+    path: String
+
+    """
+    [blog][BAT]
+    Blog Category Position
+    """
+    position: Int
+
+    """
+    [blog][BAT]
+    Blog Category Posts Count
+    """
+    posts_count: Int
+
+    """
+    [blog][BAT]
+    Blog Category Posts sort by
+    """
+    posts_sort_by: Int
+
+    """
+    [blog][BAT]
+    Blog Category title
+    """
+    title: String
+}

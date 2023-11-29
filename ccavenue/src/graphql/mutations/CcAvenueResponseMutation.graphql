@@ -1,0 +1,7 @@
+#import "../../../../quote/src/graphql/fragments/CheckoutOrder.fragment.graphql"
+
+mutation CcAvenueResponseMutation($input: String) {
+    ccavenueResponse(token: $input) {
+        ...BatCheckoutOrderFragment
+    }
+}

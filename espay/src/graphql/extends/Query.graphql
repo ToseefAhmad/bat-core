@@ -1,0 +1,13 @@
+extend type Query {
+    """
+    [espay][BAT]
+    request to retrieve available payment chanel list
+    """
+    espayPaymentInfo: [EspayPaymentItem]
+
+    """
+    [espay][BAT]
+    request to retrieve configuration for Espay iframe
+    """
+    espay(input: EspayPaymentMethodInput): EspayConfig
+}

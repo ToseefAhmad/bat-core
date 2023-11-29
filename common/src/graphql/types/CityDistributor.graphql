@@ -1,0 +1,13 @@
+type CityDistributor {
+    """
+    [common][BAT]
+    Courier email
+    """
+    email: String
+
+    """
+    [common][BAT]
+    City of courier email
+    """
+    city: String
+}

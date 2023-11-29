@@ -1,0 +1,7 @@
+extend type Query {
+    """
+    [checkout-com][BAT]
+    Request to retrieve configuration for Checkout.com iframe
+    """
+    checkoutComCardPayment: CheckoutComConfig
+}

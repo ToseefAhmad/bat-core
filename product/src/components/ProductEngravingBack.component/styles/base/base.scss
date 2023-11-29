@@ -1,0 +1,174 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .product-engraving-back-component {
+    $product-engraving-back-component-title-font-size: 2rem;
+    $product-engraving-back-component-title-margin: 3rem 0;
+    $product-engraving-back-component-tabs-title-line-height: 1.4rem;
+    $product-engraving-back-component-control-height: 5rem;
+    $product-engraving-back-component-control-width: 17.9rem;
+    $product-engraving-back-component-variations-item-width: 33.333%;
+    $product-engraving-back-component-variations-item-height: 10rem;
+    $product-engraving-back-component-variations-item-preview-font-size: 3rem;
+    $product-engraving-back-component-variations-item-preview-line-height: 3rem;
+    $product-engraving-back-component-actions-cancel-background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-right-black.svg') !default;
+    $product-engraving-back-component-actions-cancel-padding-inline-end: 3rem;
+    $product-engraving-back-component-actions-cancel-background-size: 2rem 1.4rem;
+    $product-engraving-back-component-actions-continue-width: 22rem;
+
+    &-title {
+        font-size: $product-engraving-back-component-title-font-size;
+        font-weight: $font-weight-semibold;
+        margin: $product-engraving-back-component-title-margin;
+    }
+
+    &-tabs {
+        & {
+            margin-bottom: $m-primary;
+        }
+
+        &-title {
+            font-weight: $font-weight-semibold;
+            margin-bottom: $m-primary;
+            text-transform: uppercase;
+            line-height: $product-engraving-back-component-tabs-title-line-height;
+        }
+
+        &-control {
+            display: flex;
+        }
+
+        &-control-item.button-component.button-component-primary {
+            & {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: $product-engraving-back-component-control-height;
+                width: $product-engraving-back-component-control-width;
+                background-color: $gray-light-secondary;
+                font-weight: $font-weight-semibold;
+                font-size: $h4-font-size;
+                border-radius: 0;
+                text-transform: none;
+            }
+
+            &.active,
+            &:hover,
+            &:focus,
+            &:not(:disabled):not(.disabled):active {
+                background-color: $darker;
+                color: $light;
+                box-shadow: none;
+            }
+        }
+
+        &-control-item:first-child {
+            margin-inline-end: $m-tertiary;
+        }
+    }
+
+    &-variations {
+        & {
+            margin-top: $m-primary;
+            margin-bottom: $m-primary;
+        }
+
+        &-title {
+            font-weight: $font-weight-semibold;
+            margin-bottom: $m-primary;
+            text-transform: uppercase;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -#{$m-tertiary};
+            margin-left: -#{$m-tertiary};
+        }
+
+        &-list-col {
+            flex: 0 0 $product-engraving-back-component-variations-item-width;
+            max-width: $product-engraving-back-component-variations-item-width;
+            padding-right: $p-tertiary;
+            padding-left: $p-tertiary;
+            margin-bottom: $m-secondary;
+        }
+
+        &-list-item {
+            & {
+                height: $product-engraving-back-component-variations-item-height;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: $p-primary $p-secondary $p-secondary;
+                background-color: $gray-light-secondary;
+                cursor: pointer;
+            }
+        }
+
+        &-list-item:hover,
+        &-list-item.active {
+            & {
+                background-color: $darker;
+            }
+
+            .product-engraving-back-component-variations-list-item {
+                &-title,
+                &-preview {
+                    color: $light;
+                }
+            }
+        }
+
+        &-list-item-preview {
+            font-size: $product-engraving-back-component-variations-item-preview-font-size;
+            line-height: $product-engraving-back-component-variations-item-preview-line-height;
+        }
+
+        &-list-item-title {
+            font-weight: $font-weight-semibold;
+        }
+    }
+
+    &-actions {
+        & {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-continue.button-component {
+            width: $product-engraving-back-component-actions-continue-width;
+        }
+
+        &-cancel.button-component {
+            margin: 0;
+            text-transform: uppercase;
+            box-shadow: initial;
+            padding-inline-end: $product-engraving-back-component-actions-cancel-padding-inline-end;
+            background: $product-engraving-back-component-actions-cancel-background-image no-repeat;
+            background-position: center right;
+            background-size: $product-engraving-back-component-actions-cancel-background-size;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app .product-engraving-back-component {
+        $product-engraving-back-component-actions-cancel-background-image: url('../../../../../../common/src/resources/svg/base/bat-arrow-left-black.svg') !default;
+        $product-engraving-back-component-actions-cancel-background-size: 2rem 1.4rem;
+
+        &-tabs-title,
+        &-variations-title {
+            font-weight: $font-weight-bold;
+        }
+
+        &-actions {
+            &-cancel.button-component {
+                background: $product-engraving-back-component-actions-cancel-background-image no-repeat;
+                background-position: center left;
+                background-size: $product-engraving-back-component-actions-cancel-background-size;
+            }
+        }
+    }
+}

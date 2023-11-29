@@ -1,0 +1,17 @@
+"""
+[user][BAT]
+Input is used as an argument for confirming the account
+"""
+input SendConfirmationLinkInput {
+    """
+    [user][BAT]
+    Email provided by the user, used for confirming the account
+    """
+    email: String
+
+    """
+    [user][BAT]
+    Url, where user will be redirected after confirming the account
+    """
+    back_url: String
+}

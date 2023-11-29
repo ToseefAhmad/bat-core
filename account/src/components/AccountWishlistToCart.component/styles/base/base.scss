@@ -1,0 +1,20 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-wishlist-to-cart-component {
+    $account-wishlist-to-cart-component-flex: 1 1 50% !default;
+
+    & {
+        flex: $account-wishlist-to-cart-component-flex;
+    }
+
+    &-action.button-component {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .alert-component {
+        margin: $m-secondary 0 0;
+    }
+}

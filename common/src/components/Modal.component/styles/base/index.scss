@@ -1,0 +1,76 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.modal-component {
+    $modal-component-background-color: $light !default;
+    $modal-component-color: null !default;
+    $modal-component-header-secondary-close-button-background-image: null !default;
+    $modal-component-header-secondary-close-button-background-size: 2rem !default;
+    $modal-component-confirm-top: 30% !default;
+    $modal-component-header-tertiary-border-bottom: null !default;
+    $modal-component-title-font-weight: null !default;
+    $modal-component-title-font-size: null !default;
+
+    &-content,
+    &-dialog,
+    &-body {
+        background: $modal-component-background-color;
+        color: $modal-component-color;
+    }
+
+    &-header {
+        border: none;
+
+        &.modal-component-header-secondary-revert .modal-component-close {
+            margin-right: -#{$m-secondary};
+        }
+
+        &.modal-component-header-tertiary {
+            border-bottom: $modal-component-header-tertiary-border-bottom;
+
+            .modal-component-title {
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        .modal-component-close.button-component {
+            background-image: $modal-component-header-secondary-close-button-background-image;
+            background-size: $modal-component-header-secondary-close-button-background-size;
+            background-position: center;
+            opacity: 1;
+        }
+    }
+
+    &-confirm {
+        top: $modal-component-confirm-top;
+
+        .modal-component-body-content {
+            font-size: $h4-font-size;
+
+            .modal-component-footer {
+                & > *,
+                & > .button-component {
+                    margin: unset;
+                    margin-inline-start: $m-secondary;
+                }
+
+                & > *:first-child,
+                & > .button-component:first-child {
+                    margin-inline-start: 0;
+                }
+            }
+        }
+    }
+
+    &-title {
+        font-weight: $modal-component-title-font-weight;
+        font-size: $modal-component-title-font-size;
+    }
+
+    &-content {
+        font-size: $h4-font-size;
+    }
+
+    &-close.button-component:focus {
+        box-shadow: none;
+    }
+}

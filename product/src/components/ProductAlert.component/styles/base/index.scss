@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.product-alert-component {
+    $product-alert-component-action-max-width: 44rem !default;
+
+    & {
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+    }
+
+    &-action {
+        display: flex;
+        justify-content: center;
+        max-width: $product-alert-component-action-max-width;
+    }
+}

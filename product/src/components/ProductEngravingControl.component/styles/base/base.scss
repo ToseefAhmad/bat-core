@@ -1,0 +1,76 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.product-engraving-control-component {
+    $product-engraving-control-component-icon-background: url('../../../../../../common/src/resources/svg/base/bat-engrave.svg');
+    $product-engraving-control-component-icon-width: 5.5rem;
+    $product-engraving-control-component-icon-height: 6rem;
+    $product-engraving-control-component-price-padding-inline-end: 0.1rem;
+    $product-engraving-control-component-action-width: 10rem;
+    $product-engraving-control-component-disclaimer-padding: $p-secondary $p-primary 1.6rem;
+
+    & {
+        background-color: $gray-light-secondary;
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $p-secondary;
+        border-bottom: 1px solid $gray-light-primary;
+    }
+
+    &-icon {
+        width: $product-engraving-control-component-icon-width;
+        height: $product-engraving-control-component-icon-height;
+        background: $product-engraving-control-component-icon-background center no-repeat;
+        background-size: $product-engraving-control-component-icon-width
+            $product-engraving-control-component-icon-height;
+    }
+
+    &-content {
+        & {
+            border-right: 1px solid $gray-light-primary;
+            flex: 1;
+            padding: $p-secondary;
+            padding-inline-end: $p-primary;
+        }
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+            margin-bottom: $m-secondary;
+            font-weight: $font-weight-bold;
+        }
+
+        &-price::before {
+            content: '+';
+            padding-inline-end: $product-engraving-control-component-price-padding-inline-end;
+        }
+    }
+
+    &-action.button-component {
+        width: $product-engraving-control-component-action-width;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+    }
+
+    &-disclaimer {
+        padding: $product-engraving-control-component-disclaimer-padding;
+        color: $dark-grey;
+        white-space: pre-line;
+    }
+}
+
+[dir='rtl'] {
+    .app .product-engraving-control-component {
+        &-content {
+            & {
+                border-right: none;
+                border-left: 1px solid $gray-light-primary;
+            }
+        }
+    }
+}

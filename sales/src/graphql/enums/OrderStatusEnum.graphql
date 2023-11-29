@@ -1,0 +1,13 @@
+extend enum OrderStatusEnum {
+    """
+    [sales][BAT]
+    Rescheduled
+    """
+    RESCHEDULED
+
+    """
+    [sales][BAT]
+    Returned
+    """
+    RETURNED
+}

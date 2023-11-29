@@ -1,0 +1,12 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .wishlist-component {
+        $wishlist-component-gap-sm: 2rem !default;
+
+        &-actions {
+            flex-direction: row;
+            gap: $wishlist-component-gap-sm;
+        }
+    }
+}

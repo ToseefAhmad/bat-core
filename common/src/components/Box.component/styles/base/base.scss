@@ -1,0 +1,34 @@
+@import '../../../../scss/variables/base';
+
+.app {
+    .box-component {
+        $box-component-title-font-size: 1.8rem !default;
+        $box-component-title-font-weight: null !default;
+        $box-component-title-text-transform: null !default;
+        $box-component-title-line-height: null !default;
+        $box-component-title-padding-block-start: null !default;
+        $box-component-title-padding-block-end: null !default;
+        $box-component-title-disabled-color: null !default;
+        $box-component-active-border-width: null !default;
+
+        &-title {
+            font-size: $box-component-title-font-size;
+            font-weight: $box-component-title-font-weight;
+            text-transform: $box-component-title-text-transform;
+            line-height: $box-component-title-line-height;
+            padding-block-start: $box-component-title-padding-block-start;
+            padding-block-end: $box-component-title-padding-block-end;
+        }
+
+        &.box-component-disabled {
+            .box-component-title {
+                padding-block-end: $box-component-title-padding-block-end;
+                color: $box-component-title-disabled-color;
+            }
+        }
+
+        &.box-component-active {
+            border-width: $box-component-active-border-width;
+        }
+    }
+}

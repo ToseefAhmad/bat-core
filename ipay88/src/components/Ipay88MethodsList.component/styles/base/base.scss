@@ -1,0 +1,26 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.ipay88-methods-list-component {
+    $ipay88-methods-list-component-grid-template-columns: repeat(3, 1fr) !default;
+    $ipay88-methods-list-component-grid-gap: 1rem !default;
+    $ipay88-methods-list-component-group-border-top: $border-width solid $gray-light-primary !default;
+
+    & {
+        padding: 0 $p-primary $p-primary;
+        position: relative;
+    }
+
+    &-row {
+        & {
+            display: grid;
+            grid-template-columns: $ipay88-methods-list-component-grid-template-columns;
+            gap: $ipay88-methods-list-component-grid-gap;
+            margin-bottom: $m-primary;
+        }
+
+        &-group {
+            padding-top: $p-primary;
+            border-top: $ipay88-methods-list-component-group-border-top;
+        }
+    }
+}

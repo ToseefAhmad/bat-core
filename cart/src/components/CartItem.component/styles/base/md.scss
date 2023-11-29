@@ -1,0 +1,53 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(md) {
+    .app {
+        .cart-item-component {
+            $cart-item-component-edit-icon-position-md: null !default;
+            $cart-item-component-move-to-wishlist-component-margin-block-start-md: -2rem !default;
+            $cart-item-component-move-to-wishlist-component-padding-block-start-md: 12.8rem !default;
+
+            &-content {
+                padding: $p-primary;
+            }
+
+            &-edit-button.button-component {
+                top: $cart-item-component-edit-icon-position-md;
+                right: $cart-item-component-edit-icon-position-md;
+            }
+
+            .move-to-wishlist-component {
+                width: 100%;
+                margin-block-start: $cart-item-component-move-to-wishlist-component-margin-block-start-md;
+                padding-inline-start: $cart-item-component-move-to-wishlist-component-padding-block-start-md;
+                text-align: start;
+                position: unset;
+            }
+        }
+    }
+
+    [dir='rtl'] {
+        .app {
+            .cart-item-component {
+                $cart-item-component-edit-icon-left-md-rtl: 2rem;
+
+                &-edit-button.button-component.button-component-primary {
+                    left: $cart-item-component-edit-icon-left-md-rtl;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .app {
+        .cart-item-component {
+            $move-to-wishlist-component-padding-inline-start: 17.8rem;
+
+            .move-to-wishlist-component {
+                padding-inline-start: $move-to-wishlist-component-padding-inline-start;
+            }
+        }
+    }
+}

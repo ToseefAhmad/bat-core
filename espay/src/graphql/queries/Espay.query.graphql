@@ -1,0 +1,8 @@
+query EspayQuery($input: EspayPaymentMethodInput) {
+    espay(input: $input) {
+        key
+        back_url
+        display
+        espay_url
+    }
+}

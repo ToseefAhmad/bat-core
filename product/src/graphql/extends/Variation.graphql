@@ -1,0 +1,7 @@
+extend type Variation {
+    """
+    [product][BAT]
+    Flag, which indicates if current variation is in stock
+    """
+    is_in_stock: Boolean
+}

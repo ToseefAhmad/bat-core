@@ -1,0 +1,6 @@
+query PakistanCities($code: String!) {
+    pk_cities(regionCode: $code) {
+        id
+        name
+    }
+}

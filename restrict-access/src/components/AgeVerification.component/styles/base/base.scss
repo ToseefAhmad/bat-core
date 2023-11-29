@@ -1,0 +1,19 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.age-verification-component {
+    &-title {
+        font-size: $h2-font-size;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: $m-primary;
+    }
+
+    &-note {
+        margin-block-end: $m-secondary;
+        font-size: $font-size-mobile;
+    }
+
+    &-note-bold {
+        font-weight: $font-weight-bold;
+    }
+}

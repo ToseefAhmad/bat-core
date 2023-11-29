@@ -1,0 +1,19 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$menu-set-component-toggle-collapse-show-color: $green;
+$menu-set-component-second-level-category-background-color: $dark-green;
+$menu-set-component-second-level-icon-image-max-height: 6.4rem;
+$menu-set-component-second-level-category-border-color: $dark;
+$menu-set-component-first-level-category-border-top: $border-width solid $dark;
+$menu-set-component-all-background-color: #3a3a3a;
+$menu-set-component-modal-menu-set-background-color: $darker;
+
+// sm
+$menu-set-component-category-padding-sm: 1.8rem $p-tertiary;
+$menu-set-component-accordion-background-color-sm: $primary;
+$menu-set-component-menu-set-nav-max-width-sm: 22rem;
+$menu-set-component-second-level-icon-image-max-height-sm: none;
+$menu-set-component-second-level-category-background-color-sm: $darker;
+
+// md
+$menu-set-component-category-padding-md: 1.8rem $p-primary;

@@ -1,0 +1,62 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .add-review-form-component {
+        $add-review-form-component-actions-margin-sm: null !default;
+        $add-review-form-component-actions-button-height-sm: null !default;
+        $add-review-form-component-actions-button-margin-top-sm: null !default;
+        $add-review-form-component-actions-button-border-top-sm: null !default;
+        $add-review-form-component-actions-button-font-weight-sm: null !default;
+        $add-review-form-component-actions-button-background-color-sm: null !default;
+        $add-review-form-component-actions-button-border-sm: null !default;
+        $add-review-form-component-actions-button-box-shadow-focus-sm: null !default;
+        $add-review-form-component-actions-button-background-color-focus-sm: null !default;
+        $add-review-form-component-actions-button-primary-color-sm: null !default;
+        $add-review-form-component-actions-button-primary-color-active-sm: null !default;
+        $add-review-form-component-actions-button-tertiary-color-sm: null !default;
+        $add-review-form-component-actions-button-tertiary-color-active-sm: null !default;
+
+        &-actions {
+            margin: $add-review-form-component-actions-margin-sm;
+
+            .button-component-block + .button-component-block {
+                margin-top: $add-review-form-component-actions-button-margin-top-sm;
+            }
+
+            .button-component.button-component-block {
+                background-color: $add-review-form-component-actions-button-background-color-sm;
+                height: $add-review-form-component-actions-button-height-sm;
+                border: $add-review-form-component-actions-button-border-sm;
+                border-top: $add-review-form-component-actions-button-border-top-sm;
+                font-weight: $add-review-form-component-actions-button-font-weight-sm;
+
+                &:focus,
+                &:not(:disabled):not(.disabled):active,
+                &:not(:disabled):not(.disabled):active:focus {
+                    box-shadow: $add-review-form-component-actions-button-box-shadow-focus-sm;
+                    background-color: $add-review-form-component-actions-button-background-color-focus-sm;
+                    border-top: $add-review-form-component-actions-button-border-top-sm;
+                }
+            }
+
+            // Submit button
+            .button-component.button-component-primary {
+                color: $add-review-form-component-actions-button-primary-color-sm;
+
+                &:not(:disabled):not(.disabled):active {
+                    color: $add-review-form-component-actions-button-primary-color-active-sm;
+                }
+            }
+
+            // Cancel button
+            .button-component.button-component-tertiary {
+                color: $add-review-form-component-actions-button-tertiary-color-sm;
+
+                &:not(:disabled):not(.disabled):active {
+                    color: $add-review-form-component-actions-button-tertiary-color-active-sm;
+                }
+            }
+        }
+    }
+}

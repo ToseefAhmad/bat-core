@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .account-address-book-list-item-component {
+        $account-address-book-list-item-component-address-border-color: null !default;
+
+        &::after {
+            background-color: $background-primary-color;
+        }
+
+        &-info,
+        .account-default-address-component {
+            border-color: $account-address-book-list-item-component-address-border-color;
+        }
+    }
+}

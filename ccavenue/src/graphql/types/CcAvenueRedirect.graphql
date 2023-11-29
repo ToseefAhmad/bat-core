@@ -1,0 +1,13 @@
+type CcAvenueRedirect {
+    """
+    [ccavenue][BAT]
+    Action - url to send data
+    """
+    action: String
+
+    """
+    [ccavenue][BAT]
+    List of fields
+    """
+    fields: [CcAvenueRedirectField]
+}

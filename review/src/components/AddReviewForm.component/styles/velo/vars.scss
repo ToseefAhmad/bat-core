@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+// sm
+$add-review-form-component-actions-margin-sm: 0 -#{$m-primary} -#{$m-primary};
+$add-review-form-component-actions-button-margin-top-sm: 0;
+$add-review-form-component-actions-button-border-top-sm: $border-width solid $gray;
+$add-review-form-component-actions-button-height-sm: 5.4rem;
+$add-review-form-component-actions-button-background-color-sm: $light;
+$add-review-form-component-actions-button-border-sm: none;
+$add-review-form-component-actions-button-font-weight-sm: normal;
+$add-review-form-component-actions-button-box-shadow-focus-sm: none;
+$add-review-form-component-actions-button-background-color-focus-sm: $light;
+$add-review-form-component-actions-button-primary-color-sm: $secondary-font-color;
+$add-review-form-component-actions-button-primary-color-active-sm: $secondary-font-color;
+$add-review-form-component-actions-button-tertiary-color-sm: $primary-font-color;
+$add-review-form-component-actions-button-tertiary-color-active-sm: $primary-font-color;

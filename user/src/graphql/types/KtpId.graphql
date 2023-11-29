@@ -1,0 +1,7 @@
+type KtpId {
+    """
+    [user][BAT]
+    KTP id
+    """
+    ktp_id: ID
+}

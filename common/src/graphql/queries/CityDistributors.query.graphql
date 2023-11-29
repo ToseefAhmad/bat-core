@@ -1,0 +1,6 @@
+query CityDistributors($code: String) {
+    cityDistributors(regionCode: $code) {
+        email
+        city
+    }
+}

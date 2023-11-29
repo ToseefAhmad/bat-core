@@ -1,0 +1,52 @@
+#import "./Shipping.fragment.graphql"
+#import "./BatPayment.fragment.graphql"
+
+fragment BatCheckoutFragment on Cart {
+    id
+    prices {
+        subtotal {
+            currency
+            value
+        }
+        grand_total {
+            currency
+            value
+        }
+        taxes {
+            label
+            amount {
+                currency
+                value
+            }
+        }
+        promotions {
+            label
+            amount {
+                currency
+                value
+            }
+        }
+    }
+    total_items
+    email
+    ...BatShippingFragment
+    ...BatPaymentFragment
+    coupons {
+        code
+        label
+        applied_discount {
+            currency
+            value
+        }
+        percent
+    }
+    gift_cards {
+        id
+        code
+        applied_balance {
+            currency
+            value
+        }
+    }
+    is_virtual
+}

@@ -1,0 +1,7 @@
+extend type CheckoutOrder {
+    """
+    [checkout-com][BAT]
+    URL to redirect to 3DS2
+    """
+    redirect_url: String
+}

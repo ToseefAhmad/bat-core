@@ -1,0 +1,85 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/catalog/src/components/CategoryBreadcrumbs.component/index';
+
+.app {
+    .category-breadcrumbs-component {
+        $category-breadcrumbs-component-root-padding-inline-start: null !default;
+        $category-breadcrumbs-component-back-icon-width: 1.4rem !default;
+        $category-breadcrumbs-component-back-icon-height: 1.1rem !default;
+        $category-breadcrumbs-component-back-icon-background-position-y: 0.3rem !default;
+        $category-breadcrumbs-component-padding-block-end: null !default;
+        $category-breadcrumbs-component-padding-block-start: null !default;
+        $category-breadcrumbs-component-padding-inline-end: 1.5rem !default;
+        $category-breadcrumbs-component-padding-inline-start: 1.5rem !default;
+        $category-breadcrumbs-component-back-margin-inline-start: null !default;
+
+        &-root {
+            padding-inline-start: $category-breadcrumbs-component-root-padding-inline-start;
+        }
+
+        .category-breadcrumbs {
+            & {
+                position: relative;
+                color: $primary-font-color;
+                text-transform: none;
+                border-bottom: none;
+                padding-inline-start: $category-breadcrumbs-component-padding-inline-start;
+                padding-inline-end: $category-breadcrumbs-component-padding-inline-end;
+                padding-block-start: $category-breadcrumbs-component-padding-block-start;
+                padding-block-end: $category-breadcrumbs-component-padding-block-end;
+            }
+
+            &:hover {
+                text-transform: none;
+                color: $primary-font-color;
+                border-bottom: none;
+            }
+
+            .category-breadcrumbs-item-back,
+            .category-breadcrumbs-item {
+                & {
+                    display: flex;
+                    align-items: center;
+                    background-image: url('../../../../../../common/src/resources/svg/base/bat-back.svg');
+                    background-size: $category-breadcrumbs-component-back-icon-width
+                        $category-breadcrumbs-component-back-icon-height;
+                    background-repeat: no-repeat;
+                    background-position-y: $category-breadcrumbs-component-back-icon-background-position-y;
+                    padding-inline-start: $category-breadcrumbs-component-back-icon-width;
+                }
+
+                .category-breadcrumbs-item-title {
+                    margin-inline-start: $m-secondary;
+                    vertical-align: text-bottom;
+                }
+            }
+
+            .category-breadcrumbs-item-back {
+                margin-inline-start: $category-breadcrumbs-component-back-margin-inline-start;
+            }
+
+            // The last breadcrumb
+            + .category-breadcrumbs-item-title {
+                color: $gray;
+                text-transform: none;
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .category-breadcrumbs-component {
+        .category-breadcrumbs {
+            &::after {
+                right: initial;
+            }
+
+            .category-breadcrumbs-item-back,
+            .category-breadcrumbs-item {
+                background-image: url('../../../../../../common/src/resources/svg/base/bat-back-rtl.svg');
+                background-position: 100% 100%;
+                background-position-y: 0.2rem;
+            }
+        }
+    }
+}

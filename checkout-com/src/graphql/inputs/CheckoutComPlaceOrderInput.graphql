@@ -1,0 +1,41 @@
+"""
+[checkout-com][BAT]
+Input is used as an argument for 'checkoutcomPlaceOrder' mutation
+"""
+input CheckoutcomPlaceOrderInput {
+    """
+    [checkout-com][BAT]
+    Cart ID
+    """
+    cart_id: ID
+
+    """
+    [checkout-com][BAT]
+    Payment method code
+    """
+    method_id: String
+
+    """
+    [checkout-com][BAT]
+    Card token
+    """
+    card_token: String
+
+    """
+    [checkout-com][BAT]
+    Card bin
+    """
+    card_bin: String
+
+    """
+    [checkout-com][BAT]
+    Flag that responsible if payment card should be saved
+    """
+    save_card: Boolean
+
+    """
+    [checkout-com][BAT]
+    Additional string with payment method code
+    """
+    source: String
+}

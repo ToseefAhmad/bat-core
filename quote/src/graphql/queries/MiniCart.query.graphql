@@ -1,0 +1,54 @@
+#import "@luft/product/src/graphql/fragments/ProductDetailLimited.fragment.graphql"
+#import "@luft/gift-card/src/graphql/fragments/GiftCardItem.fragment.graphql"
+#import "../../../../product/src/graphql/fragments/BundleInfo.fragment.graphql"
+#import "../fragments/ProductLimited.fragment.graphql"
+#import "../fragments/EngravedOptions.fragment.graphql"
+
+query MiniCart($cart_id: ID) {
+    cart(cart_id: $cart_id) @connection(key: "cart") {
+        id
+        items {
+            added_at
+            cart_item_id
+            product {
+                ...ProductLimitedFragment
+            }
+            quantity
+            product_type
+            price_label
+            configurable_variation {
+                product {
+                    ...ProductDetailLimitedFragment
+                }
+                variation_values {
+                    variation_attribute_id
+                    value
+                }
+            }
+            gift_card {
+                ...GiftCardItemFragment
+            }
+            engraved_options {
+                ...EngravedOptionsFragment
+            }
+            bundle_info {
+                ...BatBundleInfoFragment
+            }
+        }
+        prices {
+            subtotal {
+                currency
+                value
+            }
+            grand_total {
+                currency
+                value
+            }
+        }
+        total_items
+        error_info {
+            has_error
+            errors
+        }
+    }
+}

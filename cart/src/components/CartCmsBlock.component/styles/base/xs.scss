@@ -1,0 +1,13 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(xs) {
+    .app {
+        .cms-block-component {
+            .cart-need-help {
+                border-radius: 0 !important; // Override inline style
+                margin-bottom: $m-primary;
+            }
+        }
+    }
+}

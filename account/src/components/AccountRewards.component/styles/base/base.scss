@@ -1,0 +1,27 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.account-rewards-component {
+    $account-rewards-component-title-border-bottom: $border-width solid $gray-light-primary !default;
+    $account-rewards-component-title-margin-block-end: null !default;
+    $account-rewards-component-title-font-size: 1.6rem !default;
+
+    & {
+        padding-inline-start: $p-primary;
+        padding-inline-end: $p-primary;
+    }
+
+    &-title {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+        border-bottom: $account-rewards-component-title-border-bottom;
+        margin-bottom: $m-tertiary;
+        font-size: $account-rewards-component-title-font-size;
+    }
+
+    &-empty {
+        padding-block-start: $p-primary;
+        padding-block-end: $p-primary;
+    }
+}

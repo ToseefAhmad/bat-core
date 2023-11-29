@@ -1,0 +1,61 @@
+@import '~@luft/account/src/components/AccountOrder.component/index';
+
+.app {
+    .account-order-component {
+        $account-order-component-back-padding-inline-start: 2.4rem !default;
+        $account-order-component-back-top: -5rem !default;
+        $account-order-component-back-title-line-height: null !default;
+        $account-order-component-back-title-padding: null !default;
+        $account-order-component-bundle-plain-margin-block-end: null !default;
+        $account-order-component-bundle-plain-collapse-padding-block-start: null !default;
+        $account-order-component-product-pain-padding-block-start: null !default;
+        $account-order-component-editable-bundle-price-margin-block-end: null !default;
+
+        .back-component {
+            &.account-title-component-back-alt {
+                top: $account-order-component-back-top;
+            }
+
+            &-control.button-component {
+                padding-inline-start: $account-order-component-back-padding-inline-start;
+            }
+
+            &-control-title {
+                line-height: $account-order-component-back-title-line-height;
+                padding: $account-order-component-back-title-padding;
+            }
+        }
+
+        .minimum-product-price-component {
+            &-label {
+                display: none;
+            }
+        }
+
+        .bundle-plain-options-component {
+            & {
+                margin-block-end: $account-order-component-bundle-plain-margin-block-end;
+            }
+
+            &-collapse {
+                padding-block-start: $account-order-component-bundle-plain-collapse-padding-block-start;
+            }
+        }
+
+        .product-pane-component-body-wrapper {
+            padding-top: $account-order-component-product-pain-padding-block-start;
+        }
+
+        .editable-bundle-price-component {
+            margin-bottom: $account-order-component-editable-bundle-price-margin-block-end;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .account-order-component {
+        .back-component {
+            padding-left: unset;
+        }
+    }
+}

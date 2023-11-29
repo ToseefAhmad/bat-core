@@ -1,0 +1,49 @@
+type ClientPurchaseActionField {
+    """
+    [quote][BAT]
+    Cart items
+    """
+    id: ID
+
+    """
+    [quote][BAT]
+    Affiliation
+    """
+    affiliation: String
+
+    """
+    [quote][BAT]
+    Grand total
+    """
+    revenue: Float
+
+    """
+    [quote][BAT]
+    Shipping method amount value
+    """
+    shipping: Float
+
+    """
+    [quote][BAT]
+    Coupon label
+    """
+    coupon: String
+
+    """
+    [quote][BAT]
+    Referral Code
+    """
+    referral_code: ReferralCode
+
+    """
+    [quote][BAT]
+    Payment method name
+    """
+    payment_method: String
+
+    """
+    [quote][BAT]
+    Applied taxes
+    """
+    taxes: [TaxItem]
+}

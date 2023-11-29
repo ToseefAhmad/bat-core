@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app .editable-bundle-settings-component {
+        &-options {
+            .editable-bundle-option-component:first-child {
+                .editable-bundle-option-component-title {
+                    padding-top: $p-secondary;
+                }
+            }
+        }
+    }
+}

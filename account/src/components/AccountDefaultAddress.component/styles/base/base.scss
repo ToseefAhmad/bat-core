@@ -1,0 +1,27 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .account-default-address-component {
+        $account-default-address-component-reserve-address-padding-block: null !default;
+        $account-default-address-component-delivery-font-weight: null !default;
+        $account-default-address-component-check-icon-width: null !default;
+        $account-default-address-component-delivery-background-image: null !default;
+        $account-default-address-component-delivery-background-size: null !default;
+
+        .account-default-address-component-set-delivery,
+        &-reserve-address {
+            padding-block-start: $account-default-address-component-reserve-address-padding-block;
+            padding-block-end: $account-default-address-component-reserve-address-padding-block;
+        }
+
+        .account-default-address-component-set-delivery {
+            font-weight: $account-default-address-component-delivery-font-weight;
+        }
+
+        .account-default-address-component-image {
+            background-image: $account-default-address-component-delivery-background-image;
+            background-size: $account-default-address-component-delivery-background-size;
+            width: $account-default-address-component-check-icon-width;
+        }
+    }
+}

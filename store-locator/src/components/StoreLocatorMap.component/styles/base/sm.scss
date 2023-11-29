@@ -1,0 +1,29 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .store-locator-map-component {
+        $store-locator-map-component-height-sm: 50vh !default;
+        $store-locator-map-component-info-window-width-sm: null !default;
+        $store-locator-map-component-info-window-title-font-size-sm: null !default;
+        $store-locator-map-component-info-window-address-font-size-sm: null !default;
+
+        & {
+            height: $store-locator-map-component-height-sm;
+        }
+
+        .gm-style {
+            .gm-style-iw {
+                max-width: $store-locator-map-component-info-window-width-sm;
+            }
+        }
+
+        &-info-window-title {
+            font-size: $store-locator-map-component-info-window-title-font-size-sm;
+        }
+
+        &-info-window-address {
+            font-size: $store-locator-map-component-info-window-address-font-size-sm;
+        }
+    }
+}

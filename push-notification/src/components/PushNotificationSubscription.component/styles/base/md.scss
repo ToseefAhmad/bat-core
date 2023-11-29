@@ -1,0 +1,21 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .push-notification-subscription-component {
+            $push-notification-subscription-component-background-color-md: null !default;
+            $push-notification-subscription-component-label-padding-block-md: 1.5rem !default;
+            $push-notification-subscription-component-label-min-width-md: 25.7rem !default;
+
+            & {
+                background-color: $push-notification-subscription-component-background-color-md;
+            }
+
+            .checkbox-component-label {
+                padding-block-start: $push-notification-subscription-component-label-padding-block-md;
+                padding-block-end: $push-notification-subscription-component-label-padding-block-md;
+                min-width: $push-notification-subscription-component-label-min-width-md;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .age-verification-modal-component {
+        $age-verification-modal-component-modal-body-padding-block-start-md: 3.5rem !default;
+
+        &.modal-component .modal-component-body {
+            padding-block-start: $age-verification-modal-component-modal-body-padding-block-start-md;
+            padding-block-end: $p-primary-lg;
+            padding-inline-start: $p-primary-lg;
+            padding-inline-end: $p-primary-lg;
+        }
+    }
+}

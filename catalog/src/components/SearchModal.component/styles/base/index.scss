@@ -1,0 +1,29 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .search-modal-component {
+        .product-preview-component,
+        .product-preview-alt-component {
+            .wishlist-product-actions-component,
+            .add-to-wishlist-component,
+            .remove-from-wishlist-component {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
+
+body[dir='rtl'] {
+    .search-modal-component {
+        .product-preview-component,
+        .product-preview-alt-component {
+            .wishlist-product-actions-component,
+            .add-to-wishlist-component,
+            .remove-from-wishlist-component {
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+}

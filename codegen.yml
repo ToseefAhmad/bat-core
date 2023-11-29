@@ -1,0 +1,20 @@
+overwrite: true
+schema:
+  - "./node_modules/@luft/*/graphql/**/*.graphql"
+  - "./*/graphql/**/*.graphql"
+  - "./*/src/graphql/enums/*.graphql"
+  - "./*/src/graphql/extends/*.graphql"
+  - "./*/src/graphql/inputs/*.graphql"
+  - "./*/src/graphql/types/*.graphql"
+documents:
+  - "./node_modules/@luft/*/src/graphql/**/*.graphql"
+  - "./*/src/graphql/fragments/*.graphql"
+  - "./*/src/graphql/queries/*.graphql"
+  - "./*/src/graphql/mutations/*.graphql"
+config:
+  namingConvention:
+    enumValues: change-case#upperCase
+generates:
+  ./types/index.js:
+    plugins:
+      - "flow"

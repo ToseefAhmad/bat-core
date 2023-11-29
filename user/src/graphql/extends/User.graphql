@@ -1,0 +1,67 @@
+extend type User {
+    """
+    [user][BAT]
+    User KTP ID
+    """
+    ktp_id: String
+
+    """
+    [user][BAT]
+    User date of birth
+    """
+    dob: String
+
+    """
+    [user][BAT]
+    User gender
+    """
+    gender: GenderEnum
+
+    """
+    [user][BAT]
+    Agent referral code
+    """
+    referral: String
+
+    """
+    [user][BAT]
+    Consent
+    """
+    consent: Boolean
+
+    """
+    [user][BAT]
+    Indicates if it's a registration using social network
+    """
+    is_social_register: Boolean
+
+    """
+    [user][BAT]
+    Information about a customer's password
+    """
+    password_info: PasswordInfo
+
+    """
+    [user][BAT]
+    Prefix
+    """
+    prefix: String
+
+    """
+    [user][BAT]
+    Status Code
+    """
+    status_code: String
+
+    """
+    [user][BAT]
+    Age Verified
+    """
+    is_age_verified: Boolean
+
+    """
+    [user][BAT]
+    Indicates if phone is confirmed
+    """
+    phone_is_confirmed: Boolean
+}

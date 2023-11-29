@@ -1,0 +1,87 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/components/Checkbox.component/index';
+
+.app,
+.modal-component {
+    .push-notification-subscription-component {
+        $push-notification-subscription-component-checkbox-text-padding-inline-start: 0 !default;
+        $push-notification-subscription-component-checkbox-text-padding-inline-end: 7rem !default;
+        $push-notification-subscription-component-checkbox-label-after-right: 3rem !default;
+        $push-notification-subscription-component-checkbox-label-icon-size: 3rem !default;
+        $push-notification-subscription-component-checkbox-label-before-width: 6rem !default;
+
+        $push-notification-subscription-component-switch-before-background-color: $secondary !default;
+        $push-notification-subscription-component-switch-after-background-color: $light !default;
+        $push-notification-subscription-component-switch-disabled-background-color: $light !default;
+
+        & {
+            white-space: nowrap;
+        }
+
+        .checkbox-component-switch {
+            .checkbox-component-input:checked + .checkbox-component-label .checkbox-component-label-text {
+                &::before {
+                    background-color: $push-notification-subscription-component-switch-before-background-color;
+                }
+
+                &::after {
+                    background-color: $push-notification-subscription-component-switch-after-background-color;
+                    right: 0;
+                }
+
+                .checkbox-component-input:disabled {
+                    background-color: $push-notification-subscription-component-switch-disabled-background-color;
+                }
+            }
+
+            .checkbox-component-label-text {
+                & {
+                    padding-inline-start: $push-notification-subscription-component-checkbox-text-padding-inline-start;
+                    padding-inline-end: $push-notification-subscription-component-checkbox-text-padding-inline-end;
+                    text-transform: capitalize;
+                    line-height: $push-notification-subscription-component-checkbox-label-icon-size;
+                    min-height: $push-notification-subscription-component-checkbox-label-icon-size;
+                    font-size: $h4-font-size;
+                }
+
+                &::before {
+                    bottom: 0;
+                    right: 0;
+                    height: $push-notification-subscription-component-checkbox-label-icon-size;
+                    width: $push-notification-subscription-component-checkbox-label-before-width;
+                }
+
+                &::after {
+                    top: 0;
+                    right: $push-notification-subscription-component-checkbox-label-after-right;
+                    height: $push-notification-subscription-component-checkbox-label-icon-size;
+                    width: $push-notification-subscription-component-checkbox-label-icon-size;
+                }
+            }
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app,
+    .modal-component {
+        .push-notification-subscription-component {
+            $push-notification-subscription-component-checkbox-label-after-left-rtl: 3rem !default;
+
+            .checkbox-component-label-text {
+                &::before,
+                &::after {
+                    left: 0;
+                    right: initial;
+                }
+            }
+
+            .checkbox-component-input:checked + .checkbox-component-label .checkbox-component-label-text {
+                &::after {
+                    left: $push-notification-subscription-component-checkbox-label-after-left-rtl;
+                    right: initial;
+                }
+            }
+        }
+    }
+}

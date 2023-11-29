@@ -1,0 +1,34 @@
+#import "@luft/product/src/graphql/fragments/ProductDetailLimited.fragment.graphql"
+#import "@luft/gift-card/src/graphql/fragments/GiftCardItem.fragment.graphql"
+#import "../../../../product/src/graphql/fragments/BundleInfo.fragment.graphql"
+#import "./ProductLimited.fragment.graphql"
+#import "./EngravedOptions.fragment.graphql"
+
+fragment BatCartItemFragment on CartItem {
+    added_at
+    cart_item_id
+    product {
+        ...ProductLimitedFragment
+    }
+    quantity
+    product_type
+    price_label
+    configurable_variation {
+        product {
+            ...ProductDetailLimitedFragment
+        }
+        variation_values {
+            variation_attribute_id
+            value
+        }
+    }
+    gift_card {
+        ...GiftCardItemFragment
+    }
+    engraved_options {
+        ...EngravedOptionsFragment
+    }
+    bundle_info {
+        ...BatBundleInfoFragment
+    }
+}

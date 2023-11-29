@@ -1,0 +1,103 @@
+type StoreLocation {
+    """
+    [store-locator][BAT]
+    Store name
+    """
+    name: String
+
+    """
+    [store-locator][BAT]
+    Address line 1
+    """
+    adr1: String
+
+    """
+    [store-locator][BAT]
+    Address line 2
+    """
+    adr2: String
+
+    """
+    [store-locator][BAT]
+    Address line 3
+    """
+    adr3: String
+
+    """
+    [store-locator][BAT]
+    City
+    """
+    city: String
+
+    """
+    [store-locator][BAT]
+    Country code
+    """
+    country_code: String
+
+    """
+    [store-locator][BAT]
+    Custom image
+    """
+    custom_image: String
+
+    """
+    [store-locator][BAT]
+    Custom logo
+    """
+    custom_logo: String
+
+    """
+    [store-locator][BAT]
+    Custom marker
+    """
+    custom_marker: String
+
+    """
+    [store-locator][BAT]
+    Latitude
+    """
+    latitude: Float
+
+    """
+    [store-locator][BAT]
+    Longitude
+    """
+    longitude: Float
+
+    """
+    [store-locator][BAT]
+    Phone number
+    """
+    phone: String
+
+    """
+    [store-locator][BAT]
+    State/Region
+    """
+    state: String
+
+    """
+    [store-locator][BAT]
+    Store location stocks
+    """
+    stocks: [StoreStock]
+
+    """
+    [store-locator][BAT]
+    Zindex
+    """
+    zindex: Int
+
+    """
+    [store-locator][BAT]
+    Zip Code
+    """
+    zip_code: String
+
+    """
+    [store-locator][BAT]
+    Store Type information
+    """
+    store_type: StoreType
+}

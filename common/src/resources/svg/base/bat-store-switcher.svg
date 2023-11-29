@@ -1,0 +1,24 @@
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="b" d="M0 0h16v16H0z"/>
+        <path id="d" d="M0 0h6.444v16H0z"/>
+        <filter color-interpolation-filters="auto" id="a">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g transform="translate(-313 -15)" filter="url(#a)" fill="none" fill-rule="evenodd">
+        <g transform="translate(313 15)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#b"/>
+            </mask>
+            <path d="M8 1.021A6.986 6.986 0 0 0 1.022 8 6.986 6.986 0 0 0 8 14.978 6.986 6.986 0 0 0 14.978 8 6.986 6.986 0 0 0 8 1.021M8 16c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8" fill="#000" mask="url(#c)"/>
+        </g>
+        <g transform="translate(317.778 15)">
+            <mask id="e" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <path d="M3.222 1.021c-.919 0-2.2 2.655-2.2 6.979s1.281 6.978 2.2 6.978c.919 0 2.2-2.654 2.2-6.978s-1.281-6.979-2.2-6.979m0 14.979C1.129 16 0 11.878 0 8s1.13-8 3.222-8c2.093 0 3.222 4.122 3.222 8s-1.13 8-3.222 8" fill="#000" mask="url(#e)"/>
+        </g>
+        <path d="M327.98 21.114h-13.99a.51.51 0 1 1 0-1.021h13.99a.51.51 0 0 1 0 1.021M327.98 25.907h-13.99a.51.51 0 0 1 0-1.021h13.99a.51.51 0 0 1 0 1.021" fill="#000"/>
+    </g>
+</svg>

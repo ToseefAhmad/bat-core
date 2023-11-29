@@ -1,0 +1,36 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.review-item-component {
+    $review-item-border-color: #d8d8d8;
+
+    & {
+        border-color: $review-item-border-color;
+        font-size: $font-size-md;
+    }
+
+    &:first-child {
+        border-top: none;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &-ratings {
+        flex-wrap: wrap;
+    }
+
+    &-rating {
+        margin-inline-end: $m-secondary;
+    }
+
+    .review-item-component-rating + .review-item-component-rating {
+        margin-inline-start: 0;
+    }
+
+    &-details {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}

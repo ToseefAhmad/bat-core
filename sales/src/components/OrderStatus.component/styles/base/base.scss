@@ -1,0 +1,44 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .order-status-component {
+        $order-status-component-pending-color: #6358bd !default;
+        $order-status-component-processing-color: #ffcb00 !default;
+        $order-status-component-padding-block: 0.3rem !default;
+        $order-status-component-padding-inline: 0.8rem !default;
+
+        .order-status-component-value {
+            color: $light;
+            line-height: 1;
+            padding-block-start: $order-status-component-padding-block;
+            padding-block-end: $order-status-component-padding-block;
+            padding-inline-start: $order-status-component-padding-inline;
+            padding-inline-end: $order-status-component-padding-inline;
+        }
+
+        &.order-status-component-pending {
+            .order-status-component-value {
+                background-color: $order-status-component-pending-color;
+            }
+        }
+
+        .order-status-component-processing {
+            .order-status-component-value {
+                background-color: $order-status-component-processing-color;
+            }
+        }
+
+        &.order-status-component-closed,
+        &.order-status-component-cancelled {
+            .order-status-component-value {
+                background-color: $danger;
+            }
+        }
+
+        &.order-status-component-complete {
+            .order-status-component-value {
+                background-color: $success;
+            }
+        }
+    }
+}

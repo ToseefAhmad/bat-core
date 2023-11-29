@@ -1,0 +1,1 @@
+export {useStoreConfigAddressSettingsQuery} from './useStoreConfigAddressSettingsQuery';

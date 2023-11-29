@@ -1,0 +1,7 @@
+extend type StoreConfig {
+    """
+    [ipay88][BAT]
+    Ipay88 payment configuration
+    """
+    ipay88_payment_config: [Ipay88PaymentConfig]
+}

@@ -1,0 +1,13 @@
+extend type OrderItem {
+    """
+    [sales][BAT]
+    Label from setting, or NULL if the setting is_hide_free_item_price is disabled
+    """
+    price_label: String
+
+    """
+    [sales][BAT]
+    Engraved Options
+    """
+    engraved_options: EngravedOptionsInfo
+}

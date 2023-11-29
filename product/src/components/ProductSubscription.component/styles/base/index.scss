@@ -1,0 +1,54 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.product-subscription-component {
+    $product-subscription-component-item-border: 1px solid $gray-light-primary !default;
+    $product-subscription-component-item-padding: 1.5rem $p-primary 1.5rem $p-secondary !default;
+    $product-subscription-component-item-label-font-size: 1.4rem !default;
+    $product-subscription-component-item-description-padding-inline-start: 3.5rem !default;
+    $product-subscription-component-cms-block-label-line-height: 1.6rem !default;
+
+    & {
+        margin-bottom: $m-primary;
+    }
+
+    &-item {
+        & {
+            border: $product-subscription-component-item-border;
+            padding: $product-subscription-component-item-padding;
+        }
+
+        &:last-child {
+            border-top: none;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &-description {
+            padding-inline-start: $product-subscription-component-item-description-padding-inline-start;
+        }
+    }
+
+    &-switcher {
+        display: inline-block;
+    }
+
+    &-link {
+        text-transform: uppercase;
+        margin-top: $m-tertiary;
+    }
+
+    .radio-component:not(.radio-component-tick) .radio-component-label-text {
+        font-size: $product-subscription-component-item-label-font-size;
+    }
+
+    .radio-component-label {
+        cursor: pointer;
+    }
+
+    .cms-subscribe-up-label {
+        text-transform: uppercase;
+        line-height: $product-subscription-component-cms-block-label-line-height;
+        margin-bottom: $m-secondary;
+    }
+}

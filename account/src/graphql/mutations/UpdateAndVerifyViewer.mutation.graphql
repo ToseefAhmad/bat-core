@@ -1,0 +1,7 @@
+#import "../../../../user/src/graphql/fragments/BatViewer.fragment.graphql"
+
+mutation UpdateAndVerifyViewerMutation($input: UpdateViewerInput) {
+    updateAndVerifyViewer(input: $input) @connection(key: "updateAndVerifyViewer") {
+        ...BatViewerFragment
+    }
+}

@@ -1,0 +1,13 @@
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .box-component {
+            $box-component-title-font-size-md: 2rem !default;
+
+            &-title {
+                font-size: $box-component-title-font-size-md;
+            }
+        }
+    }
+}

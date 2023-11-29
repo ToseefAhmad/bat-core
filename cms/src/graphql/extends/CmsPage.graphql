@@ -1,0 +1,7 @@
+extend type CmsPage {
+    """
+    [cms][BAT]
+    Meta Robots tags
+    """
+    meta_robots: String
+}

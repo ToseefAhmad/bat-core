@@ -1,0 +1,8 @@
+query CheckoutComQuery {
+    checkoutComCardPayment {
+        public_key
+        debug
+        localization
+        style
+    }
+}

@@ -1,0 +1,6 @@
+query GetDocumentTypesQuery {
+    getDocumentTypes {
+        key
+        label
+    }
+}

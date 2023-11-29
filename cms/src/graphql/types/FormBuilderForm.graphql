@@ -1,0 +1,73 @@
+type FormBuilderForm {
+    """
+    [BAT][cms]
+    Form ID
+    """
+    id: Int
+
+    """
+    [BAT][cms]
+    Form name
+    """
+    name: String
+
+    """
+    [BAT][cms]
+    For identifier
+    """
+    code: String
+
+    """
+    [BAT][cms]
+    Redirect URL
+    """
+    redirect_url: String
+
+    """
+    [BAT][cms]
+    Is form active
+    """
+    is_active: Boolean
+
+    """
+    [BAT][cms]
+    Form description
+    """
+    description: String
+
+    """
+    [BAT][cms]
+    Success text
+    """
+    success_text: String
+
+    """
+    [BAT][cms]
+    Captcha mode
+    """
+    captcha_mode: String
+
+    """
+    [BAT][cms]
+    Files upload size in kb
+    """
+    files_upload_limit: Int
+
+    """
+    [BAT][cms]
+    Images upload size in kb
+    """
+    images_upload_limit: Int
+
+    """
+    [BAT][cms]
+    Submit button text
+    """
+    submit_button_text: String
+
+    """
+    [BAT][cms]
+    Form fieldsets
+    """
+    fieldsets: [FormBuilderFieldset]
+}

@@ -1,0 +1,69 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '../../../../../../common/src/scss/keyframes';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .blog-post-tile-component {
+            $blog-post-tile-component-width-md: calc(100% / 3) !default;
+            $blog-post-tile-component-margin-bottom-md: 3rem !default;
+            $blog-post-tile-component-link-wrapper-padding-bottom-md: 3rem !default;
+            $blog-post-tile-component-image-max-height-md: 21.4rem !default;
+            $blog-post-tile-component-date-margin-md: $m-secondary 0 !default;
+            $blog-post-tile-component-title-font-size-md: null !default;
+            $blog-post-tile-component-content-margin-md: $m-secondary 0 $m-primary !default;
+            $blog-post-tile-component-content-font-size-md: null !default;
+
+            & {
+                width: $blog-post-tile-component-width-md;
+                padding: 0 $p-tertiary;
+                margin-bottom: $blog-post-tile-component-margin-bottom-md;
+            }
+
+            &-link-wrapper {
+                padding-bottom: $blog-post-tile-component-link-wrapper-padding-bottom-md;
+            }
+
+            &-image {
+                max-height: $blog-post-tile-component-image-max-height-md;
+                width: 100%;
+            }
+
+            &-date {
+                margin: $blog-post-tile-component-date-margin-md;
+            }
+
+            &-title {
+                margin: 0;
+                font-size: $blog-post-tile-component-title-font-size-md;
+            }
+
+            &-content {
+                margin: $blog-post-tile-component-content-margin-md;
+                font-size: $blog-post-tile-component-content-font-size-md;
+            }
+
+            &-action {
+                padding: 0;
+            }
+
+            &-action:hover::after {
+                animation: bounce-arrow 2s ease-in-out infinite;
+            }
+        }
+    }
+
+    [dir='rtl'] {
+        .app {
+            .blog-post-tile-component {
+                &-action {
+                    padding: 0;
+                }
+
+                &-action:hover::after {
+                    animation: bounce-arrow-rtl 2s ease-in-out infinite;
+                }
+            }
+        }
+    }
+}

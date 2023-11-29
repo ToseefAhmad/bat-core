@@ -1,0 +1,182 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/newsletter/src/components/Newsletter.component/index';
+
+.app {
+    .newsletter-component {
+        $newsletter-component-margin-bottom: 3rem !default;
+        $newsletter-component-height: 4rem !default;
+        $newsletter-component-form-button-top: 0.5rem !default;
+        $newsletter-component-form-button-right: 0.5rem !default;
+        $newsletter-component-control-padding-right: 12rem !default;
+        $newsletter-component-button-padding: 1.3rem 2.5rem !default;
+        $newsletter-component-button-color: $primary !default;
+        $newsletter-component-button-color-hover: null !default;
+        $newsletter-component-button-background-color: null !default;
+        $newsletter-component-button-background-color-hover: null !default;
+        $newsletter-component-button-loader-top: calc(50% - 0.5rem) !default;
+        $newsletter-component-button-loader-right: 1.2rem !default;
+        $newsletter-component-button-loader-color: null !default;
+        $newsletter-component-text-font-size: 1.1rem !default;
+
+        & {
+            margin-bottom: $newsletter-component-margin-bottom;
+        }
+
+        &-form {
+            margin-bottom: 0;
+        }
+
+        &-form-title {
+            color: $light;
+            font-weight: $font-weight-bold;
+            text-align: left;
+        }
+
+        &-form-body {
+            border-radius: $form-border-radius;
+            position: relative;
+
+            .validation-error-component {
+                padding: 0 $p-secondary;
+            }
+        }
+
+        &-form-button {
+            position: absolute;
+            top: $newsletter-component-form-button-top;
+            right: $newsletter-component-form-button-right;
+        }
+
+        &-form-submit.button-component {
+            & {
+                @extend .button-component-primary;
+                color: $newsletter-component-button-color;
+                background-color: $newsletter-component-button-background-color;
+
+                &:hover {
+                    background-color: $newsletter-component-button-background-color-hover;
+                    color: $newsletter-component-button-color-hover;
+                }
+            }
+
+            &.button-component-tertiary.button-component-block {
+                & {
+                    display: flex;
+                    align-items: center;
+                    padding: $newsletter-component-button-padding;
+                }
+
+                .loader-component.loader-component-attached {
+                    top: $newsletter-component-button-loader-top;
+                    right: $newsletter-component-button-loader-right;
+                    width: auto;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .loader-component-spinner {
+                    color: $newsletter-component-button-loader-color;
+                    margin: 0;
+                }
+            }
+        }
+
+        .form-control-component-secondary {
+            & {
+                background-color: transparent;
+            }
+
+            .form-control-label-transform {
+                & {
+                    color: $gray;
+                    top: $p-primary;
+                    left: $p-secondary;
+                }
+
+                .active-label {
+                    display: none;
+                }
+            }
+        }
+
+        .form-input-component {
+            background-color: $light;
+            height: $newsletter-component-height;
+            padding: $p-secondary $newsletter-component-control-padding-right $p-secondary $p-secondary;
+            border-radius: $form-border-radius;
+            border-color: transparent;
+
+            &:focus {
+                border-color: transparent;
+                box-shadow: none;
+            }
+
+            &.input-component-error {
+                border-color: $danger;
+            }
+        }
+
+        .form-control-component-secondary.form-control-component-active-label .form-input-component {
+            line-height: $line-height-sm;
+            padding-top: $p-secondary;
+        }
+
+        .form-control-component-secondary .form-control.form-field-valid {
+            padding-right: $newsletter-component-control-padding-right;
+        }
+
+        .form-control-component {
+            .form-control-label-transform.form-label.active-label {
+                display: none;
+            }
+        }
+
+        &-text {
+            margin-top: $m-tertiary;
+            font-size: $newsletter-component-text-font-size;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        $newsletter-component-form-button-left: null !default;
+        $newsletter-component-form-control-label-right: null !default;
+        $newsletter-component-form-title-text-align: null !default;
+        $newsletter-component-control-padding-right: null !default;
+        $newsletter-component-form-input-padding-left: 12rem !default;
+
+        .newsletter-component {
+            &-form-title {
+                text-align: $newsletter-component-form-title-text-align;
+            }
+
+            &-form-button {
+                left: $newsletter-component-form-button-left;
+                right: initial;
+                margin-left: 0;
+                margin-right: $m-tertiary;
+            }
+
+            .form-control {
+                padding: $newsletter-component-control-padding-right;
+            }
+
+            .form-control-component-secondary {
+                & {
+                    background-color: transparent;
+                }
+
+                .form-control-label-transform {
+                    left: initial;
+                    right: $newsletter-component-form-control-label-right;
+                }
+            }
+
+            .form-input-component {
+                padding-right: $p-secondary;
+                padding-left: $newsletter-component-form-input-padding-left;
+            }
+        }
+    }
+}

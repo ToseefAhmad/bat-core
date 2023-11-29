@@ -1,0 +1,64 @@
+#import "@luft/quote/src/graphql/fragments/ShippingMethod.fragment.graphql"
+#import "../../../../quote/src/graphql/fragments/BatPaymentMethod.fragment.graphql"
+#import "../../../../user/src/graphql/fragments/BatAddress.fragment.graphql"
+#import "./OrderItem.fragment.graphql"
+#import "./RewardsDiscount.fragment.graphql"
+
+fragment BatOrderFragment on Order {
+    id
+    email
+    created_at
+    status {
+        code
+        name
+    }
+    can_reorder
+    items {
+        ...BatOrderItemFragment
+    }
+    prices {
+        subtotal {
+            currency
+            value
+        }
+        grand_total {
+            currency
+            value
+        }
+    }
+    shipments {
+        shipment_id
+        created_at
+        status {
+            code
+            name
+        }
+        items {
+            ...BatOrderItemFragment
+        }
+        shipping_address {
+            ...BatAddressFragment
+        }
+        shipping_method {
+            ...ShippingMethodFragment
+        }
+        tracking_number
+    }
+    payment_methods {
+        ...BatPaymentMethodFragment
+    }
+    billing_address {
+        ...BatAddressFragment
+    }
+    returnable
+    discount {
+        amount {
+            currency
+            value
+        }
+        label
+    }
+    rewards_discount {
+        ...RewardsDiscountFragment
+    }
+}

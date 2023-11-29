@@ -1,0 +1,82 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app,
+.navigation-modal-component {
+    .settings-nav-item-component {
+        $settings-nav-item-component-order: 20 !default;
+        $settings-nav-item-component-border-top: $border-width solid $dark !default;
+        $settings-nav-item-component-background-image: null !default;
+        $settings-nav-item-component-push-background-image: null !default;
+        $settings-nav-item-component-button-background-image: url('../../../../../../common/src/resources/svg/base/bat-plus-white.svg') !default;
+        $settings-nav-item-component-button-collapse-background-image: url('../../../../../../common/src/resources/svg/base/bat-minus-white.svg') !default;
+        $settings-nav-item-component-button-color: $secondary !default;
+        $settings-nav-item-component-button-padding-inline-start: 5rem !default;
+        $settings-nav-item-component-button-padding-inline-end: 0 !default;
+        $settings-nav-item-component-button-background-size: 2rem 2rem !default;
+        $settings-nav-item-component-button-background-position: 2rem 1.7rem !default;
+        $settings-nav-item-component-button-height: 5.9rem !default;
+        $settings-nav-item-component-collapse-background-color: $dark !default;
+        $settings-nav-item-component-collapse-color: null !default;
+        $settings-nav-item-component-collapse-z-index: 2;
+
+        & {
+            order: $settings-nav-item-component-order;
+            border-top: $settings-nav-item-component-border-top;
+            background-image: $settings-nav-item-component-background-image;
+            background-position: $settings-nav-item-component-button-background-position;
+            background-repeat: no-repeat;
+            background-size: $settings-nav-item-component-button-background-size;
+        }
+
+        &.push {
+            background-image: $settings-nav-item-component-push-background-image;
+        }
+
+        .settings-nav-item-component-button.button-component {
+            height: $settings-nav-item-component-button-height;
+            padding-inline-start: $settings-nav-item-component-button-padding-inline-start;
+            padding-inline-end: $settings-nav-item-component-button-padding-inline-end;
+            background-image: $settings-nav-item-component-button-background-image;
+            background-size: $settings-nav-item-component-button-background-size;
+            color: $light;
+            text-align: initial;
+
+            &.accordion-toggle-component-active {
+                background-image: $settings-nav-item-component-button-collapse-background-image;
+                color: $settings-nav-item-component-button-color;
+            }
+        }
+
+        &.accordion-component .accordion-collapse-component {
+            padding-block-start: 0;
+            padding-block-end: 0;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            margin-block-start: 0;
+            margin-block-end: $m-secondary;
+            margin-inline-start: $m-primary;
+            margin-inline-end: $m-primary;
+            background-color: $settings-nav-item-component-collapse-background-color;
+            color: $settings-nav-item-component-collapse-color;
+            z-index: $settings-nav-item-component-collapse-z-index;
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app,
+    .navigation-modal-component {
+        $settings-nav-item-component-button-background-position-rtl: right 2rem top 1.7rem !default;
+        $settings-nav-item-component-accordion-button-background-position-x-rtl: 2rem !default;
+
+        .settings-nav-item-component {
+            & {
+                background-position: $settings-nav-item-component-button-background-position-rtl;
+            }
+
+            .accordion-toggle-component.button-component {
+                background-position-x: $settings-nav-item-component-accordion-button-background-position-x-rtl;
+            }
+        }
+    }
+}

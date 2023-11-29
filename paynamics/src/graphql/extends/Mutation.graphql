@@ -1,0 +1,13 @@
+extend type Mutation {
+    """
+    [paynamics][BAT]
+    Start paynamics payment
+    """
+    paynamicsStart(input: PaynamicsStartInput): PaynamicsStart
+
+    """
+    [paynamics][BAT]
+    Verify the payment result
+    """
+    paynamicsResult(input: PaynamicsResultInput): CheckoutOrder
+}

@@ -1,0 +1,26 @@
+#import "@luft/sales/src/graphql/fragments/OrderProductPreview.fragment.graphql"
+#import "@luft/gift-card/src/graphql/fragments/GiftCardItem.fragment.graphql"
+#import "@luft/sales/src/graphql/fragments/OrderVariationAttributes.fragment.graphql"
+#import "../../../../quote/src/graphql/fragments/EngravedOptions.fragment.graphql"
+#import "../../../../product/src/graphql/fragments/BundleInfo.fragment.graphql"
+
+fragment BatOrderItemFragment on OrderItem {
+    id
+    price_label
+    quantity
+    product {
+        ...OrderProductPreviewFragment
+    }
+    engraved_options {
+        ...EngravedOptionsFragment
+    }
+    gift_card {
+        ...GiftCardItemFragment
+    }
+    bundle_info {
+        ...BatBundleInfoFragment
+    }
+    order_variation_attributes {
+        ...OrderVariationAttributesFragment
+    }
+}

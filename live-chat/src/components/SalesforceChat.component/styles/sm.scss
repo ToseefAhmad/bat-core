@@ -1,0 +1,26 @@
+@import '../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .salesforce-chat-component {
+        $salesforce-chat-component-bottom-sm: 0 !default;
+        $salesforce-chat-component-status-width-sm: auto !default;
+        $salesforce-chat-component-status-padding-sm: $p-secondary 1.8rem !default;
+        $salesforce-chat-component-status-border-radius-sm: 1.8rem 1.8rem 0 0 !default;
+
+        & {
+            bottom: $salesforce-chat-component-bottom-sm;
+        }
+
+        &-online-action,
+        &-offline-action {
+            width: $salesforce-chat-component-status-width-sm;
+            border-radius: $salesforce-chat-component-status-border-radius-sm;
+            padding: $salesforce-chat-component-status-padding-sm;
+        }
+
+        &-text {
+            display: inline-block;
+        }
+    }
+}

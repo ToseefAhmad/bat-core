@@ -1,0 +1,28 @@
+@import '../../../../scss/variables/base';
+
+.app {
+    .accordion-toggle.button-component {
+        & {
+            background-image: url('../../../../resources/svg/base/bat-collapsed.svg');
+            text-align: initial;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &.accordion-toggle-collapse-show {
+            background-image: url('../../../../resources/svg/base/bat-expanded.svg');
+        }
+    }
+}
+
+[dir='rtl'] {
+    .app {
+        $accordion-toggle-icon-position-x: 2rem;
+
+        .accordion-toggle.button-component {
+            background-position-x: $accordion-toggle-icon-position-x;
+        }
+    }
+}

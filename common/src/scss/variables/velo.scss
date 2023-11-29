@@ -1,0 +1,65 @@
+@import './base';
+
+// font-size
+$font-family: 'velosans-regular', sans-serif;
+$h1-font-size: 4rem;
+$h2-font-size: 2.6rem;
+$h4-font-size: 1.4rem;
+
+// color
+$primary: #5862bf;
+$secondary: #00a2c7;
+$tertiary: #041e42;
+$light: #ffffff;
+$dark: #000000;
+$gray: #dbdbdb;
+$gray-light: #e7e7e7;
+$gray-lighter: #efefef;
+$dark-blue: #001734;
+
+$placeholder-color: #f0f0f0;
+$image-background-color: #f5f5f5;
+
+$button-secondary-background-color: #4f868e;
+$background-primary-color: #f0f0f0;
+$background-secondary-color: #eeeff9;
+
+$primary-font-color: #000000;
+$secondary-font-color: #5862bf;
+$tertiary-font-color: #00a2c7;
+$placeholder-font-color: #969696;
+$disabled-font-color: #757778;
+
+$primary-border-color: #dbdbdb;
+$secondary-border-color: #dbdbdb;
+$tertiary-border-color: #5862bf;
+
+$scroll-bg: #ccc;
+$scroll-color: $primary;
+
+$success: #02d36e;
+$danger: #eb0000;
+
+$carousel-indicators-inactive-background: #c1c2c2;
+$carousel-inner-background-color: #f9f9f9;
+
+// Input
+$input-border-color: $secondary-border-color;
+$input-color: $primary-font-color;
+
+// Link
+$link-color: $tertiary-font-color;
+$link-hover-color: darken($tertiary-font-color, 10%);
+$link-decoration: underline $link-color;
+$link-hover-decoration: underline transparent;
+
+// Header
+$header-height: 17.4rem;
+$header-height-xs: 11.6rem;
+$header-icon-height: 4rem;
+$header-elements-z-index: 2;
+$form-control-height: 5.2rem;
+
+$btn-font-weight: 500;
+
+$arrow-translate-value: 1rem;

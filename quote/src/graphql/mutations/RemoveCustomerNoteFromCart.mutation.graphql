@@ -1,0 +1,10 @@
+#import "../fragments/Checkout.fragment.graphql"
+
+mutation RemoveCustomerNoteFromCart($input: RemoveCustomerNoteFromCartInput) {
+    removeCustomerNoteFromCart(input: $input) @connection(key: "cart") {
+        ...BatCheckoutFragment
+        customer_note {
+            code
+        }
+    }
+}

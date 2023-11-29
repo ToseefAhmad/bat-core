@@ -1,0 +1,7 @@
+extend type VariationAttributeValue {
+    """
+    [product][BAT]
+    Amount of filled indicators, which should be displayed in CUSTOM swatch (e.g. total amount of indicators 5, but only 3 of them should be filled)
+    """
+    position: Int
+}

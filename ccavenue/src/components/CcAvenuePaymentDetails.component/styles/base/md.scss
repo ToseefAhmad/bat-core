@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .ccavenue-payment-details-component {
+        $ccavenue-payment-details-component-padding-inline-start-md: $p-primary;
+
+        & {
+            padding-inline-start: $ccavenue-payment-details-component-padding-inline-start-md;
+        }
+    }
+}

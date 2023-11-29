@@ -1,0 +1,81 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .product-engraving-preview-component {
+    $product-engraving-preview-component-front-image-width: 86%;
+    $product-engraving-preview-component-front-image-top: 40%;
+    $product-engraving-preview-component-front-image-center: 50%;
+    $product-engraving-preview-component-front-image-transform: translate3d(-50%, -50%, 0);
+    $product-engraving-preview-component-text-top: 36.6%;
+    $product-engraving-preview-component-text-left: 50%;
+    $product-engraving-preview-component-controls-bottom: 1rem;
+    $product-engraving-preview-component-action-width: 12rem;
+    $product-engraving-preview-component-action-height: 4rem;
+    $product-engraving-preview-component-background: rgba(255, 255, 255, 0.6);
+    $product-engraving-preview-component-action-margin: 0 0.1rem;
+
+    & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: $p-secondary;
+    }
+
+    &-box {
+        display: inline;
+        position: relative;
+    }
+
+    &-front-image {
+        position: absolute;
+        height: auto;
+        width: $product-engraving-preview-component-front-image-width;
+        margin-top: $product-engraving-preview-component-front-image-center;
+        top: $product-engraving-preview-component-front-image-top;
+        left: $product-engraving-preview-component-front-image-center;
+        transform: $product-engraving-preview-component-front-image-transform;
+    }
+
+    &-back-text {
+        position: absolute;
+        top: $product-engraving-preview-component-text-top;
+        left: $product-engraving-preview-component-text-left;
+        white-space: nowrap;
+        font-size: $h3-font-size;
+        color: $light;
+        transform: translateX(-50%) translateY(-50%);
+
+        &.vertical {
+            transform: translateX(-50%) translateY(-100%) rotate(-90deg);
+        }
+    }
+
+    &-controls {
+        position: absolute;
+        bottom: $product-engraving-preview-component-controls-bottom;
+        display: flex;
+        align-items: center;
+    }
+
+    &-controls-action.button-component.button-component-primary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: $product-engraving-preview-component-action-width;
+        height: $product-engraving-preview-component-action-height;
+        margin: $product-engraving-preview-component-action-margin;
+        background: $product-engraving-preview-component-background;
+        border: 1px solid $dark;
+        border-radius: 0;
+        text-transform: none;
+
+        &.active,
+        &:hover,
+        &:focus,
+        &:not(:disabled):not(.disabled):active {
+            background: $dark;
+            color: $light;
+            box-shadow: none;
+        }
+    }
+}

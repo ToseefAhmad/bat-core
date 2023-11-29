@@ -1,0 +1,43 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(sm) {
+    .store-view-switcher-component {
+        $store-view-switcher-component-height-sm: 4rem !default;
+        $store-view-switcher-component-margin-inline-start-sm: 3.2rem !default;
+        $store-view-switcher-component-icon-height-sm: 1.6rem !default;
+        $store-view-switcher-component-icon-line-height-sm: 1.2 !default;
+        $store-view-switcher-component-icon-position-sm: 50% 0 !default;
+        $store-view-switcher-component-icon-z-index-sm: 1 !default;
+
+        & {
+            border-top: none;
+            display: flex;
+            order: 0;
+            flex-direction: column;
+            height: $store-view-switcher-component-height-sm;
+            margin-inline-start: $store-view-switcher-component-margin-inline-start-sm;
+            position: relative;
+            z-index: $store-view-switcher-component-icon-z-index-sm;
+        }
+
+        &-icon {
+            & {
+                background-position: $store-view-switcher-component-icon-position-sm;
+                flex-direction: column;
+                height: $store-view-switcher-component-height-sm;
+                line-height: $store-view-switcher-component-icon-line-height-sm;
+                padding-block-start: 0;
+                padding-block-end: 0;
+                padding-inline-start: 0;
+                padding-inline-end: 0;
+                justify-content: space-between;
+            }
+
+            &::before {
+                height: $store-view-switcher-component-icon-height-sm;
+                margin-inline-end: 0;
+            }
+        }
+    }
+}

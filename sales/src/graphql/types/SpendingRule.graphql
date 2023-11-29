@@ -1,0 +1,11 @@
+"""
+[sales][VELO]
+Spending rule
+"""
+type SpendingRule {
+    """
+    [sales][VELO]
+    Sending rule label
+    """
+    label: String
+}

@@ -1,0 +1,5 @@
+mutation UpdatePreferencesMutation($input: UpdatePreferencesInput) {
+    updatePreferencesMutation(input: $input) {
+        success
+    }
+}

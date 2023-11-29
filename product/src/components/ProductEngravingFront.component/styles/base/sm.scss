@@ -1,0 +1,40 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app .product-engraving-front-component {
+        $product-engraving-front-component-variations-item-width-sm: 32%;
+
+        &-title {
+            font-size: $h2-font-size;
+            margin: $m-primary 0;
+        }
+
+        &-variations {
+            &-list {
+                flex-wrap: nowrap;
+                overflow: auto;
+            }
+
+            &-list-col {
+                flex: 0 0 $product-engraving-front-component-variations-item-width-sm;
+                max-width: $product-engraving-front-component-variations-item-width-sm;
+            }
+        }
+
+        &-actions {
+            & {
+                flex-direction: column;
+            }
+
+            &-continue.button-component {
+                width: 100%;
+                margin-bottom: $m-secondary;
+            }
+
+            &-cancel.button-component {
+                padding-left: 0;
+            }
+        }
+    }
+}

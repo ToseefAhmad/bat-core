@@ -1,0 +1,19 @@
+extend type Category {
+    """
+    [catalog][BAT]
+    Meta Robots tags
+    """
+    meta_robots: String
+
+    """
+    [catalog][BAT]
+    Available Product Listing Sort By
+    """
+    available_sort_by: [String]
+
+    """
+    [catalog][BAT]
+    Default Product Listing Sort By
+    """
+    default_sort_by: String
+}

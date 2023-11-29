@@ -1,0 +1,9 @@
+mutation CcAvenuePlaceOrderMutation($input: CcAvenueRedirectInput) {
+    ccavenuePlaceOrder(input: $input) {
+        action
+        fields {
+            name
+            value
+        }
+    }
+}

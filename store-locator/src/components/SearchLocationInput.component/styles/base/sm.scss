@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .search-location-input-component {
+        &-lookup,
+        &-list {
+            width: 100%;
+        }
+    }
+}

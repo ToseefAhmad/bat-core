@@ -1,0 +1,7 @@
+type ConfirmationLink {
+    """
+    [user][BAT]
+    Flag, which identifies that confirmation was successfully sent to the user email
+    """
+    success: Boolean
+}

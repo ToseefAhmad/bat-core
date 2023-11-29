@@ -1,0 +1,19 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$blog-post-tile-component-margin-bottom: 1.5rem;
+$blog-post-tile-component-image-component-padding-top: 51%;
+$blog-post-tile-component-link-wrapper-padding-bottom: 1.5rem;
+$blog-post-tile-component-date-color: #686868;
+$blog-post-tile-component-title-font-size: 2rem;
+$blog-post-tile-component-title-font-weight: $font-weight-semibold;
+$blog-post-tile-component-title-string-number: 2;
+$blog-post-tile-component-content-string-number: 3;
+$blog-post-tile-component-button-arrow-width: 2rem;
+$blog-post-tile-component-button-arrow-height: 1.4rem;
+$blog-post-tile-component-button-arrow-top: 0.3rem;
+
+// md
+$blog-post-tile-component-width-md: calc(100% / 3);
+$blog-post-tile-component-margin-bottom-md: 3rem;
+$blog-post-tile-component-link-wrapper-padding-bottom-md: 3rem;
+$blog-post-tile-component-image-max-height-md: 21.4rem;

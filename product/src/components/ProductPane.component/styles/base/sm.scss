@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(sm) {
+    .app {
+        $product-pane-component-product-qty-component-number-input-component-max-width-sm: 8rem !default;
+
+        .product-pane-component {
+            .product-qty-component {
+                .number-input-component {
+                    max-width: $product-pane-component-product-qty-component-number-input-component-max-width-sm;
+                }
+            }
+        }
+    }
+}

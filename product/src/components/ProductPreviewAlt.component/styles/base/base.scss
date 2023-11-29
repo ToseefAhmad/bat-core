@@ -1,0 +1,168 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+@import '~@luft/common/src/components/Image.component/index';
+@import '~@luft/common/src/components/ImagePlaceholder.component/index';
+
+.product-preview-alt-component {
+    $product-preview-alt-component-footer-padding-block-start: 1.2rem !default;
+    $product-preview-alt-component-footer-padding-block-end: $p-primary !default;
+    $product-preview-alt-component-footer-padding-inline: 1.4rem !default;
+    $product-preview-alt-component-body-padding-inline: 1.4rem !default;
+    $product-preview-alt-component-name-line-height: 1.43 !default;
+    $product-preview-alt-component-price-font-weight: 700 !default;
+    $product-preview-alt-component-price-line-height: 1.25 !default;
+    $product-preview-alt-component-price-letter-spacing: 0.02rem !default;
+    $product-preview-alt-component-add-to-cart-button-line-height: 1.2rem !default;
+    $product-preview-alt-component-add-to-cart-button-letter-spacing: 0.07rem !default;
+    $product-preview-alt-component-variation-attribute-width: 25% !default;
+    $product-preview-alt-component-button-component-height: 4rem !default;
+    $product-preview-alt-component-footer-component-height: 7.2rem !default;
+    $product-preview-alt-component-variation-attribute-adaptive-height: 3rem !default;
+    $product-preview-alt-component-variation-name-small-font-size: 0.5rem !default;
+    $product-preview-alt-component-variation-name-large-font-size: 0.8rem !default;
+    $product-preview-alt-component-variation-attribute-adaptive-width: 1.4rem !default;
+    $product-preview-alt-component-final-product-price-discounted-value-font-weight: null !default;
+    $product-preview-alt-component-cms-block-label-font-size: 1rem !default;
+    $product-preview-alt-component-cms-block-label-line-height: 1.2rem !default;
+    $product-preview-alt-component-wishlist-button-background-width: 2.2rem !default;
+    $product-preview-alt-component-wishlist-button-background-height: 1.9rem !important;
+
+    & {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border: 0;
+        border-radius: 0;
+        min-height: calc(100% - #{$m-secondary});
+        height: 100%;
+        background-color: $light;
+    }
+
+    .product-preview-alt-component-link-name {
+        display: block;
+        font-size: $font-size-md;
+        color: $primary-font-color;
+        line-height: $product-preview-alt-component-name-line-height;
+        text-decoration: none;
+        margin-block-end: $m-secondary;
+
+        @include text-truncate;
+
+        &:empty {
+            height: 1em * $line-height-base;
+        }
+    }
+
+    .variation-attribute-adaptive-component {
+        grid-template-columns: repeat(4, $product-preview-alt-component-variation-attribute-width);
+        gap: 0;
+
+        &-value {
+            height: $product-preview-alt-component-variation-attribute-adaptive-height;
+        }
+
+        &-name-small {
+            font-size: $product-preview-alt-component-variation-name-small-font-size;
+        }
+
+        &-name-large {
+            font-size: $product-preview-alt-component-variation-name-large-font-size;
+        }
+
+        &-indicators {
+            width: $product-preview-alt-component-variation-attribute-adaptive-width;
+        }
+    }
+
+    .variation-attribute:last-child {
+        margin-block-end: 0;
+    }
+
+    .product-preview-alt-component-body {
+        flex: 1 1 auto;
+        padding-block-start: $p-secondary;
+        padding-block-end: 0;
+        padding-inline-start: $product-preview-alt-component-body-padding-inline;
+        padding-inline-end: $product-preview-alt-component-body-padding-inline;
+    }
+
+    .product-price-component {
+        &-regular-value,
+        &-gift-card-value,
+        &-minimum-value,
+        &-discounted-value,
+        &-final-value {
+            font-size: $font-size-lg;
+            line-height: $product-preview-alt-component-price-line-height;
+            letter-spacing: $product-preview-alt-component-price-letter-spacing;
+        }
+
+        &-regular-value,
+        &-gift-card-value,
+        &-minimum-value,
+        &-final-value {
+            font-weight: $product-preview-alt-component-price-font-weight;
+        }
+    }
+
+    .final-product-price-component {
+        & {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .final-product-price-component-discounted-value {
+            font-weight: $product-preview-alt-component-final-product-price-discounted-value-font-weight;
+        }
+    }
+
+    .image-component .image-component-image-block img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-preview-alt-component-footer {
+        background-color: $light;
+        padding-block-start: $product-preview-alt-component-footer-padding-block-start;
+        padding-block-end: $product-preview-alt-component-footer-padding-block-end;
+        padding-inline-start: $product-preview-alt-component-footer-padding-inline;
+        padding-inline-end: $product-preview-alt-component-footer-padding-inline;
+        border-top: none;
+
+        &-wrapper {
+            height: $product-preview-alt-component-footer-component-height;
+        }
+    }
+
+    &-footer .button-component {
+        & {
+            height: $product-preview-alt-component-button-component-height;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: $font-size-mobile;
+            line-height: $product-preview-alt-component-add-to-cart-button-line-height;
+            letter-spacing: $product-preview-alt-component-add-to-cart-button-letter-spacing;
+            white-space: nowrap;
+        }
+
+        .loader-component {
+            display: none;
+        }
+    }
+
+    .cms-subscribe-up-label {
+        text-transform: uppercase;
+        margin: $m-secondary 0;
+        font-size: $product-preview-alt-component-cms-block-label-font-size;
+        line-height: $product-preview-alt-component-cms-block-label-line-height;
+    }
+
+    .add-to-wishlist-component,
+    .remove-from-wishlist-component {
+        width: $product-preview-alt-component-wishlist-button-background-width;
+        height: $product-preview-alt-component-wishlist-button-background-height;
+        background-size: $product-preview-alt-component-wishlist-button-background-width
+            $product-preview-alt-component-wishlist-button-background-height;
+    }
+}

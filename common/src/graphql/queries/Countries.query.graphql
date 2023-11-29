@@ -1,0 +1,22 @@
+query BatCountries {
+    countries {
+        id
+        code
+        name
+        regions {
+            id
+            code
+            name
+            cities {
+                id
+                name
+                code
+                districts {
+                    id
+                    name
+                    code
+                }
+            }
+        }
+    }
+}

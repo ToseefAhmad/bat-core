@@ -1,0 +1,23 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app .product-selected-attributes-component {
+    & {
+        padding-inline-start: 0;
+        padding-block-end: 0;
+        padding-block-start: 0;
+    }
+
+    &-attr {
+        display: flex;
+    }
+
+    &-attr-title {
+        & {
+            margin-inline-end: $m-tertiary;
+        }
+
+        &::after {
+            content: ':';
+        }
+    }
+}

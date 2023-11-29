@@ -1,0 +1,21 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .back-component {
+            $back-component-button-hover-background-image-md: url('../../../../resources/svg/base/bat-back.svg') !default;
+            $back-component-button-text-align-md: null !default;
+
+            &-control.button-component {
+                & {
+                    text-align: $back-component-button-text-align-md;
+                }
+
+                &:hover {
+                    background-image: $back-component-button-hover-background-image-md;
+                }
+            }
+        }
+    }
+}

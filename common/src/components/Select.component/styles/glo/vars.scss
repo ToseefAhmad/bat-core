@@ -1,0 +1,15 @@
+@import '../../../../scss/variables/glo';
+
+$select-component-check-valid-icon-size: 1.4rem 1.1rem;
+$select-component-control-background-color: $gray-light-secondary;
+$select-component-control-border: $secondary-border-width solid $gray-light-secondary;
+$select-component-option-background-color: $gray-light-secondary;
+$select-component-option-border-color: $gray-light-primary;
+$select-component-option-focused-background-color: $primary;
+$select-component-option-selected-background-color: $primary;
+$select-component-control-focused-border-color: $primary;
+$select-component-control-focused-box-shadow: none;
+$select-component-menu-background-color: $gray-light-secondary;
+$select-component-menu-list-border: $secondary-border-width solid $primary;
+$select-component-menu-list-border-top: unset;
+$select-component-menu-list-box-shadow: none;

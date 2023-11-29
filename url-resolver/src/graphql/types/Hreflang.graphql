@@ -1,0 +1,13 @@
+type Hreflang {
+    """
+    [url-resolver][BAT]
+    Alternative version language
+    """
+    language: String
+
+    """
+    [url-resolver][BAT]
+    Alternative version url
+    """
+    url: String
+}

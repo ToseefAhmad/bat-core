@@ -1,0 +1,11 @@
+"""
+[sales][VELO]
+Earning rules
+"""
+type EarningRule {
+    """
+    [sales][VELO]
+    Earning rule label
+    """
+    label: String
+}

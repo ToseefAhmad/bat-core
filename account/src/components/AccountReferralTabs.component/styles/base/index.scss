@@ -1,0 +1,37 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/components/TabNav.component/index';
+@import '~@luft/common/src/components/Tabs.component/index';
+
+.account-referral-tabs-component {
+    .tab-nav-component {
+        $tab-nav-component-nav-item-box-shadow: null !default;
+        $tab-nav-component-nav-link-component-active-font-color: $secondary-font-color !default;
+        $tab-nav-component-nav-link-component-font-color: $primary-font-color !default;
+
+        .nav-item {
+            box-shadow: $tab-nav-component-nav-item-box-shadow;
+        }
+
+        .nav-link {
+            font-weight: $font-weight-semibold;
+
+            &:not(.active) {
+                color: $primary-font-color;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &-component {
+                & {
+                    color: $tab-nav-component-nav-link-component-font-color;
+                }
+
+                &-active {
+                    color: $tab-nav-component-nav-link-component-active-font-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/product/src/components/ProductQty.component/index';
+@import '~@luft/common/src/components/Select.component/index';
+
+.app {
+    .editable-bundle-dropdown-component {
+        .select-component .select-component-custom__value-container {
+            transform: none;
+        }
+
+        .select-component.form-input-component {
+            padding-inline-end: $p-primary-lg;
+        }
+    }
+}

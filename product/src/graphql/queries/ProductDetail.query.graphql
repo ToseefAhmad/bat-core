@@ -1,0 +1,53 @@
+#import "@luft/product/src/graphql/fragments/ProductDetail.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/BundledProductsFragment.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/GiftCardDetail.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/GroupedProductDetail.fragment.graphql"
+
+query BatProductDetail($id: ID) {
+    product(id: $id) {
+        ...ProductDetailFragment
+        ...BundledProductsFragment
+        ...GiftCardDetailFragment
+        ...GroupedProductDetailFragment
+        variation_attributes {
+            options_count
+            variation_attribute_id
+            name
+            type
+            values {
+                id
+                name
+                description
+                value
+                position
+            }
+        }
+        variations {
+            variation_values {
+                variation_attribute_id
+                value
+            }
+        }
+        design_attributes {
+            place
+            value
+            code
+        }
+        short_description
+        psn_is_personalisable
+        psn_text_coordinates
+        psn_image_coordinates
+        psn_front_image {
+            id
+            alt
+            name
+            url
+        }
+        psn_background_image {
+            id
+            alt
+            name
+            url
+        }
+    }
+}

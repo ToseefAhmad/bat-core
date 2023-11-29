@@ -1,0 +1,1 @@
+export {getActiveItemByPath} from './getActiveItemByPath';

@@ -1,0 +1,5 @@
+fragment Ipay88PaymentMethodFragment on Ipay88PaymentInfo {
+    id
+    name
+    logo
+}

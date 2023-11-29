@@ -1,0 +1,46 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    $app-footer-top-padding-block-start-md: null !default;
+    $app-footer-top-right-margin-inline-start-md: auto !default;
+    $app-footer-middle-max-width-md: map-get($container-max-widths, 'xl') !default;
+    $app-footer-section-title-letter-spacing-md: null !default;
+    $app-footer-section-title-font-size-md: null !default;
+    $app-footer-section-link-font-size-md: null !default;
+    $app-footer-section-holder-display-md: null !default;
+    $app-footer-section-holder-grid-template-column-md: null !default;
+
+    .app-footer {
+        &-top {
+            padding-block-start: $app-footer-top-padding-block-start-md;
+        }
+
+        &-top-right {
+            margin-inline-start: $app-footer-top-right-margin-inline-start-md;
+        }
+
+        &-middle {
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            width: 100%;
+            max-width: $app-footer-middle-max-width-md;
+        }
+
+        .footer-section {
+            &-title {
+                letter-spacing: $app-footer-section-title-letter-spacing-md;
+                font-size: $app-footer-section-title-font-size-md;
+            }
+
+            &-link {
+                font-size: $app-footer-section-link-font-size-md;
+            }
+
+            &-holder {
+                display: $app-footer-section-holder-display-md;
+                grid-template-columns: $app-footer-section-holder-grid-template-column-md;
+            }
+        }
+    }
+}

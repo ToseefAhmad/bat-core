@@ -1,0 +1,31 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.app {
+    .billing-address-as-shipping-component {
+        $billing-address-as-shipping-component-label-line-height: 2rem !default;
+        $billing-address-as-shipping-component-label-font-size: $font-size-md !default;
+        $billing-address-as-shipping-component-switch-height: 3.1rem !default;
+        $billing-address-as-shipping-component-switch-top: calc(
+            50% - #{$billing-address-as-shipping-component-switch-height} / 2
+        ) !default;
+
+        .checkbox-component-label {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            text-transform: none;
+        }
+
+        .checkbox-component-label-text {
+            line-height: $billing-address-as-shipping-component-label-line-height;
+            font-size: $billing-address-as-shipping-component-label-font-size;
+        }
+
+        .checkbox-component-switch .checkbox-component-label-text {
+            &::before,
+            &::after {
+                top: $billing-address-as-shipping-component-switch-top;
+            }
+        }
+    }
+}

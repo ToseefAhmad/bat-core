@@ -1,0 +1,38 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .product-slider-component {
+        $product-slider-component-padding-md: 0 6rem !default;
+        $product-slider-component-number-md: 4 !default;
+        $product-slider-component-partial-coefficient-md: 0.4 !default;
+        $product-slider-component-arrow-button-height-md: 3rem !default;
+        $product-slider-component-arrow-button-width-md: 1.6rem !default;
+        $product-slider-component-arrow-button-background-size-md: $product-slider-component-arrow-button-width-md
+            $product-slider-component-arrow-button-height-md !default;
+        $product-slider-component-button-next-right-md: 1rem !default;
+
+        & {
+            padding: $product-slider-component-padding-md;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: flex;
+
+            &:after {
+                height: $product-slider-component-arrow-button-height-md;
+                width: $product-slider-component-arrow-button-width-md;
+                background-size: $product-slider-component-arrow-button-background-size-md;
+            }
+        }
+
+        .swiper-button-next {
+            right: $product-slider-component-button-next-right-md;
+        }
+
+        .swiper-slide {
+            width: #{100% / ($product-slider-component-number-md + $product-slider-component-partial-coefficient-md)} !important;
+        }
+    }
+}

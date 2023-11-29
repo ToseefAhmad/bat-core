@@ -1,0 +1,7 @@
+type StoreStock {
+    """
+    [store-locator][BAT]
+    Category/Stock name
+    """
+    name: String
+}

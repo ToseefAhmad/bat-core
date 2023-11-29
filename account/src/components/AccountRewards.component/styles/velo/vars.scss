@@ -1,0 +1,12 @@
+@import '../../../../../../common/src/scss/variables/velo';
+
+$account-rewards-component-title-border-bottom: $border-width solid $primary-border-color;
+$account-rewards-component-title-margin-block-end: $m-tertiary;
+
+// md
+$account-rewards-component-title-padding-inline-md: $p-primary-lg;
+$account-rewards-component-label-padding-block-start-md: $p-tertiary;
+$account-rewards-component-label-padding-block-end-md: $p-tertiary;
+$account-rewards-component-label-padding-inline-md: $p-primary-lg;
+$account-rewards-component-empty-padding-inline-md: $p-primary-lg;
+$account-rewards-component-label-font-weight-md: $font-weight-bold;

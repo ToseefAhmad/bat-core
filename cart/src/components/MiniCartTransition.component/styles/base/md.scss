@@ -1,0 +1,56 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app {
+        .mini-cart-transition-component {
+            $mini-cart-component-width-md: 53rem;
+
+            @keyframes open-mini-cart {
+                from {
+                    transform: translateX($mini-cart-component-width-md);
+                }
+
+                to {
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes close-mini-cart {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX($mini-cart-component-width-md);
+                }
+            }
+        }
+    }
+
+    [dir='rtl'] {
+        .mini-cart-transition-component {
+            $mini-cart-component-width-md-rtl: 53rem;
+
+            @keyframes open-mini-cart-rtl {
+                from {
+                    transform: translateX(-#{$mini-cart-component-width-md-rtl});
+                }
+
+                to {
+                    transform: translateX(0);
+                }
+            }
+
+            @keyframes close-mini-cart-rtl {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(-#{$mini-cart-component-width-md-rtl});
+                }
+            }
+        }
+    }
+}

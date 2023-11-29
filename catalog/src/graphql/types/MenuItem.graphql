@@ -1,0 +1,103 @@
+type MenuItem {
+    """
+    [catalog][BAT]
+    Menu item id
+    """
+    id: ID
+
+    """
+    [catalog][BAT]
+    Menu item type
+    """
+    type: MenuItemType
+
+    """
+    [catalog][BAT]
+    Menu item title
+    """
+    title: String!
+
+    """
+    [catalog][BAT]
+    Menu item identifier
+    """
+    identifier: String
+
+    """
+    [catalog][BAT]
+    Menu item parent id if any
+    """
+    parent: ID
+
+    """
+    [catalog][BAT]
+    Menu item position for sorting
+    """
+    position: Int
+
+    """
+    [catalog][BAT]
+    Is menu item a link
+    """
+    is_link: Boolean
+
+    """
+    [catalog][BAT]
+    Menu item link url
+    """
+    url: String
+
+    """
+    [catalog][BAT]
+    If menu item should be visible to just guest customers, just logged in customers or both
+    """
+    is_logged_in: Boolean
+
+    """
+    [catalog][BAT]
+    Menu item frontend class extracted from custom options
+    """
+    frontend_class: String
+
+    """
+    [catalog][BAT]
+    Menu item styles extracted from custom options
+    """
+    style: String
+
+    """
+    [catalog][BAT]
+    Menu item content
+    """
+    content: String
+
+    """
+    [catalog][BAT]
+    CMS block content
+    """
+    cms_block_content: String
+
+    """
+    [catalog][BAT]
+    A comma-separated list of keywords that are visible only to search engines
+    """
+    meta_keywords: String
+
+    """
+    [catalog][BAT]
+    A string that is displayed in the title bar and tab of the browser and in search results lists
+    """
+    meta_title: String
+
+    """
+    [catalog][BAT]
+    A brief overview of the category for search results listings, maximum 255 characters
+    """
+    meta_description: String
+
+    """
+    [catalog][BAT]
+    Children items
+    """
+    children: [MenuItem]
+}

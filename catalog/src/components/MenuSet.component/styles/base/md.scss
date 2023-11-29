@@ -1,0 +1,14 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .app .menu-set-component {
+        $menu-set-component-category-margin-md: 0 $m-primary !default;
+        $menu-set-component-category-padding-md: $p-primary !default;
+
+        &-category {
+            margin: $menu-set-component-category-margin-md;
+            padding: $menu-set-component-category-padding-md;
+        }
+    }
+}

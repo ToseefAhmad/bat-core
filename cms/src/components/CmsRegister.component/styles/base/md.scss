@@ -1,0 +1,16 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .cms-register-component {
+        $cms-register-component-max-width-md: 44rem !default;
+
+        & {
+            max-width: $cms-register-component-max-width-md;
+        }
+
+        .age-verification-component {
+            margin: 0;
+        }
+    }
+}

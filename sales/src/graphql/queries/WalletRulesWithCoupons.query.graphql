@@ -1,0 +1,12 @@
+query WalletRulesWithCoupons {
+    getWalletRulesWithCoupons {
+        id
+        label
+        coupon_info {
+            exp_day
+            code
+            description
+            is_usable
+        }
+    }
+}

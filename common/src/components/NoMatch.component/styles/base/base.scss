@@ -1,0 +1,76 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/components/Button.component/index';
+@import '~@luft/product/src/components/ProductListSlider.component/index';
+@import '~@luft/widget/src/components/CatalogProductListLoader.component/index';
+
+.no-match-component {
+    $no-match-component-padding: 7rem $p-primary 4rem $p-primary;
+    $no-match-component-background-position: center 2rem;
+    $no-match-component-background-size: 3.4rem 3.4rem;
+    $no-match-component-box-background-color: #efefef;
+    $no-match-component-title-font-size: 1.8rem;
+    $no-match-component-note-margin-bottom: 3rem;
+    $no-match-component-slider-title-font-size: 2.4rem;
+
+    & {
+        text-align: center;
+        background-color: $light;
+    }
+
+    &-box {
+        padding: $no-match-component-padding;
+        background-image: url('../../../../../../common/src/resources/svg/base/bat-error-point.svg');
+        background-position: $no-match-component-background-position;
+        background-size: $no-match-component-background-size;
+        background-repeat: no-repeat;
+        background-color: $no-match-component-box-background-color;
+    }
+
+    &-title {
+        margin-bottom: $m-secondary;
+        font-size: $no-match-component-title-font-size;
+        font-weight: $font-weight-bold;
+    }
+
+    &-note {
+        margin-bottom: $no-match-component-note-margin-bottom;
+        font-size: $h4-font-size;
+    }
+
+    &-actions {
+        &-button {
+            height: $button-height;
+        }
+
+        &-button:last-child {
+            margin-top: $m-primary;
+        }
+
+        &-button.button-component-tertiary:hover {
+            background-color: transparent;
+        }
+    }
+
+    &-slider {
+        & {
+            margin-bottom: $m-primary;
+        }
+
+        .product-list-slider-component-title {
+            font-size: $no-match-component-slider-title-font-size;
+            font-weight: $font-weight-bold;
+            margin-bottom: $m-primary;
+        }
+
+        .variation-attributes-component,
+        .add-to-cart-component {
+            display: none;
+        }
+    }
+
+    .product-list-slider-component-products {
+        &::-webkit-scrollbar {
+            display: block;
+        }
+    }
+}

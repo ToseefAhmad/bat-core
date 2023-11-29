@@ -1,0 +1,27 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.phone-number-confirmation-component {
+    $phone-number-confirmation-component-max-width: 60rem !default;
+    $phone-number-confirmation-component-content-max-width: none !default;
+    $phone-number-confirmation-component-note-line-height: 2rem !default;
+
+    &.modal-component {
+        .modal-component-dialog {
+            max-width: $phone-number-confirmation-component-max-width;
+        }
+
+        .modal-component-header {
+            padding: $p-primary;
+        }
+
+        .modal-component-title {
+            font-size: $font-size-mobile;
+            line-height: 1;
+            font-weight: $font-weight-normal;
+        }
+
+        &.modal-component-confirm .modal-component-body-content {
+            max-width: none;
+        }
+    }
+}

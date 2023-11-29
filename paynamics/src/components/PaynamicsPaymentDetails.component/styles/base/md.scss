@@ -1,0 +1,8 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .paynamics-payment-details-component {
+        padding-inline-start: $p-primary;
+    }
+}

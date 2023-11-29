@@ -1,0 +1,47 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/account/src/components/AccountNavControl.component/index';
+
+.app {
+    .account-nav-control-alt-component {
+        $account-nav-control-alt-component-icon-background-image: url('../../../../../../common/src/resources/svg/base/bat-account.svg') !default;
+        $account-nav-control-alt-component-icon-width: 1.8rem !default;
+        $account-nav-control-alt-component-icon-height: 1.8rem !default;
+        $account-nav-control-alt-component-height: 4rem !default;
+        $account-nav-control-alt-component-text-line-height: 1.2 !default;
+
+        & {
+            display: flex;
+            flex-direction: column;
+            height: $account-nav-control-alt-component-height;
+            z-index: $header-elements-z-index;
+        }
+
+        &-icon {
+            background-image: $account-nav-control-alt-component-icon-background-image;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: top;
+            background-size: $account-nav-control-alt-component-icon-width
+                $account-nav-control-alt-component-icon-height;
+            border: none;
+            padding-block-start: 0;
+            padding-block-end: 0;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        &-text {
+            color: $light;
+            font-size: $font-size-base;
+            line-height: $account-nav-control-alt-component-text-line-height;
+            text-transform: capitalize;
+            font-weight: $font-weight-normal;
+            font-size: $font-size-base;
+            white-space: nowrap;
+        }
+    }
+}

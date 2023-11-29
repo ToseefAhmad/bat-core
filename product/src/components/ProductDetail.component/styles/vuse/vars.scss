@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/vuse';
+
+$product-detail-component-number-input-control-padding-block: 0.8rem;
+$product-detail-component-product-price-line-height: 2.8rem;
+
+// rtl
+$product-detail-component-primary-information-brand-font-family-rtl: $font-family-secondary;
+$product-detail-component-product-price-font-family-rtl: $font-family-secondary;
+
+// md
+$product-detail-component-stock-status-out-of-stock-margin-block-start-md: $m-secondary;

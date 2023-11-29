@@ -1,0 +1,6 @@
+query RewardPointsSettings($input: RewardsSettingInput) {
+    getRewardsPointSettings(input: $input) {
+        min_spend_points
+        max_spend_points
+    }
+}

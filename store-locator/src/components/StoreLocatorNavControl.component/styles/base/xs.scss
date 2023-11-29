@@ -1,0 +1,51 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(xs) {
+    .store-locator-nav-control-component {
+        $store-locator-nav-control-component-order-xs: 20 !default;
+        $store-locator-nav-control-component-height-xs: 6rem !default;
+        $store-locator-nav-control-component-background-size-xs: 2rem 2rem !default;
+        $store-locator-nav-control-component-background-position-xs: 2rem 1.7rem !default;
+        $store-locator-nav-control-component-border-color-xs: $tertiary !default;
+        $store-locator-nav-control-component-background-image-xs: url('../../../../../../common/src/resources/svg/base/bat-mobile-shape.svg') !default;
+        $store-locator-nav-control-component-text-padding-inline-start-xs: 5rem !default;
+
+        & {
+            height: $store-locator-nav-control-component-height-xs;
+            order: $store-locator-nav-control-component-order-xs;
+            background-image: $store-locator-nav-control-component-background-image-xs;
+            background-position: $store-locator-nav-control-component-background-position-xs;
+            background-repeat: no-repeat;
+            background-size: $store-locator-nav-control-component-background-size-xs;
+            border-top: $border-width solid $store-locator-nav-control-component-border-color-xs;
+            margin-inline-start: 0;
+        }
+
+        button.store-locator-nav-control-component-icon.button-component {
+            background: none;
+            align-items: center;
+        }
+
+        &-text {
+            color: $light;
+            width: 100%;
+            text-align: start;
+            padding-inline-start: $store-locator-nav-control-component-text-padding-inline-start-xs;
+            white-space: normal;
+            text-transform: uppercase;
+            font-size: $font-size-base;
+            font-weight: $font-weight-bold;
+        }
+    }
+
+    [dir='rtl'] {
+        .store-locator-nav-control-component {
+            $store-locator-nav-control-component-icon-background-position-xs: right 2rem top 1.7rem;
+
+            & {
+                background-position: $store-locator-nav-control-component-icon-background-position-xs;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+#import "@luft/product/src/graphql/fragments/ProductDetailLimited.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/BundledProductsFragment.fragment.graphql"
+#import "@luft/product/src/graphql/fragments/GiftCardDetailLimited.fragment.graphql"
+
+fragment ProductLimitedFragment on Product {
+    ...GiftCardDetailLimitedFragment
+    ...BundledProductsFragment
+    ...ProductDetailLimitedFragment
+    variation_attributes {
+        options_count
+        variation_attribute_id
+        name
+        type
+        values {
+            id
+            name
+            description
+            value
+            position
+        }
+    }
+    variations {
+        is_in_stock
+        variation_values {
+            variation_attribute_id
+            value
+        }
+    }
+}

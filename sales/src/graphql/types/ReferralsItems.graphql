@@ -1,0 +1,8 @@
+"""
+[sales][VELO]
+Provides affiliate program referrals data items
+"""
+type ReferralsItems {
+    name: String
+    email: String
+}

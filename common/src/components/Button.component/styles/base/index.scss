@@ -1,0 +1,139 @@
+@import '../../../../scss/variables/base';
+@import '~@luft/common/src/components/Button.component/index';
+
+.app,
+.modal-component,
+.restrict-access-component {
+    .button-component {
+        $button-component-letter-spacing: null !default;
+        $button-component-font-weight: $btn-font-weight !default;
+        $button-component-line-height: null !default;
+        $button-component-box-shadow-hover: null !default;
+        $button-component-padding-block: null !default;
+        $button-component-background-image: null !default;
+        $button-component-background-color: null !default;
+        $button-component-background-size: null !default;
+        $button-component-background-position: null !default;
+        $button-component-color: null !default;
+        $button-component-transition: null !default;
+        $button-component-hover-background-position: null !default;
+        $button-component-hover-background-color: null !default;
+        $button-component-hover-color: null !default;
+        $button-component-disabled-background-image: null !default;
+        $button-component-disabled-background-color: null !default;
+        $button-component-primary-background-color: $primary !default;
+        $button-component-primary-border: null !default;
+        $button-component-primary-border-radius: null !default;
+        $button-component-primary-font-weight: null !default;
+        $button-component-primary-transition: null !default;
+        $button-component-primary-disabled-border: $border-width solid $disabled-color !default;
+        $button-component-secondary-background-color: null !default;
+        $button-component-secondary-disabled-border: $border-width-lg solid $disabled-color !default;
+        $button-component-tertiary-padding-block: null !default;
+        $button-component-tertiary-color: $secondary-font-color !default;
+        $button-component-tertiary-border-color: $tertiary-border-color !default;
+        $button-component-tertiary-border-radius: null !default;
+        $button-component-tertiary-hover-border-color: null !default;
+        $button-component-tertiary-focus-box-shadow: null !default;
+        $button-component-tertiary-disabled-border: $border-width-lg solid $disabled-color !default;
+        $button-component-quaternary-color: null !default;
+        $button-component-quaternary-background-color: null !default;
+        $button-component-quaternary-hover-background-color: null !default;
+
+        & {
+            font-weight: $button-component-font-weight;
+            font-size: $font-size-md;
+            letter-spacing: $button-component-letter-spacing;
+            line-height: $button-component-line-height;
+        }
+
+        &-primary,
+        &-secondary {
+            background-color: $button-component-background-color;
+            background-image: $button-component-background-image;
+            background-size: $button-component-background-size;
+            background-position: $button-component-background-position;
+            border: $button-component-primary-border;
+            padding-block-start: $button-component-padding-block;
+            padding-block-end: $button-component-padding-block;
+            border-radius: $button-component-primary-border-radius;
+            color: $button-component-color;
+            font-weight: $button-component-primary-font-weight;
+            transition: $button-component-transition;
+
+            &:hover {
+                background-color: $button-component-hover-background-color;
+                background-position: $button-component-hover-background-position;
+                color: $button-component-hover-color;
+            }
+
+            &:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                color: $button-component-hover-color;
+                box-shadow: $button-component-box-shadow-hover;
+                background-color: $button-component-hover-background-color;
+            }
+
+            &:disabled {
+                background-color: $button-component-disabled-background-color;
+                background-image: $button-component-disabled-background-image;
+            }
+        }
+
+        &-secondary {
+            background-color: $button-component-secondary-background-color;
+        }
+
+        &-tertiary {
+            border-color: $button-component-tertiary-border-color;
+            border-width: $secondary-border-width;
+            padding-block-start: $button-component-tertiary-padding-block;
+            padding-block-end: $button-component-tertiary-padding-block;
+            color: $button-component-tertiary-color;
+            border-radius: $button-component-tertiary-border-radius;
+
+            &:hover,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                border-color: $button-component-tertiary-hover-border-color;
+            }
+
+            &:focus,
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus {
+                box-shadow: $button-component-box-shadow-hover;
+            }
+
+            &:disabled {
+                border: $button-component-tertiary-disabled-border;
+            }
+        }
+
+        &-quaternary {
+            color: $button-component-quaternary-color;
+            background-color: $button-component-quaternary-background-color;
+        }
+
+        &-quaternary:hover {
+            color: $button-component-quaternary-color;
+            background-color: $button-component-quaternary-hover-background-color;
+        }
+
+        &-primary:disabled,
+        &-secondary:disabled,
+        &-tertiary:disabled {
+            background-color: $disabled-color;
+            color: $disabled-font-color;
+            opacity: 1;
+        }
+
+        &-primary:disabled {
+            border: $button-component-primary-disabled-border;
+        }
+
+        &-secondary:disabled {
+            border: $button-component-secondary-disabled-border;
+        }
+    }
+}

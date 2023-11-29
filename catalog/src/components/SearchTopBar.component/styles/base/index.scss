@@ -1,0 +1,11 @@
+@import '../../../../../../common/src/scss/variables/base';
+
+.search-top-bar-component {
+    & {
+        padding: $p-tertiary 0;
+    }
+
+    &-title {
+        text-transform: none;
+    }
+}

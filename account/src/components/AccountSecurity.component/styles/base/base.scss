@@ -1,0 +1,23 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/account/src/components/AccountSecurity.component/index';
+
+.app {
+    .account-security-component {
+        $account-security-component-content-width: null !default;
+        $account-security-form-group-last-child-margin-block-end: null !default;
+
+        &-content {
+            width: $account-security-component-content-width;
+        }
+
+        &-password-tooltip {
+            color: $dark-grey;
+            font-size: $font-size-base;
+            margin-bottom: $m-secondary;
+        }
+
+        .form-group:last-child {
+            margin-block-end: $account-security-form-group-last-child-margin-block-end;
+        }
+    }
+}

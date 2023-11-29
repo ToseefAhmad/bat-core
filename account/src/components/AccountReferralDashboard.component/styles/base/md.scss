@@ -1,0 +1,21 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-up(md) {
+    .account-referral-dashboard-component {
+        $account-referral-dashboard-component-padding-inline-md: $p-primary !default;
+
+        &-row {
+            & {
+                padding-block-start: $p-primary;
+                padding-block-end: $p-primary;
+                padding-inline-start: $account-referral-dashboard-component-padding-inline-md;
+                padding-inline-end: $account-referral-dashboard-component-padding-inline-md;
+            }
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

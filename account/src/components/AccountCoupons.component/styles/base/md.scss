@@ -1,0 +1,19 @@
+@import '../../../../../../common/src/scss/variables/base';
+@import '~@luft/common/src/scss/mixins';
+
+@include media-breakpoint-down(md) {
+    .account-coupons-component {
+        .coupons-wallet-component {
+            padding-inline-start: $p-primary;
+            padding-inline-end: $p-primary;
+        }
+
+        .coupons-wallet-component-item,
+        .coupons-wallet-component-empty {
+            padding-block-start: $p-primary;
+            padding-block-end: $p-primary;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+        }
+    }
+}

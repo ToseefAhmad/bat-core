@@ -1,0 +1,5 @@
+query CustomerAffiliateProgramReferralLink {
+    getReferralUrl {
+        referral_url
+    }
+}
